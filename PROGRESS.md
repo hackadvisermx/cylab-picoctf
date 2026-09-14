@@ -81,10 +81,31 @@ Todos estos retos ya aparecían como "Solved by you" en la cuenta antes de esta 
 | Specialer | ✅ resuelto | [challenges/general-skills/specialer](challenges/general-skills/medium/specialer/README.md) |
 | YaraRules0x100 | ✅ resuelto | [challenges/general-skills/yararules0x100](challenges/general-skills/medium/yararules0x100/README.md) |
 
+## Tabla de retos — Web Exploitation, Easy (orden de aparición en la plataforma)
+
+Los 24 retos de esta dificultad ya aparecían como "Solved by you" antes de retomar esta categoría (progreso de una sesión anterior). Se documentan aquí en bloques de 4, en el mismo orden en que aparecen en el Challenge Library.
+
+| # | Reto | Estado | Writeup |
+|---|------|--------|---------|
+| 1 | Old Sessions | ✅ resuelto | [challenges/web-exploitation/easy/old_sessions](challenges/web-exploitation/easy/old_sessions/README.md) |
+| 2 | Crack the Gate 1 | ✅ resuelto | [challenges/web-exploitation/easy/crack_the_gate_1](challenges/web-exploitation/easy/crack_the_gate_1/README.md) |
+| 3 | SSTI1 | ✅ resuelto | [challenges/web-exploitation/easy/ssti1](challenges/web-exploitation/easy/ssti1/README.md) |
+| 4 | n0s4n1ty 1 | ✅ resuelto | [challenges/web-exploitation/easy/n0s4n1ty_1](challenges/web-exploitation/easy/n0s4n1ty_1/README.md) |
+| 5 | head-dump | ⏳ pendiente de documentar | — |
+| 6 | Cookie Monster Secret Recipe | ⏳ pendiente de documentar | — |
+| 7 | WebDecode | ⏳ pendiente de documentar | — |
+| 8 | Unminify | ⏳ pendiente de documentar | — |
+| 9 | IntroToBurp | ⏳ pendiente de documentar | — |
+| 10 | Bookmarklet | ⏳ pendiente de documentar | — |
+| 11 | Local Authority | ⏳ pendiente de documentar | — |
+| 12 | Inspect HTML | ⏳ pendiente de documentar | — |
+| 13–24 | (página 2, sin revisar aún) | ⏳ pendiente de documentar | — |
+
 ## Fases del proyecto
 1. ✅ **General Skills — Easy**: 48/48 retos resueltos y documentados.
 2. ✅ **General Skills — Medium**: 8/8 retos resueltos y documentados (los que estaban pendientes de esta cuenta). Quedan sin documentar `Failure Failure`, `ABSOLUTE NANO`, `KSECRETS`, `bytemancy 3`, `bytemancy 2`, `useless`, `Special` (ya aparecían resueltos de antes; no se ha escrito su writeup).
-3. ⏳ **Resto de categorías** (Web Exploitation, Cryptography, Reverse Engineering, Forensics, Binary Exploitation, Blockchain, Artificial Intelligence) — sin empezar.
+3. ⏳ **Web Exploitation — Easy**: 4/24 documentados (en curso, en bloques de 4).
+4. ⏳ **Resto de categorías** (Cryptography, Reverse Engineering, Forensics, Binary Exploitation, Blockchain, Artificial Intelligence) — sin empezar.
 4. ⏳ **Notas de arquitectura de la plataforma** (`notes/host-characteristics.md`) — en curso, se completa a medida que se observan patrones de infraestructura (instancias efímeras, formato de flag, etc.)
 5. ⏳ **Entorno de práctica local** replicando los retos más representativos — futuro
 6. ⏳ **Automatización** (`scripts/`) para resolver retos repetibles — futuro, según haga falta
@@ -98,3 +119,8 @@ Todos estos retos ya aparecían como "Solved by you" en la cuenta antes de esta 
 - **Specialer** (Medium, picoCTF 2023): bash real pero con `$PATH` sin ningún binario externo disponible — solo quedan los builtins de bash (`echo`, `mapfile`, glob). Se resuelve explorando con `echo *` y leyendo archivos con `mapfile -t arr < archivo` en vez de `cat`. Ver [writeup](challenges/general-skills/medium/specialer/README.md).
 - **YaraRules0x100** (Medium, picoCTF 2025): análisis de malware — escribir una regla YARA que detecte un ejecutable (empaquetado con UPX) tanto en su forma empaquetada como desempaquetada, sin dar falsos positivos. La clave es usar el módulo `pe` de YARA para matchear por **imports sospechosos** (combo anti-debug "self-debugging": `DebugActiveProcess`, `IsDebuggerPresent`, `CreateToolhelp32Snapshot`, `AdjustTokenPrivileges`+`SeDebugPrivilege`, `CreateMutexW`) en vez de cadenas de texto sueltas (que desaparecen al empaquetar). Se probó localmente con `yara`/`pefile` antes de enviar la regla por `socat`. Ver [writeup](challenges/general-skills/medium/yararules0x100/README.md).
 - **Organización de carpetas:** `challenges/general-skills/` se separó en subcarpetas `easy/` y `medium/` (48 y 8 retos respectivamente) para que la estructura del repo refleje la dificultad de cada reto, a pedido explícito del usuario.
+- **Old Sessions** (Easy, picoCTF 2026): un endpoint de debug `/sessions` filtra literalmente todas las sesiones server-side almacenadas (Flask-Session), incluida una de `admin` que nunca expira (`_permanent: True`). Sustituyendo la cookie `session` propia por la de `admin` se accede a su cuenta. Ver [writeup](challenges/web-exploitation/easy/old_sessions/README.md).
+- **Crack the Gate 1** (Easy, picoMini by CMU-Africa): comentario HTML cifrado en ROT13 revela un backdoor de desarrollo (`X-Dev-Access: yes`) que bypasea la verificación de contraseña en el login. Ver [writeup](challenges/web-exploitation/easy/crack_the_gate_1/README.md).
+- **SSTI1** (Easy, picoCTF 2025): Server-Side Template Injection en Jinja2/Flask; RCE vía `self.__init__.__globals__.__builtins__.__import__("os").popen(...)` para leer el archivo de flag. Ver [writeup](challenges/web-exploitation/easy/ssti1/README.md).
+- **n0s4n1ty 1** (Easy, picoCTF 2025): subida de archivos sin restricción de tipo → webshell PHP → RCE como `www-data` → `sudo -l` revela `NOPASSWD: ALL` → escalada trivial a root. Ver [writeup](challenges/web-exploitation/easy/n0s4n1ty_1/README.md).
+- **Nota operativa:** `curl -F` con rutas de archivo absolutas dio error 26 ("Failed to open/read local data") en el entorno de esta sesión al subir archivos multipart; se resolvió usando la librería `requests` de Python en su lugar para las subidas de archivo.
