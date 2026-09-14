@@ -95,16 +95,16 @@ Los 24 retos de esta dificultad ya aparecían como "Solved by you" antes de reto
 | 6 | Cookie Monster Secret Recipe | ✅ resuelto | [challenges/web-exploitation/easy/cookie_monster_secret_recipe](challenges/web-exploitation/easy/cookie_monster_secret_recipe/README.md) |
 | 7 | WebDecode | ✅ resuelto | [challenges/web-exploitation/easy/webdecode](challenges/web-exploitation/easy/webdecode/README.md) |
 | 8 | Unminify | ✅ resuelto | [challenges/web-exploitation/easy/unminify](challenges/web-exploitation/easy/unminify/README.md) |
-| 9 | IntroToBurp | ⏳ pendiente de documentar | — |
-| 10 | Bookmarklet | ⏳ pendiente de documentar | — |
-| 11 | Local Authority | ⏳ pendiente de documentar | — |
-| 12 | Inspect HTML | ⏳ pendiente de documentar | — |
+| 9 | IntroToBurp | ✅ resuelto | [challenges/web-exploitation/easy/introtoburp](challenges/web-exploitation/easy/introtoburp/README.md) |
+| 10 | Bookmarklet | ✅ resuelto | [challenges/web-exploitation/easy/bookmarklet](challenges/web-exploitation/easy/bookmarklet/README.md) |
+| 11 | Local Authority | ✅ resuelto | [challenges/web-exploitation/easy/local_authority](challenges/web-exploitation/easy/local_authority/README.md) |
+| 12 | Inspect HTML | ✅ resuelto | [challenges/web-exploitation/easy/inspect_html](challenges/web-exploitation/easy/inspect_html/README.md) |
 | 13–24 | (página 2, sin revisar aún) | ⏳ pendiente de documentar | — |
 
 ## Fases del proyecto
 1. ✅ **General Skills — Easy**: 48/48 retos resueltos y documentados.
 2. ✅ **General Skills — Medium**: 8/8 retos resueltos y documentados (los que estaban pendientes de esta cuenta). Quedan sin documentar `Failure Failure`, `ABSOLUTE NANO`, `KSECRETS`, `bytemancy 3`, `bytemancy 2`, `useless`, `Special` (ya aparecían resueltos de antes; no se ha escrito su writeup).
-3. ⏳ **Web Exploitation — Easy**: 8/24 documentados (en curso, en bloques de 4).
+3. ⏳ **Web Exploitation — Easy**: 12/24 documentados — página 1 completa (en curso, en bloques de 4).
 4. ⏳ **Resto de categorías** (Cryptography, Reverse Engineering, Forensics, Binary Exploitation, Blockchain, Artificial Intelligence) — sin empezar.
 5. ⏳ **Contenedor Docker de práctica local** con la misma estructura.
 6. ⏳ **Mejorar la secuencia y el contenido de los retos con fines pedagógicos.**
@@ -126,3 +126,8 @@ Los 24 retos de esta dificultad ya aparecían como "Solved by you" antes de reto
 - **head-dump** (Easy, picoCTF 2025): la documentación Swagger (`/api-docs`) de una API Express revela un endpoint `/heapdump` que expone un volcado de memoria V8 completo; la flag aparece en texto plano dentro del dump. Ver [writeup](challenges/web-exploitation/easy/head_dump/README.md).
 - **Cookie Monster Secret Recipe** (Easy, picoCTF 2025): la flag viaja directamente, en Base64, en un header `Set-Cookie` que el servidor entrega en cualquier intento de login. Ver [writeup](challenges/web-exploitation/easy/cookie_monster_secret_recipe/README.md).
 - **WebDecode** (Easy, picoCTF 2024) y **Unminify** (Easy, picoCTF 2024): ambos esconden la flag en atributos HTML no estándar/decorativos (`notify_true="..."` en Base64; `class="picoCTF{...}"` entre docenas de `class="picoctf{}"` vacíos como señuelo) — conviene siempre revisar el HTML crudo servido (`curl`), no solo lo renderizado visualmente. Ver writeups: [WebDecode](challenges/web-exploitation/easy/webdecode/README.md), [Unminify](challenges/web-exploitation/easy/unminify/README.md).
+- **IntroToBurp** (Easy, picoCTF 2024): la fuerza bruta directa del OTP de 2FA no funcionó (posible invalidación de sesión en cada intento); la vulnerabilidad real es que el backend valida el OTP de forma distinta según el `Content-Type` del request — enviándolo como JSON (`Content-Type`/`Accept: application/json`) en vez de form-urlencoded, se bypasea la verificación por completo. Se consultaron writeups públicos para confirmar la técnica tras el intento fallido de fuerza bruta. Ver [writeup](challenges/web-exploitation/easy/introtoburp/README.md).
+- **Bookmarklet** (Easy, picoCTF 2024): la flag va cifrada (resta de códigos de carácter módulo 256, clave repetida) dentro del propio bookmarklet JS mostrado en la página; ojo con `requests` de Python adivinando mal la codificación de caracteres si el servidor no declara charset — hay que forzar `r.encoding = "utf-8"`. Ver [writeup](challenges/web-exploitation/easy/bookmarklet/README.md).
+- **Local Authority** (Easy, picoCTF 2022): autenticación completamente delegada al cliente vía un archivo `secure.js` público que contiene las credenciales en texto plano — el servidor calcula y entrega el hash de admin sin importar si el JS del cliente lo usó o no. Ver [writeup](challenges/web-exploitation/easy/local_authority/README.md).
+- **Inspect HTML** (Easy, picoCTF 2022): flag directamente en un comentario `<!-- -->` al final del HTML. Ver [writeup](challenges/web-exploitation/easy/inspect_html/README.md).
+- **Página 1 de Web Exploitation — Easy completa** (12/12 retos visibles con el filtro por defecto). Queda por revisar la página 2 (12 retos restantes) en el próximo bloque.
