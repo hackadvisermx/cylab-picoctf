@@ -118,10 +118,10 @@ Con el filtro "Hide Solved" activado, la cuenta tenía **16 retos sin resolver**
 | 2 | SSTI2 | ✅ resuelto | [challenges/web-exploitation/medium/ssti2](challenges/web-exploitation/medium/ssti2/README.md) |
 | 3 | 3v@l | ✅ resuelto | [challenges/web-exploitation/medium/3val](challenges/web-exploitation/medium/3val/README.md) |
 | 4 | WebSockFish | ✅ resuelto | [challenges/web-exploitation/medium/websockfish](challenges/web-exploitation/medium/websockfish/README.md) |
-| 5 | Apriti sesamo | ⏳ pendiente | — |
-| 6 | No Sql Injection | ⏳ pendiente | — |
-| 7 | Forbidden Paths | ⏳ pendiente | — |
-| 8 | JAuth | ⏳ pendiente | — |
+| 5 | Apriti sesamo | ✅ resuelto | [challenges/web-exploitation/medium/apriti_sesamo](challenges/web-exploitation/medium/apriti_sesamo/README.md) |
+| 6 | No Sql Injection | ✅ resuelto | [challenges/web-exploitation/medium/no_sql_injection](challenges/web-exploitation/medium/no_sql_injection/README.md) |
+| 7 | Forbidden Paths | ✅ resuelto | [challenges/web-exploitation/medium/forbidden_paths](challenges/web-exploitation/medium/forbidden_paths/README.md) |
+| 8 | JAuth | ✅ resuelto | [challenges/web-exploitation/medium/jauth](challenges/web-exploitation/medium/jauth/README.md) |
 | 9 | caas | ⏳ pendiente | — |
 | 10 | login | ⏳ pendiente | — |
 | 11 | Super Serial | ⏳ pendiente | — |
@@ -135,7 +135,7 @@ Con el filtro "Hide Solved" activado, la cuenta tenía **16 retos sin resolver**
 1. ✅ **General Skills — Easy**: 48/48 retos resueltos y documentados.
 2. ✅ **General Skills — Medium**: 8/8 retos resueltos y documentados (los que estaban pendientes de esta cuenta). Quedan sin documentar `Failure Failure`, `ABSOLUTE NANO`, `KSECRETS`, `bytemancy 3`, `bytemancy 2`, `useless`, `Special` (ya aparecían resueltos de antes; no se ha escrito su writeup).
 3. ✅ **Web Exploitation — Easy**: 20/20 resueltos y documentados.
-4. ⏳ **Web Exploitation — Medium**: 4/16 resueltos y documentados (bloque 1 de 4).
+4. ⏳ **Web Exploitation — Medium**: 8/16 resueltos y documentados (bloques 1 y 2 de 4).
 5. ⏳ **Resto de categorías** (Web Exploitation Hard, Cryptography, Reverse Engineering, Forensics, Binary Exploitation, Blockchain, Artificial Intelligence) — sin empezar.
 6. ⏳ **Contenedor Docker de práctica local** con la misma estructura.
 7. ⏳ **Mejorar la secuencia y el contenido de los retos con fines pedagógicos.**
@@ -175,4 +175,8 @@ Con el filtro "Hide Solved" activado, la cuenta tenía **16 retos sin resolver**
 - **SSTI2** (Medium, picoCTF 2025): SSTI en Jinja2 con un filtro que elimina todo carácter `_` y `.` de la entrada cruda antes de renderizar, más un bloqueo de patrones tipo `'a'[0]`/`(x)[1]` (indexado justo tras comilla/paréntesis). Bypass: reconstruir cualquier dunder (`__class__`, `__mro__`, `__subclasses__`, etc.) generando el guion bajo en tiempo de render con `'%c'%(95)` y concatenando con `~`; sustituir todo indexado `[n]` por filtros `|last`/`|selectattr(...)|list|first` (que no usan corchetes tras un cierre). Ver [writeup](challenges/web-exploitation/medium/ssti2/README.md).
 - **3v@l** (Medium, picoCTF 2025): calculadora de préstamos con `eval()` de Python y un blacklist de palabras (`os`, `eval`, `exec`, `cat`, etc.) y caracteres (`/`, `.`+extensión, hex/unicode/URL-escapes) — documentado sin querer por el propio reto en un comentario HTML "TODO". Bypass: partir las palabras prohibidas con concatenación de strings (`'o'+'s'`) y generar `/` y `.` en tiempo de ejecución con `chr(47)`/`chr(46)` en vez de escribirlos literalmente. Ver [writeup](challenges/web-exploitation/medium/3val/README.md).
 - **WebSockFish** (Medium, picoCTF 2025): un ajedrez contra Stockfish que corre **enteramente en el cliente** (chess.js + Web Worker); el navegador le informa al servidor su propia evaluación de la posición por WebSocket (`"eval N"` / `"mate N"`) sin que el servidor verifique nada de la partida real. Bastó con conectarse al WebSocket sin jugar y enviar `"eval -1000000000"` para que el servidor "se rindiera" y diera la flag. Los mensajes `"mate -N"` no lo lograron; hubo que consultar writeups públicos (a pedido del usuario, tras quedar atascado) para confirmar que la clave estaba en el mensaje `"eval"`. Ver [writeup](challenges/web-exploitation/medium/websockfish/README.md).
-- **Web Exploitation — Medium: bloque 1/4 completo (4/16).** Continúa en la próxima sesión con Apriti sesamo, No Sql Injection, Forbidden Paths y JAuth.
+- **Apriti sesamo** (Medium, picoCTF 2025): login PHP "imposible de hackear" vulnerable a **type juggling** — enviando `username[]`/`pwd[]` como arrays, `sha1()` falla silenciosamente (solo warning) y devuelve `NULL` en ambos lados de la comparación, bypaseando el login sin credenciales. Ver [writeup](challenges/web-exploitation/medium/apriti_sesamo/README.md).
+- **No Sql Injection** (Medium, picoCTF 2024): backend Node/Express/Mongoose que hace `JSON.parse` de los campos `email`/`password` si empiezan y terminan con `{`/`}` — permite inyectar operadores MongoDB (`{"$ne":null}`) para bypasear el login sin credenciales. Ver [writeup](challenges/web-exploitation/medium/no_sql_injection/README.md).
+- **Forbidden Paths** (Medium, picoCTF 2022): un "Web eReader" bloquea rutas absolutas (`/flag.txt`) pero no filtra path traversal relativo (`../../../../flag.txt`), que sí llega al archivo objetivo. Ver [writeup](challenges/web-exploitation/medium/forbidden_paths/README.md).
+- **JAuth** (Medium, picoCTF 2021): JWT con ataque clásico **`alg: none`** — reconstruir el token cambiando el header a `alg:none`, `role` a `admin` en el payload y dejar la firma vacía, sin necesidad de conocer ningún secreto. Ver [writeup](challenges/web-exploitation/medium/jauth/README.md).
+- **Web Exploitation — Medium: bloques 1 y 2 de 4 completos (8/16).** Continúa en la próxima sesión con caas, login, Super Serial y Web Gauntlet 2.
