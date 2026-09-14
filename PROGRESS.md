@@ -91,10 +91,10 @@ Los 24 retos de esta dificultad ya aparecían como "Solved by you" antes de reto
 | 2 | Crack the Gate 1 | ✅ resuelto | [challenges/web-exploitation/easy/crack_the_gate_1](challenges/web-exploitation/easy/crack_the_gate_1/README.md) |
 | 3 | SSTI1 | ✅ resuelto | [challenges/web-exploitation/easy/ssti1](challenges/web-exploitation/easy/ssti1/README.md) |
 | 4 | n0s4n1ty 1 | ✅ resuelto | [challenges/web-exploitation/easy/n0s4n1ty_1](challenges/web-exploitation/easy/n0s4n1ty_1/README.md) |
-| 5 | head-dump | ⏳ pendiente de documentar | — |
-| 6 | Cookie Monster Secret Recipe | ⏳ pendiente de documentar | — |
-| 7 | WebDecode | ⏳ pendiente de documentar | — |
-| 8 | Unminify | ⏳ pendiente de documentar | — |
+| 5 | head-dump | ✅ resuelto | [challenges/web-exploitation/easy/head_dump](challenges/web-exploitation/easy/head_dump/README.md) |
+| 6 | Cookie Monster Secret Recipe | ✅ resuelto | [challenges/web-exploitation/easy/cookie_monster_secret_recipe](challenges/web-exploitation/easy/cookie_monster_secret_recipe/README.md) |
+| 7 | WebDecode | ✅ resuelto | [challenges/web-exploitation/easy/webdecode](challenges/web-exploitation/easy/webdecode/README.md) |
+| 8 | Unminify | ✅ resuelto | [challenges/web-exploitation/easy/unminify](challenges/web-exploitation/easy/unminify/README.md) |
 | 9 | IntroToBurp | ⏳ pendiente de documentar | — |
 | 10 | Bookmarklet | ⏳ pendiente de documentar | — |
 | 11 | Local Authority | ⏳ pendiente de documentar | — |
@@ -104,7 +104,7 @@ Los 24 retos de esta dificultad ya aparecían como "Solved by you" antes de reto
 ## Fases del proyecto
 1. ✅ **General Skills — Easy**: 48/48 retos resueltos y documentados.
 2. ✅ **General Skills — Medium**: 8/8 retos resueltos y documentados (los que estaban pendientes de esta cuenta). Quedan sin documentar `Failure Failure`, `ABSOLUTE NANO`, `KSECRETS`, `bytemancy 3`, `bytemancy 2`, `useless`, `Special` (ya aparecían resueltos de antes; no se ha escrito su writeup).
-3. ⏳ **Web Exploitation — Easy**: 4/24 documentados (en curso, en bloques de 4).
+3. ⏳ **Web Exploitation — Easy**: 8/24 documentados (en curso, en bloques de 4).
 4. ⏳ **Resto de categorías** (Cryptography, Reverse Engineering, Forensics, Binary Exploitation, Blockchain, Artificial Intelligence) — sin empezar.
 4. ⏳ **Notas de arquitectura de la plataforma** (`notes/host-characteristics.md`) — en curso, se completa a medida que se observan patrones de infraestructura (instancias efímeras, formato de flag, etc.)
 5. ⏳ **Entorno de práctica local** replicando los retos más representativos — futuro
@@ -124,3 +124,6 @@ Los 24 retos de esta dificultad ya aparecían como "Solved by you" antes de reto
 - **SSTI1** (Easy, picoCTF 2025): Server-Side Template Injection en Jinja2/Flask; RCE vía `self.__init__.__globals__.__builtins__.__import__("os").popen(...)` para leer el archivo de flag. Ver [writeup](challenges/web-exploitation/easy/ssti1/README.md).
 - **n0s4n1ty 1** (Easy, picoCTF 2025): subida de archivos sin restricción de tipo → webshell PHP → RCE como `www-data` → `sudo -l` revela `NOPASSWD: ALL` → escalada trivial a root. Ver [writeup](challenges/web-exploitation/easy/n0s4n1ty_1/README.md).
 - **Nota operativa:** `curl -F` con rutas de archivo absolutas dio error 26 ("Failed to open/read local data") en el entorno de esta sesión al subir archivos multipart; se resolvió usando la librería `requests` de Python en su lugar para las subidas de archivo.
+- **head-dump** (Easy, picoCTF 2025): la documentación Swagger (`/api-docs`) de una API Express revela un endpoint `/heapdump` que expone un volcado de memoria V8 completo; la flag aparece en texto plano dentro del dump. Ver [writeup](challenges/web-exploitation/easy/head_dump/README.md).
+- **Cookie Monster Secret Recipe** (Easy, picoCTF 2025): la flag viaja directamente, en Base64, en un header `Set-Cookie` que el servidor entrega en cualquier intento de login. Ver [writeup](challenges/web-exploitation/easy/cookie_monster_secret_recipe/README.md).
+- **WebDecode** (Easy, picoCTF 2024) y **Unminify** (Easy, picoCTF 2024): ambos esconden la flag en atributos HTML no estándar/decorativos (`notify_true="..."` en Base64; `class="picoCTF{...}"` entre docenas de `class="picoctf{}"` vacíos como señuelo) — conviene siempre revisar el HTML crudo servido (`curl`), no solo lo renderizado visualmente. Ver writeups: [WebDecode](challenges/web-exploitation/easy/webdecode/README.md), [Unminify](challenges/web-exploitation/easy/unminify/README.md).
