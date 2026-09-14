@@ -108,13 +108,37 @@ Todos estos retos ya aparecían como "Solved by you" en la cuenta antes de esta 
 | 19 | Insp3ct0r | ✅ resuelto | [challenges/web-exploitation/easy/insp3ct0r](challenges/web-exploitation/easy/insp3ct0r/README.md) |
 | 20 | where are the robots | ✅ resuelto | [challenges/web-exploitation/easy/where_are_the_robots](challenges/web-exploitation/easy/where_are_the_robots/README.md) |
 
+## Tabla de retos — Web Exploitation, Medium (orden de aparición en la plataforma)
+
+Con el filtro "Hide Solved" activado, la cuenta tenía **16 retos sin resolver** en esta categoría/dificultad (el resto ya aparecía "Solved by you" de sesiones previas sin writeup). Se documentan en bloques de 4.
+
+| # | Reto | Estado | Writeup |
+|---|------|--------|---------|
+| 1 | Pachinko | ✅ resuelto | [challenges/web-exploitation/medium/pachinko](challenges/web-exploitation/medium/pachinko/README.md) |
+| 2 | SSTI2 | ✅ resuelto | [challenges/web-exploitation/medium/ssti2](challenges/web-exploitation/medium/ssti2/README.md) |
+| 3 | 3v@l | ✅ resuelto | [challenges/web-exploitation/medium/3val](challenges/web-exploitation/medium/3val/README.md) |
+| 4 | WebSockFish | ✅ resuelto | [challenges/web-exploitation/medium/websockfish](challenges/web-exploitation/medium/websockfish/README.md) |
+| 5 | Apriti sesamo | ⏳ pendiente | — |
+| 6 | No Sql Injection | ⏳ pendiente | — |
+| 7 | Forbidden Paths | ⏳ pendiente | — |
+| 8 | JAuth | ⏳ pendiente | — |
+| 9 | caas | ⏳ pendiente | — |
+| 10 | login | ⏳ pendiente | — |
+| 11 | Super Serial | ⏳ pendiente | — |
+| 12 | Web Gauntlet 2 | ⏳ pendiente | — |
+| 13 | Some Assembly Required 2 | ⏳ pendiente | — |
+| 14 | Web Gauntlet 3 | ⏳ pendiente | — |
+| 15 | More Cookies | ⏳ pendiente | — |
+| 16 | Web Gauntlet | ⏳ pendiente | — |
+
 ## Fases del proyecto
 1. ✅ **General Skills — Easy**: 48/48 retos resueltos y documentados.
 2. ✅ **General Skills — Medium**: 8/8 retos resueltos y documentados (los que estaban pendientes de esta cuenta). Quedan sin documentar `Failure Failure`, `ABSOLUTE NANO`, `KSECRETS`, `bytemancy 3`, `bytemancy 2`, `useless`, `Special` (ya aparecían resueltos de antes; no se ha escrito su writeup).
 3. ✅ **Web Exploitation — Easy**: 20/20 resueltos y documentados.
-4. ⏳ **Resto de categorías** (Web Exploitation Medium/Hard, Cryptography, Reverse Engineering, Forensics, Binary Exploitation, Blockchain, Artificial Intelligence) — sin empezar.
-5. ⏳ **Contenedor Docker de práctica local** con la misma estructura.
-6. ⏳ **Mejorar la secuencia y el contenido de los retos con fines pedagógicos.**
+4. ⏳ **Web Exploitation — Medium**: 4/16 resueltos y documentados (bloque 1 de 4).
+5. ⏳ **Resto de categorías** (Web Exploitation Hard, Cryptography, Reverse Engineering, Forensics, Binary Exploitation, Blockchain, Artificial Intelligence) — sin empezar.
+6. ⏳ **Contenedor Docker de práctica local** con la misma estructura.
+7. ⏳ **Mejorar la secuencia y el contenido de los retos con fines pedagógicos.**
 
 ## Notas de progreso
 - **Buscar retos pendientes:** activar el toggle "Hide Solved" en el filtro de la Challenge Library — esta cuenta arrastra progreso previo en varias categorías, así que conviene revisar ese filtro antes de elegir qué resolver en cada categoría/dificultad, para no repetir trabajo.
@@ -147,3 +171,8 @@ Todos estos retos ya aparecían como "Solved by you" en la cuenta antes de esta 
 - **Insp3ct0r** (Easy, picoCTF 2019): flag en 3 fragmentos (HTML/CSS/JS), mismo patrón que *Scavenger Hunt*. Un error de transcripción manual (leer `d3` como `de`) hizo fallar el primer intento — lección: copiar los fragmentos literalmente desde la terminal, no transcribirlos a mano. Ver [writeup](challenges/web-exploitation/easy/insp3ct0r/README.md).
 - **where are the robots** (Easy, picoCTF 2019): `robots.txt` no protege nada, solo le pide a los buscadores no indexar una ruta — la ruta en sí sigue siendo accesible y contiene la flag. Ver [writeup](challenges/web-exploitation/easy/where_are_the_robots/README.md).
 - **Web Exploitation — Easy: 20/20 completo.** Categoría cerrada al 100%.
+- **Pachinko** (Medium, picoCTF 2025): un "NAND Simulator" visual pide invertir 4 bits de entrada, pero basta con leer el JS para ver que el circuito se envía como JSON a `POST /check` — se resuelve directo con `curl`, sin tocar la UI, conectando cada salida a su propia entrada (`NAND(x,x) = NOT x`). Solo entrega la primera de dos flags del reto (la segunda vive en "Pachinko Revisited", sin resolver). Ver [writeup](challenges/web-exploitation/medium/pachinko/README.md).
+- **SSTI2** (Medium, picoCTF 2025): SSTI en Jinja2 con un filtro que elimina todo carácter `_` y `.` de la entrada cruda antes de renderizar, más un bloqueo de patrones tipo `'a'[0]`/`(x)[1]` (indexado justo tras comilla/paréntesis). Bypass: reconstruir cualquier dunder (`__class__`, `__mro__`, `__subclasses__`, etc.) generando el guion bajo en tiempo de render con `'%c'%(95)` y concatenando con `~`; sustituir todo indexado `[n]` por filtros `|last`/`|selectattr(...)|list|first` (que no usan corchetes tras un cierre). Ver [writeup](challenges/web-exploitation/medium/ssti2/README.md).
+- **3v@l** (Medium, picoCTF 2025): calculadora de préstamos con `eval()` de Python y un blacklist de palabras (`os`, `eval`, `exec`, `cat`, etc.) y caracteres (`/`, `.`+extensión, hex/unicode/URL-escapes) — documentado sin querer por el propio reto en un comentario HTML "TODO". Bypass: partir las palabras prohibidas con concatenación de strings (`'o'+'s'`) y generar `/` y `.` en tiempo de ejecución con `chr(47)`/`chr(46)` en vez de escribirlos literalmente. Ver [writeup](challenges/web-exploitation/medium/3val/README.md).
+- **WebSockFish** (Medium, picoCTF 2025): un ajedrez contra Stockfish que corre **enteramente en el cliente** (chess.js + Web Worker); el navegador le informa al servidor su propia evaluación de la posición por WebSocket (`"eval N"` / `"mate N"`) sin que el servidor verifique nada de la partida real. Bastó con conectarse al WebSocket sin jugar y enviar `"eval -1000000000"` para que el servidor "se rindiera" y diera la flag. Los mensajes `"mate -N"` no lo lograron; hubo que consultar writeups públicos (a pedido del usuario, tras quedar atascado) para confirmar que la clave estaba en el mensaje `"eval"`. Ver [writeup](challenges/web-exploitation/medium/websockfish/README.md).
+- **Web Exploitation — Medium: bloque 1/4 completo (4/16).** Continúa en la próxima sesión con Apriti sesamo, No Sql Injection, Forbidden Paths y JAuth.
