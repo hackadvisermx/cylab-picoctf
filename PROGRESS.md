@@ -83,7 +83,7 @@ Todos estos retos ya aparecían como "Solved by you" en la cuenta antes de esta 
 
 ## Tabla de retos — Web Exploitation, Easy (orden de aparición en la plataforma)
 
-Los 24 retos de esta dificultad ya aparecían como "Solved by you" antes de retomar esta categoría (progreso de una sesión anterior). Se documentan aquí en bloques de 4, en el mismo orden en que aparecen en el Challenge Library.
+Los 20 retos de esta dificultad ya aparecían como "Solved by you" antes de retomar esta categoría (progreso de una sesión anterior; el conteo real es 20, no 24 como se estimó inicialmente). Se documentan aquí en bloques de 4, en el mismo orden en que aparecen en el Challenge Library.
 
 | # | Reto | Estado | Writeup |
 |---|------|--------|---------|
@@ -99,12 +99,19 @@ Los 24 retos de esta dificultad ya aparecían como "Solved by you" antes de reto
 | 10 | Bookmarklet | ✅ resuelto | [challenges/web-exploitation/easy/bookmarklet](challenges/web-exploitation/easy/bookmarklet/README.md) |
 | 11 | Local Authority | ✅ resuelto | [challenges/web-exploitation/easy/local_authority](challenges/web-exploitation/easy/local_authority/README.md) |
 | 12 | Inspect HTML | ✅ resuelto | [challenges/web-exploitation/easy/inspect_html](challenges/web-exploitation/easy/inspect_html/README.md) |
-| 13–24 | (página 2, sin revisar aún) | ⏳ pendiente de documentar | — |
+| 13 | Includes | ✅ resuelto | [challenges/web-exploitation/easy/includes](challenges/web-exploitation/easy/includes/README.md) |
+| 14 | Cookies | ✅ resuelto | [challenges/web-exploitation/easy/cookies](challenges/web-exploitation/easy/cookies/README.md) |
+| 15 | Scavenger Hunt | ✅ resuelto | [challenges/web-exploitation/easy/scavenger_hunt](challenges/web-exploitation/easy/scavenger_hunt/README.md) |
+| 16 | GET aHEAD | ✅ resuelto | [challenges/web-exploitation/easy/get_ahead](challenges/web-exploitation/easy/get_ahead/README.md) |
+| 17 | dont-use-client-side | ⏳ pendiente de documentar | — |
+| 18 | logon | ⏳ pendiente de documentar | — |
+| 19 | Insp3ct0r | ⏳ pendiente de documentar | — |
+| 20 | where are the robots | ⏳ pendiente de documentar | — |
 
 ## Fases del proyecto
 1. ✅ **General Skills — Easy**: 48/48 retos resueltos y documentados.
 2. ✅ **General Skills — Medium**: 8/8 retos resueltos y documentados (los que estaban pendientes de esta cuenta). Quedan sin documentar `Failure Failure`, `ABSOLUTE NANO`, `KSECRETS`, `bytemancy 3`, `bytemancy 2`, `useless`, `Special` (ya aparecían resueltos de antes; no se ha escrito su writeup).
-3. ⏳ **Web Exploitation — Easy**: 12/24 documentados — página 1 completa (en curso, en bloques de 4).
+3. ⏳ **Web Exploitation — Easy**: 16/20 documentados (en curso, en bloques de 4; quedan 4 retos de la página 2).
 4. ⏳ **Resto de categorías** (Cryptography, Reverse Engineering, Forensics, Binary Exploitation, Blockchain, Artificial Intelligence) — sin empezar.
 5. ⏳ **Contenedor Docker de práctica local** con la misma estructura.
 6. ⏳ **Mejorar la secuencia y el contenido de los retos con fines pedagógicos.**
@@ -130,4 +137,8 @@ Los 24 retos de esta dificultad ya aparecían como "Solved by you" antes de reto
 - **Bookmarklet** (Easy, picoCTF 2024): la flag va cifrada (resta de códigos de carácter módulo 256, clave repetida) dentro del propio bookmarklet JS mostrado en la página; ojo con `requests` de Python adivinando mal la codificación de caracteres si el servidor no declara charset — hay que forzar `r.encoding = "utf-8"`. Ver [writeup](challenges/web-exploitation/easy/bookmarklet/README.md).
 - **Local Authority** (Easy, picoCTF 2022): autenticación completamente delegada al cliente vía un archivo `secure.js` público que contiene las credenciales en texto plano — el servidor calcula y entrega el hash de admin sin importar si el JS del cliente lo usó o no. Ver [writeup](challenges/web-exploitation/easy/local_authority/README.md).
 - **Inspect HTML** (Easy, picoCTF 2022): flag directamente en un comentario `<!-- -->` al final del HTML. Ver [writeup](challenges/web-exploitation/easy/inspect_html/README.md).
-- **Página 1 de Web Exploitation — Easy completa** (12/12 retos visibles con el filtro por defecto). Queda por revisar la página 2 (12 retos restantes) en el próximo bloque.
+- **Página 1 de Web Exploitation — Easy completa** (12/12 retos visibles con el filtro por defecto). El total real de la categoría/dificultad es 20 (no 24 como se estimó al empezar), 8 en la página 2.
+- **Includes** (Easy, picoCTF 2022): flag partida en dos mitades, cada una en un comentario dentro de un archivo incluido (`style.css` y `script.js`) — hay que revisar todos los recursos enlazados, no solo el HTML. Ver [writeup](challenges/web-exploitation/easy/includes/README.md).
+- **Cookies** (Easy, picoCTF 2021): la cookie `name` es un índice entero no verificado (IDOR) — se enumeró manualmente (0 a 30) hasta dar con el índice 18, que devuelve la flag. Ver [writeup](challenges/web-exploitation/easy/cookies/README.md).
+- **Scavenger Hunt** (Easy, picoCTF 2021): flag en 5 fragmentos repartidos en HTML, CSS, `robots.txt`, `.htaccess` y `.DS_Store`, cada archivo con una pista textual hacia el siguiente. Ver [writeup](challenges/web-exploitation/easy/scavenger_hunt/README.md).
+- **GET aHEAD** (Easy, picoCTF 2021): la flag viaja en un header de respuesta HTTP personalizado, visible solo con `curl -I` (petición `HEAD`). Ver [writeup](challenges/web-exploitation/easy/get_ahead/README.md).

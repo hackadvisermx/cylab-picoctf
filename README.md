@@ -12,7 +12,7 @@ A diferencia de wargames con progresión estrictamente secuencial (Bandit, Natas
 |---|---|---|
 | General Skills | Easy | ✅ 48/48 resueltos y documentados |
 | General Skills | Medium | ✅ 8/8 resueltos y documentados (los que estaban pendientes en esta cuenta) |
-| Web Exploitation | Easy | ⏳ 8/24 documentados (en curso, en bloques de 4) |
+| Web Exploitation | Easy | ⏳ 16/20 documentados (en curso, en bloques de 4) |
 | Cryptography | — | ⏳ sin empezar |
 | Reverse Engineering | — | ⏳ sin empezar |
 | Forensics | — | ⏳ sin empezar |
@@ -30,10 +30,13 @@ El detalle reto por reto, en el orden en que aparecen en la plataforma, está en
 └── challenges/
     ├── _template/
     │   └── README.md               # Plantilla base para cada writeup nuevo
-    └── general-skills/
-        ├── easy/                   # 48 writeups (uno por reto, en su propia carpeta)
-        │   └── <slug>/README.md
-        └── medium/                 # 8 writeups
+    ├── general-skills/
+    │   ├── easy/                   # 48 writeups (uno por reto, en su propia carpeta)
+    │   │   └── <slug>/README.md
+    │   └── medium/                 # 8 writeups
+    │       └── <slug>/README.md
+    └── web-exploitation/
+        └── easy/                   # 16/20 writeups (en curso)
             └── <slug>/README.md
 ```
 
