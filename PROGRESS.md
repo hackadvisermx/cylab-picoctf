@@ -83,7 +83,7 @@ Todos estos retos ya aparecían como "Solved by you" en la cuenta antes de esta 
 
 ## Tabla de retos — Web Exploitation, Easy (orden de aparición en la plataforma)
 
-Los 20 retos de esta dificultad ya aparecían como "Solved by you" antes de retomar esta categoría (progreso de una sesión anterior; el conteo real es 20, no 24 como se estimó inicialmente). Se documentan aquí en bloques de 4, en el mismo orden en que aparecen en el Challenge Library.
+**✅ Los 20 retos de Web Exploitation - Easy están resueltos y documentados (100%).** Ya aparecían como "Solved by you" antes de retomar esta categoría (progreso de una sesión anterior; el conteo real es 20, no 24 como se estimó inicialmente). Se documentaron en bloques de 4, en el mismo orden en que aparecen en el Challenge Library.
 
 | # | Reto | Estado | Writeup |
 |---|------|--------|---------|
@@ -103,16 +103,16 @@ Los 20 retos de esta dificultad ya aparecían como "Solved by you" antes de reto
 | 14 | Cookies | ✅ resuelto | [challenges/web-exploitation/easy/cookies](challenges/web-exploitation/easy/cookies/README.md) |
 | 15 | Scavenger Hunt | ✅ resuelto | [challenges/web-exploitation/easy/scavenger_hunt](challenges/web-exploitation/easy/scavenger_hunt/README.md) |
 | 16 | GET aHEAD | ✅ resuelto | [challenges/web-exploitation/easy/get_ahead](challenges/web-exploitation/easy/get_ahead/README.md) |
-| 17 | dont-use-client-side | ⏳ pendiente de documentar | — |
-| 18 | logon | ⏳ pendiente de documentar | — |
-| 19 | Insp3ct0r | ⏳ pendiente de documentar | — |
-| 20 | where are the robots | ⏳ pendiente de documentar | — |
+| 17 | dont-use-client-side | ✅ resuelto | [challenges/web-exploitation/easy/dont_use_client_side](challenges/web-exploitation/easy/dont_use_client_side/README.md) |
+| 18 | logon | ✅ resuelto | [challenges/web-exploitation/easy/logon](challenges/web-exploitation/easy/logon/README.md) |
+| 19 | Insp3ct0r | ✅ resuelto | [challenges/web-exploitation/easy/insp3ct0r](challenges/web-exploitation/easy/insp3ct0r/README.md) |
+| 20 | where are the robots | ✅ resuelto | [challenges/web-exploitation/easy/where_are_the_robots](challenges/web-exploitation/easy/where_are_the_robots/README.md) |
 
 ## Fases del proyecto
 1. ✅ **General Skills — Easy**: 48/48 retos resueltos y documentados.
 2. ✅ **General Skills — Medium**: 8/8 retos resueltos y documentados (los que estaban pendientes de esta cuenta). Quedan sin documentar `Failure Failure`, `ABSOLUTE NANO`, `KSECRETS`, `bytemancy 3`, `bytemancy 2`, `useless`, `Special` (ya aparecían resueltos de antes; no se ha escrito su writeup).
-3. ⏳ **Web Exploitation — Easy**: 16/20 documentados (en curso, en bloques de 4; quedan 4 retos de la página 2).
-4. ⏳ **Resto de categorías** (Cryptography, Reverse Engineering, Forensics, Binary Exploitation, Blockchain, Artificial Intelligence) — sin empezar.
+3. ✅ **Web Exploitation — Easy**: 20/20 resueltos y documentados.
+4. ⏳ **Resto de categorías** (Web Exploitation Medium/Hard, Cryptography, Reverse Engineering, Forensics, Binary Exploitation, Blockchain, Artificial Intelligence) — sin empezar.
 5. ⏳ **Contenedor Docker de práctica local** con la misma estructura.
 6. ⏳ **Mejorar la secuencia y el contenido de los retos con fines pedagógicos.**
 
@@ -142,3 +142,8 @@ Los 20 retos de esta dificultad ya aparecían como "Solved by you" antes de reto
 - **Cookies** (Easy, picoCTF 2021): la cookie `name` es un índice entero no verificado (IDOR) — se enumeró manualmente (0 a 30) hasta dar con el índice 18, que devuelve la flag. Ver [writeup](challenges/web-exploitation/easy/cookies/README.md).
 - **Scavenger Hunt** (Easy, picoCTF 2021): flag en 5 fragmentos repartidos en HTML, CSS, `robots.txt`, `.htaccess` y `.DS_Store`, cada archivo con una pista textual hacia el siguiente. Ver [writeup](challenges/web-exploitation/easy/scavenger_hunt/README.md).
 - **GET aHEAD** (Easy, picoCTF 2021): la flag viaja en un header de respuesta HTTP personalizado, visible solo con `curl -I` (petición `HEAD`). Ver [writeup](challenges/web-exploitation/easy/get_ahead/README.md).
+- **dont-use-client-side** (Easy, picoCTF 2019): verificación de contraseña hecha enteramente en JS del cliente, comparando fragmentos fijos de 4 caracteres — la flag se reconstruye leyendo el propio código fuente, sin ejecutar nada. Ver [writeup](challenges/web-exploitation/easy/dont_use_client_side/README.md).
+- **logon** (Easy, picoCTF 2019): doble falla — SQL injection para bypasear el login, y una cookie `admin=False/True` sin firmar que controla el acceso a `/flag`; basta con cambiarla a `True` manualmente. Ver [writeup](challenges/web-exploitation/easy/logon/README.md).
+- **Insp3ct0r** (Easy, picoCTF 2019): flag en 3 fragmentos (HTML/CSS/JS), mismo patrón que *Scavenger Hunt*. Un error de transcripción manual (leer `d3` como `de`) hizo fallar el primer intento — lección: copiar los fragmentos literalmente desde la terminal, no transcribirlos a mano. Ver [writeup](challenges/web-exploitation/easy/insp3ct0r/README.md).
+- **where are the robots** (Easy, picoCTF 2019): `robots.txt` no protege nada, solo le pide a los buscadores no indexar una ruta — la ruta en sí sigue siendo accesible y contiene la flag. Ver [writeup](challenges/web-exploitation/easy/where_are_the_robots/README.md).
+- **Web Exploitation — Easy: 20/20 completo.** Categoría cerrada al 100%.
