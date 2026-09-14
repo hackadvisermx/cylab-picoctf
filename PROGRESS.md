@@ -85,6 +85,8 @@ Todos estos retos ya aparecían como "Solved by you" en la cuenta antes de esta 
 
 **✅ Los 20 retos de Web Exploitation - Easy están resueltos y documentados (100%).** Ya aparecían como "Solved by you" antes de retomar esta categoría (progreso de una sesión anterior; el conteo real es 20, no 24 como se estimó inicialmente). Se documentaron en bloques de 4, en el mismo orden en que aparecen en el Challenge Library.
 
+**✅ Los 16 retos sin resolver de Web Exploitation - Medium están ahora resueltos y documentados (100% de lo pendiente en esta cuenta).**
+
 | # | Reto | Estado | Writeup |
 |---|------|--------|---------|
 | 1 | Old Sessions | ✅ resuelto | [challenges/web-exploitation/easy/old_sessions](challenges/web-exploitation/easy/old_sessions/README.md) |
@@ -126,16 +128,16 @@ Con el filtro "Hide Solved" activado, la cuenta tenía **16 retos sin resolver**
 | 10 | login | ✅ resuelto | [challenges/web-exploitation/medium/login](challenges/web-exploitation/medium/login/README.md) |
 | 11 | Super Serial | ✅ resuelto | [challenges/web-exploitation/medium/super_serial](challenges/web-exploitation/medium/super_serial/README.md) |
 | 12 | Web Gauntlet 2 | ✅ resuelto | [challenges/web-exploitation/medium/web_gauntlet_2](challenges/web-exploitation/medium/web_gauntlet_2/README.md) |
-| 13 | Some Assembly Required 2 | ⏳ pendiente | — |
-| 14 | Web Gauntlet 3 | ⏳ pendiente | — |
-| 15 | More Cookies | ⏳ pendiente | — |
-| 16 | Web Gauntlet | ⏳ pendiente | — |
+| 13 | Some Assembly Required 2 | ✅ resuelto | [challenges/web-exploitation/medium/some_assembly_required_2](challenges/web-exploitation/medium/some_assembly_required_2/README.md) |
+| 14 | Web Gauntlet 3 | ✅ resuelto | [challenges/web-exploitation/medium/web_gauntlet_3](challenges/web-exploitation/medium/web_gauntlet_3/README.md) |
+| 15 | More Cookies | ✅ resuelto | [challenges/web-exploitation/medium/more_cookies](challenges/web-exploitation/medium/more_cookies/README.md) |
+| 16 | Web Gauntlet | ✅ resuelto | [challenges/web-exploitation/medium/web_gauntlet](challenges/web-exploitation/medium/web_gauntlet/README.md) |
 
 ## Fases del proyecto
 1. ✅ **General Skills — Easy**: 48/48 retos resueltos y documentados.
 2. ✅ **General Skills — Medium**: 8/8 retos resueltos y documentados (los que estaban pendientes de esta cuenta). Quedan sin documentar `Failure Failure`, `ABSOLUTE NANO`, `KSECRETS`, `bytemancy 3`, `bytemancy 2`, `useless`, `Special` (ya aparecían resueltos de antes; no se ha escrito su writeup).
 3. ✅ **Web Exploitation — Easy**: 20/20 resueltos y documentados.
-4. ⏳ **Web Exploitation — Medium**: 12/16 resueltos y documentados (bloques 1, 2 y 3 de 4).
+4. ✅ **Web Exploitation — Medium**: 16/16 resueltos y documentados (100% de lo pendiente en esta cuenta).
 5. ⏳ **Resto de categorías** (Web Exploitation Hard, Cryptography, Reverse Engineering, Forensics, Binary Exploitation, Blockchain, Artificial Intelligence) — sin empezar.
 6. ⏳ **Contenedor Docker de práctica local** con la misma estructura.
 7. ⏳ **Mejorar la secuencia y el contenido de los retos con fines pedagógicos.**
@@ -183,4 +185,8 @@ Con el filtro "Hide Solved" activado, la cuenta tenía **16 retos sin resolver**
 - **login** (Medium, picoMini by redpwn): autenticación 100% client-side, con usuario y flag embebidos en Base64 directamente en el JS servido — se decodifica sin tocar el formulario. Ver [writeup](challenges/web-exploitation/medium/login/README.md).
 - **Super Serial** (Medium, picoCTF 2021): PHP Object Injection — el código fuente se filtra vía `/index.phps` (PHP Source Viewer); `unserialize()` sobre una cookie no valida la clase del objeto, permitiendo sustituir la clase esperada por otra (`access_log`) cuyo `__toString()`/`read_log()` lee un archivo arbitrario, filtrado a través de un mensaje de error capturado. Ver [writeup](challenges/web-exploitation/medium/super_serial/README.md).
 - **Web Gauntlet 2** (Medium, picoCTF 2021): SQLi con blacklist de palabras (`or`,`and`,`=`,`admin`, etc., expuesta en `/filter.php`) — bypass con el operador `||` de SQLite para construir la palabra "admin" por concatenación sin escribirla, y `IS NOT` en vez de `OR`/`=` para una tautología. Se consultó un writeup público tras quedar atascado sin encontrar la combinación exacta de operadores permitidos. Ver [writeup](challenges/web-exploitation/medium/web_gauntlet_2/README.md).
-- **Web Exploitation — Medium: bloques 1, 2 y 3 de 4 completos (12/16).** Continúa en la próxima sesión con Some Assembly Required 2, Web Gauntlet 3, More Cookies y Web Gauntlet (el último bloque).
+- **Some Assembly Required 2** (Medium, picoCTF 2021): la validación de la flag ocurre dentro de un módulo **WebAssembly** cargado por un JS ofuscado; desensamblando el `.wasm` con `wasm2wat` (paquete `wabt`) se ve que compara `char XOR 8` contra un blob de datos fijo — se extrae el blob y se aplica XOR 8 para reconstruir la flag sin ejecutar nada. Ver [writeup](challenges/web-exploitation/medium/some_assembly_required_2/README.md).
+- **Web Gauntlet 3** (Medium, picoCTF 2021): igual que Web Gauntlet 2 (bypass de blacklist SQLi con `\|\|` e `IS NOT`) pero con un límite de 25 caracteres por campo, que el mismo payload ya cumplía. Ver [writeup](challenges/web-exploitation/medium/web_gauntlet_3/README.md).
+- **More Cookies** (Medium, picoCTF 2021): la cookie de autenticación usa cifrado por bloques en modo **CBC**, vulnerable a un ataque de **bit-flipping**: se automatizó un brute-force de los 96 bytes × 8 bits de la cookie hasta voltear el bit que activa `admin=1` en el plaintext, sin conocer la clave. Se consultó un writeup público para confirmar que se trataba de CBC bit-flipping (y no de la homomorfía RSA que sugería la pista de Wikipedia). Ver [writeup](challenges/web-exploitation/medium/more_cookies/README.md).
+- **Web Gauntlet** (Medium, picoCTF 2020 Mini-Competition): el primer reto de la serie, con **5 rondas** de SQLi y una blacklist que crece en cada una (visible en `/filter.php`); se resolvió cada ronda combinando comentarios de línea/bloque (`-- `, `/* ` sin cerrar) y concatenación `\|\|` para reconstruir "admin" sin escribirlo, hasta llegar a la flag en la ronda 6. Se consultó un writeup público para el payload exacto de cada ronda. Ver [writeup](challenges/web-exploitation/medium/web_gauntlet/README.md).
+- **Web Exploitation — Medium: 16/16 completo (100% de lo pendiente en esta cuenta).** Categoría cerrada.

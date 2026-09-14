@@ -15,7 +15,7 @@ A diferencia de wargames con progresión estrictamente secuencial (Bandit, Natas
 | General Skills | Easy | ✅ 48/48 resueltos y documentados |
 | General Skills | Medium | ✅ 8/8 resueltos y documentados (los que estaban pendientes en esta cuenta) |
 | Web Exploitation | Easy | ✅ 20/20 resueltos y documentados |
-| Web Exploitation | Medium | ⏳ 12/16 resueltos y documentados |
+| Web Exploitation | Medium | ✅ 16/16 resueltos y documentados |
 | Cryptography | — | ⏳ sin empezar |
 | Reverse Engineering | — | ⏳ sin empezar |
 | Forensics | — | ⏳ sin empezar |
@@ -41,7 +41,7 @@ El detalle reto por reto, en el orden en que aparecen en la plataforma, está en
     └── web-exploitation/
         ├── easy/                   # 20 writeups (100%)
         │   └── <slug>/README.md
-        └── medium/                 # 12/16 writeups
+        └── medium/                 # 16/16 writeups (100%)
             └── <slug>/README.md
 ```
 
@@ -55,7 +55,7 @@ Cada writeup vive en su propia carpeta (`challenges/<categoría>/<dificultad>/<s
 
 ## Próximos pasos
 
-Con General Skills y Web Exploitation (Easy) al 100%, sigue Web Exploitation Medium (12/16, bloques 1-3 de 4) y el resto de categorías: Cryptography, Reverse Engineering, Forensics, Binary Exploitation, Blockchain, Artificial Intelligence (y Web Exploitation Hard). Ver la sección "Fases del proyecto" en [PROGRESS.md](PROGRESS.md) para el detalle completo.
+Con General Skills, Web Exploitation Easy y Web Exploitation Medium al 100%, sigue el resto de categorías: Cryptography, Reverse Engineering, Forensics, Binary Exploitation, Blockchain, Artificial Intelligence (y Web Exploitation Hard). Ver la sección "Fases del proyecto" en [PROGRESS.md](PROGRESS.md) para el detalle completo.
 
 ## Aviso
 
