@@ -122,10 +122,10 @@ Con el filtro "Hide Solved" activado, la cuenta tenía **16 retos sin resolver**
 | 6 | No Sql Injection | ✅ resuelto | [challenges/web-exploitation/medium/no_sql_injection](challenges/web-exploitation/medium/no_sql_injection/README.md) |
 | 7 | Forbidden Paths | ✅ resuelto | [challenges/web-exploitation/medium/forbidden_paths](challenges/web-exploitation/medium/forbidden_paths/README.md) |
 | 8 | JAuth | ✅ resuelto | [challenges/web-exploitation/medium/jauth](challenges/web-exploitation/medium/jauth/README.md) |
-| 9 | caas | ⏳ pendiente | — |
-| 10 | login | ⏳ pendiente | — |
-| 11 | Super Serial | ⏳ pendiente | — |
-| 12 | Web Gauntlet 2 | ⏳ pendiente | — |
+| 9 | caas | ✅ resuelto | [challenges/web-exploitation/medium/caas](challenges/web-exploitation/medium/caas/README.md) |
+| 10 | login | ✅ resuelto | [challenges/web-exploitation/medium/login](challenges/web-exploitation/medium/login/README.md) |
+| 11 | Super Serial | ✅ resuelto | [challenges/web-exploitation/medium/super_serial](challenges/web-exploitation/medium/super_serial/README.md) |
+| 12 | Web Gauntlet 2 | ✅ resuelto | [challenges/web-exploitation/medium/web_gauntlet_2](challenges/web-exploitation/medium/web_gauntlet_2/README.md) |
 | 13 | Some Assembly Required 2 | ⏳ pendiente | — |
 | 14 | Web Gauntlet 3 | ⏳ pendiente | — |
 | 15 | More Cookies | ⏳ pendiente | — |
@@ -135,7 +135,7 @@ Con el filtro "Hide Solved" activado, la cuenta tenía **16 retos sin resolver**
 1. ✅ **General Skills — Easy**: 48/48 retos resueltos y documentados.
 2. ✅ **General Skills — Medium**: 8/8 retos resueltos y documentados (los que estaban pendientes de esta cuenta). Quedan sin documentar `Failure Failure`, `ABSOLUTE NANO`, `KSECRETS`, `bytemancy 3`, `bytemancy 2`, `useless`, `Special` (ya aparecían resueltos de antes; no se ha escrito su writeup).
 3. ✅ **Web Exploitation — Easy**: 20/20 resueltos y documentados.
-4. ⏳ **Web Exploitation — Medium**: 8/16 resueltos y documentados (bloques 1 y 2 de 4).
+4. ⏳ **Web Exploitation — Medium**: 12/16 resueltos y documentados (bloques 1, 2 y 3 de 4).
 5. ⏳ **Resto de categorías** (Web Exploitation Hard, Cryptography, Reverse Engineering, Forensics, Binary Exploitation, Blockchain, Artificial Intelligence) — sin empezar.
 6. ⏳ **Contenedor Docker de práctica local** con la misma estructura.
 7. ⏳ **Mejorar la secuencia y el contenido de los retos con fines pedagógicos.**
@@ -179,4 +179,8 @@ Con el filtro "Hide Solved" activado, la cuenta tenía **16 retos sin resolver**
 - **No Sql Injection** (Medium, picoCTF 2024): backend Node/Express/Mongoose que hace `JSON.parse` de los campos `email`/`password` si empiezan y terminan con `{`/`}` — permite inyectar operadores MongoDB (`{"$ne":null}`) para bypasear el login sin credenciales. Ver [writeup](challenges/web-exploitation/medium/no_sql_injection/README.md).
 - **Forbidden Paths** (Medium, picoCTF 2022): un "Web eReader" bloquea rutas absolutas (`/flag.txt`) pero no filtra path traversal relativo (`../../../../flag.txt`), que sí llega al archivo objetivo. Ver [writeup](challenges/web-exploitation/medium/forbidden_paths/README.md).
 - **JAuth** (Medium, picoCTF 2021): JWT con ataque clásico **`alg: none`** — reconstruir el token cambiando el header a `alg:none`, `role` a `admin` en el payload y dejar la firma vacía, sin necesidad de conocer ningún secreto. Ver [writeup](challenges/web-exploitation/medium/jauth/README.md).
-- **Web Exploitation — Medium: bloques 1 y 2 de 4 completos (8/16).** Continúa en la próxima sesión con caas, login, Super Serial y Web Gauntlet 2.
+- **caas** (Medium, picoMini by redpwn): "cowsay as a service" con inyección de comandos directa en `child_process.exec()` de Node — el parámetro de la URL se concatena sin sanitizar. Ver [writeup](challenges/web-exploitation/medium/caas/README.md).
+- **login** (Medium, picoMini by redpwn): autenticación 100% client-side, con usuario y flag embebidos en Base64 directamente en el JS servido — se decodifica sin tocar el formulario. Ver [writeup](challenges/web-exploitation/medium/login/README.md).
+- **Super Serial** (Medium, picoCTF 2021): PHP Object Injection — el código fuente se filtra vía `/index.phps` (PHP Source Viewer); `unserialize()` sobre una cookie no valida la clase del objeto, permitiendo sustituir la clase esperada por otra (`access_log`) cuyo `__toString()`/`read_log()` lee un archivo arbitrario, filtrado a través de un mensaje de error capturado. Ver [writeup](challenges/web-exploitation/medium/super_serial/README.md).
+- **Web Gauntlet 2** (Medium, picoCTF 2021): SQLi con blacklist de palabras (`or`,`and`,`=`,`admin`, etc., expuesta en `/filter.php`) — bypass con el operador `||` de SQLite para construir la palabra "admin" por concatenación sin escribirla, y `IS NOT` en vez de `OR`/`=` para una tautología. Se consultó un writeup público tras quedar atascado sin encontrar la combinación exacta de operadores permitidos. Ver [writeup](challenges/web-exploitation/medium/web_gauntlet_2/README.md).
+- **Web Exploitation — Medium: bloques 1, 2 y 3 de 4 completos (12/16).** Continúa en la próxima sesión con Some Assembly Required 2, Web Gauntlet 3, More Cookies y Web Gauntlet (el último bloque).
