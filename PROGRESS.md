@@ -106,9 +106,8 @@ Los 24 retos de esta dificultad ya aparecían como "Solved by you" antes de reto
 2. ✅ **General Skills — Medium**: 8/8 retos resueltos y documentados (los que estaban pendientes de esta cuenta). Quedan sin documentar `Failure Failure`, `ABSOLUTE NANO`, `KSECRETS`, `bytemancy 3`, `bytemancy 2`, `useless`, `Special` (ya aparecían resueltos de antes; no se ha escrito su writeup).
 3. ⏳ **Web Exploitation — Easy**: 8/24 documentados (en curso, en bloques de 4).
 4. ⏳ **Resto de categorías** (Cryptography, Reverse Engineering, Forensics, Binary Exploitation, Blockchain, Artificial Intelligence) — sin empezar.
-4. ⏳ **Notas de arquitectura de la plataforma** (`notes/host-characteristics.md`) — en curso, se completa a medida que se observan patrones de infraestructura (instancias efímeras, formato de flag, etc.)
-5. ⏳ **Entorno de práctica local** replicando los retos más representativos — futuro
-6. ⏳ **Automatización** (`scripts/`) para resolver retos repetibles — futuro, según haga falta
+5. ⏳ **Contenedor Docker de práctica local** con la misma estructura.
+6. ⏳ **Mejorar la secuencia y el contenido de los retos con fines pedagógicos.**
 
 ## Notas de progreso
 - **Buscar retos pendientes:** activar el toggle "Hide Solved" en el filtro de la Challenge Library — esta cuenta arrastra progreso previo en varias categorías, así que conviene revisar ese filtro antes de elegir qué resolver en cada categoría/dificultad, para no repetir trabajo.
