@@ -1,5 +1,7 @@
 # CyLab picoCTF — Writeups
 
+> Este repositorio es parte de **[sec-proy](https://github.com/hackadvisermx/sec-proy)**, un proyecto más amplio de soluciones a retos de ciberseguridad (CTFs, wargames y máquinas de hacking).
+
 Writeups propios de retos de **CyLab Security Academy** ([learn.cylabacademy.org](https://learn.cylabacademy.org)), la plataforma de la Carnegie Mellon University que aloja el archivo histórico de **picoCTF** (2019–2026, picoMini, etc.) organizado en un "Challenge Library" por categoría y dificultad.
 
 A diferencia de wargames con progresión estrictamente secuencial (Bandit, Natas), en CyLab cada reto es independiente: se navega por **categoría** (Web Exploitation, Cryptography, Reverse Engineering, Forensics, General Skills, Binary Exploitation, Blockchain, Artificial Intelligence) y **dificultad** (Easy / Medium / Hard).
@@ -51,3 +53,7 @@ Cada writeup vive en su propia carpeta (`challenges/<categoría>/<dificultad>/<s
 ## Próximos pasos
 
 Según el orden acordado: seguir con **Web Exploitation** (Easy primero), y luego el resto de categorías (Cryptography, Forensics, Reverse Engineering, Binary Exploitation, Blockchain, Artificial Intelligence). Ver la sección "Fases del proyecto" en [PROGRESS.md](PROGRESS.md) para el detalle completo.
+
+## Aviso
+
+Este material es para uso educativo propio sobre retos públicos (picoCTF, vía CyLab Security Academy) que autorizan explícitamente su resolución. Evita publicar las flags fuera de un contexto de práctica personal como este.
