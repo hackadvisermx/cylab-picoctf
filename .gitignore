@@ -1,0 +1,4 @@
+scripts/flags.json
+scripts/creds.txt
+__pycache__/
+*.pyc

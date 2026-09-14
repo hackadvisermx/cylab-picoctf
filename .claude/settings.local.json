@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(mkdir -p /tmp/piece_by_piece && cd /tmp/piece_by_piece *)",
+      "Bash(cd /tmp/piece_by_piece *)",
+      "Bash(mkdir -p /tmp/password_profiler && cd /tmp/password_profiler *)",
+      "Bash(cd /tmp/cupp *)",
+      "Bash(grep -n 'input\\(' /tmp/cupp/cupp.py | sed -n '1,30p')",
+      "Bash(pkill -f cupp.py 2>/dev/null; sleep 1 *)",
+      "Bash(cd /tmp/password_profiler *)",
+      "Bash(curl -s \"https://challenge-files.picoctf.net/c_amiable_citadel/49cec6157142f24a599f4164d5b63322c2494f801390d6f22eb91b3aa592bc66/server.log\" -o /tmp/server.log *)",
+      "Bash(mkdir -p /tmp/rustfixme3 && cd /tmp/rustfixme3 *)",
+      "Bash(cat /tmp/rustfixme3/fixme3/src/main.rs)",
+      "Bash(mkdir -p /tmp/timemachine && cd /tmp/timemachine *)"
+    ]
+  }
+}
