@@ -68,7 +68,7 @@ Todos estos retos ya aparecían como "Solved by you" en la cuenta antes de esta 
 
 ## Tabla de retos — General Skills, Medium
 
-**✅ Los 8 retos de General Skills - Medium que estaban en el radar de esta cuenta están resueltos y documentados.** (Nota: la plataforma tiene más retos Medium en esta categoría, algunos ya aparecían resueltos de una sesión anterior a esta serie — `Failure Failure`, `ABSOLUTE NANO`, `KSECRETS`, `bytemancy 3`, `bytemancy 2`, `useless`, `Special` — pendientes de escribir su writeup si se retoma esa cobertura.)
+Auditoría completa (todas las páginas, "Hide Solved" desactivado): la categoría tiene **25 retos Medium** en total. 8 ya estaban documentados de una ronda anterior; una nueva auditoría encontró **17 adicionales resueltos por la cuenta mucho antes pero nunca documentados** — se están re-resolviendo y documentando en bloques de 3, igual que se hizo con Web Exploitation Medium.
 
 | Reto | Estado | Writeup |
 |------|--------|---------|
@@ -80,6 +80,32 @@ Todos estos retos ya aparecían como "Solved by you" en la cuenta antes de esta 
 | SansAlpha | ✅ resuelto | [challenges/general-skills/sansalpha](challenges/general-skills/medium/sansalpha/README.md) |
 | Specialer | ✅ resuelto | [challenges/general-skills/specialer](challenges/general-skills/medium/specialer/README.md) |
 | YaraRules0x100 | ✅ resuelto | [challenges/general-skills/yararules0x100](challenges/general-skills/medium/yararules0x100/README.md) |
+| Failure Failure | ✅ resuelto | [challenges/general-skills/failure_failure](challenges/general-skills/medium/failure_failure/README.md) |
+| ABSOLUTE NANO | ✅ resuelto | [challenges/general-skills/absolute_nano](challenges/general-skills/medium/absolute_nano/README.md) |
+| KSECRETS | ✅ resuelto | [challenges/general-skills/ksecrets](challenges/general-skills/medium/ksecrets/README.md) |
+| bytemancy 3 | ✅ resuelto | [challenges/general-skills/bytemancy_3](challenges/general-skills/medium/bytemancy_3/README.md) |
+| bytemancy 2 | ✅ resuelto | [challenges/general-skills/bytemancy_2](challenges/general-skills/medium/bytemancy_2/README.md) |
+| useless | ✅ resuelto | [challenges/general-skills/useless](challenges/general-skills/medium/useless/README.md) |
+| Special | ⏳ pendiente | — |
+| Permissions | ⏳ pendiente | — |
+| chrono | ⏳ pendiente | — |
+| Serpentine | ⏳ pendiente | — |
+| PW Crack 5 | ⏳ pendiente | — |
+| PW Crack 4 | ⏳ pendiente | — |
+| PW Crack 3 | ⏳ pendiente | — |
+| Python Wrangling | ⏳ pendiente | — |
+| Nothing Up My Sleeve | ⏳ pendiente | — |
+| plumbing | ⏳ pendiente | — |
+| Based | ⏳ pendiente | — |
+
+## Tabla de retos — General Skills, Hard
+
+Auditoría completa: la categoría tiene solo **2 retos Hard**, ambos ya resueltos por la cuenta desde antes pero sin documentar.
+
+| Reto | Estado | Writeup |
+|------|--------|---------|
+| Printer Shares 2 | ⏳ pendiente | — |
+| Printer Shares 3 | ⏳ pendiente | — |
 
 ## Tabla de retos — Web Exploitation, Easy (orden de aparición en la plataforma)
 
@@ -135,9 +161,10 @@ Con el filtro "Hide Solved" activado, la cuenta tenía **16 retos sin resolver**
 
 ## Fases del proyecto
 1. ✅ **General Skills — Easy**: 48/48 retos resueltos y documentados.
-2. ✅ **General Skills — Medium**: 8/8 retos resueltos y documentados (los que estaban pendientes de esta cuenta). Quedan sin documentar `Failure Failure`, `ABSOLUTE NANO`, `KSECRETS`, `bytemancy 3`, `bytemancy 2`, `useless`, `Special` (ya aparecían resueltos de antes; no se ha escrito su writeup).
+2. ⏳ **General Skills — Medium**: 14/25 resueltos y documentados (auditoría completa reveló 25 retos totales; 11 aún pendientes de documentar, ya resueltos por la cuenta desde antes).
 3. ✅ **Web Exploitation — Easy**: 20/20 resueltos y documentados.
-4. ✅ **Web Exploitation — Medium**: 16/16 resueltos y documentados (100% de lo pendiente en esta cuenta).
+4. ⏳ **Web Exploitation — Medium**: 16/16 de una primera ronda, pero una auditoría posterior encontró 29 retos adicionales resueltos-sin-documentar; 2 de esos 29 ya están documentados (`no_fa`, `hashgate`), 1 en progreso (`Credential Stuffing`), 26 pendientes.
+4b. ⏳ **General Skills — Hard**: 0/2 documentados (`Printer Shares 2`, `Printer Shares 3`, ambos ya resueltos por la cuenta desde antes).
 5. ⏳ **Resto de categorías** (Web Exploitation Hard, Cryptography, Reverse Engineering, Forensics, Binary Exploitation, Blockchain, Artificial Intelligence) — sin empezar.
 6. ⏳ **Contenedor Docker de práctica local** con la misma estructura.
 7. ⏳ **Mejorar la secuencia y el contenido de los retos con fines pedagógicos.**
@@ -151,6 +178,12 @@ Con el filtro "Hide Solved" activado, la cuenta tenía **16 retos sin resolver**
 - **Specialer** (Medium, picoCTF 2023): bash real pero con `$PATH` sin ningún binario externo disponible — solo quedan los builtins de bash (`echo`, `mapfile`, glob). Se resuelve explorando con `echo *` y leyendo archivos con `mapfile -t arr < archivo` en vez de `cat`. Ver [writeup](challenges/general-skills/medium/specialer/README.md).
 - **YaraRules0x100** (Medium, picoCTF 2025): análisis de malware — escribir una regla YARA que detecte un ejecutable (empaquetado con UPX) tanto en su forma empaquetada como desempaquetada, sin dar falsos positivos. La clave es usar el módulo `pe` de YARA para matchear por **imports sospechosos** (combo anti-debug "self-debugging": `DebugActiveProcess`, `IsDebuggerPresent`, `CreateToolhelp32Snapshot`, `AdjustTokenPrivileges`+`SeDebugPrivilege`, `CreateMutexW`) en vez de cadenas de texto sueltas (que desaparecen al empaquetar). Se probó localmente con `yara`/`pefile` antes de enviar la regla por `socat`. Ver [writeup](challenges/general-skills/medium/yararules0x100/README.md).
 - **Organización de carpetas:** `challenges/general-skills/` se separó en subcarpetas `easy/` y `medium/` (48 y 8 retos respectivamente) para que la estructura del repo refleje la dificultad de cada reto, a pedido explícito del usuario.
+- **Failure Failure** (Medium, picoCTF 2026): balanceador HAProxy con un servidor primario y uno "backup" (solo recibe tráfico si el primario cae); la app Flask usa un rate-limiter con clave **global** (no por IP), así que inundar el servicio dispara el límite también para el health check de HAProxy, tumbando el primario y forzando el failover al backup, que sí sirve la flag real. Clave para reproducirlo: inundar **en paralelo** mientras se sondea, no en dos fases secuenciales (el rate limit se recupera en segundos). Ver [writeup](challenges/general-skills/medium/failure_failure/README.md).
+- **ABSOLUTE NANO** (Medium, picoCTF 2026): `sudo -l` revela `NOPASSWD: /bin/nano /etc/sudoers` — escape clásico de [GTFOBins nano](https://gtfobins.github.io/gtfobins/nano/#sudo) (`^R^X` + `reset; sh 1>&0 2>&0`) para obtener shell root desde el editor. Automatizado con `expect`; crítico exportar `TERM=xterm` antes, o `nano` falla y los atajos `^R`/`^X` se interpretan como los de `bash`. Ver [writeup](challenges/general-skills/medium/absolute_nano/README.md).
+- **KSECRETS** (Medium, picoCTF 2026): kubeconfig con certificado de cliente válido pero apuntando a `127.0.0.1:6443` (dirección interna); hablando directo a la API REST de Kubernetes (`curl --cert/--key`, sin necesidad de `kubectl`) contra la dirección externa real se listan namespaces y se lee un Secret en el namespace `picoctf` — Base64, no cifrado. Ver [writeup](challenges/general-skills/medium/ksecrets/README.md).
+- **bytemancy 3** (Medium, picoCTF 2026): el servicio por `nc` pide, en texto plano, la dirección de 4 bytes little-endian de símbolos concretos dentro de un binario ELF no-*stripped* — basta con `nm`/`objdump` local sobre el binario entregado para leer esas direcciones directamente, sin desensamblar nada. Ver [writeup](challenges/general-skills/medium/bytemancy_3/README.md).
+- **bytemancy 2** (Medium, picoCTF 2026): el servicio pide literalmente el byte `0xFF` tres veces — pero espera los bytes crudos (`b"\xff\xff\xff"`), no la representación en texto `"FF"`; requiere un socket que mande el valor binario exacto, no un cliente de texto interactivo. Ver [writeup](challenges/general-skills/medium/bytemancy_2/README.md).
+- **useless** (Medium, picoCTF 2023): un script bash "calculadora" en el home sin ninguna vía real de privesc (sin `sudo`, sin *setuid*, sin cron) — la etiqueta de tema del reto ("man") es la pista real: `man useless` (página instalada en `/usr/local/share/man/man1/`) trae la flag en texto plano en su sección `Authors`. Lección: explorar también la documentación instalada de un comando, no solo el ejecutable. Ver [writeup](challenges/general-skills/medium/useless/README.md).
 - **Old Sessions** (Easy, picoCTF 2026): un endpoint de debug `/sessions` filtra literalmente todas las sesiones server-side almacenadas (Flask-Session), incluida una de `admin` que nunca expira (`_permanent: True`). Sustituyendo la cookie `session` propia por la de `admin` se accede a su cuenta. Ver [writeup](challenges/web-exploitation/easy/old_sessions/README.md).
 - **Crack the Gate 1** (Easy, picoMini by CMU-Africa): comentario HTML cifrado en ROT13 revela un backdoor de desarrollo (`X-Dev-Access: yes`) que bypasea la verificación de contraseña en el login. Ver [writeup](challenges/web-exploitation/easy/crack_the_gate_1/README.md).
 - **SSTI1** (Easy, picoCTF 2025): Server-Side Template Injection en Jinja2/Flask; RCE vía `self.__init__.__globals__.__builtins__.__import__("os").popen(...)` para leer el archivo de flag. Ver [writeup](challenges/web-exploitation/easy/ssti1/README.md).
