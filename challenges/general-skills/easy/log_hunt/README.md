@@ -2,6 +2,10 @@
 
 ## Descripción
 > **Prompt oficial:** "Our server seems to be leaking pieces of a secret flag in its logs. The parts are scattered and sometimes repeated. Can you reconstruct the original flag? Download the logs and figure out the full flag from the fragments."
+>
+> **Hints:**
+> 1. You can use `grep` to filter only matching lines from the log.
+> 2. Some lines are duplicates; ignore extra occurrences.
 
 - **Categoría:** General Skills
 - **Dificultad:** Easy

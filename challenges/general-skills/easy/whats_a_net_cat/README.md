@@ -2,6 +2,9 @@
 
 ## Descripción
 > **Prompt oficial:** "Using netcat (nc) is going to be pretty important. Can you connect to `<host>` at puerto `<puerto>` to get the flag?"
+>
+> **Hints:**
+> 1. nc tutorial
 
 - **Categoría:** General Skills
 - **Dificultad:** Easy

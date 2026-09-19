@@ -2,6 +2,9 @@
 
 ## Descripción
 > **Prompt oficial:** "I have built my own Git server with my own rules! You can clone the challenge repo using the command below: `git clone ssh://git@<host>:<puerto>/git/challenge.git`. Here's the password: `<pass>`. Check the README to get your flag!"
+>
+> **Hints:**
+> 1. How do you specify your Git username and email?
 
 - **Categoría:** General Skills
 - **Dificultad:** Easy

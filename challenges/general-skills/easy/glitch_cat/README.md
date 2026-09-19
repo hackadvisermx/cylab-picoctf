@@ -2,6 +2,11 @@
 
 ## Descripción
 > **Prompt oficial:** "Our flag printing service has started glitching! `nc <host> <puerto>`"
+>
+> **Hints:**
+> 1. ASCII is one of the most common encodings used in programming
+> 2. We know that the glitch output is valid Python, somehow!
+> 3. Press Ctrl and c on your keyboard to close your connection and return to the command prompt.
 
 - **Categoría:** General Skills
 - **Dificultad:** Easy

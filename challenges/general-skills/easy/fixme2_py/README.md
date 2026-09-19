@@ -2,6 +2,12 @@
 
 ## Descripción
 > **Prompt oficial:** "Fix the syntax error in the Python script to print the flag."
+>
+> **Hints:**
+> 1. Are equality and assignment the same symbol?
+> 2. To view the file in the webshell, do: `$ nano fixme2.py`
+> 3. To exit nano, press Ctrl and x and follow the on-screen prompts.
+> 4. The `str_xor` function does not need to be reverse engineered for this challenge.
 
 - **Categoría:** General Skills
 - **Dificultad:** Easy

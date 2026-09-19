@@ -2,6 +2,10 @@
 
 ## Descripción
 > **Prompt oficial:** "There is a nice program that you can talk to by using this command in a shell: `nc <host> <puerto>`, but it doesn't speak English..."
+>
+> **Hints:**
+> 1. You can practice using netcat with this picoGym problem: what's a netcat?
+> 2. You can practice reading and writing ASCII with this picoGym problem: Let's Warm Up
 
 - **Categoría:** General Skills
 - **Dificultad:** Easy

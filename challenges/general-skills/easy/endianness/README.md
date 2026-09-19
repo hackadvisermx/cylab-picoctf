@@ -2,6 +2,10 @@
 
 ## Descripción
 > **Prompt oficial:** "Know of little and big endian?" (código fuente C descargable, `nc <host> <puerto>`)
+>
+> **Hints:**
+> 1. You might want to check the ASCII table to first find the hexadecimal representation of characters before finding the endianness.
+> 2. Read more about how endianness [here](https://levelup.gitconnected.com/little-endian-and-big-endian-74ab6441b2a7)
 
 - **Categoría:** General Skills
 - **Dificultad:** Easy

@@ -2,6 +2,11 @@
 
 ## Descripción
 > **Prompt oficial:** "Want to play a game? Binary search is a classic algorithm used to quickly find an item in a sorted list. Can you find the flag? You'll have 1000 possibilities and only 10 guesses. `ssh -p <puerto> ctf-player@<host>` con contraseña `<pass>`."
+>
+> **Hints:**
+> 1. Have you ever played hot or cold? Binary search is a bit like that.
+> 2. You have a very limited number of guesses. Try larger jumps between numbers!
+> 3. The program will randomly choose a new number each time you connect. You can always try again, but you should start your binary search over from the beginning - try around 500. Can you think of why?
 
 - **Categoría:** General Skills
 - **Dificultad:** Easy

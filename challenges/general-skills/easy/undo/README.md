@@ -2,6 +2,9 @@
 
 ## Descripción
 > **Prompt oficial:** "Can you reverse a series of Linux text transformations to recover the original flag? Start searching for the flag here `nc <host> <puerto>`"
+>
+> **Hints:**
+> 1. For text translation and character replacement, see [command documentation](https://man7.org/linux/man-pages/man1/tr.1.html).
 
 - **Categoría:** General Skills
 - **Dificultad:** Easy

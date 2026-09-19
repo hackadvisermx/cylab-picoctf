@@ -2,6 +2,11 @@
 
 ## Descripción
 > **Prompt oficial:** "Have you heard of Rust? Fix the syntax errors in this Rust file to print the flag! Download the Rust code here."
+>
+> **Hints:**
+> 1. Cargo is Rust's package manager and will make your life easier. See the getting started page [here](https://doc.rust-lang.org/book/ch01-03-hello-cargo.html).
+> 2. [println!](https://doc.rust-lang.org/std/macro.println.html)
+> 3. Rust has some pretty great compiler error messages. Read them maybe?
 
 - **Categoría:** General Skills
 - **Dificultad:** Easy

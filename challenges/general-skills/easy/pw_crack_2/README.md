@@ -2,6 +2,10 @@
 
 ## Descripción
 > **Prompt oficial:** "Can you crack the password to get the flag? Download the password checker here and you'll need the encrypted flag in the same directory too."
+>
+> **Hints:**
+> 1. Does that encoding look familiar?
+> 2. The `str_xor` function does not need to be reverse engineered for this challenge.
 
 - **Categoría:** General Skills
 - **Dificultad:** Easy

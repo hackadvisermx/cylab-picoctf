@@ -2,6 +2,9 @@
 
 ## Descripción
 > **Prompt oficial:** "Do you know how to move between directories and read files in the shell? Start the container, ssh to it, and then ls once connected to begin. Login via ssh as ctf-player con la contraseña `<pass>` en el host `<host>` y puerto `<puerto>`."
+>
+> **Hints:**
+> 1. Finding a cheatsheet for bash would be really helpful!
 
 - **Categoría:** General Skills
 - **Dificultad:** Easy

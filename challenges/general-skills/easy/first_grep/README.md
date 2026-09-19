@@ -2,6 +2,9 @@
 
 ## Descripción
 > **Prompt oficial:** "Can you find the flag in the file? This would be really tedious to look through manually, something tells me there is a better way."
+>
+> **Hints:**
+> 1. grep tutorial
 
 - **Categoría:** General Skills
 - **Dificultad:** Easy

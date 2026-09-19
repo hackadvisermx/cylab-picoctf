@@ -2,6 +2,9 @@
 
 ## Descripción
 > **Prompt oficial:** "Can you conjure the right bytes? The program's source code can be downloaded here. Connect to the program with netcat: `nc <host> <puerto>`"
+>
+> **Hints:**
+> 1. Solving this with a one-liner will help with the next challenge in this series
 
 - **Categoría:** General Skills
 - **Dificultad:** Easy

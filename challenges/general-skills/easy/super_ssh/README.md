@@ -2,6 +2,12 @@
 
 ## Descripción
 > **Prompt oficial:** "Using a Secure Shell (SSH) is going to be pretty important. Can you ssh as ctf-player to `<host>` at port `<puerto>` to get the flag? You'll also need the password `<pass>`."
+>
+> **Hints:**
+> 1. https://linux.die.net/man/1/ssh
+> 2. You can try logging in 'as' someone with `<user>`@titan.picoctf.net
+> 3. How could you specify the port?
+> 4. Remember, passwords are hidden when typed into the shell
 
 - **Categoría:** General Skills
 - **Dificultad:** Easy

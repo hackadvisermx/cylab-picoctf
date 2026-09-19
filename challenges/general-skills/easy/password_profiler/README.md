@@ -2,6 +2,9 @@
 
 ## Descripción
 > **Prompt oficial:** "We intercepted a suspicious file from a system, but instead of the password itself, it only contains its SHA-1 hash. Using OSINT techniques, you are provided with personal details about the target. Your task is to leverage this information to generate a custom password list and recover the original password by matching its hash. Download: `userinfo` (detalles personales), `hash` (hash SHA-1), `check_password` (script para probar contraseñas contra el hash)."
+>
+> **Hints:**
+> 1. [CUPP](https://github.com/Mebus/cupp) is a Python tool for generating custom wordlists from personal data.
 
 - **Categoría:** General Skills
 - **Dificultad:** Easy

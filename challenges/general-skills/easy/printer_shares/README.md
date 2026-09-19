@@ -2,6 +2,10 @@
 
 ## Descripción
 > **Prompt oficial:** "Oops! Someone accidentally sent an important file to a network printer—can you retrieve it from the print server? The printer is on `<puerto>`. You can try `$ nc -vz <host> <puerto>`"
+>
+> **Hints:**
+> 1. knowing how SMB protocol works would be helpful!
+> 2. smbclient and smbutil are good tools
 
 - **Categoría:** General Skills
 - **Dificultad:** Easy

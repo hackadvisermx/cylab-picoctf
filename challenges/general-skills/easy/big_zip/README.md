@@ -2,6 +2,9 @@
 
 ## Descripción
 > **Prompt oficial:** "Unzip this archive and find the flag."
+>
+> **Hints:**
+> 1. Can grep be instructed to look at every file in a directory and its subdirectories?
 
 - **Categoría:** General Skills
 - **Dificultad:** Easy

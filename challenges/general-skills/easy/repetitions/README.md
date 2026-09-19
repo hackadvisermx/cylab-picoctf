@@ -2,6 +2,9 @@
 
 ## Descripción
 > **Prompt oficial:** "Can you make the sense of this file? Download the file here." (tag: `base64`)
+>
+> **Hints:**
+> 1. Multiple decoding is always good.
 
 - **Categoría:** General Skills
 - **Dificultad:** Easy

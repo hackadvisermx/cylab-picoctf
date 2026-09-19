@@ -2,6 +2,10 @@
 
 ## Descripción
 > **Prompt oficial:** "If you want to hash with the best, beat this test! `nc <host> <puerto>`"
+>
+> **Hints:**
+> 1. You can use a commandline tool or web app to hash text
+> 2. Press Ctrl and c on your keyboard to close your connection and return to the command prompt.
 
 - **Categoría:** General Skills
 - **Dificultad:** Easy

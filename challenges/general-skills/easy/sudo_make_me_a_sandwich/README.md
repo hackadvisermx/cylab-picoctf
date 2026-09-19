@@ -2,6 +2,10 @@
 
 ## Descripción
 > **Prompt oficial:** "Can you read the flag? I think you can! `ssh -p <puerto> ctf-player@<host>` using password `<pass>`"
+>
+> **Hints:**
+> 1. What is sudo?
+> 2. How do you know what permission you have?
 
 - **Categoría:** General Skills
 - **Dificultad:** Easy

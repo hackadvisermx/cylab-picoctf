@@ -2,6 +2,9 @@
 
 ## Descripción
 > **Prompt oficial:** "Can you find the flag in file without running it?"
+>
+> **Hints:**
+> 1. strings
 
 - **Categoría:** General Skills
 - **Dificultad:** Easy
