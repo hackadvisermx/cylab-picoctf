@@ -89,9 +89,9 @@ Auditoría completa (todas las páginas, "Hide Solved" desactivado): la categor�
 | Special | ✅ resuelto | [challenges/general-skills/special](challenges/general-skills/medium/special/README.md) |
 | Permissions | ✅ resuelto | [challenges/general-skills/permissions](challenges/general-skills/medium/permissions/README.md) |
 | chrono | ✅ resuelto | [challenges/general-skills/chrono](challenges/general-skills/medium/chrono/README.md) |
-| Serpentine | ⏳ pendiente | — |
-| PW Crack 5 | ⏳ pendiente | — |
-| PW Crack 4 | ⏳ pendiente | — |
+| Serpentine | ✅ resuelto | [challenges/general-skills/serpentine](challenges/general-skills/medium/serpentine/README.md) |
+| PW Crack 5 | ✅ resuelto | [challenges/general-skills/pw_crack_5](challenges/general-skills/medium/pw_crack_5/README.md) |
+| PW Crack 4 | ✅ resuelto | [challenges/general-skills/pw_crack_4](challenges/general-skills/medium/pw_crack_4/README.md) |
 | PW Crack 3 | ⏳ pendiente | — |
 | Python Wrangling | ⏳ pendiente | — |
 | Nothing Up My Sleeve | ⏳ pendiente | — |
@@ -161,7 +161,7 @@ Con el filtro "Hide Solved" activado, la cuenta tenía **16 retos sin resolver**
 
 ## Fases del proyecto
 1. ✅ **General Skills — Easy**: 48/48 retos resueltos y documentados.
-2. ⏳ **General Skills — Medium**: 17/25 resueltos y documentados (auditoría completa reveló 25 retos totales; 8 aún pendientes de documentar, ya resueltos por la cuenta desde antes).
+2. ⏳ **General Skills — Medium**: 20/25 resueltos y documentados (auditoría completa reveló 25 retos totales; 5 aún pendientes de documentar).
 3. ✅ **Web Exploitation — Easy**: 20/20 resueltos y documentados.
 4. ⏳ **Web Exploitation — Medium**: 16/16 de una primera ronda, pero una auditoría posterior encontró 29 retos adicionales resueltos-sin-documentar; 2 de esos 29 ya están documentados (`no_fa`, `hashgate`), 1 en progreso (`Credential Stuffing`), 26 pendientes.
 4b. ⏳ **General Skills — Hard**: 0/2 documentados (`Printer Shares 2`, `Printer Shares 3`, ambos ya resueltos por la cuenta desde antes).
@@ -187,6 +187,8 @@ Con el filtro "Hide Solved" activado, la cuenta tenía **16 retos sin resolver**
 - **Special** (Medium, picoCTF 2023): shell SSH que corrige ortografía y **fuerza a mayúscula solo la primera palabra** de cada línea (rompiendo cualquier comando, incluso los bien escritos, porque Linux distingue mayúsculas/minúsculas). Bypass: anteponer una palabra basura + `;` para que el comando real quede en segunda posición y no sea capitalizado — patrón general contra filtros que solo protegen una posición fija de la entrada. Ver [writeup](challenges/general-skills/medium/special/README.md).
 - **Permissions** (Medium, picoCTF 2023): `sudo -l` habilita `/usr/bin/vi` (con contraseña, no NOPASSWD) — escape clásico [GTFOBins vi](https://gtfobins.github.io/gtfobins/vi/#sudo) vía `:!<comando>` para shell root. La flag estaba en un archivo oculto (`/root/.flag.txt`), no en la ruta obvia. Ver [writeup](challenges/general-skills/medium/permissions/README.md).
 - **chrono** (Medium, picoCTF 2023): la flag está directamente en `/etc/crontab` (archivo de configuración de cron, de lectura pública) — reto de calentamiento puro sobre dónde vive la configuración de tareas programadas en Linux, sin explotación. Ver [writeup](challenges/general-skills/medium/chrono/README.md).
+- **Serpentine** (Medium, Beginner picoMini 2022): script Python con una función `print_flag()` que nunca se llama desde el menú, pero sigue definida en el código junto a la flag cifrada (`flag_enc`) y la clave (`'enkidu'`) — basta con reproducir localmente el XOR de clave repetida (`str_xor`) para descifrarla sin ejecutar el programa real. Ver [writeup](challenges/general-skills/medium/serpentine/README.md).
+- **PW Crack 5** y **PW Crack 4** (Medium, Beginner picoMini 2022): ambos comparan el MD5 de una contraseña candidata contra un hash de referencia, y usan la contraseña correcta como clave para descifrar la flag con el mismo XOR de clave repetida que `Serpentine`. Nivel 5 trae un diccionario externo de 65,536 candidatos; nivel 4 trae solo 100 candidatos hardcodeados al final del propio script (el enunciado indica explícitamente "examina el script"). Ver writeups: [PW Crack 5](challenges/general-skills/medium/pw_crack_5/README.md), [PW Crack 4](challenges/general-skills/medium/pw_crack_4/README.md).
 - **Old Sessions** (Easy, picoCTF 2026): un endpoint de debug `/sessions` filtra literalmente todas las sesiones server-side almacenadas (Flask-Session), incluida una de `admin` que nunca expira (`_permanent: True`). Sustituyendo la cookie `session` propia por la de `admin` se accede a su cuenta. Ver [writeup](challenges/web-exploitation/easy/old_sessions/README.md).
 - **Crack the Gate 1** (Easy, picoMini by CMU-Africa): comentario HTML cifrado en ROT13 revela un backdoor de desarrollo (`X-Dev-Access: yes`) que bypasea la verificación de contraseña en el login. Ver [writeup](challenges/web-exploitation/easy/crack_the_gate_1/README.md).
 - **SSTI1** (Easy, picoCTF 2025): Server-Side Template Injection en Jinja2/Flask; RCE vía `self.__init__.__globals__.__builtins__.__import__("os").popen(...)` para leer el archivo de flag. Ver [writeup](challenges/web-exploitation/easy/ssti1/README.md).
