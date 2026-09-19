@@ -2,6 +2,9 @@
 
 ## Descripción
 > **Prompt oficial del reto:** "You have complete power with nano. Think you can get the flag?" — se entrega acceso SSH: `ssh -p <puerto> ctf-player@crystal-peak.picoctf.net` con contraseña provista.
+>
+> **Hints:**
+> 1. What can you do with nano?
 
 - **Categoría:** General Skills
 - **Dificultad:** Medium

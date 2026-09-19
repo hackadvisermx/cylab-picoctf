@@ -2,6 +2,9 @@
 
 ## Descripción
 > **Prompt oficial del reto:** "Can you read files in the root file? The system admin has provisioned an account for you on the main server. Can you login and read the root file?" — se entrega acceso SSH (`ssh -p <puerto> picoplayer@saturn.picoctf.net`, contraseña provista). Etiqueta de tema: **"vim"**.
+>
+> **Hints:**
+> 1. What permissions do you have?
 
 - **Categoría:** General Skills
 - **Dificultad:** Medium

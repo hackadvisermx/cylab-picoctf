@@ -2,6 +2,11 @@
 
 ## Descripción
 > **Prompt oficial del reto:** "Can you conjure the right bytes? The program's source code can be downloaded here and the compiled spellbook binary can be downloaded here. Connect to the program with netcat."
+>
+> **Hints:**
+> 1. `objdump -t spellbook` reveals the symbol table.
+> 2. Send the addresses as 4 raw bytes in little-endian order.
+> 3. `pwnlib.util.packing.p32()` simplifies crafting the payloads.
 
 - **Categoría:** General Skills
 - **Dificultad:** Medium

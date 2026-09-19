@@ -2,6 +2,11 @@
 
 ## Descripción
 > **Prompt oficial del reto:** "We have a kubernetes cluster setup and flag is in the secrets. You think you can get it?" — se entrega la dirección del API server de Kubernetes (`green-hill.picoctf.net:59581`) y un enlace de descarga de un `kubeconfig`.
+>
+> **Hints:**
+> 1. Where are secrets usually stored in Kubernetes
+> 2. How are Kubernetes secrets stored internally? Can you decode them?
+> 3. Please ignore TLS
 
 - **Categoría:** General Skills
 - **Dificultad:** Medium

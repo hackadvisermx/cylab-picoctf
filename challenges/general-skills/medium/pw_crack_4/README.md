@@ -2,6 +2,10 @@
 
 ## Descripción
 > **Prompt oficial del reto:** "Can you crack the password to get the flag? [...] There are 100 potential passwords with only 1 being correct. You can find these by examining the password checker script." — se entregan `level4.py`, `level4.flag.txt.enc` y `level4.hash.bin`, sin instancia remota ni diccionario externo.
+>
+> **Hints:**
+> 1. A for loop can help you do many things very quickly.
+> 2. The `str_xor` function does not need to be reverse engineered for this challenge.
 
 - **Categoría:** General Skills
 - **Dificultad:** Medium

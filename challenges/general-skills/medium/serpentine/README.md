@@ -2,6 +2,12 @@
 
 ## Descripción
 > **Prompt oficial del reto:** "Find the flag in the Python script!" — se entrega un script `serpentine.py` para descargar, sin instancia remota.
+>
+> **Hints:**
+> 1. Try running the script and see what happens
+> 2. In the webshell, try examining the script with a text editor like `nano`
+> 3. To exit `nano`, press Ctrl and x and follow the on-screen prompts.
+> 4. The `str_xor` function does not need to be reverse engineered for this challenge.
 
 - **Categoría:** General Skills
 - **Dificultad:** Medium

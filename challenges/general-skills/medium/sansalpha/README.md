@@ -2,6 +2,9 @@
 
 ## Descripción
 > **Prompt oficial del reto:** "The Multiverse is within your grasp! Unfortunately, the server that contains the secrets of the multiverse is in a universe where keyboards only have numbers and (most) symbols." Se entrega `ssh -p <puerto> ctf-player@mimas.picoctf.net` con una contraseña.
+>
+> **Hints:**
+> 1. Where can you get some letters?
 
 - **Categoría:** General Skills
 - **Dificultad:** Medium

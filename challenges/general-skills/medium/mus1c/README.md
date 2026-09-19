@@ -4,6 +4,9 @@
 > **Prompt oficial:** "I wrote you a song. Put it in the picoCTF{} flag format."
 >
 > El enlace "song" descarga un archivo `lyrics.txt` (ver copia local en esta carpeta).
+>
+> **Hints:**
+> 1. Do you think you can master rockstar?
 
 - **Categoría:** General Skills
 - **Dificultad:** Medium

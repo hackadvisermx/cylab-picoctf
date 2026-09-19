@@ -2,6 +2,10 @@
 
 ## Descripción
 > **Prompt oficial del reto:** "Can you conjure the right bytes? The program's source code can be downloaded here. Connect to the program with netcat."
+>
+> **Hints:**
+> 1. There's no way to print these bytes
+> 2. Use pwntools to send raw bytes over the network
 
 - **Categoría:** General Skills
 - **Dificultad:** Medium

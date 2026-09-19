@@ -2,6 +2,9 @@
 
 ## Descripción
 > **Prompt oficial del reto:** "Don't power users get tired of making spelling mistakes in the shell? Not anymore! Enter Special, the Spell Checked Interface for Affecting Linux. Now, every word is properly spelled and capitalized... automatically and behind-the-scenes! Be the first to test Special in beta [...] That's Special (TM)" — se entrega acceso SSH (`ssh -p <puerto> ctf-player@saturn.picoctf.net`, contraseña provista).
+>
+> **Hints:**
+> 1. Experiment with different shell syntax
 
 - **Categoría:** General Skills
 - **Dificultad:** Medium

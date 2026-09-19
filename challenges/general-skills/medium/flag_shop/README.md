@@ -2,6 +2,9 @@
 
 ## Descripción
 > **Prompt oficial:** "There's a flag shop selling stuff, can you buy a flag?"
+>
+> **Hints:**
+> 1. Two's compliment can do some weird things when numbers get really big!
 
 - **Categoría:** General Skills
 - **Dificultad:** Medium

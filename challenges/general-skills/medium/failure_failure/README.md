@@ -2,6 +2,9 @@
 
 ## Descripción
 > **Prompt oficial del reto:** "Welcome to Failure Failure — a high-available system. This challenge simulates a real-world failover scenario where one server is prioritized over the other. A load balancer stands between you and the truth — and it won't hand over the flag until you force its hand." Se entrega también la configuración de HAProxy (`haproxy.cfg`) y el código fuente de la aplicación (`app.py`).
+>
+> **Hints:**
+> 1. How does a load balancer decide which server should get the traffic?
 
 - **Categoría:** General Skills
 - **Dificultad:** Medium
