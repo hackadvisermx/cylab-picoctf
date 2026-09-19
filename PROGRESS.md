@@ -92,9 +92,9 @@ Auditoría completa (todas las páginas, "Hide Solved" desactivado): la categor�
 | Serpentine | ✅ resuelto | [challenges/general-skills/serpentine](challenges/general-skills/medium/serpentine/README.md) |
 | PW Crack 5 | ✅ resuelto | [challenges/general-skills/pw_crack_5](challenges/general-skills/medium/pw_crack_5/README.md) |
 | PW Crack 4 | ✅ resuelto | [challenges/general-skills/pw_crack_4](challenges/general-skills/medium/pw_crack_4/README.md) |
-| PW Crack 3 | ⏳ pendiente | — |
-| Python Wrangling | ⏳ pendiente | — |
-| Nothing Up My Sleeve | ⏳ pendiente | — |
+| PW Crack 3 | ✅ resuelto | [challenges/general-skills/pw_crack_3](challenges/general-skills/medium/pw_crack_3/README.md) |
+| Python Wrangling | ✅ resuelto | [challenges/general-skills/python_wrangling](challenges/general-skills/medium/python_wrangling/README.md) |
+| Nothing Up My Sleeve | ✅ resuelto | [challenges/general-skills/nothing_up_my_sleeve](challenges/general-skills/medium/nothing_up_my_sleeve/README.md) |
 | plumbing | ⏳ pendiente | — |
 | Based | ⏳ pendiente | — |
 
@@ -161,7 +161,7 @@ Con el filtro "Hide Solved" activado, la cuenta tenía **16 retos sin resolver**
 
 ## Fases del proyecto
 1. ✅ **General Skills — Easy**: 48/48 retos resueltos y documentados.
-2. ⏳ **General Skills — Medium**: 20/25 resueltos y documentados (auditoría completa reveló 25 retos totales; 5 aún pendientes de documentar).
+2. ⏳ **General Skills — Medium**: 23/25 resueltos y documentados (auditoría completa reveló 25 retos totales; 2 aún pendientes de documentar: `plumbing`, `Based`).
 3. ✅ **Web Exploitation — Easy**: 20/20 resueltos y documentados.
 4. ⏳ **Web Exploitation — Medium**: 16/16 de una primera ronda, pero una auditoría posterior encontró 29 retos adicionales resueltos-sin-documentar; 2 de esos 29 ya están documentados (`no_fa`, `hashgate`), 1 en progreso (`Credential Stuffing`), 26 pendientes.
 4b. ⏳ **General Skills — Hard**: 0/2 documentados (`Printer Shares 2`, `Printer Shares 3`, ambos ya resueltos por la cuenta desde antes).
