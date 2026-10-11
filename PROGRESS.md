@@ -100,12 +100,12 @@ Todos estos retos ya aparecían como "Solved by you" en la cuenta antes de esta 
 
 ## Tabla de retos — General Skills, Hard
 
-Auditoría completa: la categoría tiene solo **2 retos Hard**, ambos ya resueltos por la cuenta desde antes pero sin documentar.
+**✅ Los 2 retos de General Skills - Hard están resueltos y documentados (100%).**
 
 | Reto | Estado | Writeup |
 |------|--------|---------|
-| Printer Shares 2 | ⏳ pendiente | — |
-| Printer Shares 3 | ⏳ pendiente | — |
+| Printer Shares 2 | ✅ resuelto | [challenges/general-skills/hard/printer_shares_2](challenges/general-skills/hard/printer_shares_2/README.md) |
+| Printer Shares 3 | ✅ resuelto | [challenges/general-skills/hard/printer_shares_3](challenges/general-skills/hard/printer_shares_3/README.md) |
 
 ## Tabla de retos — Web Exploitation, Easy (orden de aparición en la plataforma)
 
@@ -164,7 +164,7 @@ Con el filtro "Hide Solved" activado, la cuenta tenía **16 retos sin resolver**
 2. ✅ **General Skills — Medium**: 25/25 retos resueltos y documentados.
 3. ✅ **Web Exploitation — Easy**: 20/20 resueltos y documentados.
 4. ⏳ **Web Exploitation — Medium**: 16/16 de una primera ronda, pero una auditoría posterior encontró 29 retos adicionales resueltos-sin-documentar; 2 de esos 29 ya están documentados (`no_fa`, `hashgate`), 1 en progreso (`Credential Stuffing`), 26 pendientes.
-4b. ⏳ **General Skills — Hard**: 0/2 documentados (`Printer Shares 2`, `Printer Shares 3`, ambos ya resueltos por la cuenta desde antes).
+4b. ✅ **General Skills — Hard**: 2/2 retos resueltos y documentados. **Con esto General Skills queda 100% completo en las 3 dificultades (48 Easy + 25 Medium + 2 Hard = 75 retos).**
 5. ⏳ **Resto de categorías** (Web Exploitation Hard, Cryptography, Reverse Engineering, Forensics, Binary Exploitation, Blockchain, Artificial Intelligence) — sin empezar.
 6. ⏳ **Contenedor Docker de práctica local** con la misma estructura.
 7. ⏳ **Mejorar la secuencia y el contenido de los retos con fines pedagógicos.**
