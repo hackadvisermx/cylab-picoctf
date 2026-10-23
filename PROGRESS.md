@@ -159,15 +159,39 @@ Con el filtro "Hide Solved" activado, la cuenta tenía **16 retos sin resolver**
 | 15 | More Cookies | ✅ resuelto | [challenges/web-exploitation/medium/more_cookies](challenges/web-exploitation/medium/more_cookies/README.md) |
 | 16 | Web Gauntlet | ✅ resuelto | [challenges/web-exploitation/medium/web_gauntlet](challenges/web-exploitation/medium/web_gauntlet/README.md) |
 
+## Tabla de retos — Web Exploitation, Hard (orden de aparición en la plataforma)
+
+Existen **16 retos** en total en esta categoría y dificultad. Se van resolviendo y documentando en bloques de 3.
+
+| # | Reto | Estado | Writeup |
+|---|------|--------|---------|
+| 1 | ORDER ORDER | ✅ resuelto | [challenges/web-exploitation/hard/order_order](challenges/web-exploitation/hard/order_order/README.md) |
+| 2 | paper-2 | ⏳ pendiente | — |
+| 3 | secure-email-service | ✅ resuelto | [challenges/web-exploitation/hard/secure_email_service](challenges/web-exploitation/hard/secure_email_service/README.md) |
+| 4 | Pachinko Revisited | ⏳ pendiente | — |
+| 5 | elements | ⏳ pendiente | — |
+| 6 | msfroggenerator2 | ⏳ pendiente | [challenges/web-exploitation/hard/msfroggenerator2](challenges/web-exploitation/hard/msfroggenerator2/README.md) |
+| 7 | cancri-sp | ⏳ pendiente | — |
+| 8 | noted | ✅ resuelto | [challenges/web-exploitation/hard/noted](challenges/web-exploitation/hard/noted/README.md) |
+| 9 | Live Art | ⏳ pendiente | — |
+| 10 | notepad | ✅ resuelto | [challenges/web-exploitation/hard/notepad](challenges/web-exploitation/hard/notepad/README.md) |
+| 11 | Bithug | ⏳ pendiente | — |
+| 12 | X marks the spot | ⏳ pendiente | — |
+| 13 | Some Assembly Required 4 | ⏳ pendiente | — |
+| 14 | Some Assembly Required 3 | ✅ resuelto | [challenges/web-exploitation/hard/some_assembly_required_3](challenges/web-exploitation/hard/some_assembly_required_3/README.md) |
+| 15 | Java Script Kiddie 2 | ✅ resuelto | [challenges/web-exploitation/hard/java_script_kiddie_2](challenges/web-exploitation/hard/java_script_kiddie_2/README.md) |
+| 16 | Java Script Kiddie | ✅ resuelto | [challenges/web-exploitation/hard/java_script_kiddie](challenges/web-exploitation/hard/java_script_kiddie/README.md) |
+
 ## Fases del proyecto
 1. ✅ **General Skills — Easy**: 48/48 retos resueltos y documentados.
 2. ✅ **General Skills — Medium**: 25/25 retos resueltos y documentados.
 3. ✅ **Web Exploitation — Easy**: 20/20 resueltos y documentados.
-4. ⏳ **Web Exploitation — Medium**: 16/16 de una primera ronda, pero una auditoría posterior encontró 29 retos adicionales resueltos-sin-documentar; 23 de esos 29 ya están documentados (`no_fa`, `hashgate`, `picobrowser`, `power_cookie`, `roboto_sans`, `it_is_my_birthday`, `search_source`, `matchtheregex`, `sqlilite`, `secret_box`, `most_cookies`, `findme`, `trickster`, `irish_name_repo_1`, `irish_name_repo_2`, `irish_name_repo_3`, `soap`, `more_sqli`, `byp4ss3d`, `crack_the_gate_2`, `north_south`, `fool_the_lockout`, `sql_map1`); 6 completamente pendientes.
+4. ✅ **Web Exploitation — Medium**: 100% resueltos y documentados (todos los de la plataforma).
 4b. ✅ **General Skills — Hard**: 2/2 retos resueltos y documentados. **Con esto General Skills queda 100% completo en las 3 dificultades (48 Easy + 25 Medium + 2 Hard = 75 retos).**
 4c. ✅ **Cryptography — Easy**: 8/8 resueltos y documentados (`13`, `Mod 26`, `The Numbers`, `interencdec`, `hashcrack`, `EVEN RSA CAN BE BROKEN???`, `Shared Secrets`, `StegoRSA`). **Categoría Easy de Cryptography al 100%.**
 4d. ✅ **Cryptography — Medium**: 45/45 resueltos y documentados. **Categoría Medium de Cryptography al 100%.**
-5. ⏳ **Resto de categorías** (Web Exploitation Hard, Cryptography Hard, Reverse Engineering, Forensics, Binary Exploitation, Blockchain, Artificial Intelligence) — sin empezar.
+4e. ⏳ **Web Exploitation — Hard**: 7/16 resueltos y documentados (`ORDER ORDER`, `secure-email-service`, `noted`, `notepad`, `Some Assembly Required 3`, `Java Script Kiddie 2`, `Java Script Kiddie`).
+5. ⏳ **Resto de categorías** (Cryptography Hard, Reverse Engineering, Forensics, Binary Exploitation, Blockchain, Artificial Intelligence).
 6. ⏳ **Contenedor Docker de práctica local** con la misma estructura.
 7. ⏳ **Mejorar la secuencia y el contenido de los retos con fines pedagógicos.**
 

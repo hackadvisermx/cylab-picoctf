@@ -16,6 +16,7 @@ A diferencia de wargames con progresión estrictamente secuencial (Bandit, Natas
 | General Skills | Medium | ✅ 8/8 resueltos y documentados (los que estaban pendientes en esta cuenta) |
 | Web Exploitation | Easy | ✅ 20/20 resueltos y documentados |
 | Web Exploitation | Medium | ✅ 16/16 resueltos y documentados |
+| Web Exploitation | Hard | ⏳ 7/16 resueltos y documentados |
 | Cryptography | Easy | ✅ 8/8 resueltos y documentados |
 | Cryptography | Medium | ✅ 45/45 resueltos y documentados (100%) |
 | Reverse Engineering | — | ⏳ sin empezar |
