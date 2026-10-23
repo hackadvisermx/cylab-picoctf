@@ -17,7 +17,7 @@ A diferencia de wargames con progresión estrictamente secuencial (Bandit, Natas
 | Web Exploitation | Easy | ✅ 20/20 resueltos y documentados |
 | Web Exploitation | Medium | ✅ 16/16 resueltos y documentados |
 | Cryptography | Easy | ✅ 8/8 resueltos y documentados |
-| Cryptography | Medium | ⏳ 41/45 documentados · 42/45 resueltos · 4 sin resolver |
+| Cryptography | Medium | ✅ 45/45 resueltos y documentados (100%) |
 | Reverse Engineering | — | ⏳ sin empezar |
 | Forensics | — | ⏳ sin empezar |
 | Binary Exploitation | — | ⏳ sin empezar |
@@ -35,15 +35,15 @@ El detalle reto por reto, en el orden en que aparecen en la plataforma, está en
     ├── _template/
     │   └── README.md               # Plantilla base para cada writeup nuevo
     ├── general-skills/
-    │   ├── easy/                   # 48 writeups (uno por reto, en su propia carpeta)
-    │   │   └── <slug>/README.md
-    │   └── medium/                 # 8 writeups
-    │       └── <slug>/README.md
-    └── web-exploitation/
-        ├── easy/                   # 20 writeups (100%)
-        │   └── <slug>/README.md
-        └── medium/                 # 16/16 writeups (100%)
-            └── <slug>/README.md
+    │   ├── easy/                   # 48 writeups (100%)
+    │   ├── medium/                 # 25 writeups (100%)
+    │   └── hard/                   # 2 writeups (100%)
+    ├── web-exploitation/
+    │   ├── easy/                   # 20 writeups (100%)
+    │   └── medium/                 # 39 writeups (100% de lo pendiente en cuenta)
+    └── cryptography/
+        ├── easy/                   # 8 writeups (100%)
+        └── medium/                 # 45 writeups (100%)
 ```
 
 Cada writeup vive en su propia carpeta (`challenges/<categoría>/<dificultad>/<slug>/README.md`) y sigue la plantilla de [`challenges/_template/README.md`](challenges/_template/README.md): descripción oficial del reto, categoría/dificultad/evento/autor, solución paso a paso con los comandos usados, notas adicionales y referencias. Algunas carpetas incluyen también archivos de apoyo descargados del reto (código fuente, logs, binarios de análisis, reglas YARA, etc.) cuando son relevantes para seguir la solución.
@@ -56,7 +56,10 @@ Cada writeup vive en su propia carpeta (`challenges/<categoría>/<dificultad>/<s
 
 ## Próximos pasos
 
-Con General Skills y Web Exploitation al 100%, se continúa con **Cryptography Medium**: 42 de 45 retos resueltos, 41 documentados. Quedan solo 4 sin resolver (`Small Trouble`, `shift registers`, `Related Messages`, `Not TRUe`), y avanzar a las demás categorías (Reverse Engineering, Forensics, Binary Exploitation, Blockchain, Artificial Intelligence). Ver [PROGRESS.md](PROGRESS.md) para el detalle.
+Con **General Skills** (Easy, Medium, Hard), **Web Exploitation** (Easy, Medium) y **Cryptography** (Easy, Medium: 45/45) al 100%, se continuará con:
+1. **Cryptography Hard**
+2. **Web Exploitation Hard**
+3. Resto de categorías: Reverse Engineering, Forensics, Binary Exploitation, Blockchain, Artificial Intelligence. Ver [PROGRESS.md](PROGRESS.md) para el detalle.
 
 ## Aviso
 
