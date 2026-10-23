@@ -166,7 +166,8 @@ Con el filtro "Hide Solved" activado, la cuenta tenía **16 retos sin resolver**
 4. ⏳ **Web Exploitation — Medium**: 16/16 de una primera ronda, pero una auditoría posterior encontró 29 retos adicionales resueltos-sin-documentar; 23 de esos 29 ya están documentados (`no_fa`, `hashgate`, `picobrowser`, `power_cookie`, `roboto_sans`, `it_is_my_birthday`, `search_source`, `matchtheregex`, `sqlilite`, `secret_box`, `most_cookies`, `findme`, `trickster`, `irish_name_repo_1`, `irish_name_repo_2`, `irish_name_repo_3`, `soap`, `more_sqli`, `byp4ss3d`, `crack_the_gate_2`, `north_south`, `fool_the_lockout`, `sql_map1`); 6 completamente pendientes.
 4b. ✅ **General Skills — Hard**: 2/2 retos resueltos y documentados. **Con esto General Skills queda 100% completo en las 3 dificultades (48 Easy + 25 Medium + 2 Hard = 75 retos).**
 4c. ✅ **Cryptography — Easy**: 8/8 resueltos y documentados (`13`, `Mod 26`, `The Numbers`, `interencdec`, `hashcrack`, `EVEN RSA CAN BE BROKEN???`, `Shared Secrets`, `StegoRSA`). **Categoría Easy de Cryptography al 100%.**
-5. ⏳ **Resto de categorías** (Web Exploitation Hard, Cryptography Medium/Hard, Reverse Engineering, Forensics, Binary Exploitation, Blockchain, Artificial Intelligence) — sin empezar.
+4d. ⏳ **Cryptography — Medium**: 26/45 documentados · 37/45 resueltos · 8 sin resolver (`cryptomaze`, `black_cobra_pepper`, `crack_the_power` recién documentados).
+5. ⏳ **Resto de categorías** (Web Exploitation Hard, Cryptography Hard, Reverse Engineering, Forensics, Binary Exploitation, Blockchain, Artificial Intelligence) — sin empezar.
 6. ⏳ **Contenedor Docker de práctica local** con la misma estructura.
 7. ⏳ **Mejorar la secuencia y el contenido de los retos con fines pedagógicos.**
 
