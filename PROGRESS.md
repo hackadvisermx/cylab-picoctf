@@ -182,34 +182,166 @@ Existen **16 retos** en total en esta categoría y dificultad. Se van resolviend
 | 15 | Java Script Kiddie 2 | ✅ resuelto | [challenges/web-exploitation/hard/java_script_kiddie_2](challenges/web-exploitation/hard/java_script_kiddie_2/README.md) |
 | 16 | Java Script Kiddie | ✅ resuelto | [challenges/web-exploitation/hard/java_script_kiddie](challenges/web-exploitation/hard/java_script_kiddie/README.md) |
 
-## Tabla de retos — Forensics (Grupo 1)
+## Tabla de retos — Forensics, Easy (orden de aparición en la plataforma)
 
-| # | Reto | Dificultad | Estado | Writeup |
-|---|------|------------|--------|---------|
-| 1 | Riddle Registry | Easy | ✅ resuelto | [challenges/forensics/easy/riddle_registry](challenges/forensics/easy/riddle_registry/README.md) |
-| 2 | Hidden in plainsight | Easy | ✅ resuelto | [challenges/forensics/easy/hidden_in_plainsight](challenges/forensics/easy/hidden_in_plainsight/README.md) |
-| 3 | Flag in Flame | Easy | ✅ resuelto | [challenges/forensics/easy/flag_in_flame](challenges/forensics/easy/flag_in_flame/README.md) |
-| 4 | Corrupted file | Easy | ✅ resuelto | [challenges/forensics/easy/corrupted_file](challenges/forensics/easy/corrupted_file/README.md) |
-| 5 | Binary Digits | Easy | ✅ resuelto | [challenges/forensics/easy/binary_digits](challenges/forensics/easy/binary_digits/README.md) |
-| 6 | Lookey here | Medium | ✅ resuelto | [challenges/forensics/medium/lookey_here](challenges/forensics/medium/lookey_here/README.md) |
-| 7 | Enhance! | Medium | ✅ resuelto | [challenges/forensics/medium/enhance](challenges/forensics/medium/enhance/README.md) |
-| 8 | Timeline 0 | Medium | ✅ resuelto | [challenges/forensics/medium/timeline_0](challenges/forensics/medium/timeline_0/README.md) |
-| 9 | Timeline 1 | Medium | ✅ resuelto | [challenges/forensics/medium/timeline_1](challenges/forensics/medium/timeline_1/README.md) |
-| 10 | DISKO 4 | Medium | ✅ resuelto | [challenges/forensics/medium/disko_4](challenges/forensics/medium/disko_4/README.md) |
+**✅ Los 15 retos de Forensics - Easy están resueltos y documentados (100%).**
+
+| # | Reto | Estado | Writeup |
+|---|------|--------|---------|
+| 1 | Binary Digits | ✅ resuelto | [challenges/forensics/easy/binary_digits](challenges/forensics/easy/binary_digits/README.md) |
+| 2 | Riddle Registry | ✅ resuelto | [challenges/forensics/easy/riddle_registry](challenges/forensics/easy/riddle_registry/README.md) |
+| 3 | Hidden in plainsight | ✅ resuelto | [challenges/forensics/easy/hidden_in_plainsight](challenges/forensics/easy/hidden_in_plainsight/README.md) |
+| 4 | Flag in Flame | ✅ resuelto | [challenges/forensics/easy/flag_in_flame](challenges/forensics/easy/flag_in_flame/README.md) |
+| 5 | Corrupted file | ✅ resuelto | [challenges/forensics/easy/corrupted_file](challenges/forensics/easy/corrupted_file/README.md) |
+| 6 | DISKO 1 | ✅ resuelto | [challenges/forensics/easy/disko_1](challenges/forensics/easy/disko_1/README.md) |
+| 7 | RED | ✅ resuelto | [challenges/forensics/easy/red](challenges/forensics/easy/red/README.md) |
+| 8 | Ph4nt0m 1ntrud3r | ✅ resuelto | [challenges/forensics/easy/ph4nt0m_1ntrud3r](challenges/forensics/easy/ph4nt0m_1ntrud3r/README.md) |
+| 9 | Verify | ✅ resuelto | [challenges/forensics/easy/verify](challenges/forensics/easy/verify/README.md) |
+| 10 | Scan Surprise | ✅ resuelto | [challenges/forensics/easy/scan_surprise](challenges/forensics/easy/scan_surprise/README.md) |
+| 11 | Secret of the Polyglot | ✅ resuelto | [challenges/forensics/easy/secret_of_the_polyglot](challenges/forensics/easy/secret_of_the_polyglot/README.md) |
+| 12 | CanYouSee | ✅ resuelto | [challenges/forensics/easy/canyousee](challenges/forensics/easy/canyousee/README.md) |
+| 13 | WPA-ing Out | ✅ resuelto | [challenges/forensics/easy/wpa_ing_out](challenges/forensics/easy/wpa_ing_out/README.md) |
+| 14 | information | ✅ resuelto | [challenges/forensics/easy/information](challenges/forensics/easy/information/README.md) |
+| 15 | Glory of the Garden | ✅ resuelto | [challenges/forensics/easy/glory_of_the_garden](challenges/forensics/easy/glory_of_the_garden/README.md) |
+
+## Tabla de retos — Forensics, Medium (orden de aparición en la plataforma)
+
+| # | Reto | Estado | Writeup |
+|---|------|--------|---------|
+| 1 | Timeline 1 | ✅ resuelto | [challenges/forensics/medium/timeline_1](challenges/forensics/medium/timeline_1/README.md) |
+| 2 | Timeline 0 | ✅ resuelto | [challenges/forensics/medium/timeline_0](challenges/forensics/medium/timeline_0/README.md) |
+| 3 | Rogue Tower | ⏳ pendiente | — |
+| 4 | Forensics Git 2 | ⏳ pendiente | — |
+| 5 | Forensics Git 1 | ⏳ pendiente | — |
+| 6 | Forensics Git 0 | ⏳ pendiente | — |
+| 7 | DISKO 4 | ✅ resuelto | [challenges/forensics/medium/disko_4](challenges/forensics/medium/disko_4/README.md) |
+| 8 | DISKO 3 | ⏳ pendiente | — |
+| 9 | DISKO 2 | ⏳ pendiente | — |
+| 10 | flags are stepic | ⏳ pendiente | — |
+| 11 | Event-Viewing | ⏳ pendiente | — |
+| 12 | Bitlocker-2 | ⏳ pendiente | — |
+| 13 | Bitlocker-1 | ⏳ pendiente | — |
+| 14 | Blast from the past | ⏳ pendiente | — |
+| 15 | Mob psycho | ⏳ pendiente | — |
+| 16 | endianness-v2 | ⏳ pendiente | — |
+| 17 | Dear Diary | ⏳ pendiente | — |
+| 18 | PcapPoisoning | ⏳ pendiente | — |
+| 19 | MSB | ⏳ pendiente | — |
+| 20 | hideme | ⏳ pendiente | — |
+| 21 | FindAndOpen | ⏳ pendiente | — |
+| 22 | Torrent Analyze | ⏳ pendiente | — |
+| 23 | St3g0 | ⏳ pendiente | — |
+| 24 | Sleuthkit Intro | ⏳ pendiente | — |
+| 25 | Sleuthkit Apprentice | ⏳ pendiente | — |
+| 26 | Redaction gone wrong | ⏳ pendiente | — |
+| 27 | Packets Primer | ⏳ pendiente | — |
+| 28 | Operation Orchid | ⏳ pendiente | — |
+| 29 | Operation Oni | ⏳ pendiente | — |
+| 30 | Lookey here | ✅ resuelto | [challenges/forensics/medium/lookey_here](challenges/forensics/medium/lookey_here/README.md) |
+| 31 | File types | ⏳ pendiente | — |
+| 32 | Enhance! | ✅ resuelto | [challenges/forensics/medium/enhance](challenges/forensics/medium/enhance/README.md) |
+| 33 | Eavesdrop | ⏳ pendiente | — |
+| 34 | advanced-potion-making | ⏳ pendiente | — |
+| 35 | Milkslap | ⏳ pendiente | — |
+| 36 | Disk, disk, sleuth! II | ⏳ pendiente | — |
+| 37 | MacroHard WeakEdge | ⏳ pendiente | — |
+| 38 | Matryoshka doll | ⏳ pendiente | — |
+| 39 | Wireshark doo dooo do doo... | ⏳ pendiente | — |
+| 40 | Disk, disk, sleuth! | ⏳ pendiente | — |
+| 41 | tunn3l v1s10n | ⏳ pendiente | — |
+| 42 | Wireshark twoo twooo two twoo... | ⏳ pendiente | — |
+| 43 | Trivial Flag Transfer Protocol | ⏳ pendiente | — |
+| 44 | Weird File | ⏳ pendiente | — |
+| 45 | Pitter, Patter, Platters | ⏳ pendiente | — |
+| 46 | shark on wire 2 | ⏳ pendiente | — |
+| 47 | like1000 | ⏳ pendiente | — |
+| 48 | What Lies Within | ⏳ pendiente | — |
+| 49 | c0rrupt | ⏳ pendiente | — |
+| 50 | extensions | ⏳ pendiente | — |
+| 51 | WhitePages | ⏳ pendiente | — |
+| 52 | shark on wire 1 | ⏳ pendiente | — |
+| 53 | m00nwalk | ⏳ pendiente | — |
+| 54 | So Meta | ⏳ pendiente | — |
+
+## Tabla de retos — Cryptography, Easy (orden de aparición en la plataforma)
+
+**✅ Los 8 retos de Cryptography - Easy están resueltos y documentados (100%).**
+
+| # | Reto | Estado | Writeup |
+|---|------|--------|---------|
+| 1 | StegoRSA | ✅ resuelto | [challenges/cryptography/easy/stegorsa](challenges/cryptography/easy/stegorsa/README.md) |
+| 2 | Shared Secrets | ✅ resuelto | [challenges/cryptography/easy/shared_secrets](challenges/cryptography/easy/shared_secrets/README.md) |
+| 3 | hashcrack | ✅ resuelto | [challenges/cryptography/easy/hashcrack](challenges/cryptography/easy/hashcrack/README.md) |
+| 4 | EVEN RSA CAN BE BROKEN??? | ✅ resuelto | [challenges/cryptography/easy/even_rsa_can_be_broken](challenges/cryptography/easy/even_rsa_can_be_broken/README.md) |
+| 5 | interencdec | ✅ resuelto | [challenges/cryptography/easy/interencdec](challenges/cryptography/easy/interencdec/README.md) |
+| 6 | Mod 26 | ✅ resuelto | [challenges/cryptography/easy/mod_26](challenges/cryptography/easy/mod_26/README.md) |
+| 7 | The Numbers | ✅ resuelto | [challenges/cryptography/easy/the_numbers](challenges/cryptography/easy/the_numbers/README.md) |
+| 8 | 13 | ✅ resuelto | [challenges/cryptography/easy/crypto_13](challenges/cryptography/easy/crypto_13/README.md) |
+
+## Tabla de retos — Cryptography, Medium (orden de aparición en la plataforma)
+
+**✅ Los 45 retos de Cryptography - Medium están resueltos y documentados (100%).**
+
+| # | Reto | Estado | Writeup |
+|---|------|--------|---------|
+| 1 | Timestamped Secrets | ✅ resuelto | [challenges/cryptography/medium/timestamped_secrets](challenges/cryptography/medium/timestamped_secrets/README.md) |
+| 2 | Small Trouble | ✅ resuelto | [challenges/cryptography/medium/small_trouble](challenges/cryptography/medium/small_trouble/README.md) |
+| 3 | shift registers | ✅ resuelto | [challenges/cryptography/medium/shift_registers](challenges/cryptography/medium/shift_registers/README.md) |
+| 4 | Related Messages | ✅ resuelto | [challenges/cryptography/medium/related_messages](challenges/cryptography/medium/related_messages/README.md) |
+| 5 | Not TRUe | ✅ resuelto | [challenges/cryptography/medium/not_true](challenges/cryptography/medium/not_true/README.md) |
+| 6 | cryptomaze | ✅ resuelto | [challenges/cryptography/medium/cryptomaze](challenges/cryptography/medium/cryptomaze/README.md) |
+| 7 | ClusterRSA | ✅ resuelto | [challenges/cryptography/medium/clusterrsa](challenges/cryptography/medium/clusterrsa/README.md) |
+| 8 | Black Cobra Pepper | ✅ resuelto | [challenges/cryptography/medium/black_cobra_pepper](challenges/cryptography/medium/black_cobra_pepper/README.md) |
+| 9 | Crack the Power | ✅ resuelto | [challenges/cryptography/medium/crack_the_power](challenges/cryptography/medium/crack_the_power/README.md) |
+| 10 | Guess My Cheese (Part 2) | ✅ resuelto | [challenges/cryptography/medium/guess_my_cheese_part_2](challenges/cryptography/medium/guess_my_cheese_part_2/README.md) |
+| 11 | Guess My Cheese (Part 1) | ✅ resuelto | [challenges/cryptography/medium/guess_my_cheese_part_1](challenges/cryptography/medium/guess_my_cheese_part_1/README.md) |
+| 12 | rsa_oracle | ✅ resuelto | [challenges/cryptography/medium/rsa_oracle](challenges/cryptography/medium/rsa_oracle/README.md) |
+| 13 | Custom encryption | ✅ resuelto | [challenges/cryptography/medium/custom_encryption](challenges/cryptography/medium/custom_encryption/README.md) |
+| 14 | C3 | ✅ resuelto | [challenges/cryptography/medium/c3](challenges/cryptography/medium/c3/README.md) |
+| 15 | rotation | ✅ resuelto | [challenges/cryptography/medium/rotation](challenges/cryptography/medium/rotation/README.md) |
+| 16 | ReadMyCert | ✅ resuelto | [challenges/cryptography/medium/readmycert](challenges/cryptography/medium/readmycert/README.md) |
+| 17 | HideToSee | ✅ resuelto | [challenges/cryptography/medium/hidetosee](challenges/cryptography/medium/hidetosee/README.md) |
+| 18 | Vigenere | ✅ resuelto | [challenges/cryptography/medium/vigenere](challenges/cryptography/medium/vigenere/README.md) |
+| 19 | transposition-trial | ✅ resuelto | [challenges/cryptography/medium/transposition_trial](challenges/cryptography/medium/transposition_trial/README.md) |
+| 20 | substitution2 | ✅ resuelto | [challenges/cryptography/medium/substitution2](challenges/cryptography/medium/substitution2/README.md) |
+| 21 | substitution1 | ✅ resuelto | [challenges/cryptography/medium/substitution1](challenges/cryptography/medium/substitution1/README.md) |
+| 22 | substitution0 | ✅ resuelto | [challenges/cryptography/medium/substitution0](challenges/cryptography/medium/substitution0/README.md) |
+| 23 | rail-fence | ✅ resuelto | [challenges/cryptography/medium/rail-fence](challenges/cryptography/medium/rail-fence/README.md) |
+| 24 | morse-code | ✅ resuelto | [challenges/cryptography/medium/morse-code](challenges/cryptography/medium/morse-code/README.md) |
+| 25 | credstuff | ✅ resuelto | [challenges/cryptography/medium/credstuff](challenges/cryptography/medium/credstuff/README.md) |
+| 26 | basic-mod2 | ✅ resuelto | [challenges/cryptography/medium/basic-mod2](challenges/cryptography/medium/basic-mod2/README.md) |
+| 27 | basic-mod1 | ✅ resuelto | [challenges/cryptography/medium/basic-mod1](challenges/cryptography/medium/basic-mod1/README.md) |
+| 28 | spelling-quiz | ✅ resuelto | [challenges/cryptography/medium/spelling_quiz](challenges/cryptography/medium/spelling_quiz/README.md) |
+| 29 | Mini RSA | ✅ resuelto | [challenges/cryptography/medium/mini_rsa](challenges/cryptography/medium/mini_rsa/README.md) |
+| 30 | It is my Birthday 2 | ✅ resuelto | [challenges/cryptography/medium/it_is_my_birthday_2](challenges/cryptography/medium/it_is_my_birthday_2/README.md) |
+| 31 | Mind your Ps and Qs | ✅ resuelto | [challenges/cryptography/medium/mind_your_ps_and_qs](challenges/cryptography/medium/mind_your_ps_and_qs/README.md) |
+| 32 | Dachshund Attacks | ✅ resuelto | [challenges/cryptography/medium/dachshund_attacks](challenges/cryptography/medium/dachshund_attacks/README.md) |
+| 33 | New Caesar | ✅ resuelto | [challenges/cryptography/medium/new_caesar](challenges/cryptography/medium/new_caesar/README.md) |
+| 34 | No Padding, No Problem | ✅ resuelto | [challenges/cryptography/medium/no_padding_no_problem](challenges/cryptography/medium/no_padding_no_problem/README.md) |
+| 35 | Easy Peasy | ✅ resuelto | [challenges/cryptography/medium/easy_peasy](challenges/cryptography/medium/easy_peasy/README.md) |
+| 36 | It's Not My Fault 2 | ✅ resuelto | [challenges/cryptography/medium/its_not_my_fault_2](challenges/cryptography/medium/its_not_my_fault_2/README.md) |
+| 37 | Pixelated | ✅ resuelto | [challenges/cryptography/medium/pixelated](challenges/cryptography/medium/pixelated/README.md) |
+| 38 | caesar | ✅ resuelto | [challenges/cryptography/medium/caesar](challenges/cryptography/medium/caesar/README.md) |
+| 39 | Easy1 | ✅ resuelto | [challenges/cryptography/medium/easy1](challenges/cryptography/medium/easy1/README.md) |
+| 40 | Mr-Worldwide | ✅ resuelto | [challenges/cryptography/medium/mr_worldwide](challenges/cryptography/medium/mr_worldwide/README.md) |
+| 41 | waves over lambda | ✅ resuelto | [challenges/cryptography/medium/waves_over_lambda](challenges/cryptography/medium/waves_over_lambda/README.md) |
+| 42 | Flags | ✅ resuelto | [challenges/cryptography/medium/flags](challenges/cryptography/medium/flags/README.md) |
+| 43 | Tapping | ✅ resuelto | [challenges/cryptography/medium/tapping](challenges/cryptography/medium/tapping/README.md) |
+| 44 | john_pollard | ✅ resuelto | [challenges/cryptography/medium/john_pollard](challenges/cryptography/medium/john_pollard/README.md) |
+| 45 | la cifra de | ✅ resuelto | [challenges/cryptography/medium/la_cifra_de](challenges/cryptography/medium/la_cifra_de/README.md) |
 
 ## Fases del proyecto
-1. ✅ **General Skills — Easy**: 48/48 retos resueltos y documentados.
-2. ✅ **General Skills — Medium**: 25/25 retos resueltos y documentados.
-3. ✅ **Web Exploitation — Easy**: 20/20 resueltos y documentados.
-4. ✅ **Web Exploitation — Medium**: 100% resueltos y documentados (todos los de la plataforma).
-4b. ✅ **General Skills — Hard**: 2/2 retos resueltos y documentados. **Con esto General Skills queda 100% completo en las 3 dificultades (48 Easy + 25 Medium + 2 Hard = 75 retos).**
-4c. ✅ **Cryptography — Easy**: 8/8 resueltos y documentados (`13`, `Mod 26`, `The Numbers`, `interencdec`, `hashcrack`, `EVEN RSA CAN BE BROKEN???`, `Shared Secrets`, `StegoRSA`). **Categoría Easy de Cryptography al 100%.**
-4d. ✅ **Cryptography — Medium**: 45/45 resueltos y documentados. **Categoría Medium de Cryptography al 100%.**
-4e. ⏳ **Web Exploitation — Hard**: 11/16 resueltos y documentados (`ORDER ORDER`, `secure-email-service`, `Pachinko Revisited`, `noted`, `notepad`, `Bithug`, `X marks the spot`, `Some Assembly Required 4`, `Some Assembly Required 3`, `Java Script Kiddie 2`, `Java Script Kiddie`).
-4f. ✅ **Forensics — Grupo 1**: 10/10 resueltos y documentados (`Riddle Registry`, `Hidden in plainsight`, `Flag in Flame`, `Corrupted file`, `Binary Digits`, `Lookey here`, `Enhance!`, `Timeline 0`, `Timeline 1`, `DISKO 4`).
-5. ⏳ **Resto de categorías** (Cryptography Hard, Reverse Engineering, Forensics restante, Binary Exploitation, Blockchain, Artificial Intelligence).
-6. ⏳ **Contenedor Docker de práctica local** con la misma estructura.
-7. ⏳ **Mejorar la secuencia y el contenido de los retos con fines pedagógicos.**
+1. ✅ **General Skills — Easy**: 48/48 retos resueltos y documentados (100%).
+2. ✅ **General Skills — Medium**: 25/25 retos resueltos y documentados (100%).
+3. ✅ **General Skills — Hard**: 2/2 retos resueltos y documentados (100%). **General Skills queda 100% completo en las 3 dificultades (75 retos).**
+4. ✅ **Web Exploitation — Easy**: 20/20 resueltos y documentados (100%).
+5. ✅ **Web Exploitation — Medium**: 47/47 resueltos y documentados (100%).
+6. ⏳ **Web Exploitation — Hard**: 12/16 resueltos y documentados.
+7. ✅ **Forensics — Easy**: 15/15 resueltos y documentados (100%).
+8. ⏳ **Forensics — Medium**: 5/54 resueltos y documentados.
+9. ✅ **Cryptography — Easy**: 8/8 resueltos y documentados (100%).
+10. ✅ **Cryptography — Medium**: 45/45 resueltos y documentados (100%).
+11. ⏳ **Resto de categorías** (Forensics Medium restante / Hard, Cryptography Hard, Reverse Engineering, Binary Exploitation, Blockchain, Artificial Intelligence).
 
 ## Notas de progreso
 - **Buscar retos pendientes:** activar el toggle "Hide Solved" en el filtro de la Challenge Library — esta cuenta arrastra progreso previo en varias categorías, así que conviene revisar ese filtro antes de elegir qué resolver en cada categoría/dificultad, para no repetir trabajo.
