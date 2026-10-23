@@ -168,7 +168,7 @@ Existen **16 retos** en total en esta categoría y dificultad. Se van resolviend
 | 1 | ORDER ORDER | ✅ resuelto | [challenges/web-exploitation/hard/order_order](challenges/web-exploitation/hard/order_order/README.md) |
 | 2 | paper-2 | ⏳ pendiente | — |
 | 3 | secure-email-service | ✅ resuelto | [challenges/web-exploitation/hard/secure_email_service](challenges/web-exploitation/hard/secure_email_service/README.md) |
-| 4 | Pachinko Revisited | ⏳ pendiente | — |
+| 4 | Pachinko Revisited | ✅ resuelto | [challenges/web-exploitation/hard/pachinko_revisited](challenges/web-exploitation/hard/pachinko_revisited/README.md) |
 | 5 | elements | ⏳ pendiente | — |
 | 6 | msfroggenerator2 | ⏳ pendiente | [challenges/web-exploitation/hard/msfroggenerator2](challenges/web-exploitation/hard/msfroggenerator2/README.md) |
 | 7 | cancri-sp | ⏳ pendiente | — |
@@ -176,8 +176,8 @@ Existen **16 retos** en total en esta categoría y dificultad. Se van resolviend
 | 9 | Live Art | ⏳ pendiente | — |
 | 10 | notepad | ✅ resuelto | [challenges/web-exploitation/hard/notepad](challenges/web-exploitation/hard/notepad/README.md) |
 | 11 | Bithug | ⏳ pendiente | — |
-| 12 | X marks the spot | ⏳ pendiente | — |
-| 13 | Some Assembly Required 4 | ⏳ pendiente | — |
+| 12 | X marks the spot | ✅ resuelto | [challenges/web-exploitation/hard/x_marks_the_spot](challenges/web-exploitation/hard/x_marks_the_spot/README.md) |
+| 13 | Some Assembly Required 4 | ✅ resuelto | [challenges/web-exploitation/hard/some_assembly_required_4](challenges/web-exploitation/hard/some_assembly_required_4/README.md) |
 | 14 | Some Assembly Required 3 | ✅ resuelto | [challenges/web-exploitation/hard/some_assembly_required_3](challenges/web-exploitation/hard/some_assembly_required_3/README.md) |
 | 15 | Java Script Kiddie 2 | ✅ resuelto | [challenges/web-exploitation/hard/java_script_kiddie_2](challenges/web-exploitation/hard/java_script_kiddie_2/README.md) |
 | 16 | Java Script Kiddie | ✅ resuelto | [challenges/web-exploitation/hard/java_script_kiddie](challenges/web-exploitation/hard/java_script_kiddie/README.md) |
@@ -190,7 +190,7 @@ Existen **16 retos** en total en esta categoría y dificultad. Se van resolviend
 4b. ✅ **General Skills — Hard**: 2/2 retos resueltos y documentados. **Con esto General Skills queda 100% completo en las 3 dificultades (48 Easy + 25 Medium + 2 Hard = 75 retos).**
 4c. ✅ **Cryptography — Easy**: 8/8 resueltos y documentados (`13`, `Mod 26`, `The Numbers`, `interencdec`, `hashcrack`, `EVEN RSA CAN BE BROKEN???`, `Shared Secrets`, `StegoRSA`). **Categoría Easy de Cryptography al 100%.**
 4d. ✅ **Cryptography — Medium**: 45/45 resueltos y documentados. **Categoría Medium de Cryptography al 100%.**
-4e. ⏳ **Web Exploitation — Hard**: 7/16 resueltos y documentados (`ORDER ORDER`, `secure-email-service`, `noted`, `notepad`, `Some Assembly Required 3`, `Java Script Kiddie 2`, `Java Script Kiddie`).
+4e. ⏳ **Web Exploitation — Hard**: 10/16 resueltos y documentados (`ORDER ORDER`, `secure-email-service`, `Pachinko Revisited`, `noted`, `notepad`, `X marks the spot`, `Some Assembly Required 4`, `Some Assembly Required 3`, `Java Script Kiddie 2`, `Java Script Kiddie`).
 5. ⏳ **Resto de categorías** (Cryptography Hard, Reverse Engineering, Forensics, Binary Exploitation, Blockchain, Artificial Intelligence).
 6. ⏳ **Contenedor Docker de práctica local** con la misma estructura.
 7. ⏳ **Mejorar la secuencia y el contenido de los retos con fines pedagógicos.**
