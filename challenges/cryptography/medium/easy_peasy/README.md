@@ -4,207 +4,87 @@
 **Dificultad:** Medium  
 **Origen:** picoCTF 2021  
 **Puntos:** 40  
-**Referencia:** https://play.picoctf.org/practice/challenge/284
+**CyLab ID:** 125  
+**Estado:** Resuelto
 
 ---
 
 ## Descripción
 
-> "A one-time pad is unbreakable, but can you manage to recover the flag? (Wrap around the end of the alphabet!) Connect with `nc mercury.picoctf.net 11188`"
+> "A one-time pad is unbreakable, but can you manage to recover the flag? (Wrap with academy{})"
 
-El reto expone un servidor que cifra datos mediante un esquema de **One-Time Pad (OTP)**. En teoría, el OTP es criptográficamente irrompible. En la práctica, si el keystream se reutiliza, el esquema se rompe completamente. Aquí radica la vulnerabilidad.
+El reto expone un servidor que cifra datos mediante un esquema de **One-Time Pad (OTP)**. En teoría, el OTP es criptográficamente irrompible. En la práctica, si el keystream se reutiliza, el esquema se rompe completamente.
 
-> **Nota CyLab:** El reto requiere una instancia activa. En el entorno CyLab se accede mediante `nc <host> <puerto>` con las credenciales de la instancia asignada.
-
----
-
-## Hints oficiales
-
-1. "Maybe there's a way to get the key from the stream"
-2. "If you know where the key started and the key length, could you tell where it was reused?"
-3. "XOR the key with the ciphertext and see what happens"
+**Hint oficial:** "Maybe there's a way to make this a 2x pad."
 
 ---
 
-## Solución
+## Código del servidor
 
-### Lógica del servidor
-
-El servidor implementa un OTP con las siguientes características:
+El servidor (`otp.py`) implementa el siguiente esquema:
 
 ```python
-KEY_LEN = 50000  # clave aleatoria de 50000 bytes
-key = open('./key').read()
+KEY_LEN = 50000
+key = open("key", "rb").read()   # clave aleatoria de 50000 bytes
 
-def encrypt(key_location, data):
-    result = ''
-    for i, c in enumerate(data):
-        result += chr(ord(key[(key_location + i) % KEY_LEN]) ^ ord(c))
-    return result
+def startup(key_location):
+    flag = open("flag").read()
+    key = kf[key_location : key_location + len(flag)]
+    key_location += len(flag)
+    # imprime: "This is the encrypted flag!\n<hex>"
+    return key_location
+
+def encrypt(key_location):
+    ui = input("What data would you like to encrypt? ").rstrip()
+    # XOR de ui con kf[key_location : key_location + len(ui)]
+    # key_location avanza (con wrap-around mod KEY_LEN)
+    return key_location
 ```
 
 Al conectar:
-1. El servidor cifra la flag con `key[0 : len(flag)]` y muestra el resultado en hexadecimal.
+1. El servidor cifra la flag con `key[0 : len(flag)]` y muestra el resultado en hex.
 2. Guarda `key_location = len(flag)` como puntero interno.
-3. A partir de ese momento, el usuario puede enviar datos para cifrar; cada llamada avanza `key_location`.
-
-### La vulnerabilidad: reutilización del keystream
-
-La propiedad fundamental del OTP es que la clave **nunca debe reutilizarse**. Si `C1 = P1 XOR K` y `C2 = P2 XOR K`, entonces `C1 XOR C2 = P1 XOR P2`, lo que permite recuperar el texto plano sin conocer la clave.
-
-Aquí la clave tiene `KEY_LEN = 50000` bytes y el puntero avanza con cada cifrado aplicando módulo `KEY_LEN`. Esto significa que si forzamos al puntero a llegar a `50000`, el siguiente cifrado comenzará en la posición `0` — exactamente donde se cifró la flag.
-
-### Pasos del ataque
-
-```
-1. Al conectar:
-   server → encrypted_flag = flag XOR key[0 : flag_len]
-   key_location = flag_len
-
-2. Enviamos (50000 - flag_len) bytes de relleno:
-   key_location = flag_len + (50000 - flag_len) = 50000 ≡ 0  (mod 50000)
-
-3. Enviamos flag_len bytes de valor 0x00:
-   server → encrypt(0, b'\x00' * flag_len) = key[0 : flag_len] XOR 0x00 = key[0 : flag_len]
-
-4. Recuperamos la flag:
-   flag = encrypted_flag XOR key[0 : flag_len]
-```
-
-Al cifrar bytes nulos (`\x00`), el XOR con el keystream produce directamente el keystream. Con ese keystream y el ciphertext original, obtenemos el plaintext.
+3. Permite al usuario cifrar datos arbitrarios; cada cifrado avanza `key_location`.
+4. Cuando `key_location + len(input) >= KEY_LEN`, el wrap-around se aplica: usa `kf[start:] + kf[:stop]`.
 
 ---
 
-## Script de ataque
+## La vulnerabilidad: reutilización del keystream
 
-```python
-#!/usr/bin/env python3
-"""
-easy_peasy_solver.py
-Explotación del OTP con keystream reutilizado (wrap-around en posición 0).
-Uso: python3 easy_peasy_solver.py <host> <puerto>
-"""
+La propiedad fundamental del OTP es que la clave **nunca debe reutilizarse**. Si `C1 = P1 XOR K` y `C2 = P2 XOR K`, entonces `C1 XOR C2 = P1 XOR P2`, lo que permite recuperar el texto plano.
 
-import socket
-import sys
-
-# ── Configuración ──────────────────────────────────────────────────────────────
-HOST = sys.argv[1] if len(sys.argv) > 1 else 'mercury.picoctf.net'
-PORT = int(sys.argv[2]) if len(sys.argv) > 2 else 11188
-KEY_LEN = 50000
-# ──────────────────────────────────────────────────────────────────────────────
-
-
-def recv_until(s: socket.socket, delim: bytes = b'\n') -> bytes:
-    """Leer bytes del socket hasta encontrar el delimitador."""
-    buf = b''
-    while not buf.endswith(delim):
-        chunk = s.recv(1)
-        if not chunk:
-            break
-        buf += chunk
-    return buf
-
-
-def recv_line(s: socket.socket) -> str:
-    return recv_until(s, b'\n').decode(errors='replace').strip()
-
-
-def main():
-    s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-    s.connect((HOST, PORT))
-    print(f"[*] Conectado a {HOST}:{PORT}")
-
-    # ── Paso 1: recibir la flag cifrada ────────────────────────────────────────
-    enc_flag_hex = None
-    while enc_flag_hex is None:
-        line = recv_line(s)
-        print(f"[server] {line}")
-        # El servidor muestra algo como: "encrypted_flag = <hex>"
-        if 'flag' in line.lower() and '=' in line:
-            enc_flag_hex = line.split('=')[-1].strip()
-
-    enc_flag = bytes.fromhex(enc_flag_hex)
-    flag_len = len(enc_flag)
-    print(f"[*] Flag cifrada ({flag_len} bytes): {enc_flag_hex}")
-
-    # ── Paso 2: esperar el prompt para cifrar ──────────────────────────────────
-    # El servidor muestra un menú / prompt; consumimos hasta que pide entrada
-    while True:
-        line = recv_line(s)
-        print(f"[server] {line}")
-        if line.endswith(':') or line.endswith('?') or 'input' in line.lower():
-            break
-
-    # ── Paso 3: agotar la clave enviando (KEY_LEN - flag_len) bytes de relleno ─
-    padding_len = KEY_LEN - flag_len
-    print(f"[*] Enviando {padding_len} bytes de relleno para wrap-around...")
-
-    # El servidor suele pedir la longitud o los datos directamente en hex.
-    # Ajusta el formato según el protocolo real observado al conectar.
-    padding_hex = ('61' * padding_len)  # 'a' * padding_len en hex
-    s.sendall((padding_hex + '\n').encode())
-
-    # Consumir la respuesta del servidor (el ciphertext del relleno, ignorado)
-    while True:
-        line = recv_line(s)
-        print(f"[server] {line}")
-        if line.endswith(':') or line.endswith('?') or 'input' in line.lower():
-            break
-
-    # ── Paso 4: cifrar flag_len bytes de ceros → obtenemos el keystream ────────
-    print(f"[*] Enviando {flag_len} bytes nulos para extraer keystream...")
-    null_hex = ('00' * flag_len)
-    s.sendall((null_hex + '\n').encode())
-
-    # Leer la respuesta: keystream en hex
-    keystream_hex = None
-    while keystream_hex is None:
-        line = recv_line(s)
-        print(f"[server] {line}")
-        if '=' in line:
-            keystream_hex = line.split('=')[-1].strip()
-
-    keystream = bytes.fromhex(keystream_hex)
-    print(f"[*] Keystream recuperado: {keystream_hex}")
-
-    # ── Paso 5: XOR → flag en claro ───────────────────────────────────────────
-    flag_bytes = bytes(a ^ b for a, b in zip(enc_flag, keystream))
-    flag = flag_bytes.decode(errors='replace')
-    print(f"\n[+] Flag: {flag}")
-
-    s.close()
-
-
-if __name__ == '__main__':
-    main()
-```
-
-> **Nota sobre el protocolo:** El script asume que el servidor recibe y responde en hexadecimal y usa `=` como separador. Al conectar con `nc` por primera vez, observa el formato exacto de los prompts y ajusta las condiciones de `recv_line` según sea necesario.
+Aquí la clave tiene `KEY_LEN = 50000` bytes y el puntero avanza con cada cifrado. Si forzamos al puntero a llegar a posición `50000 mod 50000 = 0`, el siguiente cifrado comenzará exactamente donde se cifró la flag.
 
 ---
 
-## Notas adicionales
+## Ataque paso a paso
 
-### ¿Por qué este OTP no es seguro?
+```
+Paso 1: Conectar → servidor envía enc_flag = flag XOR key[0:N]
+         key_location = N  (donde N = len(flag))
 
-| Propiedad | OTP seguro | Este reto |
-|-----------|-----------|-----------|
-| Longitud de clave | = longitud del mensaje | 50 000 bytes (finita) |
-| Reutilización | Nunca | Al llegar a 50 000, vuelve a 0 |
-| Secuencia de cifrado | Independiente por mensaje | Puntero compartido y controlable |
-| Seguridad | Perfecta (Shannon, 1949) | Rota por reutilización |
+Paso 2: Enviamos (50000 - N) caracteres 'a':
+         key_location = N + (50000 - N) = 50000 ≡ 0  (mod 50000)
+         Resultado cifrado: lo ignoramos.
 
-La lección del reto: **el OTP solo es seguro si la clave es tan larga como el mensaje, verdaderamente aleatoria y nunca reutilizada**. En cuanto el keystream se repite —aunque sea parcialmente— el esquema pierde toda su seguridad.
+Paso 3: Enviamos N caracteres 'a':
+         ks_result = key[0:N] XOR 'a'*N
+         → keystream = ks_result XOR 'a'*N = key[0:N]
+
+Paso 4: flag = enc_flag XOR keystream
+              = (flag XOR key[0:N]) XOR key[0:N]
+              = flag
+```
 
 ### Identidad algebraica usada
 
 ```
-enc_flag  = flag    XOR key[0..n]
-keystream = 0x00..0 XOR key[0..n]  →  keystream = key[0..n]
+enc_flag  = flag  XOR key[0:N]
+ks_result = 'a'*N XOR key[0:N]
+keystream = ks_result XOR 'a'*N = key[0:N]
 
 flag = enc_flag XOR keystream
-     = (flag XOR key[0..n]) XOR key[0..n]
+     = (flag XOR key[0:N]) XOR key[0:N]
      = flag
 ```
 
@@ -212,9 +92,110 @@ La operación XOR es su propia inversa: `A XOR B XOR B = A`.
 
 ---
 
+## Ejecución real (CyLab)
+
+La instancia CyLab se inicia en: `https://learn.cylabacademy.org/library/125`
+
+Tras iniciar la instancia, la descripción incluye la cadena de conexión:  
+`nc <host>.cylabacademy.net <puerto>`
+
+### Protocolo del servidor
+
+El servidor lee **cadenas de texto crudas** (no hex). Se envían directamente los caracteres:
+
+```
+Banner inicial:
+  "******************Welcome to our OTP implementation!******************"
+  "This is the encrypted flag!"
+  "<hex del flag cifrado>"
+  ""
+  "What data would you like to encrypt? "
+
+Turno 1 (padding):
+  Enviamos: "aaa...a\n"  (50000 - flag_len caracteres)
+  Servidor: "<hex del ciphertext de relleno>"
+
+Turno 2 (extracción de keystream):
+  Enviamos: "aaa...a\n"  (flag_len caracteres)
+  Servidor: "Here ya go!"
+            "<hex = key[0:N] XOR 'a'*N>"
+```
+
+### Script de ataque
+
+```python
+#!/usr/bin/env python3
+"""
+otp_solve.py  — Easy Peasy OTP wrap-around attack
+Uso: python3 otp_solve.py <host> <port>
+"""
+import socket, sys, re, time
+
+HOST, PORT = sys.argv[1], int(sys.argv[2])
+KEY_LEN = 50000
+PAD_CHAR = ord('a')
+
+def recv_until(s, marker, timeout=20.0):
+    data, deadline = b"", time.time() + timeout
+    s.settimeout(timeout)
+    while time.time() < deadline:
+        ch = s.recv(1)
+        if not ch: break
+        data += ch
+        if data.endswith(marker): break
+    return data
+
+s = socket.socket(); s.connect((HOST, PORT))
+
+banner = recv_until(s, b"encrypt? ").decode(errors="replace")
+m = re.search(r'This is the encrypted flag!\s*\n([0-9a-f]+)', banner, re.I)
+enc_flag = bytes.fromhex(m.group(1))
+N = len(enc_flag)
+print(f"[*] enc_flag ({N}B): {m.group(1)}")
+
+# Padding
+s.sendall(b"a" * (KEY_LEN - N) + b"\n")
+recv_until(s, b"encrypt? ", timeout=30.0)
+
+# Keystream
+s.sendall(b"a" * N + b"\n")
+resp = recv_until(s, b"\n\n").decode(errors="replace")
+ks = bytes.fromhex(re.search(r'([0-9a-f]{' + str(N*2) + r'})', resp, re.I).group(1))
+
+# Flag
+key = bytes(b ^ PAD_CHAR for b in ks)
+flag_raw = bytes(a ^ b for a, b in zip(enc_flag, key)).decode()
+inner = re.search(r'picoCTF\{([^}]+)\}', flag_raw).group(1)
+print(f"[+] FLAG: academy{{{inner}}}")
+```
+
+---
+
+## Resultado
+
+- **Flag obtenida:** `academy{...}` (ver `scripts/creds.txt`)
+- **Submission:** Correcto (`correct: true`)
+- **Instancia usada:** `*.cylabacademy.net` (on-demand, 15 minutos)
+
+---
+
+## ¿Por qué este OTP no es seguro?
+
+| Propiedad | OTP seguro | Este reto |
+|-----------|-----------|-----------|
+| Longitud de clave | = longitud del mensaje | 50 000 bytes (finita) |
+| Reutilización | Nunca | Al llegar a 50 000, vuelve a 0 |
+| Control del atacante | Ninguno | Podemos forzar el wrap-around |
+| Seguridad | Perfecta (Shannon, 1949) | Rota por reutilización |
+
+La lección: **el OTP solo es seguro si la clave es tan larga como el mensaje, verdaderamente aleatoria y nunca reutilizada**. En cuanto el keystream se repite —aunque sea parcialmente— el esquema pierde toda su seguridad.
+
+---
+
 ## Referencias
 
-- Reto original: https://play.picoctf.org/practice/challenge/284
+- Reto original picoCTF: https://play.picoctf.org/practice/challenge/284
+- CyLab Academy: https://learn.cylabacademy.org/library/125
+- Código del servidor: `otp.py` (disponible en la instancia CyLab)
 - Shannon, C. E. (1949). *Communication Theory of Secrecy Systems*. Bell System Technical Journal.
 - [Wikipedia — One-time pad](https://en.wikipedia.org/wiki/One-time_pad)
-- [Many-time pad attack](https://en.wikipedia.org/wiki/One-time_pad#Reuse_of_key_material)
