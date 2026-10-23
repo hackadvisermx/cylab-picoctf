@@ -19,7 +19,7 @@ A diferencia de wargames con progresión estrictamente secuencial (Bandit, Natas
 | Web Exploitation | Hard | ⏳ 11/16 resueltos y documentados |
 | Cryptography | Easy | ✅ 8/8 resueltos y documentados |
 | Cryptography | Medium | ✅ 45/45 resueltos y documentados (100%) |
-| Forensics | Easy / Medium | ⏳ 6/10 resueltos y documentados (Grupo 1) |
+| Forensics | Easy / Medium | ✅ 10/10 resueltos y documentados (Grupo 1) |
 | Reverse Engineering | — | ⏳ sin empezar |
 | Binary Exploitation | — | ⏳ sin empezar |
 | Blockchain | — | ⏳ sin empezar |
@@ -46,8 +46,8 @@ El detalle reto por reto, en el orden en que aparecen en la plataforma, está en
     │   ├── easy/                   # 8 writeups (100%)
     │   └── medium/                 # 45 writeups (100%)
     └── forensics/
-        ├── easy/                   # 5 writeups (en progreso)
-        └── medium/                 # 1 writeup (en progreso)
+        ├── easy/                   # 5 writeups (100% Grupo 1)
+        └── medium/                 # 5 writeups (100% Grupo 1)
 ```
 
 Cada writeup vive en su propia carpeta (`challenges/<categoría>/<dificultad>/<slug>/README.md`) y sigue la plantilla de [`challenges/_template/README.md`](challenges/_template/README.md): descripción oficial del reto, categoría/dificultad/evento/autor, solución paso a paso con los comandos usados, notas adicionales y referencias. Algunas carpetas incluyen también archivos de apoyo descargados del reto (código fuente, logs, binarios de análisis, reglas YARA, etc.) cuando son relevantes para seguir la solución.

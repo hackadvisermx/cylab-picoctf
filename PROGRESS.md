@@ -192,10 +192,10 @@ Existen **16 retos** en total en esta categoría y dificultad. Se van resolviend
 | 4 | Corrupted file | Easy | ✅ resuelto | [challenges/forensics/easy/corrupted_file](challenges/forensics/easy/corrupted_file/README.md) |
 | 5 | Binary Digits | Easy | ✅ resuelto | [challenges/forensics/easy/binary_digits](challenges/forensics/easy/binary_digits/README.md) |
 | 6 | Lookey here | Medium | ✅ resuelto | [challenges/forensics/medium/lookey_here](challenges/forensics/medium/lookey_here/README.md) |
-| 7 | Enhance! | Medium | ⏳ pendiente | — |
-| 8 | Timeline 0 | Medium | ⏳ pendiente | — |
-| 9 | Timeline 1 | Medium | ⏳ pendiente | — |
-| 10 | DISKO 4 | Medium | ⏳ pendiente | — |
+| 7 | Enhance! | Medium | ✅ resuelto | [challenges/forensics/medium/enhance](challenges/forensics/medium/enhance/README.md) |
+| 8 | Timeline 0 | Medium | ✅ resuelto | [challenges/forensics/medium/timeline_0](challenges/forensics/medium/timeline_0/README.md) |
+| 9 | Timeline 1 | Medium | ✅ resuelto | [challenges/forensics/medium/timeline_1](challenges/forensics/medium/timeline_1/README.md) |
+| 10 | DISKO 4 | Medium | ✅ resuelto | [challenges/forensics/medium/disko_4](challenges/forensics/medium/disko_4/README.md) |
 
 ## Fases del proyecto
 1. ✅ **General Skills — Easy**: 48/48 retos resueltos y documentados.
@@ -206,7 +206,7 @@ Existen **16 retos** en total en esta categoría y dificultad. Se van resolviend
 4c. ✅ **Cryptography — Easy**: 8/8 resueltos y documentados (`13`, `Mod 26`, `The Numbers`, `interencdec`, `hashcrack`, `EVEN RSA CAN BE BROKEN???`, `Shared Secrets`, `StegoRSA`). **Categoría Easy de Cryptography al 100%.**
 4d. ✅ **Cryptography — Medium**: 45/45 resueltos y documentados. **Categoría Medium de Cryptography al 100%.**
 4e. ⏳ **Web Exploitation — Hard**: 11/16 resueltos y documentados (`ORDER ORDER`, `secure-email-service`, `Pachinko Revisited`, `noted`, `notepad`, `Bithug`, `X marks the spot`, `Some Assembly Required 4`, `Some Assembly Required 3`, `Java Script Kiddie 2`, `Java Script Kiddie`).
-4f. ⏳ **Forensics — Grupo 1**: 6/10 resueltos y documentados (`Riddle Registry`, `Hidden in plainsight`, `Flag in Flame`, `Corrupted file`, `Binary Digits`, `Lookey here`).
+4f. ✅ **Forensics — Grupo 1**: 10/10 resueltos y documentados (`Riddle Registry`, `Hidden in plainsight`, `Flag in Flame`, `Corrupted file`, `Binary Digits`, `Lookey here`, `Enhance!`, `Timeline 0`, `Timeline 1`, `DISKO 4`).
 5. ⏳ **Resto de categorías** (Cryptography Hard, Reverse Engineering, Forensics restante, Binary Exploitation, Blockchain, Artificial Intelligence).
 6. ⏳ **Contenedor Docker de práctica local** con la misma estructura.
 7. ⏳ **Mejorar la secuencia y el contenido de los retos con fines pedagógicos.**
