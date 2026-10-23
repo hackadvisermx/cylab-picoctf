@@ -219,15 +219,15 @@ Existen **16 retos** en total en esta categoría y dificultad. Se van resolviend
 | 9 | DISKO 2 | ✅ resuelto | [challenges/forensics/medium/disko_2](challenges/forensics/medium/disko_2/README.md) |
 | 10 | flags are stepic | ✅ resuelto | [challenges/forensics/medium/flags_are_stepic](challenges/forensics/medium/flags_are_stepic/README.md) |
 | 11 | Event-Viewing | ✅ resuelto | [challenges/forensics/medium/event-viewing](challenges/forensics/medium/event-viewing/README.md) |
-| 12 | Bitlocker-2 | ⏳ pendiente | — |
-| 13 | Bitlocker-1 | ⏳ pendiente | — |
-| 14 | Blast from the past | ⏳ pendiente | — |
-| 15 | Mob psycho | ⏳ pendiente | — |
-| 16 | endianness-v2 | ⏳ pendiente | — |
-| 17 | Dear Diary | ⏳ pendiente | — |
-| 18 | PcapPoisoning | ⏳ pendiente | — |
-| 19 | MSB | ⏳ pendiente | — |
-| 20 | hideme | ⏳ pendiente | — |
+| 12 | Bitlocker-2 | ✅ resuelto | [challenges/forensics/medium/bitlocker-2](challenges/forensics/medium/bitlocker-2/README.md) |
+| 13 | Bitlocker-1 | ✅ resuelto | [challenges/forensics/medium/bitlocker-1](challenges/forensics/medium/bitlocker-1/README.md) |
+| 14 | Blast from the past | ✅ resuelto | [challenges/forensics/medium/blast_from_the_past](challenges/forensics/medium/blast_from_the_past/README.md) |
+| 15 | Mob psycho | ✅ resuelto | [challenges/forensics/medium/mob_psycho](challenges/forensics/medium/mob_psycho/README.md) |
+| 16 | endianness-v2 | ✅ resuelto | [challenges/forensics/medium/endianness-v2](challenges/forensics/medium/endianness-v2/README.md) |
+| 17 | Dear Diary | ✅ resuelto | [challenges/forensics/medium/dear_diary](challenges/forensics/medium/dear_diary/README.md) |
+| 18 | PcapPoisoning | ✅ resuelto | [challenges/forensics/medium/pcappoisoning](challenges/forensics/medium/pcappoisoning/README.md) |
+| 19 | MSB | ✅ resuelto | [challenges/forensics/medium/msb](challenges/forensics/medium/msb/README.md) |
+| 20 | hideme | ✅ resuelto | [challenges/forensics/medium/hideme](challenges/forensics/medium/hideme/README.md) |
 | 21 | FindAndOpen | ⏳ pendiente | — |
 | 22 | Torrent Analyze | ⏳ pendiente | — |
 | 23 | St3g0 | ⏳ pendiente | — |
