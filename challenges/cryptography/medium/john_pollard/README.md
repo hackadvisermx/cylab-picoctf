@@ -86,11 +86,11 @@ Ambos valores de p−1 y q−1 son B-smooth con B relativamente pequeño, lo que
 
 ### 4. Construir la flag
 
-Con p < q:
+El segundo hint indica "Try swapping p and q if it does not work". CyLab espera el **mayor primo primero** (q,p):
 
 ```
-p = 67867967
-q = 73176001
+q = 73176001  (el mayor)
+p = 67867967  (el menor)
 ```
 
 ---
