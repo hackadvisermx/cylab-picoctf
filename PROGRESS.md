@@ -182,6 +182,21 @@ Existen **16 retos** en total en esta categoría y dificultad. Se van resolviend
 | 15 | Java Script Kiddie 2 | ✅ resuelto | [challenges/web-exploitation/hard/java_script_kiddie_2](challenges/web-exploitation/hard/java_script_kiddie_2/README.md) |
 | 16 | Java Script Kiddie | ✅ resuelto | [challenges/web-exploitation/hard/java_script_kiddie](challenges/web-exploitation/hard/java_script_kiddie/README.md) |
 
+## Tabla de retos — Forensics (Grupo 1)
+
+| # | Reto | Dificultad | Estado | Writeup |
+|---|------|------------|--------|---------|
+| 1 | Riddle Registry | Easy | ✅ resuelto | [challenges/forensics/easy/riddle_registry](challenges/forensics/easy/riddle_registry/README.md) |
+| 2 | Hidden in plainsight | Easy | ✅ resuelto | [challenges/forensics/easy/hidden_in_plainsight](challenges/forensics/easy/hidden_in_plainsight/README.md) |
+| 3 | Flag in Flame | Easy | ✅ resuelto | [challenges/forensics/easy/flag_in_flame](challenges/forensics/easy/flag_in_flame/README.md) |
+| 4 | Corrupted file | Easy | ⏳ pendiente | — |
+| 5 | Binary Digits | Easy | ⏳ pendiente | — |
+| 6 | Lookey here | Medium | ⏳ pendiente | — |
+| 7 | Enhance! | Medium | ⏳ pendiente | — |
+| 8 | Timeline 0 | Medium | ⏳ pendiente | — |
+| 9 | Timeline 1 | Medium | ⏳ pendiente | — |
+| 10 | DISKO 4 | Medium | ⏳ pendiente | — |
+
 ## Fases del proyecto
 1. ✅ **General Skills — Easy**: 48/48 retos resueltos y documentados.
 2. ✅ **General Skills — Medium**: 25/25 retos resueltos y documentados.
@@ -191,7 +206,8 @@ Existen **16 retos** en total en esta categoría y dificultad. Se van resolviend
 4c. ✅ **Cryptography — Easy**: 8/8 resueltos y documentados (`13`, `Mod 26`, `The Numbers`, `interencdec`, `hashcrack`, `EVEN RSA CAN BE BROKEN???`, `Shared Secrets`, `StegoRSA`). **Categoría Easy de Cryptography al 100%.**
 4d. ✅ **Cryptography — Medium**: 45/45 resueltos y documentados. **Categoría Medium de Cryptography al 100%.**
 4e. ⏳ **Web Exploitation — Hard**: 11/16 resueltos y documentados (`ORDER ORDER`, `secure-email-service`, `Pachinko Revisited`, `noted`, `notepad`, `Bithug`, `X marks the spot`, `Some Assembly Required 4`, `Some Assembly Required 3`, `Java Script Kiddie 2`, `Java Script Kiddie`).
-5. ⏳ **Resto de categorías** (Cryptography Hard, Reverse Engineering, Forensics, Binary Exploitation, Blockchain, Artificial Intelligence).
+4f. ⏳ **Forensics — Grupo 1**: 3/10 resueltos y documentados (`Riddle Registry`, `Hidden in plainsight`, `Flag in Flame`).
+5. ⏳ **Resto de categorías** (Cryptography Hard, Reverse Engineering, Forensics restante, Binary Exploitation, Blockchain, Artificial Intelligence).
 6. ⏳ **Contenedor Docker de práctica local** con la misma estructura.
 7. ⏳ **Mejorar la secuencia y el contenido de los retos con fines pedagógicos.**
 
