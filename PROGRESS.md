@@ -215,10 +215,10 @@ Existen **16 retos** en total en esta categoría y dificultad. Se van resolviend
 | 5 | Forensics Git 1 | ✅ resuelto | [challenges/forensics/medium/forensics_git_1](challenges/forensics/medium/forensics_git_1/README.md) |
 | 6 | Forensics Git 0 | ✅ resuelto | [challenges/forensics/medium/forensics_git_0](challenges/forensics/medium/forensics_git_0/README.md) |
 | 7 | DISKO 4 | ✅ resuelto | [challenges/forensics/medium/disko_4](challenges/forensics/medium/disko_4/README.md) |
-| 8 | DISKO 3 | ⏳ pendiente | — |
-| 9 | DISKO 2 | ⏳ pendiente | — |
-| 10 | flags are stepic | ⏳ pendiente | — |
-| 11 | Event-Viewing | ⏳ pendiente | — |
+| 8 | DISKO 3 | ✅ resuelto | [challenges/forensics/medium/disko_3](challenges/forensics/medium/disko_3/README.md) |
+| 9 | DISKO 2 | ✅ resuelto | [challenges/forensics/medium/disko_2](challenges/forensics/medium/disko_2/README.md) |
+| 10 | flags are stepic | ✅ resuelto | [challenges/forensics/medium/flags_are_stepic](challenges/forensics/medium/flags_are_stepic/README.md) |
+| 11 | Event-Viewing | ✅ resuelto | [challenges/forensics/medium/event-viewing](challenges/forensics/medium/event-viewing/README.md) |
 | 12 | Bitlocker-2 | ⏳ pendiente | — |
 | 13 | Bitlocker-1 | ⏳ pendiente | — |
 | 14 | Blast from the past | ⏳ pendiente | — |
