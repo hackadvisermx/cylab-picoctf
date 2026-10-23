@@ -210,10 +210,10 @@ Existen **16 retos** en total en esta categoría y dificultad. Se van resolviend
 |---|------|--------|---------|
 | 1 | Timeline 1 | ✅ resuelto | [challenges/forensics/medium/timeline_1](challenges/forensics/medium/timeline_1/README.md) |
 | 2 | Timeline 0 | ✅ resuelto | [challenges/forensics/medium/timeline_0](challenges/forensics/medium/timeline_0/README.md) |
-| 3 | Rogue Tower | ⏳ pendiente | — |
-| 4 | Forensics Git 2 | ⏳ pendiente | — |
-| 5 | Forensics Git 1 | ⏳ pendiente | — |
-| 6 | Forensics Git 0 | ⏳ pendiente | — |
+| 3 | Rogue Tower | ✅ resuelto | [challenges/forensics/medium/rogue_tower](challenges/forensics/medium/rogue_tower/README.md) |
+| 4 | Forensics Git 2 | ✅ resuelto | [challenges/forensics/medium/forensics_git_2](challenges/forensics/medium/forensics_git_2/README.md) |
+| 5 | Forensics Git 1 | ✅ resuelto | [challenges/forensics/medium/forensics_git_1](challenges/forensics/medium/forensics_git_1/README.md) |
+| 6 | Forensics Git 0 | ✅ resuelto | [challenges/forensics/medium/forensics_git_0](challenges/forensics/medium/forensics_git_0/README.md) |
 | 7 | DISKO 4 | ✅ resuelto | [challenges/forensics/medium/disko_4](challenges/forensics/medium/disko_4/README.md) |
 | 8 | DISKO 3 | ⏳ pendiente | — |
 | 9 | DISKO 2 | ⏳ pendiente | — |
