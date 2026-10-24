@@ -228,20 +228,20 @@ Existen **16 retos** en total en esta categoría y dificultad. Se van resolviend
 | 18 | PcapPoisoning | ✅ resuelto | [challenges/forensics/medium/pcappoisoning](challenges/forensics/medium/pcappoisoning/README.md) |
 | 19 | MSB | ✅ resuelto | [challenges/forensics/medium/msb](challenges/forensics/medium/msb/README.md) |
 | 20 | hideme | ✅ resuelto | [challenges/forensics/medium/hideme](challenges/forensics/medium/hideme/README.md) |
-| 21 | FindAndOpen | ⏳ pendiente | — |
-| 22 | Torrent Analyze | ⏳ pendiente | — |
-| 23 | St3g0 | ⏳ pendiente | — |
-| 24 | Sleuthkit Intro | ⏳ pendiente | — |
-| 25 | Sleuthkit Apprentice | ⏳ pendiente | — |
-| 26 | Redaction gone wrong | ⏳ pendiente | — |
-| 27 | Packets Primer | ⏳ pendiente | — |
-| 28 | Operation Orchid | ⏳ pendiente | — |
-| 29 | Operation Oni | ⏳ pendiente | — |
+| 21 | FindAndOpen | ✅ resuelto | [challenges/forensics/medium/findandopen](challenges/forensics/medium/findandopen/README.md) |
+| 22 | Torrent Analyze | ✅ resuelto | [challenges/forensics/medium/torrent_analyze](challenges/forensics/medium/torrent_analyze/README.md) |
+| 23 | St3g0 | ✅ resuelto | [challenges/forensics/medium/st3g0](challenges/forensics/medium/st3g0/README.md) |
+| 24 | Sleuthkit Intro | ✅ resuelto | [challenges/forensics/medium/sleuthkit_intro](challenges/forensics/medium/sleuthkit_intro/README.md) |
+| 25 | Sleuthkit Apprentice | ✅ resuelto | [challenges/forensics/medium/sleuthkit_apprentice](challenges/forensics/medium/sleuthkit_apprentice/README.md) |
+| 26 | Redaction gone wrong | ✅ resuelto | [challenges/forensics/medium/redaction_gone_wrong](challenges/forensics/medium/redaction_gone_wrong/README.md) |
+| 27 | Packets Primer | ✅ resuelto | [challenges/forensics/medium/packets_primer](challenges/forensics/medium/packets_primer/README.md) |
+| 28 | Operation Orchid | ✅ resuelto | [challenges/forensics/medium/operation_orchid](challenges/forensics/medium/operation_orchid/README.md) |
+| 29 | Operation Oni | ✅ resuelto | [challenges/forensics/medium/operation_oni](challenges/forensics/medium/operation_oni/README.md) |
 | 30 | Lookey here | ✅ resuelto | [challenges/forensics/medium/lookey_here](challenges/forensics/medium/lookey_here/README.md) |
-| 31 | File types | ⏳ pendiente | — |
+| 31 | File types | ✅ resuelto | [challenges/forensics/medium/file_types](challenges/forensics/medium/file_types/README.md) |
 | 32 | Enhance! | ✅ resuelto | [challenges/forensics/medium/enhance](challenges/forensics/medium/enhance/README.md) |
-| 33 | Eavesdrop | ⏳ pendiente | — |
-| 34 | advanced-potion-making | ⏳ pendiente | — |
+| 33 | Eavesdrop | ✅ resuelto | [challenges/forensics/medium/eavesdrop](challenges/forensics/medium/eavesdrop/README.md) |
+| 34 | advanced-potion-making | ✅ resuelto | [challenges/forensics/medium/advanced-potion-making](challenges/forensics/medium/advanced-potion-making/README.md) |
 | 35 | Milkslap | ⏳ pendiente | — |
 | 36 | Disk, disk, sleuth! II | ⏳ pendiente | — |
 | 37 | MacroHard WeakEdge | ⏳ pendiente | — |
