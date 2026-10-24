@@ -481,7 +481,7 @@ Con el filtro "Hide Solved" activado, la cuenta tenía **20 retos sin resolver**
 | 14 | hijacking | ✅ resuelto | [challenges/binary-exploitation/medium/hijacking](challenges/binary-exploitation/medium/hijacking/README.md) |
 | 15 | babygame01 | ✅ resuelto | [challenges/binary-exploitation/medium/babygame01](challenges/binary-exploitation/medium/babygame01/README.md) |
 | 16 | Binary Gauntlet 2 | ⏳ pendiente | — |
-| 17 | What's your input? | ⏳ pendiente | — |
+| 17 | What's your input? | ✅ resuelto | [challenges/binary-exploitation/medium/whats_your_input](challenges/binary-exploitation/medium/whats_your_input/README.md) |
 | 18 | Binary Gauntlet 3 | ⏳ pendiente | — |
 | 19 | Binary Gauntlet 1 | ⏳ pendiente | — |
 | 20 | Guessing Game 1 | ⏳ pendiente | — |
