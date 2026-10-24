@@ -592,7 +592,8 @@ Existen **16 retos** en total en esta categoría y dificultad. Se van resolviend
 16. ✅ **Artificial Intelligence — Easy**: 16/16 resueltos y documentados (100%).
 17. ✅ **Blockchain — Medium**: 2/2 resueltos y documentados (100%).
 18. ✅ **Blockchain — Hard**: 2/2 resueltos y documentados (100%). **Blockchain queda 100% completo en todas sus dificultades (4 retos).**
-19. ⏳ **Resto de categorías** (Reverse Engineering Hard, Binary Exploitation Medium/Hard, Web Exploitation Hard).
+19. ⏳ **Reverse Engineering — Hard**: 17/35 resueltos (48.6%). Se resuelven y documentan `vault-door-8`, `Forky`, `ARMssembly 3`, `ARMssembly 4` y `Powershelly`.
+20. ⏳ **Resto de categorías** (Binary Exploitation Medium/Hard, Web Exploitation Hard).
 
 ## Notas de progreso
 - **Buscar retos pendientes:** activar el toggle "Hide Solved" en el filtro de la Challenge Library — esta cuenta arrastra progreso previo en varias categorías, así que conviene revisar ese filtro antes de elegir qué resolver en cada categoría/dificultad, para no repetir trabajo.

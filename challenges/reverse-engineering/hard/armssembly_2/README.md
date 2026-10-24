@@ -90,7 +90,7 @@ hex_str = f"{result_32bit:08x}"
 La bandera está en formato `academy{XXXXXXXX}` donde `XXXXXXXX` es el número en hexadecimal de 32 bits (en minúsculas, sin prefijo `0x`, rellenado a 8 dígitos con ceros a la izquierda):
 
 ```
-Flag: academy{e815ef32}
+Flag: academy{...}
 ```
 
 ## Verificación

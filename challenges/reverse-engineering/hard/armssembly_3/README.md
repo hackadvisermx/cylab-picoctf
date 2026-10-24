@@ -83,7 +83,7 @@ hex_str = f"{res:08x}"
 
 print(f"Popcount: {popcount}")
 print(f"Resultado decimal: {res}")
-print(f"Flag: academy{{{hex_str}}}")
+# Flag: academy{...}
 ```
 
 Para $n = 605030239 = 0b100100000100000000011101011111_2$:

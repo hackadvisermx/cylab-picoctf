@@ -26,6 +26,7 @@ A diferencia de wargames con progresión estrictamente secuencial (Bandit, Natas
 | Cryptography | Hard | ✅ 30/30 resueltos y documentados (100%) |
 | Reverse Engineering | Easy | ✅ 14/14 resueltos y documentados (100%) |
 | Reverse Engineering | Medium | ✅ 53/53 resueltos y documentados (100%) |
+| Reverse Engineering | Hard | ⏳ 17/35 resueltos |
 | Binary Exploitation | Easy | ✅ 5/5 resueltos y documentados (100%) |
 | Binary Exploitation | Medium | ⏳ 36/37 resueltos |
 | Blockchain | Medium | ✅ 2/2 resueltos y documentados (100%) |
