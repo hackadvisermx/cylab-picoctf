@@ -470,11 +470,11 @@ Con el filtro "Hide Solved" activado, la cuenta tenía **20 retos sin resolver**
 | 3 | hash-only-2 | ✅ resuelto | [challenges/binary-exploitation/medium/hash_only_2](challenges/binary-exploitation/medium/hash_only_2/README.md) |
 | 4 | hash-only-1 | ✅ resuelto | [challenges/binary-exploitation/medium/hash_only_1](challenges/binary-exploitation/medium/hash_only_1/README.md) |
 | 5 | Echo Valley | ✅ resuelto | [challenges/binary-exploitation/medium/echo_valley](challenges/binary-exploitation/medium/echo_valley/README.md) |
-| 6 | format string 3 | ⏳ pendiente | — |
-| 7 | format string 2 | ⏳ pendiente | — |
-| 8 | heap 3 | ⏳ pendiente | — |
-| 9 | heap 1 | ⏳ pendiente | — |
-| 10 | heap 2 | ⏳ pendiente | — |
+| 6 | format string 3 | ✅ resuelto | [challenges/binary-exploitation/medium/format_string_3](challenges/binary-exploitation/medium/format_string_3/README.md) |
+| 7 | format string 2 | ✅ resuelto | [challenges/binary-exploitation/medium/format_string_2](challenges/binary-exploitation/medium/format_string_2/README.md) |
+| 8 | heap 3 | ✅ resuelto | [challenges/binary-exploitation/medium/heap_3](challenges/binary-exploitation/medium/heap_3/README.md) |
+| 9 | heap 1 | ✅ resuelto | [challenges/binary-exploitation/medium/heap_1](challenges/binary-exploitation/medium/heap_1/README.md) |
+| 10 | heap 2 | ✅ resuelto | [challenges/binary-exploitation/medium/heap_2](challenges/binary-exploitation/medium/heap_2/README.md) |
 | 11 | format string 1 | ⏳ pendiente | — |
 | 12 | VNE | ⏳ pendiente | — |
 | 13 | two-sum | ⏳ pendiente | — |
