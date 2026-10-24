@@ -355,6 +355,20 @@ Existen **14 retos** en total en esta categoría y dificultad. Se resuelven y do
 | 13 | Transformation | ✅ resuelto | [challenges/reverse-engineering/easy/transformation](challenges/reverse-engineering/easy/transformation/README.md) |
 | 14 | vault-door-training | ✅ resuelto | [challenges/reverse-engineering/easy/vault_door_training](challenges/reverse-engineering/easy/vault_door_training/README.md) |
 
+## Tabla de retos — Binary Exploitation, Easy (orden de aparición en la plataforma)
+
+**✅ Los 5 retos de Binary Exploitation - Easy están resueltos y documentados (100%).**
+
+Existen **5 retos** en total en esta categoría y dificultad. Se resuelven y documentan en el orden estricto de aparición en la plataforma.
+
+| # | Reto | Estado | Writeup |
+|---|------|--------|---------|
+| 1 | Quizploit | ✅ resuelto | [challenges/binary-exploitation/easy/quizploit](challenges/binary-exploitation/easy/quizploit/README.md) |
+| 2 | PIE TIME | ✅ resuelto | [challenges/binary-exploitation/easy/pie_time](challenges/binary-exploitation/easy/pie_time/README.md) |
+| 3 | heap 0 | ✅ resuelto | [challenges/binary-exploitation/easy/heap_0](challenges/binary-exploitation/easy/heap_0/README.md) |
+| 4 | format string 0 | ✅ resuelto | [challenges/binary-exploitation/easy/format_string_0](challenges/binary-exploitation/easy/format_string_0/README.md) |
+| 5 | Local Target | ✅ resuelto | [challenges/binary-exploitation/easy/local_target](challenges/binary-exploitation/easy/local_target/README.md) |
+
 ## Fases del proyecto
 1. ✅ **General Skills — Easy**: 48/48 retos resueltos y documentados (100%).
 2. ✅ **General Skills — Medium**: 25/25 retos resueltos y documentados (100%).
@@ -367,7 +381,8 @@ Existen **14 retos** en total en esta categoría y dificultad. Se resuelven y do
 9. ✅ **Cryptography — Easy**: 8/8 resueltos y documentados (100%).
 10. ✅ **Cryptography — Medium**: 45/45 resueltos y documentados (100%).
 11. ✅ **Reverse Engineering — Easy**: 14/14 resueltos y documentados (100%).
-12. ⏳ **Resto de categorías** (Forensics Medium restante / Hard, Cryptography Hard, Reverse Engineering Medium/Hard, Binary Exploitation, Blockchain, Artificial Intelligence).
+12. ✅ **Binary Exploitation — Easy**: 5/5 resueltos y documentados (100%).
+13. ⏳ **Resto de categorías** (Reverse Engineering Medium/Hard, Binary Exploitation Medium/Hard, Blockchain, Artificial Intelligence).
 
 ## Notas de progreso
 - **Buscar retos pendientes:** activar el toggle "Hide Solved" en el filtro de la Challenge Library — esta cuenta arrastra progreso previo en varias categorías, así que conviene revisar ese filtro antes de elegir qué resolver en cada categoría/dificultad, para no repetir trabajo.
