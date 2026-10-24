@@ -206,6 +206,8 @@ Existen **16 retos** en total en esta categoría y dificultad. Se van resolviend
 
 ## Tabla de retos — Forensics, Medium (orden de aparición en la plataforma)
 
+**✅ Los 54 retos de Forensics - Medium están resueltos y documentados (100%).**
+
 | # | Reto | Estado | Writeup |
 |---|------|--------|---------|
 | 1 | Timeline 1 | ✅ resuelto | [challenges/forensics/medium/timeline_1](challenges/forensics/medium/timeline_1/README.md) |
@@ -242,26 +244,26 @@ Existen **16 retos** en total en esta categoría y dificultad. Se van resolviend
 | 32 | Enhance! | ✅ resuelto | [challenges/forensics/medium/enhance](challenges/forensics/medium/enhance/README.md) |
 | 33 | Eavesdrop | ✅ resuelto | [challenges/forensics/medium/eavesdrop](challenges/forensics/medium/eavesdrop/README.md) |
 | 34 | advanced-potion-making | ✅ resuelto | [challenges/forensics/medium/advanced-potion-making](challenges/forensics/medium/advanced-potion-making/README.md) |
-| 35 | Milkslap | ⏳ pendiente | — |
-| 36 | Disk, disk, sleuth! II | ⏳ pendiente | — |
-| 37 | MacroHard WeakEdge | ⏳ pendiente | — |
-| 38 | Matryoshka doll | ⏳ pendiente | — |
-| 39 | Wireshark doo dooo do doo... | ⏳ pendiente | — |
-| 40 | Disk, disk, sleuth! | ⏳ pendiente | — |
-| 41 | tunn3l v1s10n | ⏳ pendiente | — |
-| 42 | Wireshark twoo twooo two twoo... | ⏳ pendiente | — |
-| 43 | Trivial Flag Transfer Protocol | ⏳ pendiente | — |
-| 44 | Weird File | ⏳ pendiente | — |
-| 45 | Pitter, Patter, Platters | ⏳ pendiente | — |
-| 46 | shark on wire 2 | ⏳ pendiente | — |
-| 47 | like1000 | ⏳ pendiente | — |
-| 48 | What Lies Within | ⏳ pendiente | — |
-| 49 | c0rrupt | ⏳ pendiente | — |
-| 50 | extensions | ⏳ pendiente | — |
-| 51 | WhitePages | ⏳ pendiente | — |
-| 52 | shark on wire 1 | ⏳ pendiente | — |
-| 53 | m00nwalk | ⏳ pendiente | — |
-| 54 | So Meta | ⏳ pendiente | — |
+| 35 | Milkslap | ✅ resuelto | [challenges/forensics/medium/milkslap](challenges/forensics/medium/milkslap/README.md) |
+| 36 | Disk, disk, sleuth! II | ✅ resuelto | [challenges/forensics/medium/disk_disk_sleuth_2](challenges/forensics/medium/disk_disk_sleuth_2/README.md) |
+| 37 | MacroHard WeakEdge | ✅ resuelto | [challenges/forensics/medium/macrohard_weakedge](challenges/forensics/medium/macrohard_weakedge/README.md) |
+| 38 | Matryoshka doll | ✅ resuelto | [challenges/forensics/medium/matryoshka_doll](challenges/forensics/medium/matryoshka_doll/README.md) |
+| 39 | Wireshark doo dooo do doo... | ✅ resuelto | [challenges/forensics/medium/wireshark_doo_dooo_do_doo](challenges/forensics/medium/wireshark_doo_dooo_do_doo/README.md) |
+| 40 | Disk, disk, sleuth! | ✅ resuelto | [challenges/forensics/medium/disk_disk_sleuth](challenges/forensics/medium/disk_disk_sleuth/README.md) |
+| 41 | tunn3l v1s10n | ✅ resuelto | [challenges/forensics/medium/tunn3l_v1s10n](challenges/forensics/medium/tunn3l_v1s10n/README.md) |
+| 42 | Wireshark twoo twooo two twoo... | ✅ resuelto | [challenges/forensics/medium/wireshark_twoo_twooo_two_twoo](challenges/forensics/medium/wireshark_twoo_twooo_two_twoo/README.md) |
+| 43 | Trivial Flag Transfer Protocol | ✅ resuelto | [challenges/forensics/medium/trivial_flag_transfer_protocol](challenges/forensics/medium/trivial_flag_transfer_protocol/README.md) |
+| 44 | Weird File | ✅ resuelto | [challenges/forensics/medium/weird_file](challenges/forensics/medium/weird_file/README.md) |
+| 45 | Pitter, Patter, Platters | ✅ resuelto | [challenges/forensics/medium/pitter_patter_platters](challenges/forensics/medium/pitter_patter_platters/README.md) |
+| 46 | shark on wire 2 | ✅ resuelto | [challenges/forensics/medium/shark_on_wire_2](challenges/forensics/medium/shark_on_wire_2/README.md) |
+| 47 | like1000 | ✅ resuelto | [challenges/forensics/medium/like1000](challenges/forensics/medium/like1000/README.md) |
+| 48 | What Lies Within | ✅ resuelto | [challenges/forensics/medium/what_lies_within](challenges/forensics/medium/what_lies_within/README.md) |
+| 49 | c0rrupt | ✅ resuelto | [challenges/forensics/medium/c0rrupt](challenges/forensics/medium/c0rrupt/README.md) |
+| 50 | extensions | ✅ resuelto | [challenges/forensics/medium/extensions](challenges/forensics/medium/extensions/README.md) |
+| 51 | WhitePages | ✅ resuelto | [challenges/forensics/medium/whitepages](challenges/forensics/medium/whitepages/README.md) |
+| 52 | shark on wire 1 | ✅ resuelto | [challenges/forensics/medium/shark_on_wire_1](challenges/forensics/medium/shark_on_wire_1/README.md) |
+| 53 | m00nwalk | ✅ resuelto | [challenges/forensics/medium/m00nwalk](challenges/forensics/medium/m00nwalk/README.md) |
+| 54 | So Meta | ✅ resuelto | [challenges/forensics/medium/so_meta](challenges/forensics/medium/so_meta/README.md) |
 
 ## Tabla de retos — Cryptography, Easy (orden de aparición en la plataforma)
 

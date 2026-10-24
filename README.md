@@ -19,7 +19,7 @@ A diferencia de wargames con progresión estrictamente secuencial (Bandit, Natas
 | Web Exploitation | Medium | ✅ 47/47 resueltos y documentados (100%) |
 | Web Exploitation | Hard | ⏳ 12/16 resueltos y documentados |
 | Forensics | Easy | ✅ 15/15 resueltos y documentados (100%) |
-| Forensics | Medium | ⏳ 34/54 resueltos y documentados |
+| Forensics | Medium | ✅ 54/54 resueltos y documentados (100%) |
 | Cryptography | Easy | ✅ 8/8 resueltos y documentados (100%) |
 | Cryptography | Medium | ✅ 45/45 resueltos y documentados (100%) |
 | Reverse Engineering | — | ⏳ sin empezar |
@@ -47,7 +47,7 @@ El detalle reto por reto, en el orden en que aparecen en la plataforma, está en
     │   └── hard/                   # 12 writeups
     ├── forensics/
     │   ├── easy/                   # 15 writeups (100%)
-    │   └── medium/                 # 5 writeups
+    │   └── medium/                 # 54 writeups (100%)
     └── cryptography/
         ├── easy/                   # 8 writeups (100%)
         └── medium/                 # 45 writeups (100%)
