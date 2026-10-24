@@ -536,6 +536,18 @@ Existen **2 retos** en total en esta categoría y dificultad. Se resuelven y doc
 | 2 | Access_Control | ✅ resuelto | [challenges/blockchain/medium/access_control](challenges/blockchain/medium/access_control/README.md) |
 
 
+## Tabla de retos — Blockchain, Hard (orden de aparición en la plataforma)
+
+Existen **2 retos** en total en esta categoría y dificultad. Se resuelven y documentan en el orden de aparición de la plataforma.
+
+**✅ Los 2 retos de Blockchain - Hard están resueltos y documentados (100%). Blockchain queda 100% completo en todas sus dificultades (4 retos).**
+
+| # | Reto | Estado | Writeup |
+|---|------|--------|---------|
+| 1 | Front_Running | ✅ resuelto | [challenges/blockchain/hard/front_running](challenges/blockchain/hard/front_running/README.md) |
+| 2 | Reentrance | ✅ resuelto | [challenges/blockchain/hard/reentrance](challenges/blockchain/hard/reentrance/README.md) |
+
+
 ## Tabla de retos — Artificial Intelligence, Easy (orden de aparición en la plataforma)
 
 Existen **16 retos** en total en esta categoría y dificultad. Se van resolviendo y documentando en el orden de aparición de la plataforma.
@@ -579,7 +591,8 @@ Existen **16 retos** en total en esta categoría y dificultad. Se van resolviend
 15. ✅ **Binary Exploitation — Easy**: 5/5 resueltos y documentados (100%).
 16. ✅ **Artificial Intelligence — Easy**: 16/16 resueltos y documentados (100%).
 17. ✅ **Blockchain — Medium**: 2/2 resueltos y documentados (100%).
-18. ⏳ **Resto de categorías** (Reverse Engineering Hard, Binary Exploitation Medium/Hard, Blockchain Hard, Artificial Intelligence Medium/Hard).
+18. ✅ **Blockchain — Hard**: 2/2 resueltos y documentados (100%). **Blockchain queda 100% completo en todas sus dificultades (4 retos).**
+19. ⏳ **Resto de categorías** (Reverse Engineering Hard, Binary Exploitation Medium/Hard, Web Exploitation Hard).
 
 ## Notas de progreso
 - **Buscar retos pendientes:** activar el toggle "Hide Solved" en el filtro de la Challenge Library — esta cuenta arrastra progreso previo en varias categorías, así que conviene revisar ese filtro antes de elegir qué resolver en cada categoría/dificultad, para no repetir trabajo.
