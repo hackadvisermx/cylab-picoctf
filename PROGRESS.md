@@ -358,6 +358,43 @@ Existen **17 retos** en total en esta categoría y dificultad. Se van resolviend
 | 44 | john_pollard | ✅ resuelto | [challenges/cryptography/medium/john_pollard](challenges/cryptography/medium/john_pollard/README.md) |
 | 45 | la cifra de | ✅ resuelto | [challenges/cryptography/medium/la_cifra_de](challenges/cryptography/medium/la_cifra_de/README.md) |
 
+## Tabla de retos — Cryptography, Hard (orden de aparición en la plataforma)
+
+**✅ Los 30 retos de Cryptography - Hard están resueltos y documentados (100%). Cryptography queda 100% completo en las 3 dificultades (83 retos).**
+
+| # | Reto | Estado | Writeup |
+|---|------|--------|---------|
+| 1 | Secure Dot Product | ✅ resuelto | [challenges/cryptography/hard/secure_dot_product](challenges/cryptography/hard/secure_dot_product/README.md) |
+| 2 | MSS_ADVANCE Revenge | ✅ resuelto | [challenges/cryptography/hard/mss_advance_revenge](challenges/cryptography/hard/mss_advance_revenge/README.md) |
+| 3 | Ricochet | ✅ resuelto | [challenges/cryptography/hard/ricochet](challenges/cryptography/hard/ricochet/README.md) |
+| 4 | ChaCha Slide | ✅ resuelto | [challenges/cryptography/hard/chacha_slide](challenges/cryptography/hard/chacha_slide/README.md) |
+| 5 | flag_printer | ✅ resuelto | [challenges/cryptography/hard/flag_printer](challenges/cryptography/hard/flag_printer/README.md) |
+| 6 | SRA | ✅ resuelto | [challenges/cryptography/hard/sra](challenges/cryptography/hard/sra/README.md) |
+| 7 | PowerAnalysis: Warmup | ✅ resuelto | [challenges/cryptography/hard/poweranalysis_warmup](challenges/cryptography/hard/poweranalysis_warmup/README.md) |
+| 8 | PowerAnalysis: Part 2 | ✅ resuelto | [challenges/cryptography/hard/poweranalysis_part_2](challenges/cryptography/hard/poweranalysis_part_2/README.md) |
+| 9 | PowerAnalysis: Part 1 | ✅ resuelto | [challenges/cryptography/hard/poweranalysis_part_1](challenges/cryptography/hard/poweranalysis_part_1/README.md) |
+| 10 | Very Smooth | ✅ resuelto | [challenges/cryptography/hard/very_smooth](challenges/cryptography/hard/very_smooth/README.md) |
+| 11 | Sum-O-Primes | ✅ resuelto | [challenges/cryptography/hard/sum-o-primes](challenges/cryptography/hard/sum-o-primes/README.md) |
+| 12 | Sequences | ✅ resuelto | [challenges/cryptography/hard/sequences](challenges/cryptography/hard/sequences/README.md) |
+| 13 | NSA Backdoor | ✅ resuelto | [challenges/cryptography/hard/nsa-backdoor](challenges/cryptography/hard/nsa-backdoor/README.md) |
+| 14 | college-rowing-team | ✅ resuelto | [challenges/cryptography/hard/college-rowing-team](challenges/cryptography/hard/college-rowing-team/README.md) |
+| 15 | corrupt-key-2 | ✅ resuelto | [challenges/cryptography/hard/corrupt-key-2](challenges/cryptography/hard/corrupt-key-2/README.md) |
+| 16 | triple-secure | ✅ resuelto | [challenges/cryptography/hard/triple-secure](challenges/cryptography/hard/triple-secure/README.md) |
+| 17 | XtraORdinary | ✅ resuelto | [challenges/cryptography/hard/xtraordinary](challenges/cryptography/hard/xtraordinary/README.md) |
+| 18 | corrupt-key-1 | ✅ resuelto | [challenges/cryptography/hard/corrupt-key-1](challenges/cryptography/hard/corrupt-key-1/README.md) |
+| 19 | New Vignere | ✅ resuelto | [challenges/cryptography/hard/new-vignere](challenges/cryptography/hard/new-vignere/README.md) |
+| 20 | Double DES | ✅ resuelto | [challenges/cryptography/hard/double-des](challenges/cryptography/hard/double-des/README.md) |
+| 21 | Clouds | ✅ resuelto | [challenges/cryptography/hard/clouds](challenges/cryptography/hard/clouds/README.md) |
+| 22 | Compress and Attack | ✅ resuelto | [challenges/cryptography/hard/compress-and-attack](challenges/cryptography/hard/compress-and-attack/README.md) |
+| 23 | It's Not My Fault 1 | ✅ resuelto | [challenges/cryptography/hard/its-not-my-fault-1](challenges/cryptography/hard/its-not-my-fault-1/README.md) |
+| 24 | Play Nice | ✅ resuelto | [challenges/cryptography/hard/play-nice](challenges/cryptography/hard/play-nice/README.md) |
+| 25 | Scrambled: RSA | ✅ resuelto | [challenges/cryptography/hard/scrambled-rsa](challenges/cryptography/hard/scrambled-rsa/README.md) |
+| 26 | b00tl3gRSA3 | ✅ resuelto | [challenges/cryptography/hard/b00tl3grsa3](challenges/cryptography/hard/b00tl3grsa3/README.md) |
+| 27 | AES-ABC | ✅ resuelto | [challenges/cryptography/hard/aes_abc](challenges/cryptography/hard/aes_abc/README.md) |
+| 28 | miniRSA | ✅ resuelto | [challenges/cryptography/hard/minirsa](challenges/cryptography/hard/minirsa/README.md) |
+| 29 | rsa-pop-quiz | ✅ resuelto | [challenges/cryptography/hard/rsa_pop_quiz](challenges/cryptography/hard/rsa_pop_quiz/README.md) |
+| 30 | b00tl3gRSA2 | ✅ resuelto | [challenges/cryptography/hard/b00tl3grsa2](challenges/cryptography/hard/b00tl3grsa2/README.md) |
+
 ## Tabla de retos — Reverse Engineering, Easy (orden de aparición en la plataforma)
 
 **✅ Los 14 retos de Reverse Engineering - Easy están resueltos y documentados (100%).**
@@ -533,14 +570,16 @@ Existen **16 retos** en total en esta categoría y dificultad. Se van resolviend
 6. ⏳ **Web Exploitation — Hard**: 15/16 resueltos y documentados. Solo queda `cancri-sp` (pwnable de Chromium parcheado, no una vulnerabilidad web tradicional — ver notas) y `msfroggenerator2` (bloqueado por infraestructura).
 7. ✅ **Forensics — Easy**: 15/15 resueltos y documentados (100%).
 8. ✅ **Forensics — Medium**: 54/54 resueltos y documentados (100%).
-9. ✅ **Cryptography — Easy**: 8/8 resueltos y documentados (100%).
-10. ✅ **Cryptography — Medium**: 45/45 resueltos y documentados (100%).
-11. ✅ **Reverse Engineering — Easy**: 14/14 resueltos y documentados (100%).
-12. ✅ **Reverse Engineering — Medium**: 53/53 resueltos y documentados (100%).
-13. ✅ **Binary Exploitation — Easy**: 5/5 resueltos y documentados (100%).
-14. ✅ **Artificial Intelligence — Easy**: 16/16 resueltos y documentados (100%).
-15. ✅ **Blockchain — Medium**: 2/2 resueltos y documentados (100%).
-16. ⏳ **Resto de categorías** (Reverse Engineering Hard, Binary Exploitation Medium/Hard, Blockchain Hard, Artificial Intelligence Medium/Hard).
+9. ✅ **Forensics — Hard**: 17/17 resueltos y documentados (100%). **Forensics queda 100% completo en las 3 dificultades (86 retos).**
+10. ✅ **Cryptography — Easy**: 8/8 resueltos y documentados (100%).
+11. ✅ **Cryptography — Medium**: 45/45 resueltos y documentados (100%).
+12. ✅ **Cryptography — Hard**: 30/30 resueltos y documentados (100%). **Cryptography queda 100% completo en las 3 dificultades (83 retos).**
+13. ✅ **Reverse Engineering — Easy**: 14/14 resueltos y documentados (100%).
+14. ✅ **Reverse Engineering — Medium**: 53/53 resueltos y documentados (100%).
+15. ✅ **Binary Exploitation — Easy**: 5/5 resueltos y documentados (100%).
+16. ✅ **Artificial Intelligence — Easy**: 16/16 resueltos y documentados (100%).
+17. ✅ **Blockchain — Medium**: 2/2 resueltos y documentados (100%).
+18. ⏳ **Resto de categorías** (Reverse Engineering Hard, Binary Exploitation Medium/Hard, Blockchain Hard, Artificial Intelligence Medium/Hard).
 
 ## Notas de progreso
 - **Buscar retos pendientes:** activar el toggle "Hide Solved" en el filtro de la Challenge Library — esta cuenta arrastra progreso previo en varias categorías, así que conviene revisar ese filtro antes de elegir qué resolver en cada categoría/dificultad, para no repetir trabajo.
@@ -614,3 +653,4 @@ Existen **16 retos** en total en esta categoría y dificultad. Se van resolviend
 - **North-South** (Medium, picoCTF 2026): el servidor nginx usa `geoip2` con `$remote_addr` (no un header HTTP) para enrutar peticiones según país — solo Iceland (`IS`) llega al backend con la flag. El bypass requiere Tor con exit nodes forzados a Islandia (`ExitNodes {is}` en `/etc/tor/torrc`) y `curl --socks5 127.0.0.1:9050`. Spoofear `X-Forwarded-For` no funciona porque nginx lee la IP TCP directa. Ver [writeup](challenges/web-exploitation/medium/north_south/README.md).
 - **Fool the Lockout** (Medium, picoCTF 2026): Flask con rate-limit basado en `request.remote_addr` que bloquea la IP tras 10 intentos fallidos en 30 segundos. El bypass es temporal, no de headers: enviar exactamente 9 intentos por ventana de 30 s (bajo el umbral), esperando ~32 s entre ventanas. Las credenciales van en formato `username;password` (separadas por punto y coma), no `:`. La contraseña correcta (`bethan:barber`) se encontró en el intento 60 de 100. Ver [writeup](challenges/web-exploitation/medium/fool_the_lockout/README.md).
 - **Sql Map1** (Medium, picoCTF 2026): portal PHP/SQLite "Fort Knox" con búsqueda vulnerable en `vuln.php?q=`. sqlmap extrae la tabla `users` con hashes MD5: `ctf-player` → `7a67ab5872843b22b5e14511867c4e43` → contraseña `dyesebel`. Login como `ctf-player` revela la flag en el dashboard. ✅ Flag academy confirmado y submitido. Ver [writeup](challenges/web-exploitation/medium/sql_map1/README.md).
+- **Ricochet** (Hard, picoCTF 2025): red de radio simulada entre un robot y su controlador con Monocypher X25519 DH y BLAKE2b HMAC. El mapa de 10x10 exige una ruta única de 9 pasos (`south, east, north, west, south, east, north, east, south`) que requiere del controlador 22 movimientos (hasta nonce 43), mientras que el robot solo lee 20 comandos. La solución explota la falta de autenticación en `set_addr` para mover el controlador a la dirección `0x30`, el ataque de reflexión (ricochet) para avanzar nonces sin mover al robot, y el adelanto en segundo plano del controlador durante el movimiento físico del paso 1 para obtener en vivo los movimientos 20 (`east`) y 21 (`south`), capturando la flag en $(4, 8)$. Ver [writeup](challenges/cryptography/hard/ricochet/README.md).

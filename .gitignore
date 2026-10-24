@@ -6,3 +6,4 @@ retorno.md
 tmp/
 __pycache__/
 *.pyc
+.playwright-mcp/
