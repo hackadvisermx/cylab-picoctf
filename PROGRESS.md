@@ -332,6 +332,29 @@ Existen **16 retos** en total en esta categoría y dificultad. Se van resolviend
 | 44 | john_pollard | ✅ resuelto | [challenges/cryptography/medium/john_pollard](challenges/cryptography/medium/john_pollard/README.md) |
 | 45 | la cifra de | ✅ resuelto | [challenges/cryptography/medium/la_cifra_de](challenges/cryptography/medium/la_cifra_de/README.md) |
 
+## Tabla de retos — Reverse Engineering, Easy (orden de aparición en la plataforma)
+
+**✅ Los 14 retos de Reverse Engineering - Easy están resueltos y documentados (100%).**
+
+Existen **14 retos** en total en esta categoría y dificultad. Se resuelven y documentan en el orden estricto de aparición en la plataforma.
+
+| # | Reto | Estado | Writeup |
+|---|------|--------|---------|
+| 1 | Flag Hunters | ✅ resuelto | [challenges/reverse-engineering/easy/flag_hunters](challenges/reverse-engineering/easy/flag_hunters/README.md) |
+| 2 | Picker II | ✅ resuelto | [challenges/reverse-engineering/easy/picker_ii](challenges/reverse-engineering/easy/picker_ii/README.md) |
+| 3 | Picker I | ✅ resuelto | [challenges/reverse-engineering/easy/picker_i](challenges/reverse-engineering/easy/picker_i/README.md) |
+| 4 | GDB baby step 4 | ✅ resuelto | [challenges/reverse-engineering/easy/gdb_baby_step_4](challenges/reverse-engineering/easy/gdb_baby_step_4/README.md) |
+| 5 | GDB baby step 3 | ✅ resuelto | [challenges/reverse-engineering/easy/gdb_baby_step_3](challenges/reverse-engineering/easy/gdb_baby_step_3/README.md) |
+| 6 | GDB baby step 2 | ✅ resuelto | [challenges/reverse-engineering/easy/gdb_baby_step_2](challenges/reverse-engineering/easy/gdb_baby_step_2/README.md) |
+| 7 | GDB baby step 1 | ✅ resuelto | [challenges/reverse-engineering/easy/gdb_baby_step_1](challenges/reverse-engineering/easy/gdb_baby_step_1/README.md) |
+| 8 | Bit-O-Asm-4 | ✅ resuelto | [challenges/reverse-engineering/easy/bit_o_asm_4](challenges/reverse-engineering/easy/bit_o_asm_4/README.md) |
+| 9 | Bit-O-Asm-3 | ✅ resuelto | [challenges/reverse-engineering/easy/bit_o_asm_3](challenges/reverse-engineering/easy/bit_o_asm_3/README.md) |
+| 10 | Bit-O-Asm-2 | ✅ resuelto | [challenges/reverse-engineering/easy/bit_o_asm_2](challenges/reverse-engineering/easy/bit_o_asm_2/README.md) |
+| 11 | Bit-O-Asm-1 | ✅ resuelto | [challenges/reverse-engineering/easy/bit_o_asm_1](challenges/reverse-engineering/easy/bit_o_asm_1/README.md) |
+| 12 | ASCII FTW | ✅ resuelto | [challenges/reverse-engineering/easy/ascii_ftw](challenges/reverse-engineering/easy/ascii_ftw/README.md) |
+| 13 | Transformation | ✅ resuelto | [challenges/reverse-engineering/easy/transformation](challenges/reverse-engineering/easy/transformation/README.md) |
+| 14 | vault-door-training | ✅ resuelto | [challenges/reverse-engineering/easy/vault_door_training](challenges/reverse-engineering/easy/vault_door_training/README.md) |
+
 ## Fases del proyecto
 1. ✅ **General Skills — Easy**: 48/48 retos resueltos y documentados (100%).
 2. ✅ **General Skills — Medium**: 25/25 retos resueltos y documentados (100%).
@@ -340,10 +363,11 @@ Existen **16 retos** en total en esta categoría y dificultad. Se van resolviend
 5. ✅ **Web Exploitation — Medium**: 47/47 resueltos y documentados (100%).
 6. ⏳ **Web Exploitation — Hard**: 12/16 resueltos y documentados.
 7. ✅ **Forensics — Easy**: 15/15 resueltos y documentados (100%).
-8. ⏳ **Forensics — Medium**: 5/54 resueltos y documentados.
+8. ✅ **Forensics — Medium**: 54/54 resueltos y documentados (100%).
 9. ✅ **Cryptography — Easy**: 8/8 resueltos y documentados (100%).
 10. ✅ **Cryptography — Medium**: 45/45 resueltos y documentados (100%).
-11. ⏳ **Resto de categorías** (Forensics Medium restante / Hard, Cryptography Hard, Reverse Engineering, Binary Exploitation, Blockchain, Artificial Intelligence).
+11. ✅ **Reverse Engineering — Easy**: 14/14 resueltos y documentados (100%).
+12. ⏳ **Resto de categorías** (Forensics Medium restante / Hard, Cryptography Hard, Reverse Engineering Medium/Hard, Binary Exploitation, Blockchain, Artificial Intelligence).
 
 ## Notas de progreso
 - **Buscar retos pendientes:** activar el toggle "Hide Solved" en el filtro de la Challenge Library — esta cuenta arrastra progreso previo en varias categorías, así que conviene revisar ese filtro antes de elegir qué resolver en cada categoría/dificultad, para no repetir trabajo.
