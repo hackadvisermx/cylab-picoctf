@@ -166,14 +166,14 @@ Existen **16 retos** en total en esta categoría y dificultad. Se van resolviend
 | # | Reto | Estado | Writeup |
 |---|------|--------|---------|
 | 1 | ORDER ORDER | ✅ resuelto | [challenges/web-exploitation/hard/order_order](challenges/web-exploitation/hard/order_order/README.md) |
-| 2 | paper-2 | ⏳ pendiente | — |
+| 2 | paper-2 | ✅ resuelto | [challenges/web-exploitation/hard/paper_2](challenges/web-exploitation/hard/paper_2/README.md) |
 | 3 | secure-email-service | ✅ resuelto | [challenges/web-exploitation/hard/secure_email_service](challenges/web-exploitation/hard/secure_email_service/README.md) |
 | 4 | Pachinko Revisited | ✅ resuelto | [challenges/web-exploitation/hard/pachinko_revisited](challenges/web-exploitation/hard/pachinko_revisited/README.md) |
-| 5 | elements | ⏳ pendiente | — |
+| 5 | elements | ✅ resuelto | [challenges/web-exploitation/hard/elements](challenges/web-exploitation/hard/elements/README.md) |
 | 6 | msfroggenerator2 | ⏳ pendiente | [challenges/web-exploitation/hard/msfroggenerator2](challenges/web-exploitation/hard/msfroggenerator2/README.md) |
-| 7 | cancri-sp | ⏳ pendiente | — |
+| 7 | cancri-sp | ⏳ pendiente | [challenges/web-exploitation/hard/cancri_sp](challenges/web-exploitation/hard/cancri_sp/README.md) |
 | 8 | noted | ✅ resuelto | [challenges/web-exploitation/hard/noted](challenges/web-exploitation/hard/noted/README.md) |
-| 9 | Live Art | ⏳ pendiente | — |
+| 9 | Live Art | ✅ resuelto | [challenges/web-exploitation/hard/live_art](challenges/web-exploitation/hard/live_art/README.md) |
 | 10 | notepad | ✅ resuelto | [challenges/web-exploitation/hard/notepad](challenges/web-exploitation/hard/notepad/README.md) |
 | 11 | Bithug | ✅ resuelto | [challenges/web-exploitation/hard/bithug](challenges/web-exploitation/hard/bithug/README.md) |
 | 12 | X marks the spot | ✅ resuelto | [challenges/web-exploitation/hard/x_marks_the_spot](challenges/web-exploitation/hard/x_marks_the_spot/README.md) |
@@ -476,7 +476,7 @@ Existen **16 retos** en total en esta categoría y dificultad. Se van resolviend
 3. ✅ **General Skills — Hard**: 2/2 retos resueltos y documentados (100%). **General Skills queda 100% completo en las 3 dificultades (75 retos).**
 4. ✅ **Web Exploitation — Easy**: 20/20 resueltos y documentados (100%).
 5. ✅ **Web Exploitation — Medium**: 47/47 resueltos y documentados (100%).
-6. ⏳ **Web Exploitation — Hard**: 12/16 resueltos y documentados.
+6. ⏳ **Web Exploitation — Hard**: 15/16 resueltos y documentados. Solo queda `cancri-sp` (pwnable de Chromium parcheado, no una vulnerabilidad web tradicional — ver notas) y `msfroggenerator2` (bloqueado por infraestructura).
 7. ✅ **Forensics — Easy**: 15/15 resueltos y documentados (100%).
 8. ✅ **Forensics — Medium**: 54/54 resueltos y documentados (100%).
 9. ✅ **Cryptography — Easy**: 8/8 resueltos y documentados (100%).
