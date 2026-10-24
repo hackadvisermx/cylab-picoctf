@@ -482,9 +482,9 @@ Con el filtro "Hide Solved" activado, la cuenta tenía **20 retos sin resolver**
 | 15 | babygame01 | ✅ resuelto | [challenges/binary-exploitation/medium/babygame01](challenges/binary-exploitation/medium/babygame01/README.md) |
 | 16 | Binary Gauntlet 2 | ⏳ pendiente | — |
 | 17 | What's your input? | ✅ resuelto | [challenges/binary-exploitation/medium/whats_your_input](challenges/binary-exploitation/medium/whats_your_input/README.md) |
-| 18 | Binary Gauntlet 3 | ⏳ pendiente | — |
-| 19 | Binary Gauntlet 1 | ⏳ pendiente | — |
-| 20 | Guessing Game 1 | ⏳ pendiente | — |
+| 18 | Binary Gauntlet 3 | ✅ resuelto | [challenges/binary-exploitation/medium/binary_gauntlet_3](challenges/binary-exploitation/medium/binary_gauntlet_3/README.md) |
+| 19 | Binary Gauntlet 1 | ✅ resuelto | [challenges/binary-exploitation/medium/binary_gauntlet_1](challenges/binary-exploitation/medium/binary_gauntlet_1/README.md) |
+| 20 | Guessing Game 1 | ✅ resuelto | [challenges/binary-exploitation/medium/guessing_game_1](challenges/binary-exploitation/medium/guessing_game_1/README.md) |
 
 
 ## Tabla de retos — Blockchain, Medium (orden de aparición en la plataforma)
