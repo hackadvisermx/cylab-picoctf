@@ -433,6 +433,18 @@ Existen **5 retos** en total en esta categoría y dificultad. Se resuelven y doc
 | 5 | Local Target | ✅ resuelto | [challenges/binary-exploitation/easy/local_target](challenges/binary-exploitation/easy/local_target/README.md) |
 
 
+## Tabla de retos — Blockchain, Medium (orden de aparición en la plataforma)
+
+Existen **2 retos** en total en esta categoría y dificultad. Se resuelven y documentan en el orden de aparición de la plataforma.
+
+**✅ Los 2 retos de Blockchain - Medium están resueltos y documentados (100%).**
+
+| # | Reto | Estado | Writeup |
+|---|------|--------|---------|
+| 1 | Smart_Overflow | ✅ resuelto | [challenges/blockchain/medium/smart_overflow](challenges/blockchain/medium/smart_overflow/README.md) |
+| 2 | Access_Control | ✅ resuelto | [challenges/blockchain/medium/access_control](challenges/blockchain/medium/access_control/README.md) |
+
+
 ## Tabla de retos — Artificial Intelligence, Easy (orden de aparición en la plataforma)
 
 Existen **16 retos** en total en esta categoría y dificultad. Se van resolviendo y documentando en el orden de aparición de la plataforma.
@@ -473,7 +485,8 @@ Existen **16 retos** en total en esta categoría y dificultad. Se van resolviend
 12. ✅ **Reverse Engineering — Medium**: 53/53 resueltos y documentados (100%).
 13. ✅ **Binary Exploitation — Easy**: 5/5 resueltos y documentados (100%).
 14. ✅ **Artificial Intelligence — Easy**: 16/16 resueltos y documentados (100%).
-15. ⏳ **Resto de categorías** (Reverse Engineering Hard, Binary Exploitation Medium/Hard, Blockchain, Artificial Intelligence Medium/Hard).
+15. ✅ **Blockchain — Medium**: 2/2 resueltos y documentados (100%).
+16. ⏳ **Resto de categorías** (Reverse Engineering Hard, Binary Exploitation Medium/Hard, Blockchain Hard, Artificial Intelligence Medium/Hard).
 
 ## Notas de progreso
 - **Buscar retos pendientes:** activar el toggle "Hide Solved" en el filtro de la Challenge Library — esta cuenta arrastra progreso previo en varias categorías, así que conviene revisar ese filtro antes de elegir qué resolver en cada categoría/dificultad, para no repetir trabajo.
