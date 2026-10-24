@@ -265,6 +265,32 @@ Existen **16 retos** en total en esta categoría y dificultad. Se van resolviend
 | 53 | m00nwalk | ✅ resuelto | [challenges/forensics/medium/m00nwalk](challenges/forensics/medium/m00nwalk/README.md) |
 | 54 | So Meta | ✅ resuelto | [challenges/forensics/medium/so_meta](challenges/forensics/medium/so_meta/README.md) |
 
+
+## Tabla de retos — Forensics, Hard (orden de aparición en la plataforma)
+
+Existen **17 retos** en total en esta categoría y dificultad. Se van resolviendo y documentando en el orden de aparición de la plataforma.
+
+| # | Reto | Estado | Writeup |
+|---|------|--------|---------|
+| 1 | UnforgottenBits | ✅ resuelto | [challenges/forensics/hard/unforgottenbits](challenges/forensics/hard/unforgottenbits/README.md) |
+| 2 | Invisible WORDs | ✅ resuelto | [challenges/forensics/hard/invisible_words](challenges/forensics/hard/invisible_words/README.md) |
+| 3 | SideChannel | ✅ resuelto | [challenges/forensics/hard/sidechannel](challenges/forensics/hard/sidechannel/README.md) |
+| 4 | scrambled-bytes | ✅ resuelto | [challenges/forensics/hard/scrambled_bytes](challenges/forensics/hard/scrambled_bytes/README.md) |
+| 5 | Very very very Hidden | ✅ resuelto | [challenges/forensics/hard/very_very_very_hidden](challenges/forensics/hard/very_very_very_hidden/README.md) |
+| 6 | Surfing the Waves | ✅ resuelto | [challenges/forensics/hard/surfing_the_waves](challenges/forensics/hard/surfing_the_waves/README.md) |
+| 7 | Investigative Reversing 3 | ✅ resuelto | [challenges/forensics/hard/investigative_reversing_3](challenges/forensics/hard/investigative_reversing_3/README.md) |
+| 8 | Investigative Reversing 0 | ✅ resuelto | [challenges/forensics/hard/investigative_reversing_0](challenges/forensics/hard/investigative_reversing_0/README.md) |
+| 9 | B1g_Mac | ✅ resuelto | [challenges/forensics/hard/b1g_mac](challenges/forensics/hard/b1g_mac/README.md) |
+| 10 | Investigative Reversing 4 | ✅ resuelto | [challenges/forensics/hard/investigative_reversing_4](challenges/forensics/hard/investigative_reversing_4/README.md) |
+| 11 | investigation_encoded_1 | ✅ resuelto | [challenges/forensics/hard/investigation_encoded_1](challenges/forensics/hard/investigation_encoded_1/README.md) |
+| 12 | WebNet1 | ✅ resuelto | [challenges/forensics/hard/webnet1](challenges/forensics/hard/webnet1/README.md) |
+| 13 | investigation_encoded_2 | ✅ resuelto | [challenges/forensics/hard/investigation_encoded_2](challenges/forensics/hard/investigation_encoded_2/README.md) |
+| 14 | WebNet0 | ✅ resuelto | [challenges/forensics/hard/webnet0](challenges/forensics/hard/webnet0/README.md) |
+| 15 | m00nwalk2 | ✅ resuelto | [challenges/forensics/hard/m00nwalk2](challenges/forensics/hard/m00nwalk2/README.md) |
+| 16 | Investigative Reversing 1 | ✅ resuelto | [challenges/forensics/hard/investigative_reversing_1](challenges/forensics/hard/investigative_reversing_1/README.md) |
+| 17 | Investigative Reversing 2 | ✅ resuelto | [challenges/forensics/hard/investigative_reversing_2](challenges/forensics/hard/investigative_reversing_2/README.md) |
+
+
 ## Tabla de retos — Cryptography, Easy (orden de aparición en la plataforma)
 
 **✅ Los 8 retos de Cryptography - Easy están resueltos y documentados (100%).**
@@ -431,6 +457,34 @@ Existen **5 retos** en total en esta categoría y dificultad. Se resuelven y doc
 | 3 | heap 0 | ✅ resuelto | [challenges/binary-exploitation/easy/heap_0](challenges/binary-exploitation/easy/heap_0/README.md) |
 | 4 | format string 0 | ✅ resuelto | [challenges/binary-exploitation/easy/format_string_0](challenges/binary-exploitation/easy/format_string_0/README.md) |
 | 5 | Local Target | ✅ resuelto | [challenges/binary-exploitation/easy/local_target](challenges/binary-exploitation/easy/local_target/README.md) |
+
+
+## Tabla de retos — Binary Exploitation, Medium (orden de aparición en la plataforma)
+
+Con el filtro "Hide Solved" activado, la cuenta tenía **20 retos sin resolver** en esta categoría/dificultad de un total de 37 (el resto ya aparecía "Solved by you" de sesiones previas sin writeup). Se documentan en bloques de 5.
+
+| # | Reto | Estado | Writeup |
+|---|------|--------|---------|
+| 1 | tea-cash | ✅ resuelto | [challenges/binary-exploitation/medium/tea_cash](challenges/binary-exploitation/medium/tea_cash/README.md) |
+| 2 | PIE TIME 2 | ⏳ pendiente | — |
+| 3 | hash-only-2 | ⏳ pendiente | — |
+| 4 | hash-only-1 | ✅ resuelto | [challenges/binary-exploitation/medium/hash_only_1](challenges/binary-exploitation/medium/hash_only_1/README.md) |
+| 5 | Echo Valley | ⏳ pendiente | — |
+| 6 | format string 3 | ⏳ pendiente | — |
+| 7 | format string 2 | ⏳ pendiente | — |
+| 8 | heap 3 | ⏳ pendiente | — |
+| 9 | heap 1 | ⏳ pendiente | — |
+| 10 | heap 2 | ⏳ pendiente | — |
+| 11 | format string 1 | ⏳ pendiente | — |
+| 12 | VNE | ⏳ pendiente | — |
+| 13 | two-sum | ⏳ pendiente | — |
+| 14 | hijacking | ⏳ pendiente | — |
+| 15 | babygame01 | ⏳ pendiente | — |
+| 16 | Binary Gauntlet 2 | ⏳ pendiente | — |
+| 17 | What's your input? | ⏳ pendiente | — |
+| 18 | Binary Gauntlet 3 | ⏳ pendiente | — |
+| 19 | Binary Gauntlet 1 | ⏳ pendiente | — |
+| 20 | Guessing Game 1 | ⏳ pendiente | — |
 
 
 ## Tabla de retos — Blockchain, Medium (orden de aparición en la plataforma)

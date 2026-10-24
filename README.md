@@ -20,6 +20,7 @@ A diferencia de wargames con progresión estrictamente secuencial (Bandit, Natas
 | Web Exploitation | Hard | ⏳ 12/16 resueltos y documentados |
 | Forensics | Easy | ✅ 15/15 resueltos y documentados (100%) |
 | Forensics | Medium | ✅ 54/54 resueltos y documentados (100%) |
+| Forensics | Hard | ✅ 17/17 resueltos y documentados (100%) |
 | Cryptography | Easy | ✅ 8/8 resueltos y documentados (100%) |
 | Cryptography | Medium | ✅ 45/45 resueltos y documentados (100%) |
 | Reverse Engineering | Easy | ✅ 14/14 resueltos y documentados (100%) |
