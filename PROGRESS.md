@@ -357,6 +357,8 @@ Existen **14 retos** en total en esta categoría y dificultad. Se resuelven y do
 
 ## Tabla de retos — Reverse Engineering, Medium (orden de aparición en la plataforma)
 
+**✅ Los 53 retos de Reverse Engineering - Medium están resueltos y documentados (100%).**
+
 Existen **53 retos** en total en esta categoría y dificultad. Se van resolviendo y documentando en el orden de aparición de la plataforma.
 
 | # | Reto | Estado | Writeup |
@@ -381,39 +383,39 @@ Existen **53 retos** en total en esta categoría y dificultad. Se van resolviend
 | 18 | WinAntiDbg0x200 | ✅ resuelto | [challenges/reverse-engineering/medium/winantidbg0x200](challenges/reverse-engineering/medium/winantidbg0x200/README.md) |
 | 19 | WinAntiDbg0x100 | ✅ resuelto | [challenges/reverse-engineering/medium/winantidbg0x100](challenges/reverse-engineering/medium/winantidbg0x100/README.md) |
 | 20 | weirdSnake | ✅ resuelto | [challenges/reverse-engineering/medium/weirdsnake](challenges/reverse-engineering/medium/weirdsnake/README.md) |
-| 21 | packer | ⏳ en progreso | [challenges/reverse-engineering/medium/packer](challenges/reverse-engineering/medium/packer/README.md) |
-| 22 | FactCheck | ⏳ en progreso | [challenges/reverse-engineering/medium/factcheck](challenges/reverse-engineering/medium/factcheck/README.md) |
-| 23 | Classic Crackme 0x100 | ⏳ en progreso | [challenges/reverse-engineering/medium/classic_crackme_0x100](challenges/reverse-engineering/medium/classic_crackme_0x100/README.md) |
-| 24 | Picker III | ⏳ en progreso | [challenges/reverse-engineering/medium/picker_iii](challenges/reverse-engineering/medium/picker_iii/README.md) |
-| 25 | Virtual Machine 0 | ⏳ en progreso | [challenges/reverse-engineering/medium/virtual_machine_0](challenges/reverse-engineering/medium/virtual_machine_0/README.md) |
-| 26 | timer | ⏳ en progreso | [challenges/reverse-engineering/medium/timer](challenges/reverse-engineering/medium/timer/README.md) |
-| 27 | Safe Opener 2 | ⏳ en progreso | [challenges/reverse-engineering/medium/safe_opener_2](challenges/reverse-engineering/medium/safe_opener_2/README.md) |
-| 28 | Reverse | ⏳ en progreso | [challenges/reverse-engineering/medium/reverse](challenges/reverse-engineering/medium/reverse/README.md) |
-| 29 | Ready Gladiator 2 | ⏳ en progreso | [challenges/reverse-engineering/medium/ready_gladiator_2](challenges/reverse-engineering/medium/ready_gladiator_2/README.md) |
-| 30 | Ready Gladiator 1 | ⏳ en progreso | [challenges/reverse-engineering/medium/ready_gladiator_1](challenges/reverse-engineering/medium/ready_gladiator_1/README.md) |
-| 31 | Ready Gladiator 0 | ⏳ en progreso | [challenges/reverse-engineering/medium/ready_gladiator_0](challenges/reverse-engineering/medium/ready_gladiator_0/README.md) |
-| 32 | unpackme.py | ⏳ en progreso | [challenges/reverse-engineering/medium/unpackme_py](challenges/reverse-engineering/medium/unpackme_py/README.md) |
-| 33 | unpackme | ⏳ en progreso | [challenges/reverse-engineering/medium/unpackme](challenges/reverse-engineering/medium/unpackme/README.md) |
-| 34 | Safe Opener | ⏳ en progreso | [challenges/reverse-engineering/medium/safe_opener](challenges/reverse-engineering/medium/safe_opener/README.md) |
-| 35 | patchme.py | ⏳ en progreso | [challenges/reverse-engineering/medium/patchme_py](challenges/reverse-engineering/medium/patchme_py/README.md) |
-| 36 | GDB Test Drive | ⏳ en progreso | [challenges/reverse-engineering/medium/gdb_test_drive](challenges/reverse-engineering/medium/gdb_test_drive/README.md) |
-| 37 | Fresh Java | ⏳ en progreso | [challenges/reverse-engineering/medium/fresh_java](challenges/reverse-engineering/medium/fresh_java/README.md) |
-| 38 | file-run2 | ⏳ en progreso | [challenges/reverse-engineering/medium/file_run2](challenges/reverse-engineering/medium/file_run2/README.md) |
-| 39 | file-run1 | ⏳ en progreso | [challenges/reverse-engineering/medium/file_run1](challenges/reverse-engineering/medium/file_run1/README.md) |
-| 40 | bloat.py | ⏳ en progreso | [challenges/reverse-engineering/medium/bloat_py](challenges/reverse-engineering/medium/bloat_py/README.md) |
-| 41 | Bbbbloat | ⏳ en progreso | [challenges/reverse-engineering/medium/bbbbloat](challenges/reverse-engineering/medium/bbbbloat/README.md) |
-| 42 | crackme-py | ⏳ en progreso | [challenges/reverse-engineering/medium/crackme_py](challenges/reverse-engineering/medium/crackme_py/README.md) |
-| 43 | ARMssembly 0 | ⏳ en progreso | [challenges/reverse-engineering/medium/armssembly_0](challenges/reverse-engineering/medium/armssembly_0/README.md) |
-| 44 | Shop | ⏳ en progreso | [challenges/reverse-engineering/medium/shop](challenges/reverse-engineering/medium/shop/README.md) |
-| 45 | keygenme-py | ⏳ en progreso | [challenges/reverse-engineering/medium/keygenme_py](challenges/reverse-engineering/medium/keygenme_py/README.md) |
-| 46 | speeds and feeds | ⏳ en progreso | [challenges/reverse-engineering/medium/speeds_and_feeds](challenges/reverse-engineering/medium/speeds_and_feeds/README.md) |
-| 47 | ARMssembly 1 | ⏳ en progreso | [challenges/reverse-engineering/medium/armssembly_1](challenges/reverse-engineering/medium/armssembly_1/README.md) |
-| 48 | vault-door-5 | ⏳ en progreso | [challenges/reverse-engineering/medium/vault_door_5](challenges/reverse-engineering/medium/vault_door_5/README.md) |
-| 49 | vault-door-4 | ⏳ en progreso | [challenges/reverse-engineering/medium/vault_door_4](challenges/reverse-engineering/medium/vault_door_4/README.md) |
-| 50 | vault-door-3 | ⏳ en progreso | [challenges/reverse-engineering/medium/vault_door_3](challenges/reverse-engineering/medium/vault_door_3/README.md) |
-| 51 | vault-door-6 | ⏳ en progreso | [challenges/reverse-engineering/medium/vault_door_6](challenges/reverse-engineering/medium/vault_door_6/README.md) |
-| 52 | asm1 | ⏳ en progreso | [challenges/reverse-engineering/medium/asm1](challenges/reverse-engineering/medium/asm1/README.md) |
-| 53 | vault-door-1 | ⏳ en progreso | [challenges/reverse-engineering/medium/vault_door_1](challenges/reverse-engineering/medium/vault_door_1/README.md) |
+| 21 | packer | ✅ resuelto | [challenges/reverse-engineering/medium/packer](challenges/reverse-engineering/medium/packer/README.md) |
+| 22 | FactCheck | ✅ resuelto | [challenges/reverse-engineering/medium/factcheck](challenges/reverse-engineering/medium/factcheck/README.md) |
+| 23 | Classic Crackme 0x100 | ✅ resuelto | [challenges/reverse-engineering/medium/classic_crackme_0x100](challenges/reverse-engineering/medium/classic_crackme_0x100/README.md) |
+| 24 | Picker III | ✅ resuelto | [challenges/reverse-engineering/medium/picker_iii](challenges/reverse-engineering/medium/picker_iii/README.md) |
+| 25 | Virtual Machine 0 | ✅ resuelto | [challenges/reverse-engineering/medium/virtual_machine_0](challenges/reverse-engineering/medium/virtual_machine_0/README.md) |
+| 26 | timer | ✅ resuelto | [challenges/reverse-engineering/medium/timer](challenges/reverse-engineering/medium/timer/README.md) |
+| 27 | Safe Opener 2 | ✅ resuelto | [challenges/reverse-engineering/medium/safe_opener_2](challenges/reverse-engineering/medium/safe_opener_2/README.md) |
+| 28 | Reverse | ✅ resuelto | [challenges/reverse-engineering/medium/reverse](challenges/reverse-engineering/medium/reverse/README.md) |
+| 29 | Ready Gladiator 2 | ✅ resuelto | [challenges/reverse-engineering/medium/ready_gladiator_2](challenges/reverse-engineering/medium/ready_gladiator_2/README.md) |
+| 30 | Ready Gladiator 1 | ✅ resuelto | [challenges/reverse-engineering/medium/ready_gladiator_1](challenges/reverse-engineering/medium/ready_gladiator_1/README.md) |
+| 31 | Ready Gladiator 0 | ✅ resuelto | [challenges/reverse-engineering/medium/ready_gladiator_0](challenges/reverse-engineering/medium/ready_gladiator_0/README.md) |
+| 32 | unpackme.py | ✅ resuelto | [challenges/reverse-engineering/medium/unpackme_py](challenges/reverse-engineering/medium/unpackme_py/README.md) |
+| 33 | unpackme | ✅ resuelto | [challenges/reverse-engineering/medium/unpackme](challenges/reverse-engineering/medium/unpackme/README.md) |
+| 34 | Safe Opener | ✅ resuelto | [challenges/reverse-engineering/medium/safe_opener](challenges/reverse-engineering/medium/safe_opener/README.md) |
+| 35 | patchme.py | ✅ resuelto | [challenges/reverse-engineering/medium/patchme_py](challenges/reverse-engineering/medium/patchme_py/README.md) |
+| 36 | GDB Test Drive | ✅ resuelto | [challenges/reverse-engineering/medium/gdb_test_drive](challenges/reverse-engineering/medium/gdb_test_drive/README.md) |
+| 37 | Fresh Java | ✅ resuelto | [challenges/reverse-engineering/medium/fresh_java](challenges/reverse-engineering/medium/fresh_java/README.md) |
+| 38 | file-run2 | ✅ resuelto | [challenges/reverse-engineering/medium/file_run2](challenges/reverse-engineering/medium/file_run2/README.md) |
+| 39 | file-run1 | ✅ resuelto | [challenges/reverse-engineering/medium/file_run1](challenges/reverse-engineering/medium/file_run1/README.md) |
+| 40 | bloat.py | ✅ resuelto | [challenges/reverse-engineering/medium/bloat_py](challenges/reverse-engineering/medium/bloat_py/README.md) |
+| 41 | Bbbbloat | ✅ resuelto | [challenges/reverse-engineering/medium/bbbbloat](challenges/reverse-engineering/medium/bbbbloat/README.md) |
+| 42 | crackme-py | ✅ resuelto | [challenges/reverse-engineering/medium/crackme_py](challenges/reverse-engineering/medium/crackme_py/README.md) |
+| 43 | ARMssembly 0 | ✅ resuelto | [challenges/reverse-engineering/medium/armssembly_0](challenges/reverse-engineering/medium/armssembly_0/README.md) |
+| 44 | Shop | ✅ resuelto | [challenges/reverse-engineering/medium/shop](challenges/reverse-engineering/medium/shop/README.md) |
+| 45 | keygenme-py | ✅ resuelto | [challenges/reverse-engineering/medium/keygenme_py](challenges/reverse-engineering/medium/keygenme_py/README.md) |
+| 46 | speeds and feeds | ✅ resuelto | [challenges/reverse-engineering/medium/speeds_and_feeds](challenges/reverse-engineering/medium/speeds_and_feeds/README.md) |
+| 47 | ARMssembly 1 | ✅ resuelto | [challenges/reverse-engineering/medium/armssembly_1](challenges/reverse-engineering/medium/armssembly_1/README.md) |
+| 48 | vault-door-5 | ✅ resuelto | [challenges/reverse-engineering/medium/vault_door_5](challenges/reverse-engineering/medium/vault_door_5/README.md) |
+| 49 | vault-door-4 | ✅ resuelto | [challenges/reverse-engineering/medium/vault_door_4](challenges/reverse-engineering/medium/vault_door_4/README.md) |
+| 50 | vault-door-3 | ✅ resuelto | [challenges/reverse-engineering/medium/vault_door_3](challenges/reverse-engineering/medium/vault_door_3/README.md) |
+| 51 | vault-door-6 | ✅ resuelto | [challenges/reverse-engineering/medium/vault_door_6](challenges/reverse-engineering/medium/vault_door_6/README.md) |
+| 52 | asm1 | ✅ resuelto | [challenges/reverse-engineering/medium/asm1](challenges/reverse-engineering/medium/asm1/README.md) |
+| 53 | vault-door-1 | ✅ resuelto | [challenges/reverse-engineering/medium/vault_door_1](challenges/reverse-engineering/medium/vault_door_1/README.md) |
 
 
 ## Tabla de retos — Binary Exploitation, Easy (orden de aparición en la plataforma)
@@ -442,8 +444,9 @@ Existen **5 retos** en total en esta categoría y dificultad. Se resuelven y doc
 9. ✅ **Cryptography — Easy**: 8/8 resueltos y documentados (100%).
 10. ✅ **Cryptography — Medium**: 45/45 resueltos y documentados (100%).
 11. ✅ **Reverse Engineering — Easy**: 14/14 resueltos y documentados (100%).
-12. ✅ **Binary Exploitation — Easy**: 5/5 resueltos y documentados (100%).
-13. ⏳ **Resto de categorías** (Reverse Engineering Medium/Hard, Binary Exploitation Medium/Hard, Blockchain, Artificial Intelligence).
+12. ✅ **Reverse Engineering — Medium**: 53/53 resueltos y documentados (100%).
+13. ✅ **Binary Exploitation — Easy**: 5/5 resueltos y documentados (100%).
+14. ⏳ **Resto de categorías** (Reverse Engineering Hard, Binary Exploitation Medium/Hard, Blockchain, Artificial Intelligence).
 
 ## Notas de progreso
 - **Buscar retos pendientes:** activar el toggle "Hide Solved" en el filtro de la Challenge Library — esta cuenta arrastra progreso previo en varias categorías, así que conviene revisar ese filtro antes de elegir qué resolver en cada categoría/dificultad, para no repetir trabajo.

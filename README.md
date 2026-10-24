@@ -23,7 +23,7 @@ A diferencia de wargames con progresión estrictamente secuencial (Bandit, Natas
 | Cryptography | Easy | ✅ 8/8 resueltos y documentados (100%) |
 | Cryptography | Medium | ✅ 45/45 resueltos y documentados (100%) |
 | Reverse Engineering | Easy | ✅ 14/14 resueltos y documentados (100%) |
-| Reverse Engineering | Medium | ⏳ 20/53 resueltos y documentados (38%) |
+| Reverse Engineering | Medium | ✅ 53/53 resueltos y documentados (100%) |
 | Binary Exploitation | Easy | ✅ 5/5 resueltos y documentados (100%) |
 | Binary Exploitation | Medium | ⏳ 0/37 resueltos y documentados |
 | Blockchain | — | ⏳ sin empezar |
@@ -55,7 +55,7 @@ El detalle reto por reto, en el orden en que aparecen en la plataforma, está en
         └── medium/                 # 45 writeups (100%)
     ├── reverse-engineering/
     │   ├── easy/                   # 14 writeups (100%)
-    │   └── medium/                 # 20 writeups (38%)
+    │   └── medium/                 # 53 writeups (100%)
     └── binary-exploitation/
         └── easy/                   # 5 writeups (100%)
 ```

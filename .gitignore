@@ -3,5 +3,6 @@ scripts/creds.txt
 scripts/solve_level.py
 notes/host-characteristics.md
 retorno.md
+tmp/
 __pycache__/
 *.pyc
