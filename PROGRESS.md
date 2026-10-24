@@ -475,11 +475,11 @@ Con el filtro "Hide Solved" activado, la cuenta tenía **20 retos sin resolver**
 | 8 | heap 3 | ✅ resuelto | [challenges/binary-exploitation/medium/heap_3](challenges/binary-exploitation/medium/heap_3/README.md) |
 | 9 | heap 1 | ✅ resuelto | [challenges/binary-exploitation/medium/heap_1](challenges/binary-exploitation/medium/heap_1/README.md) |
 | 10 | heap 2 | ✅ resuelto | [challenges/binary-exploitation/medium/heap_2](challenges/binary-exploitation/medium/heap_2/README.md) |
-| 11 | format string 1 | ⏳ pendiente | — |
-| 12 | VNE | ⏳ pendiente | — |
-| 13 | two-sum | ⏳ pendiente | — |
-| 14 | hijacking | ⏳ pendiente | — |
-| 15 | babygame01 | ⏳ pendiente | — |
+| 11 | format string 1 | ✅ resuelto | [challenges/binary-exploitation/medium/format_string_1](challenges/binary-exploitation/medium/format_string_1/README.md) |
+| 12 | VNE | ✅ resuelto | [challenges/binary-exploitation/medium/vne](challenges/binary-exploitation/medium/vne/README.md) |
+| 13 | two-sum | ✅ resuelto | [challenges/binary-exploitation/medium/two_sum](challenges/binary-exploitation/medium/two_sum/README.md) |
+| 14 | hijacking | ✅ resuelto | [challenges/binary-exploitation/medium/hijacking](challenges/binary-exploitation/medium/hijacking/README.md) |
+| 15 | babygame01 | ✅ resuelto | [challenges/binary-exploitation/medium/babygame01](challenges/binary-exploitation/medium/babygame01/README.md) |
 | 16 | Binary Gauntlet 2 | ⏳ pendiente | — |
 | 17 | What's your input? | ⏳ pendiente | — |
 | 18 | Binary Gauntlet 3 | ⏳ pendiente | — |
