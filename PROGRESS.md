@@ -432,6 +432,32 @@ Existen **5 retos** en total en esta categoría y dificultad. Se resuelven y doc
 | 4 | format string 0 | ✅ resuelto | [challenges/binary-exploitation/easy/format_string_0](challenges/binary-exploitation/easy/format_string_0/README.md) |
 | 5 | Local Target | ✅ resuelto | [challenges/binary-exploitation/easy/local_target](challenges/binary-exploitation/easy/local_target/README.md) |
 
+
+## Tabla de retos — Artificial Intelligence, Easy (orden de aparición en la plataforma)
+
+Existen **16 retos** en total en esta categoría y dificultad. Se van resolviendo y documentando en el orden de aparición de la plataforma.
+
+**✅ Los 16 retos de Artificial Intelligence - Easy están resueltos y documentados (100%).**
+
+| # | Reto | Estado | Writeup |
+|---|------|--------|---------|
+| 1 | Assistant or Agent? | ✅ resuelto | [challenges/artificial-intelligence/easy/assistant_or_agent](challenges/artificial-intelligence/easy/assistant_or_agent/README.md) |
+| 2 | Neuron Express 0 | ✅ resuelto | [challenges/artificial-intelligence/easy/neuron_express_0](challenges/artificial-intelligence/easy/neuron_express_0/README.md) |
+| 3 | Neuron Express 2D-0 | ✅ resuelto | [challenges/artificial-intelligence/easy/neuron_express_2d_0](challenges/artificial-intelligence/easy/neuron_express_2d_0/README.md) |
+| 4 | Neuron Meet 0 | ✅ resuelto | [challenges/artificial-intelligence/easy/neuron_meet_0](challenges/artificial-intelligence/easy/neuron_meet_0/README.md) |
+| 5 | Neuron Meet 2D-0 | ✅ resuelto | [challenges/artificial-intelligence/easy/neuron_meet_2d_0](challenges/artificial-intelligence/easy/neuron_meet_2d_0/README.md) |
+| 6 | Perceptron Play 1D Alpha | ✅ resuelto | [challenges/artificial-intelligence/easy/perceptron_play_1d_alpha](challenges/artificial-intelligence/easy/perceptron_play_1d_alpha/README.md) |
+| 7 | Perceptron Play Alpha | ✅ resuelto | [challenges/artificial-intelligence/easy/perceptron_play_alpha](challenges/artificial-intelligence/easy/perceptron_play_alpha/README.md) |
+| 8 | Perceptron Play Naught | ✅ resuelto | [challenges/artificial-intelligence/easy/perceptron_play_naught](challenges/artificial-intelligence/easy/perceptron_play_naught/README.md) |
+| 9 | Perceptron Train 3-Bit Parity | ✅ resuelto | [challenges/artificial-intelligence/easy/perceptron_train_3_bit_parity](challenges/artificial-intelligence/easy/perceptron_train_3_bit_parity/README.md) |
+| 10 | Perceptron Train Classic 0 | ✅ resuelto | [challenges/artificial-intelligence/easy/perceptron_train_classic_0](challenges/artificial-intelligence/easy/perceptron_train_classic_0/README.md) |
+| 11 | Perceptron Train Classic 1 | ✅ resuelto | [challenges/artificial-intelligence/easy/perceptron_train_classic_1](challenges/artificial-intelligence/easy/perceptron_train_classic_1/README.md) |
+| 12 | Perceptron Train Classic 2 Alpha | ✅ resuelto | [challenges/artificial-intelligence/easy/perceptron_train_classic_2_alpha](challenges/artificial-intelligence/easy/perceptron_train_classic_2_alpha/README.md) |
+| 13 | Perceptron Train Hole in Middle | ✅ resuelto | [challenges/artificial-intelligence/easy/perceptron_train_hole_in_middle](challenges/artificial-intelligence/easy/perceptron_train_hole_in_middle/README.md) |
+| 14 | Perceptron Train XNOR | ✅ resuelto | [challenges/artificial-intelligence/easy/perceptron_train_xnor](challenges/artificial-intelligence/easy/perceptron_train_xnor/README.md) |
+| 15 | Perceptron Train XOR | ✅ resuelto | [challenges/artificial-intelligence/easy/perceptron_train_xor](challenges/artificial-intelligence/easy/perceptron_train_xor/README.md) |
+| 16 | Trust But Verify | ✅ resuelto | [challenges/artificial-intelligence/easy/trust_but_verify](challenges/artificial-intelligence/easy/trust_but_verify/README.md) |
+
 ## Fases del proyecto
 1. ✅ **General Skills — Easy**: 48/48 retos resueltos y documentados (100%).
 2. ✅ **General Skills — Medium**: 25/25 retos resueltos y documentados (100%).
@@ -446,7 +472,8 @@ Existen **5 retos** en total en esta categoría y dificultad. Se resuelven y doc
 11. ✅ **Reverse Engineering — Easy**: 14/14 resueltos y documentados (100%).
 12. ✅ **Reverse Engineering — Medium**: 53/53 resueltos y documentados (100%).
 13. ✅ **Binary Exploitation — Easy**: 5/5 resueltos y documentados (100%).
-14. ⏳ **Resto de categorías** (Reverse Engineering Hard, Binary Exploitation Medium/Hard, Blockchain, Artificial Intelligence).
+14. ✅ **Artificial Intelligence — Easy**: 16/16 resueltos y documentados (100%).
+15. ⏳ **Resto de categorías** (Reverse Engineering Hard, Binary Exploitation Medium/Hard, Blockchain, Artificial Intelligence Medium/Hard).
 
 ## Notas de progreso
 - **Buscar retos pendientes:** activar el toggle "Hide Solved" en el filtro de la Challenge Library — esta cuenta arrastra progreso previo en varias categorías, así que conviene revisar ese filtro antes de elegir qué resolver en cada categoría/dificultad, para no repetir trabajo.

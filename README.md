@@ -26,8 +26,8 @@ A diferencia de wargames con progresión estrictamente secuencial (Bandit, Natas
 | Reverse Engineering | Medium | ✅ 53/53 resueltos y documentados (100%) |
 | Binary Exploitation | Easy | ✅ 5/5 resueltos y documentados (100%) |
 | Binary Exploitation | Medium | ⏳ 0/37 resueltos y documentados |
-| Blockchain | — | ⏳ sin empezar |
-| Artificial Intelligence | — | ⏳ sin empezar |
+| Blockchain | Medium | ⏳ 0/2 resueltos y documentados |
+| Artificial Intelligence | Easy | ✅ 16/16 resueltos y documentados (100%) |
 
 El detalle reto por reto, en el orden en que aparecen en la plataforma, está en **[PROGRESS.md](PROGRESS.md)**.
 
@@ -56,8 +56,10 @@ El detalle reto por reto, en el orden en que aparecen en la plataforma, está en
     ├── reverse-engineering/
     │   ├── easy/                   # 14 writeups (100%)
     │   └── medium/                 # 53 writeups (100%)
-    └── binary-exploitation/
-        └── easy/                   # 5 writeups (100%)
+    ├── binary-exploitation/
+    │   └── easy/                   # 5 writeups (100%)
+    └── artificial-intelligence/
+        └── easy/                   # 16 writeups (100%)
 ```
 
 Cada writeup vive en su propia carpeta (`challenges/<categoría>/<dificultad>/<slug>/README.md`) y sigue la plantilla de [`challenges/_template/README.md`](challenges/_template/README.md): descripción oficial del reto, categoría/dificultad/evento/autor, solución paso a paso con los comandos usados, notas adicionales y referencias. Algunas carpetas incluyen también archivos de apoyo descargados del reto (código fuente, logs, binarios de análisis, reglas YARA, etc.) cuando son relevantes para seguir la solución.
