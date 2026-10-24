@@ -466,10 +466,10 @@ Con el filtro "Hide Solved" activado, la cuenta tenía **20 retos sin resolver**
 | # | Reto | Estado | Writeup |
 |---|------|--------|---------|
 | 1 | tea-cash | ✅ resuelto | [challenges/binary-exploitation/medium/tea_cash](challenges/binary-exploitation/medium/tea_cash/README.md) |
-| 2 | PIE TIME 2 | ⏳ pendiente | — |
-| 3 | hash-only-2 | ⏳ pendiente | — |
+| 2 | PIE TIME 2 | ✅ resuelto | [challenges/binary-exploitation/medium/pie_time_2](challenges/binary-exploitation/medium/pie_time_2/README.md) |
+| 3 | hash-only-2 | ✅ resuelto | [challenges/binary-exploitation/medium/hash_only_2](challenges/binary-exploitation/medium/hash_only_2/README.md) |
 | 4 | hash-only-1 | ✅ resuelto | [challenges/binary-exploitation/medium/hash_only_1](challenges/binary-exploitation/medium/hash_only_1/README.md) |
-| 5 | Echo Valley | ⏳ pendiente | — |
+| 5 | Echo Valley | ✅ resuelto | [challenges/binary-exploitation/medium/echo_valley](challenges/binary-exploitation/medium/echo_valley/README.md) |
 | 6 | format string 3 | ⏳ pendiente | — |
 | 7 | format string 2 | ⏳ pendiente | — |
 | 8 | heap 3 | ⏳ pendiente | — |
