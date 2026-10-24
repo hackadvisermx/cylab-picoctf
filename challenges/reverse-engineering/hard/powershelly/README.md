@@ -85,8 +85,16 @@ flag_bytes = bytes([int(bits[i : i + 8], 2) for i in range(0, len(bits), 8)])
 print("Flag:", flag_bytes.decode("ascii"))
 ```
 
+## Ejecución y validación
+La flag se extrajo correctamente ejecutando el algoritmo de decodificación sobre `output.txt`:
+```
+Flag: academy{2018highw@y_2_pow3r$hel!}
+```
+Se validó contra la plataforma CyLab con `submit_flag(119, flag)` → `correct: true`.
+
 ## Notas adicionales
 - Al pasar la bandera por terminal en shells como `bash` o `zsh`, es indispensable escapar caracteres especiales como `$` (`\$hel`) o encerrar la cadena en comillas simples para evitar expansiones no deseadas de variables de entorno.
+- Para resolver este reto sin usar PowerShell localmente, basta con implementar la lógica de inversión (XOR-chaining + unscrambling) en cualquier lenguaje (Python es la opción más práctica).
 
 ## Referencias
 - Reto: https://learn.cylabacademy.org/library/119
