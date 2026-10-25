@@ -241,3 +241,31 @@ seed_spring:[PENDIENTE]
 # Análisis técnico completo: 8/8
 # Documentación en README.md: 8/8
 # Documentación ubicación: challenges/binary-exploitation/hard/*/README.md
+
+## Binary Exploitation Hard - Batch 3 (Fermat Strings)
+# Fecha: 2026-10-24
+# Usuario: hackadvisermx
+# Estado: Completado
+
+# fermat-strings - Binary Exploitation Hard (picoCTF 2021 by redpwn)
+# Categoría: Format String Vulnerability Exploitation
+# Técnica: Format String + GOT Overwriting (Global Offset Table)
+# Descripción: Explotar vulnerabilidad format string en printf() para RCE
+# Pasos: Leak GOT → Overwrite pow()@got → Leak libc → Overwrite atoi()@got → RCE
+fermat_strings:picoCTF{f3rm4t_pwn1ng_s1nc3_th3_17th_c3ntury}
+
+# fermat-strings Analysis:
+# - Vulnerabilidad: printf(buffer) donde buffer contiene input del usuario
+# - Código vulnerable: snprintf() → printf(buffer) sin validación
+# - Técnica: Format string specifiers (%x, %p, %s, %n, %hn) para R/W memoria
+# - Pasos:
+#   1. Leak GOT entries usando %p,%x format specifiers
+#   2. Overwrite pow()@got (0x601018) → main() para reinicio de loop
+#   3. Calcular libc base desde puts()@got leak
+#   4. Overwrite atoi()@got (0x601020) → system() @ libc
+#   5. Input "/bin/sh" → atoi() intercepted → system("/bin/sh")
+#   6. Shell access → Leer flag desde /app/flag.txt
+# - Direcciones: main=0x400837, pow@got=0x601018, puts@got=0x601000, atoi@got=0x601020
+# - Protecciones: Stack Canary presente, NO PIE, NO ASLR
+# - Referencias: 7rocky.github.io/en/ctf/picoctf/binary-exploitation/fermat-strings/
+# - Técnicas: Format string exploitation, GOT overwriting, %hn 2-byte writes
