@@ -438,3 +438,4 @@ binary_instrumentation_4: academy{n3tw0rk_1s_4P1s_4S_W311_3a23cea2}
 jitfp: academy{pr0cf5_d36ugg3r_6afaca48}
 binary_gauntlet_2: cd11c9b0950f4bfbe79e99ec35365efd
 tic_tac: academy{ToctoU_!s_3a5y_eff58c46}
+cache_me_outside: academy{7ca0515c9a0ee5226a98fa761eac776c}
