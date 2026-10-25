@@ -62,12 +62,16 @@ vault_door_7:picoCTF{A_b1t_0f_b1t_sh1fTiNg_8c924c21b4}
 # tic_tac:[PENDIENTE]
 
 # ropfu - Binary Exploitation Hard (picoCTF 2022, 500 pts)
-# Técnica: ROP gadgets / Binary gadget finding
-# ropfu:[PENDIENTE]
+# Técnica: ROP gadgets / Binary gadget finding / int 0x80 syscall
+ropfu:picoCTF{rop_gadgets_ftw_4be93ff7}
 
 # buffer overflow 3 - Binary Exploitation Hard (picoCTF 2022, 400 pts)
-# Técnica: Stack buffer overflow / Control flow hijacking
-# buffer_overflow_3:[PENDIENTE]
+# Técnica: Stack canary brute force byte-by-byte
+buffer_overflow_3:picoCTF{Can4ry_pr0t3ct10n_bypassed_5c9b1b9}
+
+# function overwrite - Binary Exploitation Hard (picoCTF 2022)
+# Técnica: Negative index array overflow + function pointer overwrite
+function_overwrite:picoCTF{function_overwrite_1337_d4cf73a7}
 
 # wine - Binary Exploitation Hard (picoCTF 2022, ? pts)
 # Técnica: Windows PE analysis / Wine emulation exploitation
@@ -269,3 +273,6 @@ fermat_strings:picoCTF{f3rm4t_pwn1ng_s1nc3_th3_17th_c3ntury}
 # - Protecciones: Stack Canary presente, NO PIE, NO ASLR
 # - Referencias: 7rocky.github.io/en/ctf/picoctf/binary-exploitation/fermat-strings/
 # - Técnicas: Format string exploitation, GOT overwriting, %hn 2-byte writes
+
+# fermat-strings - Binary Exploitation Hard (ID 215, picoCTF 2021 by redpwn)
+fermat_strings:picoCTF{f3rm4t_pwn1ng_s1nc3_th3_17th_c3ntury}
