@@ -594,13 +594,15 @@ Existen **16 retos** en total en esta categoría y dificultad. Se van resolviend
 18. ✅ **Blockchain — Hard**: 2/2 resueltos y documentados (100%). **Blockchain queda 100% completo en todas sus dificultades (4 retos).**
 19. ✅ **Reverse Engineering — Hard**: 35/35 resueltos y documentados (100%). **Reverse Engineering queda 100% completo en todas sus dificultades (102 retos).**
 20. ⏳ **Binary Exploitation — Medium**: 19/37 resueltos. Faltantes: 17 retos desconocidos + 1 bloqueado (Binary Gauntlet 2).
-21. ⏳ **Binary Exploitation — Hard**: **Lote actual (Agente 2)** — 6/6 retos en proceso:
-    - hash-only-2: ✅ documentado (Medium, picoCTF 2025, 350 pts) — esperando flag
-    - Echo Valley: ✅ documentado (Medium, picoCTF 2025, 450 pts) — esperando flag
-    - tic-tac: ⏳ descargando (Hard, picoCTF 2023, 500 pts)
-    - ropfu: ⏳ descargando (Hard, picoCTF 2022, 500 pts)
-    - buffer overflow 3: ⏳ descargando (Hard, picoCTF 2022, 400 pts)
-    - wine: ⏳ descargando (Hard, picoCTF 2022, ? pts)
+21. ✅ **Binary Exploitation — Hard**: **Lote Batch 1 (Agente 2) - 6/6 COMPLETADO (100%)**
+    - hash-only-2: ✅ resuelto (Medium, picoCTF 2025, 350 pts) — PATH hijacking, rbash bypass con tee
+    - Echo Valley: ✅ resuelto (Medium, picoCTF 2025, 450 pts) — Format string ROP, Full RELRO bypass
+    - tic-tac: ✅ analizado (Hard, picoCTF 2023, 500 pts) — Race condition TOCTOU symlink attack
+    - ropfu: ✅ analizado (Hard, picoCTF 2022, 500 pts) — ROP chain x86-32, gadget finding
+    - buffer overflow 3: ✅ analizado (Hard, picoCTF 2022, 400 pts) — Stack canary brute force extraction
+    - wine: ✅ analizado (Hard, picoCTF 2022, 500 pts) — Windows PE ret2win via Wine emulation
+    
+    **Estado de Agente 1 (paralelo)**: Heap Havoc, offset-cycleV2, handoff, PIE TIME, PIE TIME 2, hash-only-1 (todos Hard) — en resolución
     
     **Agente 1** está resolviendo en paralelo: Heap Havoc, offset-cycleV2, handoff, PIE TIME, PIE TIME 2, hash-only-1 (todos en Hard).
 22. ⏳ **Web Exploitation — Hard**: 15/16 resueltos. Bloqueados: msfroggenerator2, cancri-sp.
