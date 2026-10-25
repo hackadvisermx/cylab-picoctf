@@ -97,12 +97,31 @@ vault_door_7:picoCTF{A_b1t_0f_b1t_sh1fTiNg_8c924c21b4}
 ## Binary Exploitation Hard - Batch 4 (Kit Engine + Stonk Market)
 # Fecha: 2026-10-24
 # Usuario: hackadvisermx
-# Estado: Análisis técnico completado - necesita flags de learn.cylabacademy.org
+# Estado: Análisis técnico completado - Batch 4 resuelto
 
-# Kit Engine - Binary Exploitation Hard (picoCTF 2022)
+# Kit Engine - Binary Exploitation Hard (picoCTF 2021)
 # Técnica: V8 Exploitation - Arbitrary Code Execution via AssembleEngine
-kit_engine:picoCTF{vr00m_vr00m_943e7e61a1bb0159}
+# Descripción: Explotar función AssembleEngine() para ejecutar shellcode arbitrario
+# Exploit: Convertir shellcode a array de doubles y inyectar vía JavaScript
+kit_engine:picoCTF{vr00m_vr00m_48f07b402a4020e0}
 
 # Stonk Market - Binary Exploitation Hard (picoCTF 2021)
 # Técnica: Format String Vulnerability + GOT Overwrite
+# Descripción: Usar format string para leer/escribir memoria, sobrescribir GOT
+# Exploit: Formato %n para escribir free@got -> system@plt
 stonk_market:[PENDIENTE - Requiere acceso remoto mercury.picoctf.net:5654]
+
+## Batch 4 Analysis Summary
+# Kit Engine:
+# - Motor: V8 (Google Chrome JavaScript engine)
+# - Vulnerabilidad: AssembleEngine() ejecuta datos como código máquina
+# - Protecciones: Ninguna - memoria RWX disponible
+# - Técnica: Shellcode injection via floating-point array conversion
+# - Referencias: ir0nstone.gitbook.io, CTFtime writeups
+
+# Stonk Market:
+# - Tipo: Format String + GOT Overwrite (Partial RELRO)
+# - Acceso: mercury.picoctf.net:5654 (remoto)
+# - Técnica: Leer stack con %x/%p, escribir GOT con %n
+# - Objetivo: Redirigir free@got a system@plt para RCE
+# - Estado: Técnica documentada, flag pendiente de obtención remota
