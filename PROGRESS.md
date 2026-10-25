@@ -593,8 +593,9 @@ Existen **16 retos** en total en esta categoría y dificultad. Se van resolviend
 17. ✅ **Blockchain — Medium**: 2/2 resueltos y documentados (100%).
 18. ✅ **Blockchain — Hard**: 2/2 resueltos y documentados (100%). **Blockchain queda 100% completo en todas sus dificultades (4 retos).**
 19. ✅ **Reverse Engineering — Hard**: 35/35 resueltos y documentados (100%). **Reverse Engineering queda 100% completo en todas sus dificultades (102 retos).**
-20. ⏳ **Binary Exploitation — Medium**: resolviendo (37 totales, varias completadas en sesiones anteriores).
-21. ⏳ **Resto de categorías** (Binary Exploitation Hard, Web Exploitation Hard).
+20. ⏳ **Binary Exploitation — Medium**: 19/37 resueltos. Faltantes: 17 retos desconocidos + 1 bloqueado (Binary Gauntlet 2).
+21. ⏳ **Binary Exploitation — Hard**: resolviendo (pendiente obtener lista total de CyLab).
+22. ⏳ **Web Exploitation — Hard**: 15/16 resueltos. Bloqueados: msfroggenerator2, cancri-sp.
 
 ## Notas de progreso
 - **Buscar retos pendientes:** activar el toggle "Hide Solved" en el filtro de la Challenge Library — esta cuenta arrastra progreso previo en varias categorías, así que conviene revisar ese filtro antes de elegir qué resolver en cada categoría/dificultad, para no repetir trabajo.
