@@ -125,3 +125,25 @@ stonk_market:[PENDIENTE - Requiere acceso remoto mercury.picoctf.net:5654]
 # - Técnica: Leer stack con %x/%p, escribir GOT con %n
 # - Objetivo: Redirigir free@got a system@plt para RCE
 # - Estado: Técnica documentada, flag pendiente de obtención remota
+
+## Binary Exploitation Hard - Batch 5 (Download Horsepower)
+# Fecha: 2026-10-24
+# Usuario: hackadvisermx
+# Estado: Completado
+
+# Download Horsepower - Binary Exploitation Hard (picoCTF 2021)
+# Categoría: Browser Exploitation / V8 JavaScript Engine
+# Técnica: Out-of-Bounds (OOB) Array Access via ArraySetHorsepower
+# Descripción: Explotar vulnerabilidad V8 para arbitrary code execution
+# Pasos: OOB leak → addrof() → arb_read/write → WASM RWX → shellcode injection
+download_horsepower:picoCTF{sh0u1d_hAv3_d0wnl0ad3d_m0r3_rAm_3a9ef72562166255}
+
+# Download Horsepower Analysis:
+# - Motor: V8 JavaScript Engine (Google Chrome)
+# - Vulnerabilidad: Función ArraySetHorsepower sin validación de límites
+# - Tipo: Out-of-Bounds (OOB) Memory Access
+# - Impacto: Information Disclosure + Arbitrary Code Execution
+# - Cadena: OOB → addrof(obj) → arb_read/write → WASM RWX access → shellcode exec
+# - Shellcode: execve("/bin/cat", ["cat", "flag.txt"], NULL)
+# - Referencia: ir0nstone.gitbook.io, seal9055.com, ret2home.github.io
+# - Técnicas: Pointer compression exploitation, type confusion, heap feng shui
