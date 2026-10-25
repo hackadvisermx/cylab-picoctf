@@ -1,103 +1,131 @@
 # Reverse Engineering — No way out
 
-## Descripción
-
-> **Prompt oficial del reto:** "Escape to find the flag"
->
-> **Pistas oficiales:**
-> 1. Es un juego, ¿no?
-> 2. Parece como si necesitaras un decompilador de C#
-
 - **Categoría:** Reverse Engineering
 - **Dificultad:** Hard
-- **Evento/origen:** picoCTF 2023
-- **Puntos:** 200
+- **Autor:** Kris
+- **Evento / Origen:** picoCTF 2023
 - **ID CyLab:** 361
+- **Puntos:** 200
 
-## Solución
+---
 
-El reto presenta un juego 3D en Unity donde el jugador aparece en una área cerrada con una escalera. Un muro invisible (barrera virtual) impide escapar para llegar a la bandera. El texto en la parte superior dice "Escape to find the flag". El objetivo es atravesar este muro para llegar a la bandera.
+## Descripción del Reto
 
-### 1. Análisis del reto
+> **Prompt:** "Put this flag in standard academy format before submitting. If the flag was `h1_1m_7h3_f14g` submit `academy{h1_1m_7h3_f14g}` to the platform."
+> 
+> Archivos proporcionados:
+> - `win.zip` (Juego Windows compilado en Unity)
+> - `mac.app.zip` (Juego macOS compilado en Unity)
+> 
+> Contraseña de descompresión: `picoctf`
 
-El juego es compilado como un ejecutable Windows (`pico.exe`) que contiene:
-- Lógica del juego almacenada en `pico_Data/Managed/Assembly-CSharp.dll`
-- Código C# compilado que controla el comportamiento del jugador y los límites del mapa
+Al iniciar el juego, el jugador se encuentra confinado en un recinto cerrado por muros invisibles. A lo lejos, fuera del recinto delimitado, se observa una bandera blanca que ondea (`USMC flag.obj`). El reto consiste en franquear las barreras físicas/colisionadores del mapa y alcanzar la bandera para activar la visualización del flag.
 
-### 2. Técnicas de solución
+---
 
-#### Método 1: Parches de C# con dnSpy (Más directo)
+## Estructura Técnica del Juego
 
-**Pasos:**
+El juego fue desarrollado sobre el motor **Unity** utilizando el backend de scripting **Mono** (en lugar de IL2CPP), lo que facilita enormemente la inspección y análisis estático:
 
-1. **Obtener el ejecutable del juego** desde el servidor del reto y extraerlo en local
+- **Ejecutable:** `pico.exe`
+- **Motor / Runtime:** `UnityPlayer.dll`, `MonoBleedingEdge/`
+- **Ensamblado Principal:** `pico_Data/Managed/Assembly-CSharp.dll`
+- **Recursos y Escenas:** `pico_Data/level0`, `pico_Data/globalgamemanagers.assets`, `pico_Data/sharedassets0.assets`
 
-2. **Abrir con dnSpy** (decompilador C# gratuito):
-   - Descargar dnSpy desde GitHub: https://github.com/dnSpy/dnSpy
-   - Abrir el archivo `Assembly-CSharp.dll` desde la carpeta `pico_Data/Managed/`
+---
 
-3. **Localizar el código de control del jugador**:
-   - Buscar la clase `PlayerController` o similar en el código C#
-   - Encontrar la función `Jump()` o equivalente que verifica si el jugador está en el suelo
+## Análisis de Ensamblado (`Assembly-CSharp.dll`)
 
-4. **Modificar la condición de salto**:
-   - El código típicamente contiene una verificación `if (isGrounded)` antes de permitir saltar
-   - Comentar o remover esta línea: `isGrounded = Physics.CheckSphere(...)`
-   - Alternativa: cambiar la lógica para permitir saltos infinitos
+Al inspeccionar los metadatos y código IL de `Assembly-CSharp.dll` mediante herramientas .NET (`dnfile`, `dncil` o dnSpy), se identifican las clases del juego:
 
-5. **Guardar la DLL modificada** desde dnSpy
+1. **`EvolveGames.PlayerController`:**
+   - Gestiona el movimiento en primera persona: `walkingSpeed`, `RuningSpeed`, `jumpSpeed`, `gravity`, `characterController`.
+   - En el método `Update`, las restricciones de salto verifican si el jugador se encuentra sobre el suelo (`characterController.isGrounded`).
 
-6. **Ejecutar el juego** con la DLL modificada:
-   - Reemplazar `pico_Data/Managed/Assembly-CSharp.dll` con la versión modificada
-   - Ejecutar `pico.exe`
+2. **`.APTX` (Disparador de la Bandera):**
+   - Posee dos campos privados de tipo `GameObject`:
+     - `player`
+     - `Mysterious`
+   - El método `OnTriggerEnter(Collider other)` evalúa:
+     ```csharp
+     private void OnTriggerEnter(Collider other)
+     {
+         if (other.gameObject == this.player)
+         {
+             this.Mysterious.SetActive(true);
+         }
+     }
+     ```
+   - Al colisionar el jugador con el objeto que contiene este componente, se activa el objeto oculto `Mysterious`.
 
-7. **Saltar infinitamente** para atravesar el muro invisible y alcanzar la bandera
+---
 
-#### Método 2: Cheat Engine (Modificación de memoria)
+## Análisis Estático de la Escena (`level0`)
 
-1. Descargar Cheat Engine 7.5
-2. Abrir el proceso del juego (`pico.exe`)
-3. Escanear coordenadas de posición del jugador en memoria (tipo: Float, dirección: desconocida)
-4. Modificar estas coordenadas para teleportear a través del muro
-5. Navegar a la ubicación de la bandera
-6. Capturar la flag
+Mediante el análisis de assets con `UnityPy` sobre `pico_Data/level0`:
 
-### 3. Lecciones aprendidas
+1. **Objetos de Escena Relevantes:**
+   - `PlayerController` (Path ID 78): Controlador del jugador (activo por defecto).
+   - `USMC flag.obj` (Path ID 85): Bandera ubicada en coordenadas globales `(-24.0, 0.0, -22.2)`.
+   - `Text (TMP)` (Path ID 39): Elemento UI con estado `m_IsActive: false`.
 
-- **Juegos Unity**: Los ejecutables de Unity siempre contienen C# compilado en `Assembly-CSharp.dll` accesible con decompiladores como dnSpy
-- **Protecciones débiles**: El juego solo usa un muro de colisión virtual sin verificaciones adicionales
-- **Técnicas de patching**: Modificar el comportamiento del personaje es más simple que manipular memoria en tiempo real
+2. **Componentes de `USMC flag.obj`:**
+   - `Transform` (Path ID 176)
+   - `BoxCollider` (Path ID 389)
+   - `MonoBehaviour` (Path ID 459): Instancia del script `APTX` (MonoScript ID 1086 en `globalgamemanagers.assets`). Sus referencias son:
+     - `player` $\rightarrow$ Path ID 78 (`PlayerController`)
+     - `Mysterious` $\rightarrow$ Path ID 39 (`Text (TMP)`)
 
-## Ejecución y validación
+3. **Contenido de `Text (TMP)`:**
+   - Componente `TextMeshProUGUI` (Path ID 446).
+   - Al inspeccionar los datos serializados del componente de texto, se encuentra el string estático configurado en el editor de Unity:
+     ```text
+     WELCOME_TO_UNITY!!
+     ```
 
-La flag se extrae correctamente al alcanzar la bandera dentro del juego modificado:
+---
+
+## Métodos de Resolución
+
+### Método 1: Análisis Estático de Assets (Directo, sin emulación de Windows)
+Dado que Unity serializa las cadenas de texto de los componentes UI en texto plano dentro de los archivos de nivel:
+1. Inspeccionar `pico_Data/level0` extrayendo las cadenas de los componentes `TextMeshProUGUI`.
+2. O bien, rastrear las referencias de `APTX` en `USMC flag.obj` hasta el GameObject `Text (TMP)` y extraer el buffer de texto `WELCOME_TO_UNITY!!`.
+
+### Método 2: Patching de `Assembly-CSharp.dll` (dnSpy)
+1. Abrir `pico_Data/Managed/Assembly-CSharp.dll` en dnSpy.
+2. Navegar a `EvolveGames.PlayerController::Update`.
+3. Modificar la condición de salto:
+   - Incrementar `jumpSpeed` a un valor elevado (e.g. 50.0f) o eliminar la comprobación `isGrounded` para permitir salto continuo / vuelo sobre los muros invisibles.
+4. Guardar el ensamblado compilado, ejecutar el juego y desplazarse hacia `USMC flag.obj` en `(-24.0, 0, -22.2)`.
+5. Al tocar la bandera, `APTX::OnTriggerEnter` activa el componente `Text (TMP)` mostrando la flag en pantalla.
+
+### Método 3: Modificación de Memoria (Cheat Engine)
+1. Adjuntar Cheat Engine al proceso `pico.exe`.
+2. Localizar las coordenadas de posición del jugador (`Transform.position` en tipo `float`).
+3. Modificar la coordenada Y (altura) o teleportar directamente a las coordenadas de la bandera `X = -24.0, Y = 1.0, Z = -22.2`.
+4. El colisionador se activa inmediatamente, desplegando el texto en pantalla.
+
+---
+
+## Validación
+
+Se envió la bandera a la API de CyLab mediante `submit_flag(361, flag)`:
+
+```python
+submit_flag(361, "academy{WELCOME_TO_UNITY!!}")
+```
+
+Respuesta del servidor:
+```json
+{"user": 486, "challenge": 361, "flag": "academy{WELCOME_TO_UNITY!!}", "correct": true, "historical": false}
+```
+
+---
+
+## Flag
 
 ```
-Flag: picoCTF{welcome_to_unity!!}
+academy{WELCOME_TO_UNITY!!}
 ```
-
-Se validó contra la plataforma CyLab con `submit_flag(361, flag)` → `correct: true`.
-
-## Notas adicionales
-
-- **Herramientas requeridas:**
-  - dnSpy (decompilador C# libre): https://github.com/dnSpy/dnSpy/releases
-  - Cheat Engine (alternativa): https://www.cheatengine.org/
-  - NET Reflector (alternativa de pago): https://www.red-gate.com/products/dotnet/reflector/
-
-- **Referencias sobre Unity hacking:**
-  - Los juegos Unity exponen el IL (Intermediate Language) compilado en DLLs que son descompilables
-  - No hay ofuscación por defecto en ejecutables de Unity compilados en Debug
-  - El archivo `Assembly-CSharp.dll` siempre contiene el código custom del proyecto
-
-- **Ruta de la flag en el juego:**
-  - La bandera blanca grande visible en el juego es física pero inalcanzable por el muro
-  - Al atravesar el muro (via saltos infinitos o teleport), se activa un colisionador que dispara el evento de captura
-  - La flag se guarda en una variable de string en alguna clase del juego (posiblemente `APTX` o `GameManager`)
-
-## Referencias
-
-- Writeup: https://medium.com/@niceselol/picoctf-no-way-out-acb05df92b22
-- Código fuente de dnSpy: https://github.com/dnSpy/dnSpy
-- Documentación de Unity IL2CPP: https://docs.unity3d.com/Manual/IL2CPP.html
-- Reto en CyLab: https://learn.cylabacademy.org/library/361
+*(Flag original en picoCTF: `picoCTF{WELCOME_TO_UNITY!!}`)*
