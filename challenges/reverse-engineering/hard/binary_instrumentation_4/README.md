@@ -462,8 +462,10 @@ Al ejecutar el binario con Frida:
 
 Se espera un formato similar a:
 ```
-academy{...}  # Formato official de CyLab Academy
-picoCTF{...}  # Si es de picoCTF 2026
+## Flag
+
+```
+academy{n3tw0rk_1s_4P1s_4S_W311_3a23cea2}
 ```
 
 ## Recursos Técnicos

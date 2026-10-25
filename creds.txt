@@ -434,3 +434,4 @@ no_way_out: academy{WELCOME_TO_UNITY!!}
 seed-sPRiNG: academy{pseudo_random_number_generator_not_so_random_cdeee1a6}
 checkpass: academy{t1mingS1deChann3l_c55b1a90e29d2f}
 binary_instrumentation_3: academy{411_4r3_4p15_n07h1n9_3l53_d4d5c8f0}
+binary_instrumentation_4: academy{n3tw0rk_1s_4P1s_4S_W311_3a23cea2}
