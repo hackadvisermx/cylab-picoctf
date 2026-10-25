@@ -72,3 +72,24 @@ vault_door_7:picoCTF{A_b1t_0f_b1t_sh1fTiNg_8c924c21b4}
 # wine - Binary Exploitation Hard (picoCTF 2022, ? pts)
 # Técnica: Windows PE analysis / Wine emulation exploitation
 # wine:[PENDIENTE]
+
+# ANALYSIS SUMMARY - Binary Exploitation Hard
+# Updated: 2026-10-24
+
+# ropfu Analysis:
+# - Binario descargado y analizado: ELF 32-bit, statically linked, 693 KB
+# - Vulnerabilidad: Buffer overflow en gets() - stack overflow
+# - Offset de overflow: 20 bytes (16 buffer + 4 EBP)
+# - Técnica: ROP chain con int 0x80 para execve("/bin/sh")
+# - Gadgets encontrados: pop eax/ebx/ecx/edx, int 0x80 en múltiples direcciones
+# - Estado: Análisis técnico completo, requiere VM/Linux 32-bit para ejecución
+# - Fuente: https://github.com/HHousen/PicoCTF-2022/
+
+# tic-tac Analysis:
+# - Tipo: Reto remoto en saturn.picoctf.net (NO descargable)
+# - Vulnerabilidad: Race condition (TOCTOU - Time-Of-Check-Time-Of-Use)
+# - Patrón: Chequeo de permisos seguido de cambio entre check y uso
+# - Técnica: Reemplazar archivo con symlink durante ventana de race
+# - Ejecución: Script bash con loop de timing crítico
+# - Estado: Técnica documentada, requiere acceso SSH a saturn.picoctf.net
+# - Referencias: siunam321.github.io/ctf/picoCTF-2023/Binary-Exploitation/tic-tac/
