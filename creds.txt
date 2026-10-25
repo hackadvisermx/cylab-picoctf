@@ -25,3 +25,21 @@ droids4:picoCTF{not.particularly.silly}
 
 # Binary Instrumentation 3 - Reverse Engineering Hard (picoCTF 2019, 400 pts)
 binary_instrumentation_3:picoCTF{411_4r3_4p15_n07h1n9_3l53_0cfabbfe}
+
+# Batch Actual (7) - RE Hard Final: Last 5 Challenges
+# Fecha: 2026-10-24
+
+# rolling_my_own - Reverse Engineering Hard (picoCTF 2021, 300 pts)
+rolling_my_own:picoCTF{r011ing_y0ur_0wn_crypt0_15_h4rd!_06746440}
+
+# wizardlike - Reverse Engineering Hard (picoCTF 2022, 500 pts)
+wizardlike:picoCTF{ur_4_w1z4rd_8F4B04AE}
+
+# reverse_cipher - Reverse Engineering Hard (picoCTF 2019, 300 pts)
+reverse_cipher:picoCTF{r3v3rs369806a41}
+
+# riscy_business - Reverse Engineering Hard (picoCTF 2021, 400 pts)
+riscy_business:picoCTF{4ny0n3_g0t_r1scv_h4rdw4r3?_LGUfwl8xyMUlpgvz}
+
+# vault_door_7 - Reverse Engineering Hard (picoCTF 2019, 400 pts)
+vault_door_7:picoCTF{A_b1t_0f_b1t_sh1fTiNg_8c924c21b4}
