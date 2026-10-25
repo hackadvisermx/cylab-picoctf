@@ -22,3 +22,6 @@ droids3:picoCTF{tis.but.a.scratch}
 
 # droids4 - Reverse Engineering Hard (picoCTF 2019)
 droids4:picoCTF{not.particularly.silly}
+
+# Binary Instrumentation 3 - Reverse Engineering Hard (picoCTF 2019, 400 pts)
+binary_instrumentation_3:picoCTF{411_4r3_4p15_n07h1n9_3l53_0cfabbfe}
