@@ -43,3 +43,32 @@ riscy_business:picoCTF{4ny0n3_g0t_r1scv_h4rdw4r3?_LGUfwl8xyMUlpgvz}
 
 # vault_door_7 - Reverse Engineering Hard (picoCTF 2019, 400 pts)
 vault_door_7:picoCTF{A_b1t_0f_b1t_sh1fTiNg_8c924c21b4}
+
+## Binary Exploitation Hard - Batch 1 (6 retos - Agente 2)
+# Fecha: 2026-10-24
+# Usuario: hackadvisermx
+# Estado: En proceso
+
+# hash-only-2 - Binary Exploitation Hard (picoCTF 2025, 350 pts)
+# Técnica: PATH hijacking con /usr/local/bin world-writable
+# hash_only_2:[PENDIENTE]
+
+# Echo Valley - Binary Exploitation Hard (picoCTF 2025, 450 pts)
+# Técnica: Format string + ROP para sobreescribir return address
+# echo_valley:[PENDIENTE]
+
+# tic-tac - Binary Exploitation Hard (picoCTF 2023, 500 pts)
+# Técnica: ROP chain / Stack exploitation
+# tic_tac:[PENDIENTE]
+
+# ropfu - Binary Exploitation Hard (picoCTF 2022, 500 pts)
+# Técnica: ROP gadgets / Binary gadget finding
+# ropfu:[PENDIENTE]
+
+# buffer overflow 3 - Binary Exploitation Hard (picoCTF 2022, 400 pts)
+# Técnica: Stack buffer overflow / Control flow hijacking
+# buffer_overflow_3:[PENDIENTE]
+
+# wine - Binary Exploitation Hard (picoCTF 2022, ? pts)
+# Técnica: Windows PE analysis / Wine emulation exploitation
+# wine:[PENDIENTE]
