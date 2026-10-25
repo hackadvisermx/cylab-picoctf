@@ -10,8 +10,8 @@ A diferencia de wargames con progresión estrictamente secuencial (Bandit, Natas
 
 ## Estado actual
 
-- **Progreso global en plataforma:** **491 / 525 retos resueltos (93.52%)**
-- **Total retos pendientes:** **34**
+- **Progreso global en plataforma:** **486 / 525 retos resueltos (92.57%)**
+- **Total retos pendientes:** **39**
 - **Verificación:** API de CyLab, **2026-10-24** (el estado de esta sección es la fuente de verdad).
 
 ### Resumen por categoría
@@ -24,9 +24,9 @@ A diferencia de wargames con progresión estrictamente secuencial (Bandit, Natas
 | Forensics | 86 | 86 | 100.0% | ✅ Completo (Easy 15/15, Medium 54/54, Hard 17/17) |
 | General Skills | 75 | 75 | 100.0% | ✅ Completo (Easy 49/49, Medium 24/24, Hard 2/2) |
 | Web Exploitation | 81 | 83 | 97.6% | ⏳ 2 pendientes en Hard: `cancri-sp` [344], `msfroggenerator2` [360] |
-| Reverse Engineering | 101 | 102 | 99.0% | ⏳ 1 pendiente: `speeds and feeds` [116] (Medium, mantenimiento en plataforma). Hard 35/35 (100%) |
-| Binary Exploitation | 45 | 76 | 59.2% | ⏳ 31 pendientes: `Binary Gauntlet 2` [143] (Medium) + 30 en Hard |
-| **Total** | **491** | **525** | **93.52%** | **34 pendientes** |
+| Reverse Engineering | 97 | 102 | 95.1% | ⏳ 5 pendientes: `speeds and feeds` [116] (Medium, mantenimiento) + 4 en Hard |
+| Binary Exploitation | 44 | 76 | 57.9% | ⏳ 32 pendientes: `Binary Gauntlet 2` [143] (Medium) + 31 en Hard |
+| **Total** | **486** | **525** | **92.57%** | **39 pendientes** |
 
 ### Desglose por categoría y dificultad
 
@@ -48,8 +48,8 @@ A diferencia de wargames con progresión estrictamente secuencial (Bandit, Natas
 | Reverse Engineering | Medium | 52 | 53 | 98.1% | ⏳ 52 resueltos, 1 pendiente: speeds and feeds [116] (mantenimiento) |
 | Reverse Engineering | Hard | 35 | 35 | 100.0% | ✅ Resueltos y documentados |
 | Binary Exploitation | Easy | 5 | 5 | 100.0% | ✅ Resueltos y documentados |
-| Binary Exploitation | Medium | 36 | 37 | 97.3% | ⏳ 36 resueltos, 1 pendiente: Binary Gauntlet 2 [143] |
-| Binary Exploitation | Hard | 4 | 34 | 11.8% | ⏳ 4 resueltos validados (`seed-sPRiNG`, `fermat-strings`, `offset-cycleV2`, `Heap Havoc`), 30 pendientes |
+| Binary Exploitation | Medium | 37 | 37 | 100.0% | ✅ Resueltos y documentados |
+| Binary Exploitation | Hard | 4 | 34 | 11.8% | ⏳ 4 resueltos, 30 pendientes: Pizza Router [758], handoff [486], babygame03 [446], high frequency troubles [441], tic-tac [380], Horsetrack [353], babygame02 [346], wine [317], stack cache [306], solfire [302], ropfu [292], function overwrite [272], buffer overflow 3 [260], vr-school [218], homework [217], lockdown-horses [214], SaaS [213], Unsubscriptions Are Free [187], filtered-shellcode [184], Bizz Fuzz [181], Here's a LIBC [179], Turboflan [178], The Office [172], Kit Engine [168], Stonk Market [164], Cache Me Outside [146], Download Horsepower [135], Guessing Game 2 [89], zero_to_hero [75], sice_cream [55] |
 | Blockchain | Medium | 2 | 2 | 100.0% | ✅ Resueltos y documentados |
 | Blockchain | Hard | 2 | 2 | 100.0% | ✅ Resueltos y documentados |
 | Artificial Intelligence | Easy | 16 | 16 | 100.0% | ✅ Resueltos y documentados |
@@ -105,13 +105,14 @@ Cada writeup vive en su propia carpeta (`challenges/<categoría>/<dificultad>/<s
 
 ## Próximos pasos
 
-Con 488 de 525 retos resueltos (92.95%) y 5 tracks al 100% (Artificial Intelligence, Blockchain, Cryptography, Forensics, General Skills), los esfuerzos se concentran en los **37 retos pendientes**:
+Con 486 de 525 retos resueltos (92.57%) y 5 tracks al 100% (Artificial Intelligence, Blockchain, Cryptography, Forensics, General Skills), los esfuerzos se concentran en los **39 retos pendientes**:
 
-1. **Binary Exploitation (31 pendientes):**
+1. **Binary Exploitation (32 pendientes):**
    - Medium: `Binary Gauntlet 2` [143].
-   - Hard: 30 pendientes. Validados en plataforma: `seed-sPRiNG` [50], `fermat-strings` [215], `offset-cycleV2` [738] y `Heap Havoc` [763].
-2. **Reverse Engineering (1 pendiente):**
-   - Medium: `speeds and feeds` [116] (en mantenimiento en plataforma). Hard 35/35 completo (100%).
+   - Hard: 31 pendientes. Validados en plataforma: `fermat-strings` [215], `offset-cycleV2` [738] y `Heap Havoc` [763]. El resto tiene análisis técnico local, pero sus flags no fueron aceptadas (`Kit Engine`, `Download Horsepower`, `ropfu`, `buffer overflow 3`, `function overwrite`, `wine`, etc.).
+2. **Reverse Engineering (5 pendientes):**
+   - Medium: `speeds and feeds` [116] (en mantenimiento).
+   - Hard: `Checkpass` [149], `Binary Instrumentation 3` [699], `Binary Instrumentation 4` [700], `JITFP` [737].
 3. **Web Exploitation (2 pendientes):**
    - Hard: `cancri-sp` [344] y `msfroggenerator2` [360].
 

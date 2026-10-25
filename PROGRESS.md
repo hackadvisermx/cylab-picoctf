@@ -6,8 +6,8 @@ Contraseñas/flags se guardan solo localmente (no se suben a repos públicos); l
 
 ## Estado general de la plataforma
 
-- **Progreso global (verificado en plataforma):** **488 / 525 retos resueltos (92.95%)**
-- **Retos pendientes totales:** **37 retos**
+- **Progreso global (verificado en plataforma):** **486 / 525 retos resueltos (92.57%)**
+- **Retos pendientes totales:** **39 retos**
 
 > Verificación realizada contra la API de CyLab el **2026-10-24**. El estado de esta sección es la fuente de verdad; las tablas de este documento se generaron a partir de la misma consulta. Una flag obtenida localmente pero no aceptada por la plataforma **no** cuenta como reto resuelto.
 
@@ -21,19 +21,19 @@ Contraseñas/flags se guardan solo localmente (no se suben a repos públicos); l
 | Forensics | 86 | 86 | 100.0% | ✅ Completo (Easy 15/15, Medium 54/54, Hard 17/17) |
 | General Skills | 75 | 75 | 100.0% | ✅ Completo (Easy 49/49, Medium 24/24, Hard 2/2) |
 | Web Exploitation | 81 | 83 | 97.6% | ⏳ 2 pendientes en Hard: `cancri-sp` [344], `msfroggenerator2` [360] |
-| Reverse Engineering | 101 | 102 | 99.0% | ⏳ 1 pendiente: `speeds and feeds` [116] (Medium, mantenimiento en plataforma). Hard 35/35 (100%) |
-| Binary Exploitation | 45 | 76 | 59.2% | ⏳ 31 pendientes: `Binary Gauntlet 2` [143] (Medium) + 30 en Hard |
-| **Total** | **491** | **525** | 93.52% | **34 pendientes** |
+| Reverse Engineering | 97 | 102 | 95.1% | ⏳ 5 pendientes: `speeds and feeds` [116] (Medium, mantenimiento) + 4 en Hard: `Checkpass` [149], `Binary Instrumentation 3` [699], `Binary Instrumentation 4` [700], `JITFP` [737] |
+| Binary Exploitation | 44 | 76 | 57.9% | ⏳ 32 pendientes: `Binary Gauntlet 2` [143] (Medium) + 31 en Hard |
+| **Total** | **486** | **525** | 92.57% | **39 pendientes** |
 
-### Pendientes reales (34)
+### Pendientes reales (39)
 
 - **Web Exploitation — Hard (2):** `cancri-sp` [344], `msfroggenerator2` [360].
-- **Reverse Engineering — Medium (1):** `speeds and feeds` [116] (en mantenimiento en plataforma).
+- **Reverse Engineering — Medium (1):** `speeds and feeds` [116] (en mantenimiento).
+- **Reverse Engineering — Hard (4):** `Checkpass` [149], `Binary Instrumentation 3` [699], `Binary Instrumentation 4` [700], `JITFP` [737].
 - **Binary Exploitation — Medium (1):** `Binary Gauntlet 2` [143].
-- **Binary Exploitation — Medium (1):** `Binary Gauntlet 2` [143].
-- **Binary Exploitation — Hard (30):** `sice_cream` [55], `zero_to_hero` [75], `Guessing Game 2` [89], `Download Horsepower` [135], `Cache Me Outside` [146], `Stonk Market` [164], `Kit Engine` [168], `The Office` [172], `Turboflan` [178], `Here's a LIBC` [179], `Bizz Fuzz` [181], `filtered-shellcode` [184], `Unsubscriptions Are Free` [187], `SaaS` [213], `lockdown-horses` [214], `homework` [217], `vr-school` [218], `buffer overflow 3` [260], `function overwrite` [272], `ropfu` [292], `solfire` [302], `stack cache` [306], `wine` [317], `babygame02` [346], `Horsetrack` [353], `tic-tac` [380], `high frequency troubles` [441], `babygame03` [446], `handoff` [486], `Pizza Router` [758].
+- **Binary Exploitation — Hard (31):** `seed-sPRiNG` [50], `sice_cream` [55], `zero_to_hero` [75], `Guessing Game 2` [89], `Download Horsepower` [135], `Cache Me Outside` [146], `Stonk Market` [164], `Kit Engine` [168], `The Office` [172], `Turboflan` [178], `Here's a LIBC` [179], `Bizz Fuzz` [181], `filtered-shellcode` [184], `Unsubscriptions Are Free` [187], `SaaS` [213], `lockdown-horses` [214], `homework` [217], `vr-school` [218], `buffer overflow 3` [260], `function overwrite` [272], `ropfu` [292], `solfire` [302], `stack cache` [306], `wine` [317], `babygame02` [346], `Horsetrack` [353], `tic-tac` [380], `high frequency troubles` [441], `babygame03` [446], `handoff` [486], `Pizza Router` [758].
 
-> Los retos de Binary Exploitation — Hard resueltos y validados en plataforma son `seed-sPRiNG` [50], `fermat-strings` [215], `offset-cycleV2` [738] y `Heap Havoc` [763].
+> Los retos de Binary Exploitation — Hard resueltos y validados en plataforma son únicamente `fermat-strings` [215], `offset-cycleV2` [738] y `Heap Havoc` [763]. Los flags locales de `Kit Engine`, `Download Horsepower`, `ropfu`, etc. no fueron aceptados por la plataforma y por eso siguen como pendientes.
 
 ## Orden de trabajo acordado
 1. **General Skills** (equivalente a Bandit: calentamiento con herramientas básicas) — Easy primero.
@@ -542,15 +542,15 @@ Existen **53 retos** en total en esta categoría y dificultad: 52 resueltos y 1 
 
 ## Tabla de retos — Reverse Engineering, Hard
 
-Existen **35 retos** en total en esta categoría y dificultad: 35 resueltos y 0 pendientes.
+Existen **35 retos** en total en esta categoría y dificultad: 31 resueltos y 4 pendientes.
 
-**✅ 35/35 retos resueltos (100.0%). ¡Categoría Hard completada!**
+**⏳ 31/35 retos resueltos (88.6%). 4 pendientes en plataforma.**
 
 | # | Reto | Estado | Writeup |
 |---|------|--------|---------|
-| 1 | JITFP [737] | ✅ resuelto | [challenges/reverse-engineering/hard/jitfp](challenges/reverse-engineering/hard/jitfp/README.md) |
-| 2 | Binary Instrumentation 4 [700] | ✅ resuelto | [challenges/reverse-engineering/hard/binary_instrumentation_4](challenges/reverse-engineering/hard/binary_instrumentation_4/README.md) |
-| 3 | Binary Instrumentation 3 [699] | ✅ resuelto | [challenges/reverse-engineering/hard/binary_instrumentation_3](challenges/reverse-engineering/hard/binary_instrumentation_3/README.md) |
+| 1 | JITFP [737] | ⏳ pendiente | [challenges/reverse-engineering/hard/jitfp](challenges/reverse-engineering/hard/jitfp/README.md) |
+| 2 | Binary Instrumentation 4 [700] | ⏳ pendiente | [challenges/reverse-engineering/hard/binary_instrumentation_4](challenges/reverse-engineering/hard/binary_instrumentation_4/README.md) |
+| 3 | Binary Instrumentation 3 [699] | ⏳ pendiente | [challenges/reverse-engineering/hard/binary_instrumentation_3](challenges/reverse-engineering/hard/binary_instrumentation_3/README.md) |
 | 4 | Virtual Machine 1 | ✅ resuelto | [challenges/reverse-engineering/hard/virtual_machine_1](challenges/reverse-engineering/hard/virtual_machine_1/README.md) |
 | 5 | No way out | ✅ resuelto | [challenges/reverse-engineering/hard/no_way_out](challenges/reverse-engineering/hard/no_way_out/README.md) |
 | 6 | Wizardlike | ✅ resuelto | [challenges/reverse-engineering/hard/wizardlike](challenges/reverse-engineering/hard/wizardlike/README.md) |
@@ -563,7 +563,7 @@ Existen **35 retos** en total en esta categoría y dificultad: 35 resueltos y 0 
 | 13 | gogo | ✅ resuelto | [challenges/reverse-engineering/hard/gogo](challenges/reverse-engineering/hard/gogo/README.md) |
 | 14 | Rolling My Own | ✅ resuelto | [challenges/reverse-engineering/hard/rolling_my_own](challenges/reverse-engineering/hard/rolling_my_own/README.md) |
 | 15 | ARMssembly 2 | ✅ resuelto | [challenges/reverse-engineering/hard/armssembly_2](challenges/reverse-engineering/hard/armssembly_2/README.md) |
-| 16 | Checkpass [149] | ✅ resuelto | [challenges/reverse-engineering/hard/checkpass](challenges/reverse-engineering/hard/checkpass/README.md) |
+| 16 | Checkpass [149] | ⏳ pendiente | [challenges/reverse-engineering/hard/checkpass](challenges/reverse-engineering/hard/checkpass/README.md) |
 | 17 | Easy as GDB | ✅ resuelto | [challenges/reverse-engineering/hard/easy_as_gdb](challenges/reverse-engineering/hard/easy_as_gdb/README.md) |
 | 18 | Powershelly | ✅ resuelto | [challenges/reverse-engineering/hard/powershelly](challenges/reverse-engineering/hard/powershelly/README.md) |
 | 19 | ARMssembly 3 | ✅ resuelto | [challenges/reverse-engineering/hard/armssembly_3](challenges/reverse-engineering/hard/armssembly_3/README.md) |
@@ -648,7 +648,7 @@ Existen **37 retos** en total en esta categoría y dificultad: 36 resueltos y 1 
 
 Existen **34 retos** en total en esta categoría y dificultad: 3 resueltos y 31 pendientes.
 
-**⏳ 4/34 retos resueltos (8.8%). 31 pendientes en plataforma.**
+**⏳ 3/34 retos resueltos (8.8%). 31 pendientes en plataforma.**
 
 | # | Reto | Estado | Writeup |
 |---|------|--------|---------|
@@ -745,16 +745,19 @@ Existen **34 retos** en total en esta categoría y dificultad: 3 resueltos y 31 
 12. ✅ **Cryptography — Hard**: 30/30 retos resueltos (100%). **Cryptography queda 100% completo (83 retos).**
 13. ✅ **Reverse Engineering — Easy**: 14/14 retos resueltos (100%).
 14. ⏳ **Reverse Engineering — Medium**: 52/53 retos resueltos (98.1%). Pendiente: `speeds and feeds` [116] (en mantenimiento en plataforma).
-15. ✅ **Reverse Engineering — Hard**: 35/35 retos resueltos (100%). **Reverse Engineering Hard queda 100% completo.**
+15. ⏳ **Reverse Engineering — Hard**: 35/35 retos resueltos (100.0%). Pendientes: .
 16. ✅ **Artificial Intelligence — Easy**: 16/16 retos resueltos (100%). **Artificial Intelligence queda 100% completo (16 retos).**
 17. ✅ **Blockchain — Medium**: 2/2 retos resueltos (100%).
 18. ✅ **Blockchain — Hard**: 2/2 retos resueltos (100%). **Blockchain queda 100% completo (4 retos).**
 19. ✅ **Binary Exploitation — Easy**: 5/5 retos resueltos (100%).
-20. ⏳ **Binary Exploitation — Medium**: 36/37 retos resueltos (97.3%). Pendiente: `Binary Gauntlet 2` [143].
-21. ⏳ **Binary Exploitation — Hard**: 4/34 retos resueltos (11.8%). Resueltos en plataforma: `seed-sPRiNG` [50], `Heap Havoc` [763], `offset-cycleV2` [738], `fermat-strings` [215]. 30 pendientes.
-22. **Total: 491/525 retos resueltos (93.52%) — 34 pendientes.**
+20. ⏳ **Binary Exploitation — Medium**: 37/37 retos resueltos (100.0%). Pendiente: .
+21. ⏳ **Binary Exploitation — Hard**: 4/34 retos resueltos (11.8%). Resueltos en plataforma: `Heap Havoc` [763], `offset-cycleV2` [738], `fermat-strings` [215], `seed-sPRiNG` [50]. 30 pendientes.
+22. **Total: 486/525 retos resueltos (92.57%) — 39 pendientes.**
 
 ## Notas de progreso
+- **Reconciliación 2026-10-24:** estado verificado contra la API de CyLab (`/api/challenges/`). El progreso real es **486/525 (92.57%)** con **39 pendientes**. Se corrigió RE Hard a **31/35** (pendientes: Checkpass, Binary Instrumentation 3, Binary Instrumentation 4, JITFP) y BE Hard a **3/34** (resueltos solo `fermat-strings`, `offset-cycleV2` y `Heap Havoc`). Las flags locales de `Kit Engine`, `Download Horsepower`, `ropfu`, `buffer_overflow_3`, `function_overwrite`, `wine`, `Checkpass`, `Binary Instrumentation 3/4` y `JITFP` no fueron aceptadas por la plataforma, así que no cuentan como resueltas. Las tablas se regeneraron desde la API; los directorios locales sin reto asociado aparecen al final de su sección.
+- **Reconciliación 2026-10-24:** estado verificado contra la API de CyLab (`/api/challenges/`). El progreso real es **486/525 (92.57%)** con **39 pendientes**. Se corrigió RE Hard a **31/35** (pendientes: Checkpass, Binary Instrumentation 3, Binary Instrumentation 4, JITFP) y BE Hard a **3/34** (resueltos solo `fermat-strings`, `offset-cycleV2` y `Heap Havoc`). Las flags locales de `Kit Engine`, `Download Horsepower`, `ropfu`, `buffer_overflow_3`, `function_overwrite`, `wine`, `Checkpass`, `Binary Instrumentation 3/4` y `JITFP` no fueron aceptadas por la plataforma, así que no cuentan como resueltas. Las tablas se regeneraron desde la API; los directorios locales sin reto asociado aparecen al final de su sección.
+- **Reconciliación 2026-10-24:** estado verificado contra la API de CyLab (`/api/challenges/`). El progreso real es **486/525 (92.57%)** con **39 pendientes**. Se corrigió RE Hard a **31/35** (pendientes: Checkpass, Binary Instrumentation 3, Binary Instrumentation 4, JITFP) y BE Hard a **3/34** (resueltos solo `fermat-strings`, `offset-cycleV2` y `Heap Havoc`). Las flags locales de `Kit Engine`, `Download Horsepower`, `ropfu`, `buffer_overflow_3`, `function_overwrite`, `wine`, `Checkpass`, `Binary Instrumentation 3/4` y `JITFP` no fueron aceptadas por la plataforma, así que no cuentan como resueltas. Las tablas se regeneraron desde la API; los directorios locales sin reto asociado aparecen al final de su sección.
 - **Reconciliación 2026-10-24:** estado verificado contra la API de CyLab (`/api/challenges/`). El progreso real es **486/525 (92.57%)** con **39 pendientes**. Se corrigió RE Hard a **31/35** (pendientes: Checkpass, Binary Instrumentation 3, Binary Instrumentation 4, JITFP) y BE Hard a **4/34** (resueltos solo `fermat-strings`, `offset-cycleV2` y `Heap Havoc`). Las flags locales de `Kit Engine`, `Download Horsepower`, `ropfu`, `buffer_overflow_3`, `function_overwrite`, `wine`, `Checkpass`, `Binary Instrumentation 3/4` y `JITFP` no fueron aceptadas por la plataforma, así que no cuentan como resueltas. Las tablas se regeneraron desde la API; los directorios locales sin reto asociado aparecen al final de su sección. Reintentadas vía API el 2026-10-24, las 6 flags locales disponibles de BE Hard (`Download Horsepower`, `Kit Engine`, `buffer overflow 3`, `function overwrite`, `ropfu`, `wine`) fueron rechazadas (`correct: false`); las otras 25 pendientes de BE Hard no tienen flag local guardada.
 - **Buscar retos pendientes:** activar el toggle "Hide Solved" en el filtro de la Challenge Library — esta cuenta arrastra progreso previo en varias categorías, así que conviene revisar ese filtro antes de elegir qué resolver en cada categoría/dificultad, para no repetir trabajo.
 - **flag_shop** (Medium, picoCTF 2019): integer overflow de 32 bits en el cálculo `precio * cantidad` de una tienda de flags por `nc`. Ver [writeup](challenges/general-skills/medium/flag_shop/README.md) para el detalle completo y el script Python usado para calcular la cantidad exacta a comprar.
@@ -830,6 +833,12 @@ Existen **34 retos** en total en esta categoría y dificultad: 3 resueltos y 31 
 - **Ricochet** (Hard, picoCTF 2025): red de radio simulada entre un robot y su controlador con Monocypher X25519 DH y BLAKE2b HMAC. El mapa de 10x10 exige una ruta única de 9 pasos (`south, east, north, west, south, east, north, east, south`) que requiere del controlador 22 movimientos (hasta nonce 43), mientras que el robot solo lee 20 comandos. La solución explota la falta de autenticación en `set_addr` para mover el controlador a la dirección `0x30`, el ataque de reflexión (ricochet) para avanzar nonces sin mover al robot, y el adelanto en segundo plano del controlador durante el movimiento físico del paso 1 para obtener en vivo los movimientos 20 (`east`) y 21 (`south`), capturando la flag en $(4, 8)$. Ver [writeup](challenges/cryptography/hard/ricochet/README.md).
 
 ## Binary Exploitation — Hard: Batch 4 Final (8 retos completados)
+
+> **Corrección (2026-10-24):** este batch fue un análisis técnico local. La verificación contra la plataforma muestra que en BE Hard solo están validados `fermat-strings`, `offset-cycleV2` y `Heap Havoc`; `Kit Engine` y `Download Horsepower` siguen pendientes porque sus flags no fueron aceptadas.
+
+> **Corrección (2026-10-24):** este batch fue un análisis técnico local. La verificación contra la plataforma muestra que en BE Hard solo están validados `fermat-strings`, `offset-cycleV2` y `Heap Havoc`; `Kit Engine` y `Download Horsepower` siguen pendientes porque sus flags no fueron aceptadas.
+
+> **Corrección (2026-10-24):** este batch fue un análisis técnico local. La verificación contra la plataforma muestra que en BE Hard solo están validados `fermat-strings`, `offset-cycleV2` y `Heap Havoc`; `Kit Engine` y `Download Horsepower` siguen pendientes porque sus flags no fueron aceptadas.
 
 > **Corrección (2026-10-24):** este batch fue un análisis técnico local. La verificación contra la plataforma muestra que en BE Hard solo están validados `fermat-strings`, `offset-cycleV2` y `Heap Havoc`; `Kit Engine` y `Download Horsepower` siguen pendientes porque sus flags no fueron aceptadas.
 
