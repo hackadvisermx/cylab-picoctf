@@ -92,32 +92,23 @@ If we can crack the password checker on this remote host, we will be able to inf
 3. The initial guess (a8r) may be incorrect, preventing further progress
 4. The verification uses a different metric after initial characters
 
-## Attack Surface Analysis
+## Solución Definitiva
 
-### Discovered Pattern
-Testing reveals a character-by-character verification:
-- Characters 'a' to 'k' produce: `================================` (1 line)
-- Characters 'l' to 'z' and '0' to '9' produce: `================================v` + `*` (2 lines, with asterisks)
+### Mecanismo Real (Just-In-Time Function Patching)
+1. El binario ejecuta `prctl(PR_SET_PTRACER, -1)` para permitir que un servicio demonio local (`/root/jitfp-service.py`) interactúe con él vía `/proc/[pid]/mem`.
+2. El demonio reescribe y reorganiza dinámicamente la tabla de punteros a funciones en `.bss` (`qword_4120`) aproximadamente una vez por segundo, en sincronía con el bucle `sleep(1)` del binario.
+3. Para cada iteración $j$, únicamente la entrada permutada `qword_4120[dword_4020[j]]` contiene la función de validación con el byte de comparación real del carácter en la posición $j$; el resto de las entradas son señuelos aleatorios.
+4. Muestreando la memoria a intervalos de 0.1s y extrayendo la diagonal sincronizada temporalmente (`correct_flag[j] = snapshot_j[j]`), se recuperan con precisión matemática los 33 caracteres de la bandera.
 
-This suggests:
-1. First character discrimination at ASCII boundary (k=107, l=108)
-2. Asterisks may represent progress through the flag
-3. Different flag positions may have different character sets
+## Flag
 
-### Suspected Vulnerability  
-The "timing" hints suggest a timing-based side-channel attack:
-- Binary might have different execution times for correct vs. incorrect characters
-- Partial correctness detection allowing progressive flag recovery
-- The "host-specific" constraint might be related to timing precision
+```
+academy{pr0cf5_d36ugg3r_6afaca48}
+```
 
-## Exploitation Attempts
-1. Direct character enumeration - Successful at detecting character classes
-2. Parallel testing - Implemented to reduce total testing time
-3. Timing analysis - Limited by network latency and SSH overhead
+## Recursos Técnicos
 
-## Notes
-- The "JITFP" name likely means "Just In Time Flag Printer"
-- Host-specific execution requirement prevents offline analysis
-- Binary is stripped and PIE-compiled, preventing simple static analysis
-- Timing vulnerability appears to be the intended attack vector
-- This is a live challenge requiring fresh instances from CyLab
+- Linux `/proc/[pid]/mem` interface
+- Double indirection function-pointer tables in C
+- Just-In-Time code modification & debugging synchronization
+

@@ -10,8 +10,8 @@ A diferencia de wargames con progresión estrictamente secuencial (Bandit, Natas
 
 ## Estado actual
 
-- **Progreso global en plataforma:** **490 / 525 retos resueltos (93.33%)**
-- **Total retos pendientes:** **35**
+- **Progreso global en plataforma:** **491 / 525 retos resueltos (93.52%)**
+- **Total retos pendientes:** **34**
 - **Verificación:** API de CyLab, **2026-10-24** (el estado de esta sección es la fuente de verdad).
 
 ### Resumen por categoría
@@ -24,9 +24,9 @@ A diferencia de wargames con progresión estrictamente secuencial (Bandit, Natas
 | Forensics | 86 | 86 | 100.0% | ✅ Completo (Easy 15/15, Medium 54/54, Hard 17/17) |
 | General Skills | 75 | 75 | 100.0% | ✅ Completo (Easy 49/49, Medium 24/24, Hard 2/2) |
 | Web Exploitation | 81 | 83 | 97.6% | ⏳ 2 pendientes en Hard: `cancri-sp` [344], `msfroggenerator2` [360] |
-| Reverse Engineering | 100 | 102 | 98.0% | ⏳ 2 pendientes: `speeds and feeds` [116] (Medium, mantenimiento) + 1 en Hard (`JITFP` [737]) |
+| Reverse Engineering | 101 | 102 | 99.0% | ⏳ 1 pendiente: `speeds and feeds` [116] (Medium, mantenimiento en plataforma). Hard 35/35 (100%) |
 | Binary Exploitation | 45 | 76 | 59.2% | ⏳ 31 pendientes: `Binary Gauntlet 2` [143] (Medium) + 30 en Hard |
-| **Total** | **490** | **525** | **93.33%** | **35 pendientes** |
+| **Total** | **491** | **525** | **93.52%** | **34 pendientes** |
 
 ### Desglose por categoría y dificultad
 
@@ -46,7 +46,7 @@ A diferencia de wargames con progresión estrictamente secuencial (Bandit, Natas
 | Cryptography | Hard | 30 | 30 | 100.0% | ✅ Resueltos y documentados |
 | Reverse Engineering | Easy | 14 | 14 | 100.0% | ✅ Resueltos y documentados |
 | Reverse Engineering | Medium | 52 | 53 | 98.1% | ⏳ 52 resueltos, 1 pendiente: speeds and feeds [116] (mantenimiento) |
-| Reverse Engineering | Hard | 34 | 35 | 97.1% | ⏳ 34 resueltos, 1 pendiente: JITFP [737] |
+| Reverse Engineering | Hard | 35 | 35 | 100.0% | ✅ Resueltos y documentados |
 | Binary Exploitation | Easy | 5 | 5 | 100.0% | ✅ Resueltos y documentados |
 | Binary Exploitation | Medium | 36 | 37 | 97.3% | ⏳ 36 resueltos, 1 pendiente: Binary Gauntlet 2 [143] |
 | Binary Exploitation | Hard | 4 | 34 | 11.8% | ⏳ 4 resueltos validados (`seed-sPRiNG`, `fermat-strings`, `offset-cycleV2`, `Heap Havoc`), 30 pendientes |
@@ -110,9 +110,8 @@ Con 488 de 525 retos resueltos (92.95%) y 5 tracks al 100% (Artificial Intellige
 1. **Binary Exploitation (31 pendientes):**
    - Medium: `Binary Gauntlet 2` [143].
    - Hard: 30 pendientes. Validados en plataforma: `seed-sPRiNG` [50], `fermat-strings` [215], `offset-cycleV2` [738] y `Heap Havoc` [763].
-2. **Reverse Engineering (2 pendientes):**
-   - Medium: `speeds and feeds` [116] (en mantenimiento).
-   - Hard: `JITFP` [737].
+2. **Reverse Engineering (1 pendiente):**
+   - Medium: `speeds and feeds` [116] (en mantenimiento en plataforma). Hard 35/35 completo (100%).
 3. **Web Exploitation (2 pendientes):**
    - Hard: `cancri-sp` [344] y `msfroggenerator2` [360].
 
