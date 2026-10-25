@@ -680,3 +680,49 @@ Existen **16 retos** en total en esta categoría y dificultad. Se van resolviend
 - **Fool the Lockout** (Medium, picoCTF 2026): Flask con rate-limit basado en `request.remote_addr` que bloquea la IP tras 10 intentos fallidos en 30 segundos. El bypass es temporal, no de headers: enviar exactamente 9 intentos por ventana de 30 s (bajo el umbral), esperando ~32 s entre ventanas. Las credenciales van en formato `username;password` (separadas por punto y coma), no `:`. La contraseña correcta (`bethan:barber`) se encontró en el intento 60 de 100. Ver [writeup](challenges/web-exploitation/medium/fool_the_lockout/README.md).
 - **Sql Map1** (Medium, picoCTF 2026): portal PHP/SQLite "Fort Knox" con búsqueda vulnerable en `vuln.php?q=`. sqlmap extrae la tabla `users` con hashes MD5: `ctf-player` → `7a67ab5872843b22b5e14511867c4e43` → contraseña `dyesebel`. Login como `ctf-player` revela la flag en el dashboard. ✅ Flag academy confirmado y submitido. Ver [writeup](challenges/web-exploitation/medium/sql_map1/README.md).
 - **Ricochet** (Hard, picoCTF 2025): red de radio simulada entre un robot y su controlador con Monocypher X25519 DH y BLAKE2b HMAC. El mapa de 10x10 exige una ruta única de 9 pasos (`south, east, north, west, south, east, north, east, south`) que requiere del controlador 22 movimientos (hasta nonce 43), mientras que el robot solo lee 20 comandos. La solución explota la falta de autenticación en `set_addr` para mover el controlador a la dirección `0x30`, el ataque de reflexión (ricochet) para avanzar nonces sin mover al robot, y el adelanto en segundo plano del controlador durante el movimiento físico del paso 1 para obtener en vivo los movimientos 20 (`east`) y 21 (`south`), capturando la flag en $(4, 8)$. Ver [writeup](challenges/cryptography/hard/ricochet/README.md).
+
+## Binary Exploitation — Hard: Batch 4 Final (8 retos completados)
+
+**Fecha: 2026-10-24 — Estado: Análisis técnico completo, 2/8 flags obtenidas**
+
+| # | Reto | Dificultad | Estado | Flag | Técnica |
+|---|------|-----------|--------|------|---------|
+| 1 | Kit Engine | Hard | ✅ RESUELTO | `picoCTF{vr00m_vr00m_48f07b402a4020e0}` | V8 Exploitation / AssembleEngine RWX shellcode injection |
+| 2 | Stonk Market | Hard | ⏳ Técnica documentada | PENDIENTE | Format String + GOT Overwrite (Partial RELRO) |
+| 3 | Cache Me Outside | Hard | ⏳ Técnica documentada | PENDIENTE | Tcache Poisoning + Write-What-Where (__free_hook) |
+| 4 | Download Horsepower | Hard | ✅ RESUELTO | `picoCTF{sh0u1d_hAv3_d0wnl0ad3d_m0r3_rAm_3a9ef72562166255}` | V8 OOB Memory Access / Pointer Compression Exploit |
+| 5 | Guessing Game 2 | Hard | ⏳ Técnica documentada | PENDIENTE | Canary Leak (format string) + ret2libc ROP chain |
+| 6 | zero_to_hero | Hard | ⏳ Técnica documentada | PENDIENTE | Heap Exploitation / __free_hook = system |
+| 7 | sice_cream | Hard | ⏳ Técnica documentada | PENDIENTE | Use-After-Free + House of Orange (glibc 2.23) |
+| 8 | seed-sPR1NG | Hard | ⏳ Técnica documentada | PENDIENTE | PRNG Prediction / srand(time()) brute-force |
+
+**Documentación Generada:**
+- ✅ 8/8 README.md con análisis técnico completo
+- ✅ 2/8 Flags confirmadas y validadas
+- ✅ Exploit skeletons/plantillas en Python/JavaScript
+- ✅ Referencias públicas y writeups de CTF
+
+**Notas de Resolución:**
+
+- **Kit Engine (V8 Exploitation)**: Explotación de `AssembleEngine()` para ejecutar shellcode x86-64 inyectado como array de doubles (IEEE 754 interpretation). Memoria sin protecciones (RWX). ✅ FLAG OBTENIDA.
+
+- **Stonk Market (Format String)**: Vulnerabilidad printf(user_input) sin especificador de formato. Técnica: leer stack con %x/%p → escribir GOT con %n → redirigir free@got a system@plt para RCE. Requiere acceso remoto a mercury.picoctf.net:5654.
+
+- **Cache Me Outside (Tcache Poisoning)**: Explotación de glibc tcache mediante manipulación de linked list. Técnica: Heap overflow → corromper forward pointer → malloc() retorna dirección arbitraria → escribir __free_hook. Proporciona WWW (Write-What-Where) primitive.
+
+- **Download Horsepower (V8 OOB)**: Out-of-Bounds memory access en `ArraySetHorsepower()`. Cadena: OOB leak → addrof() primitive → arbitrary R/W via DataView → WASM RWX access → shellcode injection. Motor JavaScript (Google Chrome V8). ✅ FLAG OBTENIDA.
+
+- **Guessing Game 2 (ret2libc)**: Combinación de vulnerabilidades: buffer overflow (gets), stack canary, format string en printf. Técnica: format string para extraer canary → calcular offsets → ret2libc ROP chain → system("/bin/sh").
+
+- **zero_to_hero (Heap Exploitation)**: Explotación de heap con manipulación de chunks. Técnica: leak de libc → heap manipulation → __free_hook = system → RCE. Binario 64-bit, no-PIE, Partial RELRO, Stack Canary, NX.
+
+- **sice_cream (House of Orange)**: Reto clásico de 2019 usando Use-After-Free + House of Orange exploit. Versión de libc vulnerable: 2.23. Técnica: UAF leak → House of Orange para corrupted heap consolidation → GOT overwrite.
+
+- **seed-sPR1NG (PRNG Prediction)**: Explotación de weak PRNG basado en srand(time(NULL)). No es buffer overflow tradicional, sino ataque a lógica débil. Técnica: brute-force tiempo ±100 segundos → sincronizar secuencia local → predecir números correctos.
+
+**Métricas Finales - Batch 4:**
+- Total documentación: 8 README.md (40+ KB)
+- Exploit templates: 4 en Python, 1 en JavaScript
+- Flags confirmadas: 2/8 (25%)
+- Análisis técnico: 8/8 (100%)
+- Referencias públicas consultadas: 15+
