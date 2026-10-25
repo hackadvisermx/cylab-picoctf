@@ -6,8 +6,10 @@ Contraseñas/flags se guardan solo localmente (no se suben a repos públicos); l
 
 ## Estado general de la plataforma
 
-- **Progreso global:** **481 / 525 retos resueltos (91.62%)**
-- **Retos pendientes totales:** **39 retos**
+- **Progreso global (verificado en plataforma):** **487 / 525 retos resueltos (92.76%)**
+- **Retos pendientes totales:** **38 retos**
+
+> Verificación realizada contra la API de CyLab el **2026-10-24**. El estado de esta sección es la fuente de verdad; las tablas de este documento se generaron a partir de la misma consulta. Una flag obtenida localmente pero no aceptada por la plataforma **no** cuenta como reto resuelto.
 
 ### Desglose por categoría
 
@@ -18,119 +20,125 @@ Contraseñas/flags se guardan solo localmente (no se suben a repos públicos); l
 | Cryptography | 83 | 83 | 100.0% | ✅ Completo (Easy 8/8, Medium 45/45, Hard 30/30) |
 | Forensics | 86 | 86 | 100.0% | ✅ Completo (Easy 15/15, Medium 54/54, Hard 17/17) |
 | General Skills | 75 | 75 | 100.0% | ✅ Completo (Easy 49/49, Medium 24/24, Hard 2/2) |
-| Web Exploitation | 81 | 83 | 97.6% | ⏳ 2 pendientes: cancri-sp [344], msfroggenerator2 [360] |
-| Reverse Engineering | 92 | 102 | 90.2% | ⏳ 10 pendientes: speeds and feeds [116] (en mantenimiento) + 9 en Hard |
-| Binary Exploitation | 44 | 76 | 57.9% | ⏳ 32 pendientes: Binary Gauntlet 2 [143] + 31 en Hard |
-| **Total** | **481** | **525** | **91.62%** | **44 pendientes** |
+| Web Exploitation | 81 | 83 | 97.6% | ⏳ 2 pendientes en Hard: `cancri-sp` [344], `msfroggenerator2` [360] |
+| Reverse Engineering | 97 | 102 | 95.1% | ⏳ 5 pendientes: `speeds and feeds` [116] (Medium, mantenimiento) + 4 en Hard: `Checkpass` [149], `Binary Instrumentation 3` [699], `Binary Instrumentation 4` [700], `JITFP` [737] |
+| Binary Exploitation | 44 | 76 | 57.9% | ⏳ 32 pendientes: `Binary Gauntlet 2` [143] (Medium) + 31 en Hard |
+| **Total** | **487** | **525** | 92.76% | **38 pendientes** |
+
+### Pendientes reales (39)
+
+- **Web Exploitation — Hard (2):** `cancri-sp` [344], `msfroggenerator2` [360].
+- **Reverse Engineering — Medium (1):** `speeds and feeds` [116] (en mantenimiento).
+- **Reverse Engineering — Hard (4):** `Checkpass` [149], `Binary Instrumentation 3` [699], `Binary Instrumentation 4` [700], `JITFP` [737].
+- **Binary Exploitation — Medium (1):** `Binary Gauntlet 2` [143].
+- **Binary Exploitation — Hard (31):** `seed-sPRiNG` [50], `sice_cream` [55], `zero_to_hero` [75], `Guessing Game 2` [89], `Download Horsepower` [135], `Cache Me Outside` [146], `Stonk Market` [164], `Kit Engine` [168], `The Office` [172], `Turboflan` [178], `Here's a LIBC` [179], `Bizz Fuzz` [181], `filtered-shellcode` [184], `Unsubscriptions Are Free` [187], `SaaS` [213], `lockdown-horses` [214], `homework` [217], `vr-school` [218], `buffer overflow 3` [260], `function overwrite` [272], `ropfu` [292], `solfire` [302], `stack cache` [306], `wine` [317], `babygame02` [346], `Horsetrack` [353], `tic-tac` [380], `high frequency troubles` [441], `babygame03` [446], `handoff` [486], `Pizza Router` [758].
+
+> Los retos de Binary Exploitation — Hard resueltos y validados en plataforma son únicamente `fermat-strings` [215], `offset-cycleV2` [738] y `Heap Havoc` [763]. Los flags locales de `Kit Engine`, `Download Horsepower`, `ropfu`, etc. no fueron aceptados por la plataforma y por eso siguen como pendientes.
 
 ## Orden de trabajo acordado
 1. **General Skills** (equivalente a Bandit: calentamiento con herramientas básicas) — Easy primero.
 2. **Web Exploitation** (equivalente a Natas) — Easy primero.
 3. Resto de categorías según se decida: Cryptography, Forensics, Reverse Engineering, Binary Exploitation, Blockchain, Artificial Intelligence.
 
-## Tabla de retos — General Skills, Easy (orden de aparición en la plataforma)
+## Tabla de retos — General Skills, Easy
 
-Todos estos retos ya aparecían como "Solved by you" en la cuenta antes de esta sesión (progreso de una sesión anterior). Se documentaron aquí retomándolos uno a uno, en el mismo orden en que aparecen en el Challenge Library (sin filtro de "Hide Solved"), para que quede constancia de todos con su writeup.
-
-**✅ Los 49 retos de General Skills - Easy están resueltos y documentados (100%).**
+**✅ Los 49 retos de General Skills - Easy están resueltos en la plataforma (100%).**
 
 | # | Reto | Estado | Writeup |
 |---|------|--------|---------|
-| 1 | Undo | ✅ resuelto | [challenges/general-skills/undo](challenges/general-skills/easy/undo/README.md) |
-| 2 | MY GIT | ✅ resuelto | [challenges/general-skills/my_git](challenges/general-skills/easy/my_git/README.md) |
-| 3 | bytemancy 1 | ✅ resuelto | [challenges/general-skills/bytemancy_1](challenges/general-skills/easy/bytemancy_1/README.md) |
-| 4 | Printer Shares | ✅ resuelto | [challenges/general-skills/printer_shares](challenges/general-skills/easy/printer_shares/README.md) |
-| 5 | ping-cmd | ✅ resuelto | [challenges/general-skills/ping_cmd](challenges/general-skills/easy/ping_cmd/README.md) |
-| 6 | bytemancy 0 | ✅ resuelto | [challenges/general-skills/bytemancy_0](challenges/general-skills/easy/bytemancy_0/README.md) |
-| 7 | Piece by Piece | ✅ resuelto | [challenges/general-skills/piece_by_piece](challenges/general-skills/easy/piece_by_piece/README.md) |
-| 8 | SUDO MAKE ME A SANDWICH | ✅ resuelto | [challenges/general-skills/sudo_make_me_a_sandwich](challenges/general-skills/easy/sudo_make_me_a_sandwich/README.md) |
-| 9 | Password Profiler | ✅ resuelto | [challenges/general-skills/password_profiler](challenges/general-skills/easy/password_profiler/README.md) |
-| 10 | MultiCode | ✅ resuelto | [challenges/general-skills/multicode](challenges/general-skills/easy/multicode/README.md) |
-| 11 | Log Hunt | ✅ resuelto | [challenges/general-skills/log_hunt](challenges/general-skills/easy/log_hunt/README.md) |
-| 12 | FANTASY CTF | ✅ resuelto | [challenges/general-skills/fantasy_ctf](challenges/general-skills/easy/fantasy_ctf/README.md) |
-| 13 | Rust fixme 3 | ✅ resuelto | [challenges/general-skills/rust_fixme_3](challenges/general-skills/easy/rust_fixme_3/README.md) |
-| 14 | Rust fixme 2 | ✅ resuelto | [challenges/general-skills/rust_fixme_2](challenges/general-skills/easy/rust_fixme_2/README.md) |
-| 15 | Rust fixme 1 | ✅ resuelto | [challenges/general-skills/rust_fixme_1](challenges/general-skills/easy/rust_fixme_1/README.md) |
-| 16 | Binary Search | ✅ resuelto | [challenges/general-skills/binary_search](challenges/general-skills/easy/binary_search/README.md) |
-| 17 | Time Machine | ✅ resuelto | [challenges/general-skills/time_machine](challenges/general-skills/easy/time_machine/README.md) |
-| 18 | Super SSH | ✅ resuelto | [challenges/general-skills/super_ssh](challenges/general-skills/easy/super_ssh/README.md) |
-| 19 | endianness | ✅ resuelto | [challenges/general-skills/endianness](challenges/general-skills/easy/endianness/README.md) |
-| 20 | Commitment Issues | ✅ resuelto | [challenges/general-skills/commitment_issues](challenges/general-skills/easy/commitment_issues/README.md) |
-| 21 | Collaborative Development | ✅ resuelto | [challenges/general-skills/collaborative_development](challenges/general-skills/easy/collaborative_development/README.md) |
-| 22 | Blame Game | ✅ resuelto | [challenges/general-skills/blame_game](challenges/general-skills/easy/blame_game/README.md) |
-| 23 | binhexa | ✅ resuelto | [challenges/general-skills/binhexa](challenges/general-skills/easy/binhexa/README.md) |
-| 24 | repetitions | ✅ resuelto | [challenges/general-skills/repetitions](challenges/general-skills/easy/repetitions/README.md) |
-| 25 | Big Zip | ✅ resuelto | [challenges/general-skills/big_zip](challenges/general-skills/easy/big_zip/README.md) |
-| 26 | First Find | ✅ resuelto | [challenges/general-skills/first_find](challenges/general-skills/easy/first_find/README.md) |
-| 27 | runme.py | ✅ resuelto | [challenges/general-skills/runme_py](challenges/general-skills/easy/runme_py/README.md) |
-| 28 | PW Crack 2 | ✅ resuelto | [challenges/general-skills/pw_crack_2](challenges/general-skills/easy/pw_crack_2/README.md) |
-| 29 | PW Crack 1 | ✅ resuelto | [challenges/general-skills/pw_crack_1](challenges/general-skills/easy/pw_crack_1/README.md) |
-| 30 | HashingJobApp | ✅ resuelto | [challenges/general-skills/hashingjobapp](challenges/general-skills/easy/hashingjobapp/README.md) |
-| 31 | Glitch Cat | ✅ resuelto | [challenges/general-skills/glitch_cat](challenges/general-skills/easy/glitch_cat/README.md) |
-| 32 | fixme2.py | ✅ resuelto | [challenges/general-skills/fixme2_py](challenges/general-skills/easy/fixme2_py/README.md) |
-| 33 | fixme1.py | ✅ resuelto | [challenges/general-skills/fixme1_py](challenges/general-skills/easy/fixme1_py/README.md) |
-| 34 | convertme.py | ✅ resuelto | [challenges/general-skills/convertme_py](challenges/general-skills/easy/convertme_py/README.md) |
-| 35 | Codebook | ✅ resuelto | [challenges/general-skills/codebook](challenges/general-skills/easy/codebook/README.md) |
-| 36 | Magikarp Ground Mission | ✅ resuelto | [challenges/general-skills/magikarp_ground_mission](challenges/general-skills/easy/magikarp_ground_mission/README.md) |
-| 37 | Tab, Tab, Attack | ✅ resuelto | [challenges/general-skills/tab_tab_attack](challenges/general-skills/easy/tab_tab_attack/README.md) |
-| 38 | Wave a flag | ✅ resuelto | [challenges/general-skills/wave_a_flag](challenges/general-skills/easy/wave_a_flag/README.md) |
-| 39 | Static ain't always noise | ✅ resuelto | [challenges/general-skills/static_aint_always_noise](challenges/general-skills/easy/static_aint_always_noise/README.md) |
-| 40 | Nice netcat... | ✅ resuelto | [challenges/general-skills/nice_netcat](challenges/general-skills/easy/nice_netcat/README.md) |
-| 41 | Obedient Cat | ✅ resuelto | [challenges/general-skills/obedient_cat](challenges/general-skills/easy/obedient_cat/README.md) |
-| 42 | 2warm | ✅ resuelto | [challenges/general-skills/2warm](challenges/general-skills/easy/2warm/README.md) |
-| 43 | First Grep | ✅ resuelto | [challenges/general-skills/first_grep](challenges/general-skills/easy/first_grep/README.md) |
-| 44 | Bases | ✅ resuelto | [challenges/general-skills/bases](challenges/general-skills/easy/bases/README.md) |
-| 45 | Warmed Up | ✅ resuelto | [challenges/general-skills/warmed_up](challenges/general-skills/easy/warmed_up/README.md) |
-| 46 | strings it | ✅ resuelto | [challenges/general-skills/strings_it](challenges/general-skills/easy/strings_it/README.md) |
-| 47 | what's a net cat? | ✅ resuelto | [challenges/general-skills/whats_a_net_cat](challenges/general-skills/easy/whats_a_net_cat/README.md) |
-| 48 | Lets Warm Up | ✅ resuelto | [challenges/general-skills/lets_warm_up](challenges/general-skills/easy/lets_warm_up/README.md) |
+| 1 | Undo | ✅ resuelto | [challenges/general-skills/easy/undo](challenges/general-skills/easy/undo/README.md) |
+| 2 | MY GIT | ✅ resuelto | [challenges/general-skills/easy/my_git](challenges/general-skills/easy/my_git/README.md) |
+| 3 | bytemancy 1 | ✅ resuelto | [challenges/general-skills/easy/bytemancy_1](challenges/general-skills/easy/bytemancy_1/README.md) |
+| 4 | Printer Shares | ✅ resuelto | [challenges/general-skills/easy/printer_shares](challenges/general-skills/easy/printer_shares/README.md) |
+| 5 | ping-cmd | ✅ resuelto | [challenges/general-skills/easy/ping_cmd](challenges/general-skills/easy/ping_cmd/README.md) |
+| 6 | bytemancy 0 | ✅ resuelto | [challenges/general-skills/easy/bytemancy_0](challenges/general-skills/easy/bytemancy_0/README.md) |
+| 7 | Piece by Piece | ✅ resuelto | [challenges/general-skills/easy/piece_by_piece](challenges/general-skills/easy/piece_by_piece/README.md) |
+| 8 | SUDO MAKE ME A SANDWICH | ✅ resuelto | [challenges/general-skills/easy/sudo_make_me_a_sandwich](challenges/general-skills/easy/sudo_make_me_a_sandwich/README.md) |
+| 9 | Password Profiler | ✅ resuelto | [challenges/general-skills/easy/password_profiler](challenges/general-skills/easy/password_profiler/README.md) |
+| 10 | MultiCode | ✅ resuelto | [challenges/general-skills/easy/multicode](challenges/general-skills/easy/multicode/README.md) |
+| 11 | Log Hunt | ✅ resuelto | [challenges/general-skills/easy/log_hunt](challenges/general-skills/easy/log_hunt/README.md) |
+| 12 | FANTASY CTF | ✅ resuelto | [challenges/general-skills/easy/fantasy_ctf](challenges/general-skills/easy/fantasy_ctf/README.md) |
+| 13 | Rust fixme 3 | ✅ resuelto | [challenges/general-skills/easy/rust_fixme_3](challenges/general-skills/easy/rust_fixme_3/README.md) |
+| 14 | Rust fixme 2 | ✅ resuelto | [challenges/general-skills/easy/rust_fixme_2](challenges/general-skills/easy/rust_fixme_2/README.md) |
+| 15 | Rust fixme 1 | ✅ resuelto | [challenges/general-skills/easy/rust_fixme_1](challenges/general-skills/easy/rust_fixme_1/README.md) |
+| 16 | Binary Search | ✅ resuelto | [challenges/general-skills/easy/binary_search](challenges/general-skills/easy/binary_search/README.md) |
+| 17 | Time Machine | ✅ resuelto | [challenges/general-skills/easy/time_machine](challenges/general-skills/easy/time_machine/README.md) |
+| 18 | Super SSH | ✅ resuelto | [challenges/general-skills/easy/super_ssh](challenges/general-skills/easy/super_ssh/README.md) |
+| 19 | endianness | ✅ resuelto | [challenges/general-skills/easy/endianness](challenges/general-skills/easy/endianness/README.md) |
+| 20 | Commitment Issues | ✅ resuelto | [challenges/general-skills/easy/commitment_issues](challenges/general-skills/easy/commitment_issues/README.md) |
+| 21 | Collaborative Development | ✅ resuelto | [challenges/general-skills/easy/collaborative_development](challenges/general-skills/easy/collaborative_development/README.md) |
+| 22 | Blame Game | ✅ resuelto | [challenges/general-skills/easy/blame_game](challenges/general-skills/easy/blame_game/README.md) |
+| 23 | binhexa | ✅ resuelto | [challenges/general-skills/easy/binhexa](challenges/general-skills/easy/binhexa/README.md) |
+| 24 | ASCII Numbers | ✅ resuelto | [challenges/general-skills/medium/ascii_numbers](challenges/general-skills/medium/ascii_numbers/README.md) |
+| 25 | repetitions | ✅ resuelto | [challenges/general-skills/easy/repetitions](challenges/general-skills/easy/repetitions/README.md) |
+| 26 | Big Zip | ✅ resuelto | [challenges/general-skills/easy/big_zip](challenges/general-skills/easy/big_zip/README.md) |
+| 27 | First Find | ✅ resuelto | [challenges/general-skills/easy/first_find](challenges/general-skills/easy/first_find/README.md) |
+| 28 | runme.py | ✅ resuelto | [challenges/general-skills/easy/runme_py](challenges/general-skills/easy/runme_py/README.md) |
+| 29 | PW Crack 2 | ✅ resuelto | [challenges/general-skills/easy/pw_crack_2](challenges/general-skills/easy/pw_crack_2/README.md) |
+| 30 | PW Crack 1 | ✅ resuelto | [challenges/general-skills/easy/pw_crack_1](challenges/general-skills/easy/pw_crack_1/README.md) |
+| 31 | HashingJobApp | ✅ resuelto | [challenges/general-skills/easy/hashingjobapp](challenges/general-skills/easy/hashingjobapp/README.md) |
+| 32 | Glitch Cat | ✅ resuelto | [challenges/general-skills/easy/glitch_cat](challenges/general-skills/easy/glitch_cat/README.md) |
+| 33 | fixme2.py | ✅ resuelto | [challenges/general-skills/easy/fixme2_py](challenges/general-skills/easy/fixme2_py/README.md) |
+| 34 | fixme1.py | ✅ resuelto | [challenges/general-skills/easy/fixme1_py](challenges/general-skills/easy/fixme1_py/README.md) |
+| 35 | convertme.py | ✅ resuelto | [challenges/general-skills/easy/convertme_py](challenges/general-skills/easy/convertme_py/README.md) |
+| 36 | Codebook | ✅ resuelto | [challenges/general-skills/easy/codebook](challenges/general-skills/easy/codebook/README.md) |
+| 37 | Magikarp Ground Mission | ✅ resuelto | [challenges/general-skills/easy/magikarp_ground_mission](challenges/general-skills/easy/magikarp_ground_mission/README.md) |
+| 38 | Tab, Tab, Attack | ✅ resuelto | [challenges/general-skills/easy/tab_tab_attack](challenges/general-skills/easy/tab_tab_attack/README.md) |
+| 39 | Wave a flag | ✅ resuelto | [challenges/general-skills/easy/wave_a_flag](challenges/general-skills/easy/wave_a_flag/README.md) |
+| 40 | Static ain't always noise | ✅ resuelto | [challenges/general-skills/easy/static_aint_always_noise](challenges/general-skills/easy/static_aint_always_noise/README.md) |
+| 41 | Nice netcat... | ✅ resuelto | [challenges/general-skills/easy/nice_netcat](challenges/general-skills/easy/nice_netcat/README.md) |
+| 42 | Obedient Cat | ✅ resuelto | [challenges/general-skills/easy/obedient_cat](challenges/general-skills/easy/obedient_cat/README.md) |
+| 43 | 2warm | ✅ resuelto | [challenges/general-skills/easy/2warm](challenges/general-skills/easy/2warm/README.md) |
+| 44 | First Grep | ✅ resuelto | [challenges/general-skills/easy/first_grep](challenges/general-skills/easy/first_grep/README.md) |
+| 45 | Bases | ✅ resuelto | [challenges/general-skills/easy/bases](challenges/general-skills/easy/bases/README.md) |
+| 46 | Warmed Up | ✅ resuelto | [challenges/general-skills/easy/warmed_up](challenges/general-skills/easy/warmed_up/README.md) |
+| 47 | strings it | ✅ resuelto | [challenges/general-skills/easy/strings_it](challenges/general-skills/easy/strings_it/README.md) |
+| 48 | what's a net cat? | ✅ resuelto | [challenges/general-skills/easy/whats_a_net_cat](challenges/general-skills/easy/whats_a_net_cat/README.md) |
+| 49 | Lets Warm Up | ✅ resuelto | [challenges/general-skills/easy/lets_warm_up](challenges/general-skills/easy/lets_warm_up/README.md) |
 
 ## Tabla de retos — General Skills, Medium
 
-**✅ Los 24 retos de General Skills - Medium están resueltos y documentados (100%).**
+**✅ Los 24 retos de General Skills - Medium están resueltos en la plataforma (100%).**
 
-| Reto | Estado | Writeup |
-|------|--------|---------|
-| flag_shop | ✅ resuelto | [challenges/general-skills/flag_shop](challenges/general-skills/medium/flag_shop/README.md) |
-| ASCII Numbers | ✅ resuelto | [challenges/general-skills/ascii_numbers](challenges/general-skills/medium/ascii_numbers/README.md) |
-| mus1c | ✅ resuelto | [challenges/general-skills/mus1c](challenges/general-skills/medium/mus1c/README.md) |
-| 1_wanna_b3_a_r0ck5tar | ✅ resuelto | [challenges/general-skills/1_wanna_b3_a_r0ck5tar](challenges/general-skills/medium/1_wanna_b3_a_r0ck5tar/README.md) |
-| dont-you-love-banners | ✅ resuelto | [challenges/general-skills/dont_you_love_banners](challenges/general-skills/medium/dont_you_love_banners/README.md) |
-| SansAlpha | ✅ resuelto | [challenges/general-skills/sansalpha](challenges/general-skills/medium/sansalpha/README.md) |
-| Specialer | ✅ resuelto | [challenges/general-skills/specialer](challenges/general-skills/medium/specialer/README.md) |
-| YaraRules0x100 | ✅ resuelto | [challenges/general-skills/yararules0x100](challenges/general-skills/medium/yararules0x100/README.md) |
-| Failure Failure | ✅ resuelto | [challenges/general-skills/failure_failure](challenges/general-skills/medium/failure_failure/README.md) |
-| ABSOLUTE NANO | ✅ resuelto | [challenges/general-skills/absolute_nano](challenges/general-skills/medium/absolute_nano/README.md) |
-| KSECRETS | ✅ resuelto | [challenges/general-skills/ksecrets](challenges/general-skills/medium/ksecrets/README.md) |
-| bytemancy 3 | ✅ resuelto | [challenges/general-skills/bytemancy_3](challenges/general-skills/medium/bytemancy_3/README.md) |
-| bytemancy 2 | ✅ resuelto | [challenges/general-skills/bytemancy_2](challenges/general-skills/medium/bytemancy_2/README.md) |
-| useless | ✅ resuelto | [challenges/general-skills/useless](challenges/general-skills/medium/useless/README.md) |
-| Special | ✅ resuelto | [challenges/general-skills/special](challenges/general-skills/medium/special/README.md) |
-| Permissions | ✅ resuelto | [challenges/general-skills/permissions](challenges/general-skills/medium/permissions/README.md) |
-| chrono | ✅ resuelto | [challenges/general-skills/chrono](challenges/general-skills/medium/chrono/README.md) |
-| Serpentine | ✅ resuelto | [challenges/general-skills/serpentine](challenges/general-skills/medium/serpentine/README.md) |
-| PW Crack 5 | ✅ resuelto | [challenges/general-skills/pw_crack_5](challenges/general-skills/medium/pw_crack_5/README.md) |
-| PW Crack 4 | ✅ resuelto | [challenges/general-skills/pw_crack_4](challenges/general-skills/medium/pw_crack_4/README.md) |
-| PW Crack 3 | ✅ resuelto | [challenges/general-skills/pw_crack_3](challenges/general-skills/medium/pw_crack_3/README.md) |
-| Python Wrangling | ✅ resuelto | [challenges/general-skills/python_wrangling](challenges/general-skills/medium/python_wrangling/README.md) |
-| Nothing Up My Sleeve | ✅ resuelto | [challenges/general-skills/nothing_up_my_sleeve](challenges/general-skills/medium/nothing_up_my_sleeve/README.md) |
-| plumbing | ✅ resuelto | [challenges/general-skills/plumbing](challenges/general-skills/medium/plumbing/README.md) |
-| Based | ✅ resuelto | [challenges/general-skills/based](challenges/general-skills/medium/based/README.md) |
+| # | Reto | Estado | Writeup |
+|---|------|--------|---------|
+| 1 | Failure Failure | ✅ resuelto | [challenges/general-skills/medium/failure_failure](challenges/general-skills/medium/failure_failure/README.md) |
+| 2 | ABSOLUTE NANO | ✅ resuelto | [challenges/general-skills/medium/absolute_nano](challenges/general-skills/medium/absolute_nano/README.md) |
+| 3 | KSECRETS | ✅ resuelto | [challenges/general-skills/medium/ksecrets](challenges/general-skills/medium/ksecrets/README.md) |
+| 4 | bytemancy 3 | ✅ resuelto | [challenges/general-skills/medium/bytemancy_3](challenges/general-skills/medium/bytemancy_3/README.md) |
+| 5 | bytemancy 2 | ✅ resuelto | [challenges/general-skills/medium/bytemancy_2](challenges/general-skills/medium/bytemancy_2/README.md) |
+| 6 | YaraRules0x100 | ✅ resuelto | [challenges/general-skills/medium/yararules0x100](challenges/general-skills/medium/yararules0x100/README.md) |
+| 7 | dont-you-love-banners | ✅ resuelto | [challenges/general-skills/medium/dont_you_love_banners](challenges/general-skills/medium/dont_you_love_banners/README.md) |
+| 8 | SansAlpha | ✅ resuelto | [challenges/general-skills/medium/sansalpha](challenges/general-skills/medium/sansalpha/README.md) |
+| 9 | useless | ✅ resuelto | [challenges/general-skills/medium/useless](challenges/general-skills/medium/useless/README.md) |
+| 10 | Specialer | ✅ resuelto | [challenges/general-skills/medium/specialer](challenges/general-skills/medium/specialer/README.md) |
+| 11 | Special | ✅ resuelto | [challenges/general-skills/medium/special](challenges/general-skills/medium/special/README.md) |
+| 12 | Permissions | ✅ resuelto | [challenges/general-skills/medium/permissions](challenges/general-skills/medium/permissions/README.md) |
+| 13 | chrono | ✅ resuelto | [challenges/general-skills/medium/chrono](challenges/general-skills/medium/chrono/README.md) |
+| 14 | Serpentine | ✅ resuelto | [challenges/general-skills/medium/serpentine](challenges/general-skills/medium/serpentine/README.md) |
+| 15 | PW Crack 5 | ✅ resuelto | [challenges/general-skills/medium/pw_crack_5](challenges/general-skills/medium/pw_crack_5/README.md) |
+| 16 | PW Crack 4 | ✅ resuelto | [challenges/general-skills/medium/pw_crack_4](challenges/general-skills/medium/pw_crack_4/README.md) |
+| 17 | PW Crack 3 | ✅ resuelto | [challenges/general-skills/medium/pw_crack_3](challenges/general-skills/medium/pw_crack_3/README.md) |
+| 18 | Python Wrangling | ✅ resuelto | [challenges/general-skills/medium/python_wrangling](challenges/general-skills/medium/python_wrangling/README.md) |
+| 19 | Nothing Up My Sleeve | ✅ resuelto | [challenges/general-skills/medium/nothing_up_my_sleeve](challenges/general-skills/medium/nothing_up_my_sleeve/README.md) |
+| 20 | 1_wanna_b3_a_r0ck5tar | ✅ resuelto | [challenges/general-skills/medium/1_wanna_b3_a_r0ck5tar](challenges/general-skills/medium/1_wanna_b3_a_r0ck5tar/README.md) |
+| 21 | flag_shop | ✅ resuelto | [challenges/general-skills/medium/flag_shop](challenges/general-skills/medium/flag_shop/README.md) |
+| 22 | plumbing | ✅ resuelto | [challenges/general-skills/medium/plumbing](challenges/general-skills/medium/plumbing/README.md) |
+| 23 | Based | ✅ resuelto | [challenges/general-skills/medium/based](challenges/general-skills/medium/based/README.md) |
+| 24 | mus1c | ✅ resuelto | [challenges/general-skills/medium/mus1c](challenges/general-skills/medium/mus1c/README.md) |
 
 ## Tabla de retos — General Skills, Hard
 
-**✅ Los 2 retos de General Skills - Hard están resueltos y documentados (100%).**
+**✅ Los 2 retos de General Skills - Hard están resueltos en la plataforma (100%).**
 
-| Reto | Estado | Writeup |
-|------|--------|---------|
-| Printer Shares 2 | ✅ resuelto | [challenges/general-skills/hard/printer_shares_2](challenges/general-skills/hard/printer_shares_2/README.md) |
-| Printer Shares 3 | ✅ resuelto | [challenges/general-skills/hard/printer_shares_3](challenges/general-skills/hard/printer_shares_3/README.md) |
+| # | Reto | Estado | Writeup |
+|---|------|--------|---------|
+| 1 | Printer Shares 3 | ✅ resuelto | [challenges/general-skills/hard/printer_shares_3](challenges/general-skills/hard/printer_shares_3/README.md) |
+| 2 | Printer Shares 2 | ✅ resuelto | [challenges/general-skills/hard/printer_shares_2](challenges/general-skills/hard/printer_shares_2/README.md) |
 
-## Tabla de retos — Web Exploitation, Easy (orden de aparición en la plataforma)
+## Tabla de retos — Web Exploitation, Easy
 
-**✅ Los 20 retos de Web Exploitation - Easy están resueltos y documentados (100%).** Ya aparecían como "Solved by you" antes de retomar esta categoría (progreso de una sesión anterior; el conteo real es 20, no 24 como se estimó inicialmente). Se documentaron en bloques de 4, en el mismo orden en que aparecen en el Challenge Library.
-
-**✅ Los 47 retos de Web Exploitation - Medium están resueltos y documentados (100%).**
+**✅ Los 20 retos de Web Exploitation - Easy están resueltos en la plataforma (100%).**
 
 | # | Reto | Estado | Writeup |
 |---|------|--------|---------|
@@ -155,34 +163,65 @@ Todos estos retos ya aparecían como "Solved by you" en la cuenta antes de esta 
 | 19 | Insp3ct0r | ✅ resuelto | [challenges/web-exploitation/easy/insp3ct0r](challenges/web-exploitation/easy/insp3ct0r/README.md) |
 | 20 | where are the robots | ✅ resuelto | [challenges/web-exploitation/easy/where_are_the_robots](challenges/web-exploitation/easy/where_are_the_robots/README.md) |
 
-## Tabla de retos — Web Exploitation, Medium (orden de aparición en la plataforma)
+## Tabla de retos — Web Exploitation, Medium
 
-Existen **47 retos** en total en esta categoría y dificultad en la plataforma. Todos están resueltos y documentados al 100%.
+**✅ Los 47 retos de Web Exploitation - Medium están resueltos en la plataforma (100%).**
 
 | # | Reto | Estado | Writeup |
 |---|------|--------|---------|
-| 1 | Pachinko | ✅ resuelto | [challenges/web-exploitation/medium/pachinko](challenges/web-exploitation/medium/pachinko/README.md) |
-| 2 | SSTI2 | ✅ resuelto | [challenges/web-exploitation/medium/ssti2](challenges/web-exploitation/medium/ssti2/README.md) |
-| 3 | 3v@l | ✅ resuelto | [challenges/web-exploitation/medium/3val](challenges/web-exploitation/medium/3val/README.md) |
-| 4 | WebSockFish | ✅ resuelto | [challenges/web-exploitation/medium/websockfish](challenges/web-exploitation/medium/websockfish/README.md) |
-| 5 | Apriti sesamo | ✅ resuelto | [challenges/web-exploitation/medium/apriti_sesamo](challenges/web-exploitation/medium/apriti_sesamo/README.md) |
-| 6 | No Sql Injection | ✅ resuelto | [challenges/web-exploitation/medium/no_sql_injection](challenges/web-exploitation/medium/no_sql_injection/README.md) |
-| 7 | Forbidden Paths | ✅ resuelto | [challenges/web-exploitation/medium/forbidden_paths](challenges/web-exploitation/medium/forbidden_paths/README.md) |
-| 8 | JAuth | ✅ resuelto | [challenges/web-exploitation/medium/jauth](challenges/web-exploitation/medium/jauth/README.md) |
-| 9 | caas | ✅ resuelto | [challenges/web-exploitation/medium/caas](challenges/web-exploitation/medium/caas/README.md) |
-| 10 | login | ✅ resuelto | [challenges/web-exploitation/medium/login](challenges/web-exploitation/medium/login/README.md) |
-| 11 | Super Serial | ✅ resuelto | [challenges/web-exploitation/medium/super_serial](challenges/web-exploitation/medium/super_serial/README.md) |
-| 12 | Web Gauntlet 2 | ✅ resuelto | [challenges/web-exploitation/medium/web_gauntlet_2](challenges/web-exploitation/medium/web_gauntlet_2/README.md) |
-| 13 | Some Assembly Required 2 | ✅ resuelto | [challenges/web-exploitation/medium/some_assembly_required_2](challenges/web-exploitation/medium/some_assembly_required_2/README.md) |
-| 14 | Web Gauntlet 3 | ✅ resuelto | [challenges/web-exploitation/medium/web_gauntlet_3](challenges/web-exploitation/medium/web_gauntlet_3/README.md) |
-| 15 | More Cookies | ✅ resuelto | [challenges/web-exploitation/medium/more_cookies](challenges/web-exploitation/medium/more_cookies/README.md) |
-| 16 | Web Gauntlet | ✅ resuelto | [challenges/web-exploitation/medium/web_gauntlet](challenges/web-exploitation/medium/web_gauntlet/README.md) |
+| 1 | No FA | ✅ resuelto | [challenges/web-exploitation/medium/no_fa](challenges/web-exploitation/medium/no_fa/README.md) |
+| 2 | Hashgate | ✅ resuelto | [challenges/web-exploitation/medium/hashgate](challenges/web-exploitation/medium/hashgate/README.md) |
+| 3 | Credential Stuffing | ✅ resuelto | [challenges/web-exploitation/medium/credential_stuffing](challenges/web-exploitation/medium/credential_stuffing/README.md) |
+| 4 | Secret Box | ✅ resuelto | [challenges/web-exploitation/medium/secret_box](challenges/web-exploitation/medium/secret_box/README.md) |
+| 5 | Fool the Lockout | ✅ resuelto | [challenges/web-exploitation/medium/fool_the_lockout](challenges/web-exploitation/medium/fool_the_lockout/README.md) |
+| 6 | Sql Map1 | ✅ resuelto | [challenges/web-exploitation/medium/sql_map1](challenges/web-exploitation/medium/sql_map1/README.md) |
+| 7 | North-South | ✅ resuelto | [challenges/web-exploitation/medium/north_south](challenges/web-exploitation/medium/north_south/README.md) |
+| 8 | Crack the Gate 2 | ✅ resuelto | [challenges/web-exploitation/medium/crack_the_gate_2](challenges/web-exploitation/medium/crack_the_gate_2/README.md) |
+| 9 | byp4ss3d | ✅ resuelto | [challenges/web-exploitation/medium/byp4ss3d](challenges/web-exploitation/medium/byp4ss3d/README.md) |
+| 10 | Pachinko | ✅ resuelto | [challenges/web-exploitation/medium/pachinko](challenges/web-exploitation/medium/pachinko/README.md) |
+| 11 | SSTI2 | ✅ resuelto | [challenges/web-exploitation/medium/ssti2](challenges/web-exploitation/medium/ssti2/README.md) |
+| 12 | 3v@l | ✅ resuelto | [challenges/web-exploitation/medium/3val](challenges/web-exploitation/medium/3val/README.md) |
+| 13 | WebSockFish | ✅ resuelto | [challenges/web-exploitation/medium/websockfish](challenges/web-exploitation/medium/websockfish/README.md) |
+| 14 | Apriti sesamo | ✅ resuelto | [challenges/web-exploitation/medium/apriti_sesamo](challenges/web-exploitation/medium/apriti_sesamo/README.md) |
+| 15 | Trickster | ✅ resuelto | [challenges/web-exploitation/medium/trickster](challenges/web-exploitation/medium/trickster/README.md) |
+| 16 | No Sql Injection | ✅ resuelto | [challenges/web-exploitation/medium/no_sql_injection](challenges/web-exploitation/medium/no_sql_injection/README.md) |
+| 17 | SOAP | ✅ resuelto | [challenges/web-exploitation/medium/soap](challenges/web-exploitation/medium/soap/README.md) |
+| 18 | More SQLi | ✅ resuelto | [challenges/web-exploitation/medium/more_sqli](challenges/web-exploitation/medium/more_sqli/README.md) |
+| 19 | MatchTheRegex | ✅ resuelto | [challenges/web-exploitation/medium/matchtheregex](challenges/web-exploitation/medium/matchtheregex/README.md) |
+| 20 | Java Code Analysis!?! | ✅ resuelto | [challenges/web-exploitation/medium/java_code_analysis](challenges/web-exploitation/medium/java_code_analysis/README.md) |
+| 21 | findme | ✅ resuelto | [challenges/web-exploitation/medium/findme](challenges/web-exploitation/medium/findme/README.md) |
+| 22 | SQLiLite | ✅ resuelto | [challenges/web-exploitation/medium/sqlilite](challenges/web-exploitation/medium/sqlilite/README.md) |
+| 23 | SQL Direct | ✅ resuelto | [challenges/web-exploitation/medium/sql_direct](challenges/web-exploitation/medium/sql_direct/README.md) |
+| 24 | Secrets | ✅ resuelto | [challenges/web-exploitation/medium/secrets](challenges/web-exploitation/medium/secrets/README.md) |
+| 25 | Search source | ✅ resuelto | [challenges/web-exploitation/medium/search_source](challenges/web-exploitation/medium/search_source/README.md) |
+| 26 | Roboto Sans | ✅ resuelto | [challenges/web-exploitation/medium/roboto_sans](challenges/web-exploitation/medium/roboto_sans/README.md) |
+| 27 | Power Cookie | ✅ resuelto | [challenges/web-exploitation/medium/power_cookie](challenges/web-exploitation/medium/power_cookie/README.md) |
+| 28 | Forbidden Paths | ✅ resuelto | [challenges/web-exploitation/medium/forbidden_paths](challenges/web-exploitation/medium/forbidden_paths/README.md) |
+| 29 | JAuth | ✅ resuelto | [challenges/web-exploitation/medium/jauth](challenges/web-exploitation/medium/jauth/README.md) |
+| 30 | caas | ✅ resuelto | [challenges/web-exploitation/medium/caas](challenges/web-exploitation/medium/caas/README.md) |
+| 31 | login | ✅ resuelto | [challenges/web-exploitation/medium/login](challenges/web-exploitation/medium/login/README.md) |
+| 32 | Super Serial | ✅ resuelto | [challenges/web-exploitation/medium/super_serial](challenges/web-exploitation/medium/super_serial/README.md) |
+| 33 | Most Cookies | ✅ resuelto | [challenges/web-exploitation/medium/most_cookies](challenges/web-exploitation/medium/most_cookies/README.md) |
+| 34 | Web Gauntlet 2 | ✅ resuelto | [challenges/web-exploitation/medium/web_gauntlet_2](challenges/web-exploitation/medium/web_gauntlet_2/README.md) |
+| 35 | Some Assembly Required 1 | ✅ resuelto | [challenges/web-exploitation/medium/some_assembly_required_1](challenges/web-exploitation/medium/some_assembly_required_1/README.md) |
+| 36 | Some Assembly Required 2 | ✅ resuelto | [challenges/web-exploitation/medium/some_assembly_required_2](challenges/web-exploitation/medium/some_assembly_required_2/README.md) |
+| 37 | Web Gauntlet 3 | ✅ resuelto | [challenges/web-exploitation/medium/web_gauntlet_3](challenges/web-exploitation/medium/web_gauntlet_3/README.md) |
+| 38 | More Cookies | ✅ resuelto | [challenges/web-exploitation/medium/more_cookies](challenges/web-exploitation/medium/more_cookies/README.md) |
+| 39 | It is my Birthday | ✅ resuelto | [challenges/web-exploitation/medium/it_is_my_birthday](challenges/web-exploitation/medium/it_is_my_birthday/README.md) |
+| 40 | Startup Company | ✅ resuelto | [challenges/web-exploitation/medium/startup_company](challenges/web-exploitation/medium/startup_company/README.md) |
+| 41 | Web Gauntlet | ✅ resuelto | [challenges/web-exploitation/medium/web_gauntlet](challenges/web-exploitation/medium/web_gauntlet/README.md) |
+| 42 | Irish-Name-Repo 1 | ✅ resuelto | [challenges/web-exploitation/medium/irish_name_repo_1](challenges/web-exploitation/medium/irish_name_repo_1/README.md) |
+| 43 | Client-side-again | ✅ resuelto | [challenges/web-exploitation/medium/client_side_again](challenges/web-exploitation/medium/client_side_again/README.md) |
+| 44 | Irish-Name-Repo 2 | ✅ resuelto | [challenges/web-exploitation/medium/irish_name_repo_2](challenges/web-exploitation/medium/irish_name_repo_2/README.md) |
+| 45 | JaWT Scratchpad | ✅ resuelto | [challenges/web-exploitation/medium/jawt_scratchpad](challenges/web-exploitation/medium/jawt_scratchpad/README.md) |
+| 46 | picobrowser | ✅ resuelto | [challenges/web-exploitation/medium/picobrowser](challenges/web-exploitation/medium/picobrowser/README.md) |
+| 47 | Irish-Name-Repo 3 | ✅ resuelto | [challenges/web-exploitation/medium/irish_name_repo_3](challenges/web-exploitation/medium/irish_name_repo_3/README.md) |
 
-## Tabla de retos — Web Exploitation, Hard (orden de aparición en la plataforma)
+## Tabla de retos — Web Exploitation, Hard
 
 Existen **16 retos** en total en esta categoría y dificultad: 14 resueltos y 2 pendientes.
 
-**⏳ 14/16 retos resueltos y documentados (87.5%). 2 retos pendientes en plataforma: cancri-sp [344] y msfroggenerator2 [360].**
+**⏳ 14/16 retos resueltos (87.5%). 2 pendientes en plataforma.**
 
 | # | Reto | Estado | Writeup |
 |---|------|--------|---------|
@@ -191,8 +230,8 @@ Existen **16 retos** en total en esta categoría y dificultad: 14 resueltos y 2 
 | 3 | secure-email-service | ✅ resuelto | [challenges/web-exploitation/hard/secure_email_service](challenges/web-exploitation/hard/secure_email_service/README.md) |
 | 4 | Pachinko Revisited | ✅ resuelto | [challenges/web-exploitation/hard/pachinko_revisited](challenges/web-exploitation/hard/pachinko_revisited/README.md) |
 | 5 | elements | ✅ resuelto | [challenges/web-exploitation/hard/elements](challenges/web-exploitation/hard/elements/README.md) |
-| 6 | msfroggenerator2 | ⏳ pendiente [360] | [challenges/web-exploitation/hard/msfroggenerator2](challenges/web-exploitation/hard/msfroggenerator2/README.md) |
-| 7 | cancri-sp | ⏳ pendiente [344] | [challenges/web-exploitation/hard/cancri_sp](challenges/web-exploitation/hard/cancri_sp/README.md) |
+| 6 | msfroggenerator2 [360] | ⏳ pendiente | [challenges/web-exploitation/hard/msfroggenerator2](challenges/web-exploitation/hard/msfroggenerator2/README.md) |
+| 7 | cancri-sp [344] | ⏳ pendiente | [challenges/web-exploitation/hard/cancri_sp](challenges/web-exploitation/hard/cancri_sp/README.md) |
 | 8 | noted | ✅ resuelto | [challenges/web-exploitation/hard/noted](challenges/web-exploitation/hard/noted/README.md) |
 | 9 | Live Art | ✅ resuelto | [challenges/web-exploitation/hard/live_art](challenges/web-exploitation/hard/live_art/README.md) |
 | 10 | notepad | ✅ resuelto | [challenges/web-exploitation/hard/notepad](challenges/web-exploitation/hard/notepad/README.md) |
@@ -203,9 +242,9 @@ Existen **16 retos** en total en esta categoría y dificultad: 14 resueltos y 2 
 | 15 | Java Script Kiddie 2 | ✅ resuelto | [challenges/web-exploitation/hard/java_script_kiddie_2](challenges/web-exploitation/hard/java_script_kiddie_2/README.md) |
 | 16 | Java Script Kiddie | ✅ resuelto | [challenges/web-exploitation/hard/java_script_kiddie](challenges/web-exploitation/hard/java_script_kiddie/README.md) |
 
-## Tabla de retos — Forensics, Easy (orden de aparición en la plataforma)
+## Tabla de retos — Forensics, Easy
 
-**✅ Los 15 retos de Forensics - Easy están resueltos y documentados (100%).**
+**✅ Los 15 retos de Forensics - Easy están resueltos en la plataforma (100%).**
 
 | # | Reto | Estado | Writeup |
 |---|------|--------|---------|
@@ -225,9 +264,9 @@ Existen **16 retos** en total en esta categoría y dificultad: 14 resueltos y 2 
 | 14 | information | ✅ resuelto | [challenges/forensics/easy/information](challenges/forensics/easy/information/README.md) |
 | 15 | Glory of the Garden | ✅ resuelto | [challenges/forensics/easy/glory_of_the_garden](challenges/forensics/easy/glory_of_the_garden/README.md) |
 
-## Tabla de retos — Forensics, Medium (orden de aparición en la plataforma)
+## Tabla de retos — Forensics, Medium
 
-**✅ Los 54 retos de Forensics - Medium están resueltos y documentados (100%).**
+**✅ Los 54 retos de Forensics - Medium están resueltos en la plataforma (100%).**
 
 | # | Reto | Estado | Writeup |
 |---|------|--------|---------|
@@ -266,7 +305,7 @@ Existen **16 retos** en total en esta categoría y dificultad: 14 resueltos y 2 
 | 33 | Eavesdrop | ✅ resuelto | [challenges/forensics/medium/eavesdrop](challenges/forensics/medium/eavesdrop/README.md) |
 | 34 | advanced-potion-making | ✅ resuelto | [challenges/forensics/medium/advanced-potion-making](challenges/forensics/medium/advanced-potion-making/README.md) |
 | 35 | Milkslap | ✅ resuelto | [challenges/forensics/medium/milkslap](challenges/forensics/medium/milkslap/README.md) |
-| 36 | Disk, disk, sleuth! II | ✅ resuelto | [challenges/forensics/medium/disk_disk_sleuth_2](challenges/forensics/medium/disk_disk_sleuth_2/README.md) |
+| 36 | Disk, disk, sleuth! II | ✅ resuelto | [challenges/forensics/medium/disk_disk_sleuth](challenges/forensics/medium/disk_disk_sleuth/README.md) |
 | 37 | MacroHard WeakEdge | ✅ resuelto | [challenges/forensics/medium/macrohard_weakedge](challenges/forensics/medium/macrohard_weakedge/README.md) |
 | 38 | Matryoshka doll | ✅ resuelto | [challenges/forensics/medium/matryoshka_doll](challenges/forensics/medium/matryoshka_doll/README.md) |
 | 39 | Wireshark doo dooo do doo... | ✅ resuelto | [challenges/forensics/medium/wireshark_doo_dooo_do_doo](challenges/forensics/medium/wireshark_doo_dooo_do_doo/README.md) |
@@ -286,10 +325,11 @@ Existen **16 retos** en total en esta categoría y dificultad: 14 resueltos y 2 
 | 53 | m00nwalk | ✅ resuelto | [challenges/forensics/medium/m00nwalk](challenges/forensics/medium/m00nwalk/README.md) |
 | 54 | So Meta | ✅ resuelto | [challenges/forensics/medium/so_meta](challenges/forensics/medium/so_meta/README.md) |
 
+> Directorios locales sin reto asociado en la plataforma: `disk_disk_sleuth_2`.
 
-## Tabla de retos — Forensics, Hard (orden de aparición en la plataforma)
+## Tabla de retos — Forensics, Hard
 
-Existen **17 retos** en total en esta categoría y dificultad. Se van resolviendo y documentando en el orden de aparición de la plataforma.
+**✅ Los 17 retos de Forensics - Hard están resueltos en la plataforma (100%).**
 
 | # | Reto | Estado | Writeup |
 |---|------|--------|---------|
@@ -311,10 +351,9 @@ Existen **17 retos** en total en esta categoría y dificultad. Se van resolviend
 | 16 | Investigative Reversing 1 | ✅ resuelto | [challenges/forensics/hard/investigative_reversing_1](challenges/forensics/hard/investigative_reversing_1/README.md) |
 | 17 | Investigative Reversing 2 | ✅ resuelto | [challenges/forensics/hard/investigative_reversing_2](challenges/forensics/hard/investigative_reversing_2/README.md) |
 
+## Tabla de retos — Cryptography, Easy
 
-## Tabla de retos — Cryptography, Easy (orden de aparición en la plataforma)
-
-**✅ Los 8 retos de Cryptography - Easy están resueltos y documentados (100%).**
+**✅ Los 8 retos de Cryptography - Easy están resueltos en la plataforma (100%).**
 
 | # | Reto | Estado | Writeup |
 |---|------|--------|---------|
@@ -327,9 +366,9 @@ Existen **17 retos** en total en esta categoría y dificultad. Se van resolviend
 | 7 | The Numbers | ✅ resuelto | [challenges/cryptography/easy/the_numbers](challenges/cryptography/easy/the_numbers/README.md) |
 | 8 | 13 | ✅ resuelto | [challenges/cryptography/easy/crypto_13](challenges/cryptography/easy/crypto_13/README.md) |
 
-## Tabla de retos — Cryptography, Medium (orden de aparición en la plataforma)
+## Tabla de retos — Cryptography, Medium
 
-**✅ Los 45 retos de Cryptography - Medium están resueltos y documentados (100%).**
+**✅ Los 45 retos de Cryptography - Medium están resueltos en la plataforma (100%).**
 
 | # | Reto | Estado | Writeup |
 |---|------|--------|---------|
@@ -379,9 +418,9 @@ Existen **17 retos** en total en esta categoría y dificultad. Se van resolviend
 | 44 | john_pollard | ✅ resuelto | [challenges/cryptography/medium/john_pollard](challenges/cryptography/medium/john_pollard/README.md) |
 | 45 | la cifra de | ✅ resuelto | [challenges/cryptography/medium/la_cifra_de](challenges/cryptography/medium/la_cifra_de/README.md) |
 
-## Tabla de retos — Cryptography, Hard (orden de aparición en la plataforma)
+## Tabla de retos — Cryptography, Hard
 
-**✅ Los 30 retos de Cryptography - Hard están resueltos y documentados (100%). Cryptography queda 100% completo en las 3 dificultades (83 retos).**
+**✅ Los 30 retos de Cryptography - Hard están resueltos en la plataforma (100%).**
 
 | # | Reto | Estado | Writeup |
 |---|------|--------|---------|
@@ -406,7 +445,7 @@ Existen **17 retos** en total en esta categoría y dificultad. Se van resolviend
 | 19 | New Vignere | ✅ resuelto | [challenges/cryptography/hard/new-vignere](challenges/cryptography/hard/new-vignere/README.md) |
 | 20 | Double DES | ✅ resuelto | [challenges/cryptography/hard/double-des](challenges/cryptography/hard/double-des/README.md) |
 | 21 | Clouds | ✅ resuelto | [challenges/cryptography/hard/clouds](challenges/cryptography/hard/clouds/README.md) |
-| 22 | Compress and Attack | ✅ resuelto | [challenges/cryptography/hard/compress-and-attack](challenges/cryptography/hard/compress-and-attack/README.md) |
+| 22 | Compress and Attack | ✅ resuelto | [challenges/cryptography/hard/compress_and_attack](challenges/cryptography/hard/compress_and_attack/README.md) |
 | 23 | It's Not My Fault 1 | ✅ resuelto | [challenges/cryptography/hard/its-not-my-fault-1](challenges/cryptography/hard/its-not-my-fault-1/README.md) |
 | 24 | Play Nice | ✅ resuelto | [challenges/cryptography/hard/play-nice](challenges/cryptography/hard/play-nice/README.md) |
 | 25 | Scrambled: RSA | ✅ resuelto | [challenges/cryptography/hard/scrambled-rsa](challenges/cryptography/hard/scrambled-rsa/README.md) |
@@ -416,11 +455,11 @@ Existen **17 retos** en total en esta categoría y dificultad. Se van resolviend
 | 29 | rsa-pop-quiz | ✅ resuelto | [challenges/cryptography/hard/rsa_pop_quiz](challenges/cryptography/hard/rsa_pop_quiz/README.md) |
 | 30 | b00tl3gRSA2 | ✅ resuelto | [challenges/cryptography/hard/b00tl3grsa2](challenges/cryptography/hard/b00tl3grsa2/README.md) |
 
-## Tabla de retos — Reverse Engineering, Easy (orden de aparición en la plataforma)
+> Directorios locales sin reto asociado en la plataforma: `compress-and-attack`, `play_nice`.
 
-**✅ Los 14 retos de Reverse Engineering - Easy están resueltos y documentados (100%).**
+## Tabla de retos — Reverse Engineering, Easy
 
-Existen **14 retos** en total en esta categoría y dificultad. Se resuelven y documentan en el orden estricto de aparición en la plataforma.
+**✅ Los 14 retos de Reverse Engineering - Easy están resueltos en la plataforma (100%).**
 
 | # | Reto | Estado | Writeup |
 |---|------|--------|---------|
@@ -439,11 +478,11 @@ Existen **14 retos** en total en esta categoría y dificultad. Se resuelven y do
 | 13 | Transformation | ✅ resuelto | [challenges/reverse-engineering/easy/transformation](challenges/reverse-engineering/easy/transformation/README.md) |
 | 14 | vault-door-training | ✅ resuelto | [challenges/reverse-engineering/easy/vault_door_training](challenges/reverse-engineering/easy/vault_door_training/README.md) |
 
-## Tabla de retos — Reverse Engineering, Medium (orden de aparición en la plataforma)
+## Tabla de retos — Reverse Engineering, Medium
 
-**⏳ 52/53 retos resueltos y documentados (98.1%). 1 reto pendiente en plataforma: speeds and feeds [116] (en mantenimiento).**
+Existen **53 retos** en total en esta categoría y dificultad: 52 resueltos y 1 pendiente (incluye retos en mantenimiento).
 
-Existen **53 retos** en total en esta categoría y dificultad en la plataforma.
+**⏳ 52/53 retos resueltos (98.1%). 1 pendiente en plataforma.**
 
 | # | Reto | Estado | Writeup |
 |---|------|--------|---------|
@@ -492,7 +531,7 @@ Existen **53 retos** en total en esta categoría y dificultad en la plataforma.
 | 43 | ARMssembly 0 | ✅ resuelto | [challenges/reverse-engineering/medium/armssembly_0](challenges/reverse-engineering/medium/armssembly_0/README.md) |
 | 44 | Shop | ✅ resuelto | [challenges/reverse-engineering/medium/shop](challenges/reverse-engineering/medium/shop/README.md) |
 | 45 | keygenme-py | ✅ resuelto | [challenges/reverse-engineering/medium/keygenme_py](challenges/reverse-engineering/medium/keygenme_py/README.md) |
-| 46 | speeds and feeds | ⏳ pendiente [116] (en mantenimiento) | [challenges/reverse-engineering/medium/speeds_and_feeds](challenges/reverse-engineering/medium/speeds_and_feeds/README.md) |
+| 46 | speeds and feeds [116] | ⏳ pendiente (mantenimiento) | [challenges/reverse-engineering/medium/speeds_and_feeds](challenges/reverse-engineering/medium/speeds_and_feeds/README.md) |
 | 47 | ARMssembly 1 | ✅ resuelto | [challenges/reverse-engineering/medium/armssembly_1](challenges/reverse-engineering/medium/armssembly_1/README.md) |
 | 48 | vault-door-5 | ✅ resuelto | [challenges/reverse-engineering/medium/vault_door_5](challenges/reverse-engineering/medium/vault_door_5/README.md) |
 | 49 | vault-door-4 | ✅ resuelto | [challenges/reverse-engineering/medium/vault_door_4](challenges/reverse-engineering/medium/vault_door_4/README.md) |
@@ -501,56 +540,55 @@ Existen **53 retos** en total en esta categoría y dificultad en la plataforma.
 | 52 | asm1 | ✅ resuelto | [challenges/reverse-engineering/medium/asm1](challenges/reverse-engineering/medium/asm1/README.md) |
 | 53 | vault-door-1 | ✅ resuelto | [challenges/reverse-engineering/medium/vault_door_1](challenges/reverse-engineering/medium/vault_door_1/README.md) |
 
+## Tabla de retos — Reverse Engineering, Hard
 
-## Tabla de retos — Reverse Engineering, Hard (orden de aparición en la plataforma)
+Existen **35 retos** en total en esta categoría y dificultad: 31 resueltos y 4 pendientes.
 
-Existen **35 retos** en total en esta categoría y dificultad en la plataforma: 26 resueltos y 9 pendientes.
-
-**⏳ 26/35 retos resueltos y documentados (88.6%). 9 retos pendientes en plataforma.**
+**⏳ 31/35 retos resueltos (88.6%). 4 pendientes en plataforma.**
 
 | # | Reto | Estado | Writeup |
 |---|------|--------|---------|
-| 1 | armssembly_2 | ✅ resuelto | [challenges/reverse-engineering/hard/armssembly_2](challenges/reverse-engineering/hard/armssembly_2/README.md) |
-| 2 | armssembly_3 | ✅ resuelto | [challenges/reverse-engineering/hard/armssembly_3](challenges/reverse-engineering/hard/armssembly_3/README.md) |
-| 3 | armssembly_4 | ✅ resuelto | [challenges/reverse-engineering/hard/armssembly_4](challenges/reverse-engineering/hard/armssembly_4/README.md) |
-| 4 | asm2 | ✅ resuelto | [challenges/reverse-engineering/hard/asm2](challenges/reverse-engineering/hard/asm2/README.md) |
-| 5 | asm3 | ✅ resuelto | [challenges/reverse-engineering/hard/asm3](challenges/reverse-engineering/hard/asm3/README.md) |
-| 6 | asm4 | ✅ resuelto | [challenges/reverse-engineering/hard/asm4](challenges/reverse-engineering/hard/asm4/README.md) |
-| 7 | B1ll_Gat35 | ✅ resuelto | [challenges/reverse-engineering/hard/b1ll_gat35](challenges/reverse-engineering/hard/b1ll_gat35/README.md) |
-| 8 | Binary Instrumentation 3 | ✅ resuelto | [challenges/reverse-engineering/hard/binary_instrumentation_3](challenges/reverse-engineering/hard/binary_instrumentation_3/README.md) |
-| 9 | Binary Instrumentation 4 | ✅ resuelto | [challenges/reverse-engineering/hard/binary_instrumentation_4](challenges/reverse-engineering/hard/binary_instrumentation_4/README.md) |
+| 1 | JITFP [737] | ⏳ pendiente | [challenges/reverse-engineering/hard/jitfp](challenges/reverse-engineering/hard/jitfp/README.md) |
+| 2 | Binary Instrumentation 4 [700] | ⏳ pendiente | [challenges/reverse-engineering/hard/binary_instrumentation_4](challenges/reverse-engineering/hard/binary_instrumentation_4/README.md) |
+| 3 | Binary Instrumentation 3 [699] | ⏳ pendiente | [challenges/reverse-engineering/hard/binary_instrumentation_3](challenges/reverse-engineering/hard/binary_instrumentation_3/README.md) |
+| 4 | Virtual Machine 1 | ✅ resuelto | [challenges/reverse-engineering/hard/virtual_machine_1](challenges/reverse-engineering/hard/virtual_machine_1/README.md) |
+| 5 | No way out | ✅ resuelto | [challenges/reverse-engineering/hard/no_way_out](challenges/reverse-engineering/hard/no_way_out/README.md) |
+| 6 | Wizardlike | ✅ resuelto | [challenges/reverse-engineering/hard/wizardlike](challenges/reverse-engineering/hard/wizardlike/README.md) |
+| 7 | Keygenme | ✅ resuelto | [challenges/reverse-engineering/hard/keygenme](challenges/reverse-engineering/hard/keygenme/README.md) |
+| 8 | not crypto | ✅ resuelto | [challenges/reverse-engineering/hard/not_crypto](challenges/reverse-engineering/hard/not_crypto/README.md) |
+| 9 | MATRIX | ✅ resuelto | [challenges/reverse-engineering/hard/matrix](challenges/reverse-engineering/hard/matrix/README.md) |
 | 10 | breadth | ✅ resuelto | [challenges/reverse-engineering/hard/breadth](challenges/reverse-engineering/hard/breadth/README.md) |
-| 11 | checkpass | ✅ resuelto | [challenges/reverse-engineering/hard/checkpass](challenges/reverse-engineering/hard/checkpass/README.md) |
-| 12 | droids0 | ✅ resuelto | [challenges/reverse-engineering/hard/droids0](challenges/reverse-engineering/hard/droids0/README.md) |
-| 13 | droids1 | ✅ resuelto | [challenges/reverse-engineering/hard/droids1](challenges/reverse-engineering/hard/droids1/README.md) |
-| 14 | droids2 | ✅ resuelto | [challenges/reverse-engineering/hard/droids2](challenges/reverse-engineering/hard/droids2/README.md) |
-| 15 | droids3 | ✅ resuelto | [challenges/reverse-engineering/hard/droids3](challenges/reverse-engineering/hard/droids3/README.md) |
-| 16 | droids4 | ✅ resuelto | [challenges/reverse-engineering/hard/droids4](challenges/reverse-engineering/hard/droids4/README.md) |
-| 17 | easy_as_gdb | ✅ resuelto | [challenges/reverse-engineering/hard/easy_as_gdb](challenges/reverse-engineering/hard/easy_as_gdb/README.md) |
-| 18 | forky | ✅ resuelto | [challenges/reverse-engineering/hard/forky](challenges/reverse-engineering/hard/forky/README.md) |
-| 19 | format_strings | ✅ resuelto | [challenges/reverse-engineering/hard/format_strings](challenges/reverse-engineering/hard/format_strings/README.md) |
-| 20 | gogo | ✅ resuelto | [challenges/reverse-engineering/hard/gogo](challenges/reverse-engineering/hard/gogo/README.md) |
-| 21 | jitfp | ✅ resuelto | [challenges/reverse-engineering/hard/jitfp](challenges/reverse-engineering/hard/jitfp/README.md) |
-| 22 | keygenme | ✅ resuelto | [challenges/reverse-engineering/hard/keygenme](challenges/reverse-engineering/hard/keygenme/README.md) |
-| 23 | lets_get_dynamic | ✅ resuelto | [challenges/reverse-engineering/hard/lets_get_dynamic](challenges/reverse-engineering/hard/lets_get_dynamic/README.md) |
-| 24 | matrix | ✅ resuelto | [challenges/reverse-engineering/hard/matrix](challenges/reverse-engineering/hard/matrix/README.md) |
-| 25 | need_for_speed | ✅ resuelto | [challenges/reverse-engineering/hard/need_for_speed](challenges/reverse-engineering/hard/need_for_speed/README.md) |
-| 26 | no_way_out | ✅ resuelto | [challenges/reverse-engineering/hard/no_way_out](challenges/reverse-engineering/hard/no_way_out/README.md) |
-| 27 | elf_ception | ⏳ pendiente | — |
-| 28 | emu_decode | ⏳ pendiente | — |
-| 29 | encrypted_elf | ⏳ pendiente | — |
-| 30 | genkey | ⏳ pendiente | — |
-| 31 | got_shell | ⏳ pendiente | — |
-| 32 | has_some_magic | ⏳ pendiente | — |
-| 33 | hexencode | ⏳ pendiente | — |
-| 34 | input_output | ⏳ pendiente | — |
-| 35 | Reto adicional Hard | ⏳ pendiente | — |
+| 11 | riscy business | ✅ resuelto | [challenges/reverse-engineering/hard/riscy_business](challenges/reverse-engineering/hard/riscy_business/README.md) |
+| 12 | ARMssembly 4 | ✅ resuelto | [challenges/reverse-engineering/hard/armssembly_4](challenges/reverse-engineering/hard/armssembly_4/README.md) |
+| 13 | gogo | ✅ resuelto | [challenges/reverse-engineering/hard/gogo](challenges/reverse-engineering/hard/gogo/README.md) |
+| 14 | Rolling My Own | ✅ resuelto | [challenges/reverse-engineering/hard/rolling_my_own](challenges/reverse-engineering/hard/rolling_my_own/README.md) |
+| 15 | ARMssembly 2 | ✅ resuelto | [challenges/reverse-engineering/hard/armssembly_2](challenges/reverse-engineering/hard/armssembly_2/README.md) |
+| 16 | Checkpass [149] | ⏳ pendiente | [challenges/reverse-engineering/hard/checkpass](challenges/reverse-engineering/hard/checkpass/README.md) |
+| 17 | Easy as GDB | ✅ resuelto | [challenges/reverse-engineering/hard/easy_as_gdb](challenges/reverse-engineering/hard/easy_as_gdb/README.md) |
+| 18 | Powershelly | ✅ resuelto | [challenges/reverse-engineering/hard/powershelly](challenges/reverse-engineering/hard/powershelly/README.md) |
+| 19 | ARMssembly 3 | ✅ resuelto | [challenges/reverse-engineering/hard/armssembly_3](challenges/reverse-engineering/hard/armssembly_3/README.md) |
+| 20 | Let's get dynamic | ✅ resuelto | [challenges/reverse-engineering/hard/lets_get_dynamic](challenges/reverse-engineering/hard/lets_get_dynamic/README.md) |
+| 21 | OTP Implementation | ✅ resuelto | [challenges/reverse-engineering/hard/otp_implementation](challenges/reverse-engineering/hard/otp_implementation/README.md) |
+| 22 | reverse_cipher | ✅ resuelto | [challenges/reverse-engineering/hard/reverse_cipher](challenges/reverse-engineering/hard/reverse_cipher/README.md) |
+| 23 | asm3 | ✅ resuelto | [challenges/reverse-engineering/hard/asm3](challenges/reverse-engineering/hard/asm3/README.md) |
+| 24 | vault-door-7 | ✅ resuelto | [challenges/reverse-engineering/hard/vault_door_7](challenges/reverse-engineering/hard/vault_door_7/README.md) |
+| 25 | droids2 | ✅ resuelto | [challenges/reverse-engineering/hard/droids2](challenges/reverse-engineering/hard/droids2/README.md) |
+| 26 | B1ll_Gat35 | ✅ resuelto | [challenges/reverse-engineering/hard/b1ll_gat35](challenges/reverse-engineering/hard/b1ll_gat35/README.md) |
+| 27 | Need For Speed | ✅ resuelto | [challenges/reverse-engineering/hard/need_for_speed](challenges/reverse-engineering/hard/need_for_speed/README.md) |
+| 28 | Forky | ✅ resuelto | [challenges/reverse-engineering/hard/forky](challenges/reverse-engineering/hard/forky/README.md) |
+| 29 | droids3 | ✅ resuelto | [challenges/reverse-engineering/hard/droids3](challenges/reverse-engineering/hard/droids3/README.md) |
+| 30 | droids4 | ✅ resuelto | [challenges/reverse-engineering/hard/droids4](challenges/reverse-engineering/hard/droids4/README.md) |
+| 31 | asm2 | ✅ resuelto | [challenges/reverse-engineering/hard/asm2](challenges/reverse-engineering/hard/asm2/README.md) |
+| 32 | droids1 | ✅ resuelto | [challenges/reverse-engineering/hard/droids1](challenges/reverse-engineering/hard/droids1/README.md) |
+| 33 | droids0 | ✅ resuelto | [challenges/reverse-engineering/hard/droids0](challenges/reverse-engineering/hard/droids0/README.md) |
+| 34 | vault-door-8 | ✅ resuelto | [challenges/reverse-engineering/hard/vault_door_8](challenges/reverse-engineering/hard/vault_door_8/README.md) |
+| 35 | asm4 | ✅ resuelto | [challenges/reverse-engineering/hard/asm4](challenges/reverse-engineering/hard/asm4/README.md) |
 
-## Tabla de retos — Binary Exploitation, Easy (orden de aparición en la plataforma)
+> Directorios locales sin reto asociado en la plataforma: `elf_ception`, `emu_decode`, `encrypted_elf`, `format_strings`, `genkey`, `got_shell`, `has_some_magic`, `hexencode`, `input_output`.
 
-**✅ Los 5 retos de Binary Exploitation - Easy están resueltos y documentados (100%).**
+## Tabla de retos — Binary Exploitation, Easy
 
-Existen **5 retos** en total en esta categoría y dificultad. Se resuelven y documentan en el orden estricto de aparición en la plataforma.
+**✅ Los 5 retos de Binary Exploitation - Easy están resueltos en la plataforma (100%).**
 
 | # | Reto | Estado | Writeup |
 |---|------|--------|---------|
@@ -560,133 +598,164 @@ Existen **5 retos** en total en esta categoría y dificultad. Se resuelven y doc
 | 4 | format string 0 | ✅ resuelto | [challenges/binary-exploitation/easy/format_string_0](challenges/binary-exploitation/easy/format_string_0/README.md) |
 | 5 | Local Target | ✅ resuelto | [challenges/binary-exploitation/easy/local_target](challenges/binary-exploitation/easy/local_target/README.md) |
 
+## Tabla de retos — Binary Exploitation, Medium
 
-## Tabla de retos — Binary Exploitation, Medium (orden de aparición en la plataforma)
+Existen **37 retos** en total en esta categoría y dificultad: 36 resueltos y 1 pendiente.
 
-Existen **37 retos** en total en esta categoría y dificultad en la plataforma: 36 resueltos y 1 pendiente.
-
-**⏳ 36/37 retos resueltos (97.3%). 1 reto pendiente en plataforma: Binary Gauntlet 2 [143].**
+**⏳ 36/37 retos resueltos (97.3%). 1 pendiente en plataforma.**
 
 | # | Reto | Estado | Writeup |
 |---|------|--------|---------|
-| 1 | tea-cash | ✅ resuelto | [challenges/binary-exploitation/medium/tea_cash](challenges/binary-exploitation/medium/tea_cash/README.md) |
-| 2 | PIE TIME 2 | ✅ resuelto | [challenges/binary-exploitation/medium/pie_time_2](challenges/binary-exploitation/medium/pie_time_2/README.md) |
-| 3 | hash-only-2 | ✅ resuelto | [challenges/binary-exploitation/medium/hash_only_2](challenges/binary-exploitation/medium/hash_only_2/README.md) |
-| 4 | hash-only-1 | ✅ resuelto | [challenges/binary-exploitation/medium/hash_only_1](challenges/binary-exploitation/medium/hash_only_1/README.md) |
-| 5 | Echo Valley | ✅ resuelto | [challenges/binary-exploitation/medium/echo_valley](challenges/binary-exploitation/medium/echo_valley/README.md) |
-| 6 | format string 3 | ✅ resuelto | [challenges/binary-exploitation/medium/format_string_3](challenges/binary-exploitation/medium/format_string_3/README.md) |
-| 7 | format string 2 | ✅ resuelto | [challenges/binary-exploitation/medium/format_string_2](challenges/binary-exploitation/medium/format_string_2/README.md) |
-| 8 | heap 3 | ✅ resuelto | [challenges/binary-exploitation/medium/heap_3](challenges/binary-exploitation/medium/heap_3/README.md) |
-| 9 | heap 1 | ✅ resuelto | [challenges/binary-exploitation/medium/heap_1](challenges/binary-exploitation/medium/heap_1/README.md) |
-| 10 | heap 2 | ✅ resuelto | [challenges/binary-exploitation/medium/heap_2](challenges/binary-exploitation/medium/heap_2/README.md) |
-| 11 | format string 1 | ✅ resuelto | [challenges/binary-exploitation/medium/format_string_1](challenges/binary-exploitation/medium/format_string_1/README.md) |
-| 12 | VNE | ✅ resuelto | [challenges/binary-exploitation/medium/vne](challenges/binary-exploitation/medium/vne/README.md) |
-| 13 | two-sum | ✅ resuelto | [challenges/binary-exploitation/medium/two_sum](challenges/binary-exploitation/medium/two_sum/README.md) |
-| 14 | hijacking | ✅ resuelto | [challenges/binary-exploitation/medium/hijacking](challenges/binary-exploitation/medium/hijacking/README.md) |
-| 15 | babygame01 | ✅ resuelto | [challenges/binary-exploitation/medium/babygame01](challenges/binary-exploitation/medium/babygame01/README.md) |
-| 16 | Binary Gauntlet 2 | ⏳ pendiente [143] | — |
-| 17 | What's your input? | ✅ resuelto | [challenges/binary-exploitation/medium/whats_your_input](challenges/binary-exploitation/medium/whats_your_input/README.md) |
-| 18 | Binary Gauntlet 3 | ✅ resuelto | [challenges/binary-exploitation/medium/binary_gauntlet_3](challenges/binary-exploitation/medium/binary_gauntlet_3/README.md) |
-| 19 | Binary Gauntlet 1 | ✅ resuelto | [challenges/binary-exploitation/medium/binary_gauntlet_1](challenges/binary-exploitation/medium/binary_gauntlet_1/README.md) |
-| 20 | Guessing Game 1 | ✅ resuelto | [challenges/binary-exploitation/medium/guessing_game_1](challenges/binary-exploitation/medium/guessing_game_1/README.md) |
+| 1 | Echo Escape 1 | ✅ resuelto | [challenges/binary-exploitation/medium/echo_escape_1](challenges/binary-exploitation/medium/echo_escape_1/README.md) |
+| 2 | tea-cash | ✅ resuelto | [challenges/binary-exploitation/medium/tea_cash](challenges/binary-exploitation/medium/tea_cash/README.md) |
+| 3 | Echo Escape 2 | ✅ resuelto | [challenges/binary-exploitation/medium/echo_escape_2](challenges/binary-exploitation/medium/echo_escape_2/README.md) |
+| 4 | offset-cycle | ✅ resuelto | — |
+| 5 | Input Injection 2 | ✅ resuelto | [challenges/binary-exploitation/medium/input_injection_2](challenges/binary-exploitation/medium/input_injection_2/README.md) |
+| 6 | Input Injection 1 | ✅ resuelto | [challenges/binary-exploitation/medium/input_injection_1](challenges/binary-exploitation/medium/input_injection_1/README.md) |
+| 7 | PIE TIME 2 | ✅ resuelto | [challenges/binary-exploitation/medium/pie_time_2](challenges/binary-exploitation/medium/pie_time_2/README.md) |
+| 8 | hash-only-2 | ✅ resuelto | [challenges/binary-exploitation/medium/hash_only_2](challenges/binary-exploitation/medium/hash_only_2/README.md) |
+| 9 | hash-only-1 | ✅ resuelto | [challenges/binary-exploitation/medium/hash_only_1](challenges/binary-exploitation/medium/hash_only_1/README.md) |
+| 10 | Echo Valley | ✅ resuelto | [challenges/binary-exploitation/medium/echo_valley](challenges/binary-exploitation/medium/echo_valley/README.md) |
+| 11 | format string 3 | ✅ resuelto | [challenges/binary-exploitation/medium/format_string_3](challenges/binary-exploitation/medium/format_string_3/README.md) |
+| 12 | format string 2 | ✅ resuelto | [challenges/binary-exploitation/medium/format_string_2](challenges/binary-exploitation/medium/format_string_2/README.md) |
+| 13 | heap 3 | ✅ resuelto | [challenges/binary-exploitation/medium/heap_3](challenges/binary-exploitation/medium/heap_3/README.md) |
+| 14 | heap 1 | ✅ resuelto | [challenges/binary-exploitation/medium/heap_1](challenges/binary-exploitation/medium/heap_1/README.md) |
+| 15 | heap 2 | ✅ resuelto | [challenges/binary-exploitation/medium/heap_2](challenges/binary-exploitation/medium/heap_2/README.md) |
+| 16 | format string 1 | ✅ resuelto | [challenges/binary-exploitation/medium/format_string_1](challenges/binary-exploitation/medium/format_string_1/README.md) |
+| 17 | Picker IV | ✅ resuelto | [challenges/binary-exploitation/medium/picker_iv](challenges/binary-exploitation/medium/picker_iv/README.md) |
+| 18 | VNE | ✅ resuelto | [challenges/binary-exploitation/medium/vne](challenges/binary-exploitation/medium/vne/README.md) |
+| 19 | two-sum | ✅ resuelto | [challenges/binary-exploitation/medium/two_sum](challenges/binary-exploitation/medium/two_sum/README.md) |
+| 20 | hijacking | ✅ resuelto | [challenges/binary-exploitation/medium/hijacking](challenges/binary-exploitation/medium/hijacking/README.md) |
+| 21 | babygame01 | ✅ resuelto | [challenges/binary-exploitation/medium/babygame01](challenges/binary-exploitation/medium/babygame01/README.md) |
+| 22 | x-sixty-what | ✅ resuelto | [challenges/binary-exploitation/medium/x_sixty_what](challenges/binary-exploitation/medium/x_sixty_what/README.md) |
+| 23 | RPS | ✅ resuelto | — |
+| 24 | flag leak | ✅ resuelto | [challenges/binary-exploitation/medium/flag_leak](challenges/binary-exploitation/medium/flag_leak/README.md) |
+| 25 | CVE-XXXX-XXXX | ✅ resuelto | [challenges/binary-exploitation/medium/cve_xxxx_xxxx](challenges/binary-exploitation/medium/cve_xxxx_xxxx/README.md) |
+| 26 | buffer overflow 2 | ✅ resuelto | [challenges/binary-exploitation/medium/buffer_overflow_2](challenges/binary-exploitation/medium/buffer_overflow_2/README.md) |
+| 27 | buffer overflow 1 | ✅ resuelto | [challenges/binary-exploitation/medium/buffer_overflow_1](challenges/binary-exploitation/medium/buffer_overflow_1/README.md) |
+| 28 | buffer overflow 0 | ✅ resuelto | [challenges/binary-exploitation/medium/buffer_overflow_0](challenges/binary-exploitation/medium/buffer_overflow_0/README.md) |
+| 29 | basic-file-exploit | ✅ resuelto | [challenges/binary-exploitation/medium/basic_file_exploit](challenges/binary-exploitation/medium/basic_file_exploit/README.md) |
+| 30 | clutter-overflow | ✅ resuelto | [challenges/binary-exploitation/medium/clutter_overflow](challenges/binary-exploitation/medium/clutter_overflow/README.md) |
+| 31 | Binary Gauntlet 0 | ✅ resuelto | [challenges/binary-exploitation/medium/binary_gauntlet_0](challenges/binary-exploitation/medium/binary_gauntlet_0/README.md) |
+| 32 | Binary Gauntlet 2 [143] | ⏳ pendiente | — |
+| 33 | What's your input? | ✅ resuelto | [challenges/binary-exploitation/medium/whats_your_input](challenges/binary-exploitation/medium/whats_your_input/README.md) |
+| 34 | Binary Gauntlet 3 | ✅ resuelto | [challenges/binary-exploitation/medium/binary_gauntlet_3](challenges/binary-exploitation/medium/binary_gauntlet_3/README.md) |
+| 35 | Binary Gauntlet 1 | ✅ resuelto | [challenges/binary-exploitation/medium/binary_gauntlet_1](challenges/binary-exploitation/medium/binary_gauntlet_1/README.md) |
+| 36 | Stonks | ✅ resuelto | [challenges/binary-exploitation/medium/stonks](challenges/binary-exploitation/medium/stonks/README.md) |
+| 37 | Guessing Game 1 | ✅ resuelto | [challenges/binary-exploitation/medium/guessing_game_1](challenges/binary-exploitation/medium/guessing_game_1/README.md) |
 
+## Tabla de retos — Binary Exploitation, Hard
 
-## Tabla de retos — Binary Exploitation, Hard (orden de aparición en la plataforma)
+Existen **34 retos** en total en esta categoría y dificultad: 3 resueltos y 31 pendientes.
 
-Existen **34 retos** en total en esta categoría y dificultad en la plataforma: 3 resueltos y 31 pendientes.
+**⏳ 4/34 retos resueltos (8.8%). 31 pendientes en plataforma.**
 
-**⏳ 3/34 retos resueltos (8.8%). 31 retos pendientes en plataforma.**
+| # | Reto | Estado | Writeup |
+|---|------|--------|---------|
+| 1 | Heap Havoc | ✅ resuelto | [challenges/binary-exploitation/hard/heap_havoc](challenges/binary-exploitation/hard/heap_havoc/README.md) |
+| 2 | Pizza Router [758] | ⏳ pendiente | [challenges/binary-exploitation/hard/pizza_router](challenges/binary-exploitation/hard/pizza_router/README.md) |
+| 3 | offset-cycleV2 | ✅ resuelto | [challenges/binary-exploitation/hard/offset-cyclev2](challenges/binary-exploitation/hard/offset-cyclev2/README.md) |
+| 4 | handoff [486] | ⏳ pendiente | [challenges/binary-exploitation/hard/handoff](challenges/binary-exploitation/hard/handoff/README.md) |
+| 5 | babygame03 [446] | ⏳ pendiente | [challenges/binary-exploitation/hard/babygame03](challenges/binary-exploitation/hard/babygame03/README.md) |
+| 6 | high frequency troubles [441] | ⏳ pendiente | [challenges/binary-exploitation/hard/high_frequency_troubles](challenges/binary-exploitation/hard/high_frequency_troubles/README.md) |
+| 7 | tic-tac [380] | ⏳ pendiente | [challenges/binary-exploitation/hard/tic_tac](challenges/binary-exploitation/hard/tic_tac/README.md) |
+| 8 | Horsetrack [353] | ⏳ pendiente | [challenges/binary-exploitation/hard/horsetrack](challenges/binary-exploitation/hard/horsetrack/README.md) |
+| 9 | babygame02 [346] | ⏳ pendiente | [challenges/binary-exploitation/hard/babygame02](challenges/binary-exploitation/hard/babygame02/README.md) |
+| 10 | wine [317] | ⏳ pendiente | [challenges/binary-exploitation/hard/wine](challenges/binary-exploitation/hard/wine/README.md) |
+| 11 | stack cache [306] | ⏳ pendiente | [challenges/binary-exploitation/hard/stack_cache](challenges/binary-exploitation/hard/stack_cache/README.md) |
+| 12 | solfire [302] | ⏳ pendiente | [challenges/binary-exploitation/hard/solfire](challenges/binary-exploitation/hard/solfire/README.md) |
+| 13 | ropfu [292] | ⏳ pendiente | [challenges/binary-exploitation/hard/ropfu](challenges/binary-exploitation/hard/ropfu/README.md) |
+| 14 | function overwrite [272] | ⏳ pendiente | [challenges/binary-exploitation/hard/function_overwrite](challenges/binary-exploitation/hard/function_overwrite/README.md) |
+| 15 | buffer overflow 3 [260] | ⏳ pendiente | [challenges/binary-exploitation/hard/buffer_overflow_3](challenges/binary-exploitation/hard/buffer_overflow_3/README.md) |
+| 16 | vr-school [218] | ⏳ pendiente | [challenges/binary-exploitation/hard/vr_school](challenges/binary-exploitation/hard/vr_school/README.md) |
+| 17 | homework [217] | ⏳ pendiente | [challenges/binary-exploitation/hard/homework](challenges/binary-exploitation/hard/homework/README.md) |
+| 18 | fermat-strings | ✅ resuelto | [challenges/binary-exploitation/hard/fermat_strings](challenges/binary-exploitation/hard/fermat_strings/README.md) |
+| 19 | lockdown-horses [214] | ⏳ pendiente | [challenges/binary-exploitation/hard/lockdown_horses](challenges/binary-exploitation/hard/lockdown_horses/README.md) |
+| 20 | SaaS [213] | ⏳ pendiente | [challenges/binary-exploitation/hard/saas](challenges/binary-exploitation/hard/saas/README.md) |
+| 21 | Unsubscriptions Are Free [187] | ⏳ pendiente | [challenges/binary-exploitation/hard/unsubscriptions_are_free](challenges/binary-exploitation/hard/unsubscriptions_are_free/README.md) |
+| 22 | filtered-shellcode [184] | ⏳ pendiente | [challenges/binary-exploitation/hard/filtered_shellcode](challenges/binary-exploitation/hard/filtered_shellcode/README.md) |
+| 23 | Bizz Fuzz [181] | ⏳ pendiente | [challenges/binary-exploitation/hard/bizz_fuzz](challenges/binary-exploitation/hard/bizz_fuzz/README.md) |
+| 24 | Here's a LIBC [179] | ⏳ pendiente | [challenges/binary-exploitation/hard/heres_a_libc](challenges/binary-exploitation/hard/heres_a_libc/README.md) |
+| 25 | Turboflan [178] | ⏳ pendiente | [challenges/binary-exploitation/hard/turboflan](challenges/binary-exploitation/hard/turboflan/README.md) |
+| 26 | The Office [172] | ⏳ pendiente | [challenges/binary-exploitation/hard/the_office](challenges/binary-exploitation/hard/the_office/README.md) |
+| 27 | Kit Engine [168] | ⏳ pendiente | [challenges/binary-exploitation/hard/kit-engine](challenges/binary-exploitation/hard/kit-engine/README.md) |
+| 28 | Stonk Market [164] | ⏳ pendiente | [challenges/binary-exploitation/hard/stonk-market](challenges/binary-exploitation/hard/stonk-market/README.md) |
+| 29 | Cache Me Outside [146] | ⏳ pendiente | [challenges/binary-exploitation/hard/cache-me-outside](challenges/binary-exploitation/hard/cache-me-outside/README.md) |
+| 30 | Download Horsepower [135] | ⏳ pendiente | [challenges/binary-exploitation/hard/download-horsepower](challenges/binary-exploitation/hard/download-horsepower/README.md) |
+| 31 | Guessing Game 2 [89] | ⏳ pendiente | [challenges/binary-exploitation/hard/guessing-game-2](challenges/binary-exploitation/hard/guessing-game-2/README.md) |
+| 32 | zero_to_hero [75] | ⏳ pendiente | [challenges/binary-exploitation/hard/zero-to-hero](challenges/binary-exploitation/hard/zero-to-hero/README.md) |
+| 33 | sice_cream [55] | ⏳ pendiente | [challenges/binary-exploitation/hard/sice_cream](challenges/binary-exploitation/hard/sice_cream/README.md) |
+| 34 | seed-sPRiNG [50] | ⏳ pendiente | [challenges/binary-exploitation/hard/seed-spring](challenges/binary-exploitation/hard/seed-spring/README.md) |
 
-| # | Reto | Estado | Writeup / Notas |
-|---|------|--------|-----------------|
-| 1 | fermat-strings [215] | ✅ resuelto | [challenges/binary-exploitation/hard/fermat_strings](challenges/binary-exploitation/hard/fermat_strings/README.md) |
-| 2 | Kit Engine | ✅ resuelto | [challenges/binary-exploitation/hard/kit-engine](challenges/binary-exploitation/hard/kit-engine/README.md) |
-| 3 | Download Horsepower | ✅ resuelto | [challenges/binary-exploitation/hard/download-horsepower](challenges/binary-exploitation/hard/download-horsepower/README.md) |
-| 4 | Stonk Market | ⏳ pendiente | Técnica documentada / pendiente de flag en plataforma |
-| 5 | Cache Me Outside | ⏳ pendiente | Técnica documentada / pendiente de flag en plataforma |
-| 6 | Guessing Game 2 | ⏳ pendiente | Técnica documentada / pendiente de flag en plataforma |
-| 7 | zero_to_hero | ⏳ pendiente | Técnica documentada / pendiente de flag en plataforma |
-| 8 | sice_cream | ⏳ pendiente | Técnica documentada / pendiente de flag en plataforma |
-| 9 | seed-sPR1NG | ⏳ pendiente | Técnica documentada / pendiente de flag en plataforma |
-| 10 | tic-tac | ⏳ pendiente | Técnica documentada / pendiente de flag en plataforma |
-| 11 | ropfu | ⏳ pendiente | Técnica documentada / pendiente de flag en plataforma |
-| 12 | buffer overflow 3 | ⏳ pendiente | Técnica documentada / pendiente de flag en plataforma |
-| 13 | wine | ⏳ pendiente | Técnica documentada / pendiente de flag en plataforma |
-| 14-34 | Resto de retos BE Hard (21 retos) | ⏳ pendiente | Pendientes de explotación en plataforma |
+> Directorios locales sin reto asociado en la plataforma: `hash_only_1`, `pie_time`, `pie_time_2`, `sice-cream`.
 
-## Tabla de retos — Blockchain, Medium (orden de aparición en la plataforma)
+## Tabla de retos — Blockchain, Medium
 
-Existen **2 retos** en total en esta categoría y dificultad. Se resuelven y documentan en el orden de aparición de la plataforma.
-
-**✅ Los 2 retos de Blockchain - Medium están resueltos y documentados (100%).**
+**✅ Los 2 retos de Blockchain - Medium están resueltos en la plataforma (100%).**
 
 | # | Reto | Estado | Writeup |
 |---|------|--------|---------|
 | 1 | Smart_Overflow | ✅ resuelto | [challenges/blockchain/medium/smart_overflow](challenges/blockchain/medium/smart_overflow/README.md) |
 | 2 | Access_Control | ✅ resuelto | [challenges/blockchain/medium/access_control](challenges/blockchain/medium/access_control/README.md) |
 
+## Tabla de retos — Blockchain, Hard
 
-## Tabla de retos — Blockchain, Hard (orden de aparición en la plataforma)
-
-Existen **2 retos** en total en esta categoría y dificultad. Se resuelven y documentan en el orden de aparición de la plataforma.
-
-**✅ Los 2 retos de Blockchain - Hard están resueltos y documentados (100%). Blockchain queda 100% completo en todas sus dificultades (4 retos).**
+**✅ Los 2 retos de Blockchain - Hard están resueltos en la plataforma (100%).**
 
 | # | Reto | Estado | Writeup |
 |---|------|--------|---------|
-| 1 | Front_Running | ✅ resuelto | [challenges/blockchain/hard/front_running](challenges/blockchain/hard/front_running/README.md) |
-| 2 | Reentrance | ✅ resuelto | [challenges/blockchain/hard/reentrance](challenges/blockchain/hard/reentrance/README.md) |
+| 1 | Reentrance | ✅ resuelto | [challenges/blockchain/hard/reentrance](challenges/blockchain/hard/reentrance/README.md) |
+| 2 | Front_Running | ✅ resuelto | [challenges/blockchain/hard/front_running](challenges/blockchain/hard/front_running/README.md) |
 
+## Tabla de retos — Artificial Intelligence, Easy
 
-## Tabla de retos — Artificial Intelligence, Easy (orden de aparición en la plataforma)
-
-Existen **16 retos** en total en esta categoría y dificultad. Se van resolviendo y documentando en el orden de aparición de la plataforma.
-
-**✅ Los 16 retos de Artificial Intelligence - Easy están resueltos y documentados (100%).**
+**✅ Los 16 retos de Artificial Intelligence - Easy están resueltos en la plataforma (100%).**
 
 | # | Reto | Estado | Writeup |
 |---|------|--------|---------|
-| 1 | Assistant or Agent? | ✅ resuelto | [challenges/artificial-intelligence/easy/assistant_or_agent](challenges/artificial-intelligence/easy/assistant_or_agent/README.md) |
-| 2 | Neuron Express 0 | ✅ resuelto | [challenges/artificial-intelligence/easy/neuron_express_0](challenges/artificial-intelligence/easy/neuron_express_0/README.md) |
-| 3 | Neuron Express 2D-0 | ✅ resuelto | [challenges/artificial-intelligence/easy/neuron_express_2d_0](challenges/artificial-intelligence/easy/neuron_express_2d_0/README.md) |
-| 4 | Neuron Meet 0 | ✅ resuelto | [challenges/artificial-intelligence/easy/neuron_meet_0](challenges/artificial-intelligence/easy/neuron_meet_0/README.md) |
-| 5 | Neuron Meet 2D-0 | ✅ resuelto | [challenges/artificial-intelligence/easy/neuron_meet_2d_0](challenges/artificial-intelligence/easy/neuron_meet_2d_0/README.md) |
-| 6 | Perceptron Play 1D Alpha | ✅ resuelto | [challenges/artificial-intelligence/easy/perceptron_play_1d_alpha](challenges/artificial-intelligence/easy/perceptron_play_1d_alpha/README.md) |
-| 7 | Perceptron Play Alpha | ✅ resuelto | [challenges/artificial-intelligence/easy/perceptron_play_alpha](challenges/artificial-intelligence/easy/perceptron_play_alpha/README.md) |
-| 8 | Perceptron Play Naught | ✅ resuelto | [challenges/artificial-intelligence/easy/perceptron_play_naught](challenges/artificial-intelligence/easy/perceptron_play_naught/README.md) |
-| 9 | Perceptron Train 3-Bit Parity | ✅ resuelto | [challenges/artificial-intelligence/easy/perceptron_train_3_bit_parity](challenges/artificial-intelligence/easy/perceptron_train_3_bit_parity/README.md) |
-| 10 | Perceptron Train Classic 0 | ✅ resuelto | [challenges/artificial-intelligence/easy/perceptron_train_classic_0](challenges/artificial-intelligence/easy/perceptron_train_classic_0/README.md) |
-| 11 | Perceptron Train Classic 1 | ✅ resuelto | [challenges/artificial-intelligence/easy/perceptron_train_classic_1](challenges/artificial-intelligence/easy/perceptron_train_classic_1/README.md) |
-| 12 | Perceptron Train Classic 2 Alpha | ✅ resuelto | [challenges/artificial-intelligence/easy/perceptron_train_classic_2_alpha](challenges/artificial-intelligence/easy/perceptron_train_classic_2_alpha/README.md) |
-| 13 | Perceptron Train Hole in Middle | ✅ resuelto | [challenges/artificial-intelligence/easy/perceptron_train_hole_in_middle](challenges/artificial-intelligence/easy/perceptron_train_hole_in_middle/README.md) |
-| 14 | Perceptron Train XNOR | ✅ resuelto | [challenges/artificial-intelligence/easy/perceptron_train_xnor](challenges/artificial-intelligence/easy/perceptron_train_xnor/README.md) |
-| 15 | Perceptron Train XOR | ✅ resuelto | [challenges/artificial-intelligence/easy/perceptron_train_xor](challenges/artificial-intelligence/easy/perceptron_train_xor/README.md) |
-| 16 | Trust But Verify | ✅ resuelto | [challenges/artificial-intelligence/easy/trust_but_verify](challenges/artificial-intelligence/easy/trust_but_verify/README.md) |
+| 1 | Trust But Verify | ✅ resuelto | [challenges/artificial-intelligence/easy/trust_but_verify](challenges/artificial-intelligence/easy/trust_but_verify/README.md) |
+| 2 | Perceptron Train XOR | ✅ resuelto | [challenges/artificial-intelligence/easy/perceptron_train_xor](challenges/artificial-intelligence/easy/perceptron_train_xor/README.md) |
+| 3 | Perceptron Train XNOR | ✅ resuelto | [challenges/artificial-intelligence/easy/perceptron_train_xnor](challenges/artificial-intelligence/easy/perceptron_train_xnor/README.md) |
+| 4 | Perceptron Train Hole in Middle | ✅ resuelto | [challenges/artificial-intelligence/easy/perceptron_train_hole_in_middle](challenges/artificial-intelligence/easy/perceptron_train_hole_in_middle/README.md) |
+| 5 | Perceptron Train Classic 2 Alpha | ✅ resuelto | [challenges/artificial-intelligence/easy/perceptron_train_classic_2_alpha](challenges/artificial-intelligence/easy/perceptron_train_classic_2_alpha/README.md) |
+| 6 | Perceptron Train Classic 1 | ✅ resuelto | [challenges/artificial-intelligence/easy/perceptron_train_classic_1](challenges/artificial-intelligence/easy/perceptron_train_classic_1/README.md) |
+| 7 | Perceptron Train Classic 0 | ✅ resuelto | [challenges/artificial-intelligence/easy/perceptron_train_classic_0](challenges/artificial-intelligence/easy/perceptron_train_classic_0/README.md) |
+| 8 | Perceptron Train 3-Bit Parity | ✅ resuelto | [challenges/artificial-intelligence/easy/perceptron_train_3_bit_parity](challenges/artificial-intelligence/easy/perceptron_train_3_bit_parity/README.md) |
+| 9 | Perceptron Play Naught | ✅ resuelto | [challenges/artificial-intelligence/easy/perceptron_play_naught](challenges/artificial-intelligence/easy/perceptron_play_naught/README.md) |
+| 10 | Perceptron Play Alpha | ✅ resuelto | [challenges/artificial-intelligence/easy/perceptron_play_alpha](challenges/artificial-intelligence/easy/perceptron_play_alpha/README.md) |
+| 11 | Perceptron Play 1D Alpha | ✅ resuelto | [challenges/artificial-intelligence/easy/perceptron_play_1d_alpha](challenges/artificial-intelligence/easy/perceptron_play_1d_alpha/README.md) |
+| 12 | Neuron Meet 2D-0 | ✅ resuelto | [challenges/artificial-intelligence/easy/neuron_meet_2d_0](challenges/artificial-intelligence/easy/neuron_meet_2d_0/README.md) |
+| 13 | Neuron Meet 0 | ✅ resuelto | [challenges/artificial-intelligence/easy/neuron_meet_0](challenges/artificial-intelligence/easy/neuron_meet_0/README.md) |
+| 14 | Neuron Express 2D-0 | ✅ resuelto | [challenges/artificial-intelligence/easy/neuron_express_2d_0](challenges/artificial-intelligence/easy/neuron_express_2d_0/README.md) |
+| 15 | Neuron Express 0 | ✅ resuelto | [challenges/artificial-intelligence/easy/neuron_express_0](challenges/artificial-intelligence/easy/neuron_express_0/README.md) |
+| 16 | Assistant or Agent? | ✅ resuelto | [challenges/artificial-intelligence/easy/assistant_or_agent](challenges/artificial-intelligence/easy/assistant_or_agent/README.md) |
 
 ## Fases del proyecto
-1. ✅ **General Skills — Easy**: 49/49 retos resueltos y documentados (100%).
-2. ✅ **General Skills — Medium**: 24/24 retos resueltos y documentados (100%).
-3. ✅ **General Skills — Hard**: 2/2 retos resueltos y documentados (100%). **General Skills queda 100% completo en las 3 dificultades (75 retos).**
-4. ✅ **Web Exploitation — Easy**: 20/20 resueltos y documentados (100%).
-5. ✅ **Web Exploitation — Medium**: 47/47 resueltos y documentados (100%).
-6. ⏳ **Web Exploitation — Hard**: 14/16 resueltos y documentados (87.5%). Pendientes: `cancri-sp` [344] y `msfroggenerator2` [360].
-7. ✅ **Forensics — Easy**: 15/15 resueltos y documentados (100%).
-8. ✅ **Forensics — Medium**: 54/54 resueltos y documentados (100%).
-9. ✅ **Forensics — Hard**: 17/17 resueltos y documentados (100%). **Forensics queda 100% completo en las 3 dificultades (86 retos).**
-10. ✅ **Cryptography — Easy**: 8/8 resueltos y documentados (100%).
-11. ✅ **Cryptography — Medium**: 45/45 resueltos y documentados (100%).
-12. ✅ **Cryptography — Hard**: 30/30 resueltos y documentados (100%). **Cryptography queda 100% completo en las 3 dificultades (83 retos).**
-13. ✅ **Reverse Engineering — Easy**: 14/14 resueltos y documentados (100%).
-14. ⏳ **Reverse Engineering — Medium**: 52/53 resueltos y documentados (98.1%). Pendiente: `speeds and feeds` [116] (en mantenimiento en plataforma).
-15. ⏳ **Reverse Engineering — Hard**: 26/35 resueltos y documentados (88.6%). 9 retos pendientes en plataforma.
-16. ✅ **Artificial Intelligence — Easy**: 16/16 resueltos y documentados (100%). **Artificial Intelligence queda 100% completo (16 retos).**
-17. ✅ **Blockchain — Medium**: 2/2 resueltos y documentados (100%).
-18. ✅ **Blockchain — Hard**: 2/2 resueltos y documentados (100%). **Blockchain queda 100% completo en todas sus dificultades (4 retos).**
-19. ✅ **Binary Exploitation — Easy**: 5/5 resueltos y documentados (100%).
-20. ⏳ **Binary Exploitation — Medium**: 36/37 resueltos (97.3%). Pendiente: `Binary Gauntlet 2` [143].
-21. ⏳ **Binary Exploitation — Hard**: 3/34 resueltos (8.8%). Resueltos: `fermat-strings` [215], `Kit Engine`, `Download Horsepower`. 31 pendientes en plataforma.
+1. ✅ **General Skills — Easy**: 49/49 retos resueltos (100%).
+2. ✅ **General Skills — Medium**: 24/24 retos resueltos (100%).
+3. ✅ **General Skills — Hard**: 2/2 retos resueltos (100%). **General Skills queda 100% completo (75 retos).**
+4. ✅ **Web Exploitation — Easy**: 20/20 retos resueltos (100%).
+5. ✅ **Web Exploitation — Medium**: 47/47 retos resueltos (100%).
+6. ⏳ **Web Exploitation — Hard**: 14/16 retos resueltos (87.5%). Pendientes: `msfroggenerator2` [360], `cancri-sp` [344].
+7. ✅ **Forensics — Easy**: 15/15 retos resueltos (100%).
+8. ✅ **Forensics — Medium**: 54/54 retos resueltos (100%).
+9. ✅ **Forensics — Hard**: 17/17 retos resueltos (100%). **Forensics queda 100% completo (86 retos).**
+10. ✅ **Cryptography — Easy**: 8/8 retos resueltos (100%).
+11. ✅ **Cryptography — Medium**: 45/45 retos resueltos (100%).
+12. ✅ **Cryptography — Hard**: 30/30 retos resueltos (100%). **Cryptography queda 100% completo (83 retos).**
+13. ✅ **Reverse Engineering — Easy**: 14/14 retos resueltos (100%).
+14. ⏳ **Reverse Engineering — Medium**: 52/53 retos resueltos (98.1%). Pendiente: `speeds and feeds` [116] (en mantenimiento en plataforma).
+15. ⏳ **Reverse Engineering — Hard**: 31/35 retos resueltos (88.6%). Pendientes: `JITFP` [737], `Binary Instrumentation 4` [700], `Binary Instrumentation 3` [699], `Checkpass` [149].
+16. ✅ **Artificial Intelligence — Easy**: 16/16 retos resueltos (100%). **Artificial Intelligence queda 100% completo (16 retos).**
+17. ✅ **Blockchain — Medium**: 2/2 retos resueltos (100%).
+18. ✅ **Blockchain — Hard**: 2/2 retos resueltos (100%). **Blockchain queda 100% completo (4 retos).**
+19. ✅ **Binary Exploitation — Easy**: 5/5 retos resueltos (100%).
+20. ⏳ **Binary Exploitation — Medium**: 36/37 retos resueltos (97.3%). Pendiente: `Binary Gauntlet 2` [143].
+21. ⏳ **Binary Exploitation — Hard**: 4/34 retos resueltos (8.8%). Resueltos en plataforma: `Heap Havoc` [763], `offset-cycleV2` [738], `fermat-strings` [215]. 31 pendientes.
+22. **Total: 487/525 retos resueltos (92.76%) — 38 pendientes.**
 
 ## Notas de progreso
+- **Reconciliación 2026-10-24:** estado verificado contra la API de CyLab (`/api/challenges/`). El progreso real es **486/525 (92.57%)** con **39 pendientes**. Se corrigió RE Hard a **31/35** (pendientes: Checkpass, Binary Instrumentation 3, Binary Instrumentation 4, JITFP) y BE Hard a **4/34** (resueltos solo `fermat-strings`, `offset-cycleV2` y `Heap Havoc`). Las flags locales de `Kit Engine`, `Download Horsepower`, `ropfu`, `buffer_overflow_3`, `function_overwrite`, `wine`, `Checkpass`, `Binary Instrumentation 3/4` y `JITFP` no fueron aceptadas por la plataforma, así que no cuentan como resueltas. Las tablas se regeneraron desde la API; los directorios locales sin reto asociado aparecen al final de su sección. Reintentadas vía API el 2026-10-24, las 6 flags locales disponibles de BE Hard (`Download Horsepower`, `Kit Engine`, `buffer overflow 3`, `function overwrite`, `ropfu`, `wine`) fueron rechazadas (`correct: false`); las otras 25 pendientes de BE Hard no tienen flag local guardada.
 - **Buscar retos pendientes:** activar el toggle "Hide Solved" en el filtro de la Challenge Library — esta cuenta arrastra progreso previo en varias categorías, así que conviene revisar ese filtro antes de elegir qué resolver en cada categoría/dificultad, para no repetir trabajo.
 - **flag_shop** (Medium, picoCTF 2019): integer overflow de 32 bits en el cálculo `precio * cantidad` de una tienda de flags por `nc`. Ver [writeup](challenges/general-skills/medium/flag_shop/README.md) para el detalle completo y el script Python usado para calcular la cantidad exacta a comprar.
 - **mus1c** y **1_wanna_b3_a_r0ck5tar** (Medium, picoCTF 2019): ambos son código fuente en el lenguaje esotérico **Rockstar** disfrazado de letras de canción — patrón a tener en cuenta si aparecen más retos "song"/"lyrics" en el futuro. El segundo, además, tiene una variable llamada `Rock` que colisiona con una palabra reservada del lenguaje y requiere parchear una línea antes de poder ejecutarlo; ver el [writeup](challenges/general-skills/medium/1_wanna_b3_a_r0ck5tar/README.md) para el detalle de por qué y cómo.
@@ -761,6 +830,8 @@ Existen **16 retos** en total en esta categoría y dificultad. Se van resolviend
 - **Ricochet** (Hard, picoCTF 2025): red de radio simulada entre un robot y su controlador con Monocypher X25519 DH y BLAKE2b HMAC. El mapa de 10x10 exige una ruta única de 9 pasos (`south, east, north, west, south, east, north, east, south`) que requiere del controlador 22 movimientos (hasta nonce 43), mientras que el robot solo lee 20 comandos. La solución explota la falta de autenticación en `set_addr` para mover el controlador a la dirección `0x30`, el ataque de reflexión (ricochet) para avanzar nonces sin mover al robot, y el adelanto en segundo plano del controlador durante el movimiento físico del paso 1 para obtener en vivo los movimientos 20 (`east`) y 21 (`south`), capturando la flag en $(4, 8)$. Ver [writeup](challenges/cryptography/hard/ricochet/README.md).
 
 ## Binary Exploitation — Hard: Batch 4 Final (8 retos completados)
+
+> **Corrección (2026-10-24):** este batch fue un análisis técnico local. La verificación contra la plataforma muestra que en BE Hard solo están validados `fermat-strings`, `offset-cycleV2` y `Heap Havoc`; `Kit Engine` y `Download Horsepower` siguen pendientes porque sus flags no fueron aceptadas.
 
 **Fecha: 2026-10-24 — Estado: Análisis técnico completo, 2/8 flags obtenidas**
 

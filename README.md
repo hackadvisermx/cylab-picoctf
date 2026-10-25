@@ -6,12 +6,13 @@ Writeups propios de retos de **CyLab Security Academy** ([learn.cylabacademy.org
 
 A diferencia de wargames con progresión estrictamente secuencial (Bandit, Natas), en CyLab cada reto es independiente: se navega por **categoría** (Web Exploitation, Cryptography, Reverse Engineering, Forensics, General Skills, Binary Exploitation, Blockchain, Artificial Intelligence) y **dificultad** (Easy / Medium / Hard).
 
-> **Sobre las flags:** los writeups documentan la técnica usada para resolver cada reto, no las flags en sí. Las flags obtenidas se guardan solo localmente en `scripts/creds.txt` (excluido del repo vía `.gitignore`).
+> **Sobre las flags:** los writeups documentan la técnica usada para resolver cada reto, no las flags en sí. Las flags obtenidas se guardan solo localmente en `creds.txt`.
 
 ## Estado actual
 
-- **Progreso global en plataforma:** **481 / 525 retos resueltos (91.62%)**
-- **Total retos pendientes:** **44**
+- **Progreso global en plataforma:** **487 / 525 retos resueltos (92.76%)**
+- **Total retos pendientes:** **39**
+- **Verificación:** API de CyLab, **2026-10-24** (el estado de esta sección es la fuente de verdad).
 
 ### Resumen por categoría
 
@@ -22,38 +23,38 @@ A diferencia de wargames con progresión estrictamente secuencial (Bandit, Natas
 | Cryptography | 83 | 83 | 100.0% | ✅ Completo (Easy 8/8, Medium 45/45, Hard 30/30) |
 | Forensics | 86 | 86 | 100.0% | ✅ Completo (Easy 15/15, Medium 54/54, Hard 17/17) |
 | General Skills | 75 | 75 | 100.0% | ✅ Completo (Easy 49/49, Medium 24/24, Hard 2/2) |
-| Web Exploitation | 81 | 83 | 97.6% | ⏳ 2 pendientes (Easy 20/20, Medium 47/47, Hard 14/16: cancri-sp [344], msfroggenerator2 [360]) |
-| Reverse Engineering | 92 | 102 | 90.2% | ⏳ 10 pendientes (Easy 14/14, Medium 52/53 [speeds and feeds - 116 en mantenimiento], Hard 26/35 [9 pendientes]) |
-| Binary Exploitation | 44 | 76 | 57.9% | ⏳ 32 pendientes (Easy 5/5, Medium 36/37 [Binary Gauntlet 2 - 143], Hard 3/34 [fermat-strings - 215, Kit Engine, Download Horsepower resueltos; 31 pendientes]) |
-| **Total** | **481** | **525** | **91.62%** | **44 pendientes** |
+| Web Exploitation | 81 | 83 | 97.6% | ⏳ 2 pendientes en Hard: `cancri-sp` [344], `msfroggenerator2` [360] |
+| Reverse Engineering | 97 | 102 | 95.1% | ⏳ 5 pendientes: `speeds and feeds` [116] (Medium, mantenimiento) + 4 en Hard |
+| Binary Exploitation | 44 | 76 | 57.9% | ⏳ 32 pendientes: `Binary Gauntlet 2` [143] (Medium) + 31 en Hard |
+| **Total** | **487** | **525** | **92.76%** | **38 pendientes** |
 
 ### Desglose por categoría y dificultad
 
 | Categoría | Dificultad | Resueltos | Total | % | Estado |
 |---|---|---|---|---|---|
-| General Skills | Easy | 49 | 49 | 100% | ✅ Resueltos y documentados |
-| General Skills | Medium | 24 | 24 | 100% | ✅ Resueltos y documentados |
-| General Skills | Hard | 2 | 2 | 100% | ✅ Resueltos y documentados |
-| Web Exploitation | Easy | 20 | 20 | 100% | ✅ Resueltos y documentados |
-| Web Exploitation | Medium | 47 | 47 | 100% | ✅ Resueltos y documentados |
-| Web Exploitation | Hard | 14 | 16 | 87.5% | ⏳ 14 resueltos, 2 pendientes (cancri-sp [344], msfroggenerator2 [360]) |
-| Forensics | Easy | 15 | 15 | 100% | ✅ Resueltos y documentados |
-| Forensics | Medium | 54 | 54 | 100% | ✅ Resueltos y documentados |
-| Forensics | Hard | 17 | 17 | 100% | ✅ Resueltos y documentados |
-| Cryptography | Easy | 8 | 8 | 100% | ✅ Resueltos y documentados |
-| Cryptography | Medium | 45 | 45 | 100% | ✅ Resueltos y documentados |
-| Cryptography | Hard | 30 | 30 | 100% | ✅ Resueltos y documentados |
-| Reverse Engineering | Easy | 14 | 14 | 100% | ✅ Resueltos y documentados |
-| Reverse Engineering | Medium | 52 | 53 | 98.1% | ⏳ 52 resueltos, 1 pendiente: speeds and feeds [116] (en mantenimiento) |
-| Reverse Engineering | Hard | 26 | 35 | 74.3% | ⏳ 26 resueltos, 9 pendientes |
-| Binary Exploitation | Easy | 5 | 5 | 100% | ✅ Resueltos y documentados |
+| General Skills | Easy | 49 | 49 | 100.0% | ✅ Resueltos y documentados |
+| General Skills | Medium | 24 | 24 | 100.0% | ✅ Resueltos y documentados |
+| General Skills | Hard | 2 | 2 | 100.0% | ✅ Resueltos y documentados |
+| Web Exploitation | Easy | 20 | 20 | 100.0% | ✅ Resueltos y documentados |
+| Web Exploitation | Medium | 47 | 47 | 100.0% | ✅ Resueltos y documentados |
+| Web Exploitation | Hard | 14 | 16 | 87.5% | ⏳ 14 resueltos, 2 pendientes: msfroggenerator2 [360], cancri-sp [344] |
+| Forensics | Easy | 15 | 15 | 100.0% | ✅ Resueltos y documentados |
+| Forensics | Medium | 54 | 54 | 100.0% | ✅ Resueltos y documentados |
+| Forensics | Hard | 17 | 17 | 100.0% | ✅ Resueltos y documentados |
+| Cryptography | Easy | 8 | 8 | 100.0% | ✅ Resueltos y documentados |
+| Cryptography | Medium | 45 | 45 | 100.0% | ✅ Resueltos y documentados |
+| Cryptography | Hard | 30 | 30 | 100.0% | ✅ Resueltos y documentados |
+| Reverse Engineering | Easy | 14 | 14 | 100.0% | ✅ Resueltos y documentados |
+| Reverse Engineering | Medium | 52 | 53 | 98.1% | ⏳ 52 resueltos, 1 pendiente: speeds and feeds [116] (mantenimiento) |
+| Reverse Engineering | Hard | 31 | 35 | 88.6% | ⏳ 31 resueltos, 4 pendientes: JITFP [737], Binary Instrumentation 4 [700], Binary Instrumentation 3 [699], Checkpass [149] |
+| Binary Exploitation | Easy | 5 | 5 | 100.0% | ✅ Resueltos y documentados |
 | Binary Exploitation | Medium | 36 | 37 | 97.3% | ⏳ 36 resueltos, 1 pendiente: Binary Gauntlet 2 [143] |
-| Binary Exploitation | Hard | 3 | 34 | 8.8% | ⏳ 3 resueltos (fermat-strings [215], Kit Engine, Download Horsepower), 31 pendientes |
-| Blockchain | Medium | 2 | 2 | 100% | ✅ Resueltos y documentados |
-| Blockchain | Hard | 2 | 2 | 100% | ✅ Resueltos y documentados |
-| Artificial Intelligence | Easy | 16 | 16 | 100% | ✅ Resueltos y documentados |
+| Binary Exploitation | Hard | 3 | 34 | 8.8% | ⏳ 3 resueltos validados (`fermat-strings`, `offset-cycleV2`, `Heap Havoc`), 31 pendientes (lista completa en [PROGRESS.md](PROGRESS.md#pendientes-reales-39)) |
+| Blockchain | Medium | 2 | 2 | 100.0% | ✅ Resueltos y documentados |
+| Blockchain | Hard | 2 | 2 | 100.0% | ✅ Resueltos y documentados |
+| Artificial Intelligence | Easy | 16 | 16 | 100.0% | ✅ Resueltos y documentados |
 
-El detalle reto por reto, en el orden en que aparecen en la plataforma, está en **[PROGRESS.md](PROGRESS.md)**.
+Los pendientes de Hard que no caben en la columna de estado están listados completos en **[PROGRESS.md](PROGRESS.md#pendientes-reales-39)**.
 
 ## Estructura del repositorio
 
@@ -82,7 +83,7 @@ El detalle reto por reto, en el orden en que aparecen en la plataforma, está en
     ├── reverse-engineering/
     │   ├── easy/                   # 14 retos (100%)
     │   ├── medium/                 # 52/53 resueltos (1 pendiente)
-    │   └── hard/                   # 26/35 resueltos (9 pendientes)
+    │   └── hard/                   # 31/35 resueltos (4 pendientes)
     ├── binary-exploitation/
     │   ├── easy/                   # 5 retos (100%)
     │   ├── medium/                 # 36/37 resueltos (1 pendiente)
@@ -104,16 +105,16 @@ Cada writeup vive en su propia carpeta (`challenges/<categoría>/<dificultad>/<s
 
 ## Próximos pasos
 
-Con 481 de 525 retos resueltos (91.62%) y 5 tracks al 100% (Artificial Intelligence, Blockchain, Cryptography, Forensics, General Skills), los esfuerzos se concentran en los **44 retos pendientes**:
+Con 487 de 525 retos resueltos (92.76%) y 5 tracks al 100% (Artificial Intelligence, Blockchain, Cryptography, Forensics, General Skills), los esfuerzos se concentran en los **38 retos pendientes**:
 
 1. **Binary Exploitation (32 pendientes):**
-   - Medium: `Binary Gauntlet 2` [143] (1 pendiente).
-   - Hard: 31 retos pendientes (con `fermat-strings` [215], `Kit Engine` y `Download Horsepower` resueltos).
-2. **Reverse Engineering (10 pendientes):**
-   - Medium: `speeds and feeds` [116] (1 pendiente, bajo mantenimiento en plataforma).
-   - Hard: 9 retos pendientes (26/35 resueltos).
+   - Medium: `Binary Gauntlet 2` [143].
+   - Hard: 31 pendientes. Validados en plataforma: `fermat-strings` [215], `offset-cycleV2` [738] y `Heap Havoc` [763]. El resto tiene análisis técnico local, pero sus flags no fueron aceptadas (`Kit Engine`, `Download Horsepower`, `ropfu`, `buffer overflow 3`, `function overwrite`, `wine`, etc.).
+2. **Reverse Engineering (5 pendientes):**
+   - Medium: `speeds and feeds` [116] (en mantenimiento).
+   - Hard: `Checkpass` [149], `Binary Instrumentation 3` [699], `Binary Instrumentation 4` [700], `JITFP` [737].
 3. **Web Exploitation (2 pendientes):**
-   - Hard: `cancri-sp` [344] y `msfroggenerator2` [360] (2 pendientes).
+   - Hard: `cancri-sp` [344] y `msfroggenerator2` [360].
 
 ## Aviso
 
