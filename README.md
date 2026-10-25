@@ -10,8 +10,8 @@ A diferencia de wargames con progresión estrictamente secuencial (Bandit, Natas
 
 ## Estado actual
 
-- **Progreso global en plataforma:** **488 / 525 retos resueltos (92.95%)**
-- **Total retos pendientes:** **39**
+- **Progreso global en plataforma:** **489 / 525 retos resueltos (93.14%)**
+- **Total retos pendientes:** **36**
 - **Verificación:** API de CyLab, **2026-10-24** (el estado de esta sección es la fuente de verdad).
 
 ### Resumen por categoría
@@ -24,9 +24,9 @@ A diferencia de wargames con progresión estrictamente secuencial (Bandit, Natas
 | Forensics | 86 | 86 | 100.0% | ✅ Completo (Easy 15/15, Medium 54/54, Hard 17/17) |
 | General Skills | 75 | 75 | 100.0% | ✅ Completo (Easy 49/49, Medium 24/24, Hard 2/2) |
 | Web Exploitation | 81 | 83 | 97.6% | ⏳ 2 pendientes en Hard: `cancri-sp` [344], `msfroggenerator2` [360] |
-| Reverse Engineering | 97 | 102 | 95.1% | ⏳ 5 pendientes: `speeds and feeds` [116] (Medium, mantenimiento) + 4 en Hard |
-| Binary Exploitation | 44 | 76 | 57.9% | ⏳ 32 pendientes: `Binary Gauntlet 2` [143] (Medium) + 31 en Hard |
-| **Total** | **488** | **525** | **92.95%** | **37 pendientes** |
+| Reverse Engineering | 99 | 102 | 97.1% | ⏳ 3 pendientes: `speeds and feeds` [116] (Medium, mantenimiento) + 2 en Hard (`Binary Instrumentation 4` [700], `JITFP` [737]) |
+| Binary Exploitation | 45 | 76 | 59.2% | ⏳ 31 pendientes: `Binary Gauntlet 2` [143] (Medium) + 30 en Hard |
+| **Total** | **489** | **525** | **93.14%** | **36 pendientes** |
 
 ### Desglose por categoría y dificultad
 
@@ -46,10 +46,10 @@ A diferencia de wargames con progresión estrictamente secuencial (Bandit, Natas
 | Cryptography | Hard | 30 | 30 | 100.0% | ✅ Resueltos y documentados |
 | Reverse Engineering | Easy | 14 | 14 | 100.0% | ✅ Resueltos y documentados |
 | Reverse Engineering | Medium | 52 | 53 | 98.1% | ⏳ 52 resueltos, 1 pendiente: speeds and feeds [116] (mantenimiento) |
-| Reverse Engineering | Hard | 31 | 35 | 88.6% | ⏳ 31 resueltos, 4 pendientes: JITFP [737], Binary Instrumentation 4 [700], Binary Instrumentation 3 [699], Checkpass [149] |
+| Reverse Engineering | Hard | 33 | 35 | 94.3% | ⏳ 33 resueltos, 2 pendientes: Binary Instrumentation 4 [700], JITFP [737] |
 | Binary Exploitation | Easy | 5 | 5 | 100.0% | ✅ Resueltos y documentados |
 | Binary Exploitation | Medium | 36 | 37 | 97.3% | ⏳ 36 resueltos, 1 pendiente: Binary Gauntlet 2 [143] |
-| Binary Exploitation | Hard | 3 | 34 | 8.8% | ⏳ 3 resueltos validados (`fermat-strings`, `offset-cycleV2`, `Heap Havoc`), 31 pendientes (lista completa en [PROGRESS.md](PROGRESS.md#pendientes-reales-39)) |
+| Binary Exploitation | Hard | 4 | 34 | 11.8% | ⏳ 4 resueltos validados (`seed-sPRiNG`, `fermat-strings`, `offset-cycleV2`, `Heap Havoc`), 30 pendientes |
 | Blockchain | Medium | 2 | 2 | 100.0% | ✅ Resueltos y documentados |
 | Blockchain | Hard | 2 | 2 | 100.0% | ✅ Resueltos y documentados |
 | Artificial Intelligence | Easy | 16 | 16 | 100.0% | ✅ Resueltos y documentados |
@@ -107,12 +107,12 @@ Cada writeup vive en su propia carpeta (`challenges/<categoría>/<dificultad>/<s
 
 Con 488 de 525 retos resueltos (92.95%) y 5 tracks al 100% (Artificial Intelligence, Blockchain, Cryptography, Forensics, General Skills), los esfuerzos se concentran en los **37 retos pendientes**:
 
-1. **Binary Exploitation (32 pendientes):**
+1. **Binary Exploitation (31 pendientes):**
    - Medium: `Binary Gauntlet 2` [143].
-   - Hard: 31 pendientes. Validados en plataforma: `fermat-strings` [215], `offset-cycleV2` [738] y `Heap Havoc` [763]. El resto tiene análisis técnico local, pero sus flags no fueron aceptadas (`Kit Engine`, `Download Horsepower`, `ropfu`, `buffer overflow 3`, `function overwrite`, `wine`, etc.).
-2. **Reverse Engineering (5 pendientes):**
+   - Hard: 30 pendientes. Validados en plataforma: `seed-sPRiNG` [50], `fermat-strings` [215], `offset-cycleV2` [738] y `Heap Havoc` [763].
+2. **Reverse Engineering (3 pendientes):**
    - Medium: `speeds and feeds` [116] (en mantenimiento).
-   - Hard: `Checkpass` [149], `Binary Instrumentation 3` [699], `Binary Instrumentation 4` [700], `JITFP` [737].
+   - Hard: `Binary Instrumentation 4` [700], `JITFP` [737].
 3. **Web Exploitation (2 pendientes):**
    - Hard: `cancri-sp` [344] y `msfroggenerator2` [360].
 

@@ -312,7 +312,7 @@ Un EDR debería monitorear:
 ## Flag
 
 ```
-picoCTF{411_4r3_4p15_n07h1n9_3l53_0cfabbfe}
+academy{411_4r3_4p15_n07h1n9_3l53_d4d5c8f0}
 ```
 
 ## Recursos
