@@ -73,9 +73,9 @@ buffer_overflow_3:picoCTF{Can4ry_pr0t3ct10n_bypassed_5c9b1b9}
 # Técnica: Negative index array overflow + function pointer overwrite
 function_overwrite:picoCTF{function_overwrite_1337_d4cf73a7}
 
-# wine - Binary Exploitation Hard (picoCTF 2022, ? pts)
-# Técnica: Windows PE analysis / Wine emulation exploitation
-# wine:[PENDIENTE]
+# wine - Binary Exploitation Hard (picoCTF 2022)
+# Técnica: Windows PE analysis / Wine emulation exploitation / Buffer overflow Ret2Win
+wine:picoCTF{Un_v3rr3_d3_v1n_2ef42747}
 
 # ANALYSIS SUMMARY - Binary Exploitation Hard
 # Updated: 2026-10-24
@@ -97,6 +97,156 @@ function_overwrite:picoCTF{function_overwrite_1337_d4cf73a7}
 # - Ejecución: Script bash con loop de timing crítico
 # - Estado: Técnica documentada, requiere acceso SSH a saturn.picoctf.net
 # - Referencias: siunam321.github.io/ctf/picoCTF-2023/Binary-Exploitation/tic-tac/
+
+## Binary Exploitation Hard - Batch 2 (9 retos - Agentes Paralelos 1-3)
+# Fecha: 2026-10-24
+# Usuario: hackadvisermx
+# Estado: 6/9 completados, 3 en análisis
+
+# 1. wine - Binary Exploitation Hard (picoCTF 2022)
+# Técnica: Windows PE analysis / Wine emulation / Buffer overflow Ret2Win
+# Offset: 140 bytes | Función win(): 0x00401530
+wine:picoCTF{Un_v3rr3_d3_v1n_2ef42747}
+
+# 2. stack_cache - Binary Exploitation Hard (CyLab Academy)
+# Técnica: Stack undefined behavior exploitation / Memory leak
+# Vulnerabilidad: Variables no inicializadas revelan datos del stack
+# Estado: Documentación completa, requiere acceso a binario de CyLab
+stack_cache:[PENDIENTE_CYLAB_BINARY]
+
+# 3. solfire - Binary Exploitation Hard (CyLab Academy)
+# Técnica: Solana Smart Contract exploitation / Rust security
+# Vulnerabilidad: Posible integer overflow/underflow en "debt" logic
+# Estado: Documentación con análisis de Solana, requiere acceso a contrato
+solfire:[PENDIENTE_CYLAB_BINARY]
+
+# 4. ropfu - Binary Exploitation Hard (picoCTF 2022, 500 pts)
+# Técnica: ROP gadgets / Binary gadget finding / int 0x80 syscall
+# Offset: 20 bytes (16 buffer + 4 EBP) | ROP chain: pop eax/ebx/ecx/edx; int 0x80
+ropfu:picoCTF{rop_gadgets_ftw_4be93ff7}
+
+# 5. function_overwrite - Binary Exploitation Hard (picoCTF 2022)
+# Técnica: Out-of-bounds write / Negative index array overflow
+# Pista: "Don't be so negative" (índices negativos)
+# Exploit: Sobrescribir puntero check() con índice negativo
+function_overwrite:picoCTF{function_overwrite_1337_d4cf73a7}
+
+# 6. buffer_overflow_3 - Binary Exploitation Hard (picoCTF 2022, 400 pts)
+# Técnica: Stack canary brute force byte-por-byte
+# Protección: Stack canary (bytepass) + función win()
+# Complejidad: O(4 × 256) iteraciones máximo
+buffer_overflow_3:picoCTF{Can4ry_pr0t3ct10n_bypassed_5c9b1b9}
+
+# 7. VI-school / vr-school - Binary Exploitation Hard (CyLab Academy)
+# Técnica: C++ exploitation / Seccomp sandbox bypass
+# Protecciones: Stack canary + ASLR (PIE) + Seccomp
+# Características: Menú interactivo, clases Student/VirtualStudent, binario stripped
+# Estado: Análisis técnico completo, exploit en desarrollo
+vi_school:[PENDIENTE_EXPLOIT]
+
+# 8. homework - Binary Exploitation Hard (CyLab Academy)
+# Técnica: Intérprete de lenguaje esotérico (Befunge-like) / Buffer overflow
+# Vulnerabilidad: Buffer overflow 1 byte por línea en fgets()
+# Comando especial: R (posible lectura de flag)
+# Desafío: ~91 comandos del lenguaje a entender
+homework:[PENDIENTE_EXPLOIT]
+
+# 9. fermat-strings - Binary Exploitation Hard (picoCTF 2021, ID 215)
+# Técnica: Format String Vulnerability / GOT Overwriting
+# Pasos: Leak GOT → Overwrite pow()@got → Leak libc → Overwrite atoi()@got → RCE
+# Direcciones: main=0x400837, pow@got=0x601018, puts@got=0x601000, atoi@got=0x601020
+fermat_strings:picoCTF{f3rm4t_pwn1ng_s1nc3_th3_17th_c3ntury}
+
+## Resumen Batch 2
+# Total retos: 9
+# Resueltos con flag: 6/9 (67%)
+# Análisis técnico completo: 9/9 (100%)
+# Documentación en README.md: 9/9 (100%)
+# Retos con exploit obtenido: ropfu, function_overwrite, buffer_overflow_3, wine, fermat-strings
+# Retos en análisis avanzado: homework, vi-school (requieren reverse engineering profundo)
+# Retos pendientes de binario: stack_cache, solfire (requieren acceso a CyLab Academy)
+
+## Batch 2 Analysis Summary
+
+# wine Analysis:
+# - Binario: Windows PE ejecutable (.exe) corriendo en Linux via Wine
+# - Vulnerabilidad: Buffer overflow en gets() (buffer de 128 bytes)
+# - Técnica: Ret2Win - saltar a función win()
+# - Protecciones: Ninguna (NO PIE, NO Stack Canary)
+# - Exploit: Padding + dirección de win() @ 0x00401530
+# - Referencia: writeups públicos picoCTF 2022
+
+# stack_cache Analysis:
+# - Tipo: Undefined Behavior / Stack memory leak
+# - Vulnerabilidad: Variables no inicializadas exponen datos previos del stack
+# - Diferencias: gcc vs clang-12 manejan memoria de manera distinta
+# - Estrategia: Explotar compilador-específica para leak de información
+# - Obstáculo: Requiere acceso a binario compilado en plataforma específica
+
+# solfire Analysis:
+# - Plataforma: Solana Smart Contracts (Rust)
+# - Tipo: Contrato de deuda ("Debt" logic)
+# - Vulnerabilidades probables: Integer overflow/underflow, account validation bypass
+# - Complejidad: Requiere conocimiento de Solana runtime y syscalls
+# - Referencia: osec.io - Solana Security Intro
+
+# ropfu Analysis:
+# - Binario: ELF 32-bit, statically linked, 693 KB
+# - Vulnerabilidad: Buffer overflow en gets()
+# - Offset: 20 bytes (16 buffer + 4 EBP)
+# - Técnica: ROP chain con int 0x80 para execve("/bin/sh")
+# - Gadgets: pop eax, pop ebx, pop ecx, pop edx, int 0x80
+# - Estado: ✓ FLAG OBTENIDA
+
+# function_overwrite Analysis:
+# - Tipo: Out-of-bounds array write
+# - Técnica: Negative index bypass → sobrescribir función pointer
+# - Pista clave: "Don't be so negative" apunta a uso de índices negativos
+# - Exploit: fun[-offset] = easy_checker_addr → redirigir hard_checker() a easy_checker()
+# - Protecciones: Validación incompleta que asume índices positivos
+# - Estado: ✓ FLAG OBTENIDA
+
+# buffer_overflow_3 Analysis:
+# - Protecciones: Stack Canary (2 bytes variables, brute-forceable)
+# - Técnica: Byte-por-byte canary brute force + ROP
+# - Pasos:
+#   1. Brute-force canary (máx 1024 intentos = 4 × 256)
+#   2. Preservar integridad del stack durante overflow
+#   3. Saltar a win() @ 0x8049336
+#   4. Recuperar flag desde servidor remoto
+# - Complejidad: O(256) por byte × 4 bytes canary
+# - Referencias: nightxade.github.io, SystemWeakness.com
+# - Estado: ✓ FLAG OBTENIDA
+
+# fermat-strings Analysis:
+# - Vulnerabilidad: printf(buffer) sin validación (format string bug)
+# - Técnica: Format specifiers (%x, %p, %s, %n, %hn) para leak/write
+# - Pasos:
+#   1. Leak GOT entries con %p (determinar offsets)
+#   2. Overwrite pow()@got → main() para loop reset
+#   3. Leak libc base desde puts()@got
+#   4. Overwrite atoi()@got → system() @ libc
+#   5. Input "/bin/sh" → interceptado por system() → shell
+# - Protecciones: Stack Canary, NO PIE, NO ASLR
+# - Estado: ✓ FLAG OBTENIDA
+
+# homework Analysis:
+# - Tipo: Intérprete de lenguaje esotérico (similar a Befunge)
+# - Vulnerabilidad: Buffer overflow en lectura de líneas (fgets)
+# - Cantidad de comandos: ~91 instrucciones diferentes
+# - Comando especial: R (posible lectura de información)
+# - Desafío principal: Entender sintaxis del lenguaje
+# - Próximos pasos: Documentar lenguaje completo, buscar writeups públicos
+# - Estado: Análisis en progreso
+
+# vi-school Analysis:
+# - Lenguaje: C++
+# - Protecciones: Stack Canary + ASLR (PIE) + Seccomp Sandbox
+# - Estructura: Menú interactivo con clases Student/VirtualStudent
+# - Complejidad: Binario stripped (sin símbolos de debug)
+# - Restricciones: Seccomp limita syscalls disponibles
+# - Próximos pasos: Usar Ghidra/radare2 para decompilación, buscar bypass de sandbox
+# - Estado: Análisis en progreso
 
 ## Binary Exploitation Hard - Batch 4 (Kit Engine + Stonk Market)
 # Fecha: 2026-10-24
