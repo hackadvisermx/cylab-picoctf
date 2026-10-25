@@ -71,11 +71,26 @@ If we can crack the password checker on this remote host, we will be able to inf
 ## Current Status
 - Binary exfiltrated successfully to `tmp_files/ad7e550b`
 - Basic behavior patterns identified
-- Multiple solver implementations created:
+- Multiple solver implementations created and executed:
   - `solver.py` - Initial sequential solver
-  - `fast_solver.py` - Optimized character detection
+  - `fast_solver.py` - Optimized character detection [EXECUTED - Partial Success]
   - `parallel_solver.py` - Parallel testing for faster convergence
-- Solving in progress...
+  - `simple_solver.py` - Character-by-character manual solver
+
+### Solver Execution Results
+**fast_solver.py Output:**
+- Position 1: 'a' (12 asterisks) ✓
+- Position 2: '8' (12 asterisks) ✓
+- Position 3: 'r'/'x'/'u' (13 asterisks max) → 'r' selected ✓
+- Position 4+: All characters: 0 asterisks → No progress detected ✗
+
+**Partial Flag Found:** `academy{a8r`
+
+**Analysis:** The asterisk-based detection reaches maximum around position 3-4, suggesting either:
+1. The asterisk counter has a limit
+2. Different detection method needed after position 3
+3. The initial guess (a8r) may be incorrect, preventing further progress
+4. The verification uses a different metric after initial characters
 
 ## Attack Surface Analysis
 
