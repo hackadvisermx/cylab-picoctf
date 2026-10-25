@@ -147,3 +147,97 @@ download_horsepower:picoCTF{sh0u1d_hAv3_d0wnl0ad3d_m0r3_rAm_3a9ef72562166255}
 # - Shellcode: execve("/bin/cat", ["cat", "flag.txt"], NULL)
 # - Referencia: ir0nstone.gitbook.io, seal9055.com, ret2home.github.io
 # - Técnicas: Pointer compression exploitation, type confusion, heap feng shui
+
+## Binary Exploitation Hard - Batch 4 (Remaining 8 Challenges)
+# Fecha: 2026-10-24
+# Usuario: hackadvisermx
+# Estado: Análisis técnico completado - Documentación generada
+
+# 1. Kit Engine ✓ RESUELTO
+kit_engine:picoCTF{vr00m_vr00m_48f07b402a4020e0}
+
+# 2. Stonk Market (Pendiente - Requiere acceso remoto)
+stonk_market:[PENDIENTE]
+
+# 3. Cache Me Outside (Tcache Poisoning - Pendiente)
+cache_me_outside:[PENDIENTE]
+
+# 4. Download Horsepower ✓ RESUELTO (Agente 2)
+download_horsepower:picoCTF{sh0u1d_hAv3_d0wnl0ad3d_m0r3_rAm_3a9ef72562166255}
+
+# 5. Guessing Game 2 (ret2libc + Format String - Pendiente)
+guessing_game_2:[PENDIENTE]
+
+# 6. zero_to_hero (Heap Exploitation - Pendiente)
+zero_to_hero:[PENDIENTE]
+
+# 7. sice_cream (House of Orange - Pendiente)
+sice_cream:[PENDIENTE]
+
+# 8. seed-sPR1NG (PRNG Prediction - Pendiente)
+seed_spring:[PENDIENTE]
+
+## Resumen de Batch 4 (8 retos)
+
+# Kit Engine Analysis:
+# - Motor: V8 (Google Chrome JavaScript engine)
+# - Vulnerabilidad: AssembleEngine() ejecuta datos como código máquina
+# - Técnica: Inyectar shellcode como array de doubles (IEEE 754 interpretation)
+# - Protecciones: Ninguna (RWX memory sin DEP/NX)
+# - Referencias: ir0nstone.gitbook.io
+# - RESULTADO: ✓ FLAG OBTENIDA
+
+# Stonk Market Analysis:
+# - Tipo: Format String + GOT Overwrite (Partial RELRO)
+# - Servidor: mercury.picoctf.net:5654
+# - Técnica: Leer stack con %x/%p, escribir GOT con %n
+# - Objetivo: free@got -> system@plt para RCE
+# - RESULTADO: Análisis técnico completado, flag pendiente de obtención remota
+
+# Cache Me Outside Analysis:
+# - Tipo: Tcache Poisoning + Write-What-Where
+# - Versión libc: 2.26+ (tcache vulnerable)
+# - Técnica: Manipular forward pointers → malloc() retorna dirección arbitraria
+# - Objetivo: __free_hook = system para RCE
+# - RESULTADO: Documentación con técnica, pendiente ejecución remota
+
+# Download Horsepower Analysis:
+# - Motor: V8 JavaScript Engine
+# - Vulnerabilidad: Out-of-Bounds (OOB) Array Access
+# - Técnica: OOB leak → addrof() → arb_read/write → WASM RWX → shellcode
+# - Objetivo: Arbitrary Code Execution
+# - RESULTADO: ✓ FLAG OBTENIDA
+
+# Guessing Game 2 Analysis:
+# - Vulnerabilidades: Buffer Overflow (gets) + Stack Canary + Format String
+# - Técnica: Canary leak via format string → ret2libc ROP chain
+# - Objetivo: system("/bin/sh") para shell remoto
+# - RESULTADO: Documentación con técnica, pendiente ejecución remota
+
+# zero_to_hero Analysis:
+# - Tipo: Heap Exploitation / Tcache Poisoning
+# - Técnica: Leak libc → Manipular heap → __free_hook = system
+# - Objetivo: Arbitrary Code Execution
+# - Propiedades: 64-bit, Partial RELRO, Stack Canary, NX, NO PIE
+# - RESULTADO: Documentación con técnica, pendiente ejecución remota
+
+# sice_cream Analysis:
+# - Tipo: Use-After-Free + House of Orange
+# - Versión libc: 2.23 (vulnerable)
+# - Técnica: UAF para leak → House of Orange para corrupted heap → GOT overwrite
+# - Objetivo: Arbitrary Code Execution
+# - RESULTADO: Documentación con técnica, pendiente ejecución remota
+
+# seed-sPR1NG Analysis:
+# - Tipo: PRNG Prediction / Weak Random Number Generation
+# - Vulnerabilidad: srand(time(NULL)) es predecible
+# - Técnica: Brute-force time seed ±100 segundos → Sincronizar secuencia
+# - Objetivo: Adivinar números predichos para completar reto
+# - RESULTADO: Documentación con técnica, pendiente ejecución remota
+
+## Estado General - Batch 4
+# Total retos: 8
+# Resueltos con flag: 2 (Kit Engine, Download Horsepower)
+# Análisis técnico completo: 8/8
+# Documentación en README.md: 8/8
+# Documentación ubicación: challenges/binary-exploitation/hard/*/README.md
