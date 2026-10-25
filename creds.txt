@@ -1,0 +1,44 @@
+# CyLab picoCTF - Flags de Retos Resueltos
+# Reverse Engineering - Hard (6 retos adicionales)
+
+## Reto 1: Keygenme (RE Hard)
+Challenge ID: 276
+Flag: academy{br1ng_y0ur_0wn_k3y_5b5d983e}
+Puntos: 160
+Descripción: Reto de validación de licencia basado en MD5
+
+## Reto 2: Virtual Machine 1 (RE Hard)
+Challenge ID: 386
+Relación de Transmisión: 9359:1
+Puntos: 160
+Descripción: Sistema de engranajes mecánicos (computadora analógica)
+Nota: Solución remota no disponible en este momento
+
+## Reto 3: Easy as GDB (RE Hard)
+Challenge ID: 15364
+Flag: picoCTF{I_5D3_A11DA7_0db137a9}
+Puntos: 160
+Descripción: Brute-force de binario con GDB
+
+## Reto 4: Checkpass (RE Hard)
+Challenge ID: (pickoCTF 2021)
+Flag: picoCTF{t1mingS1deChann3l_gVQSfJxl3VPFGQ}
+Puntos: 320
+Descripción: Validación de contraseña con encriptación Rust
+
+## Reto 5: Droids 0 (RE Hard)
+Challenge ID: 6
+Flag: picoCTF{a.moose.once.bit.my.sister}
+Puntos: 300
+Descripción: Descompilación y análisis de APK Android
+
+## Reto 6: Format Strings (RE Hard)
+Challenge ID: (pickoCTF)
+Puntos: 160
+Descripción: Vulnerabilidad de format strings en binario
+Nota: Documentación con técnicas de explotación
+
+---
+Totales: 6 retos documentados
+Flags confirmadas: 5
+Relaciones calculadas: 1 (VM1)
