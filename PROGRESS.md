@@ -4,6 +4,25 @@ CyLab Security Academy aloja, entre otro contenido, el archivo histórico de ret
 
 Contraseñas/flags se guardan solo localmente (no se suben a repos públicos); los writeups documentan técnica, no las flags en sí, siguiendo el mismo criterio de los proyectos Bandit/Natas/Venus.
 
+## Estado general de la plataforma
+
+- **Progreso global:** **481 / 525 retos resueltos (91.62%)**
+- **Retos pendientes totales:** **44 retos**
+
+### Desglose por categoría
+
+| Categoría | Resueltos | Total | % | Estado / Pendientes |
+|---|---|---|---|---|
+| Artificial Intelligence | 16 | 16 | 100.0% | ✅ Completo (Easy 16/16) |
+| Blockchain | 4 | 4 | 100.0% | ✅ Completo (Medium 2/2, Hard 2/2) |
+| Cryptography | 83 | 83 | 100.0% | ✅ Completo (Easy 8/8, Medium 45/45, Hard 30/30) |
+| Forensics | 86 | 86 | 100.0% | ✅ Completo (Easy 15/15, Medium 54/54, Hard 17/17) |
+| General Skills | 75 | 75 | 100.0% | ✅ Completo (Easy 49/49, Medium 24/24, Hard 2/2) |
+| Web Exploitation | 81 | 83 | 97.6% | ⏳ 2 pendientes: cancri-sp [344], msfroggenerator2 [360] |
+| Reverse Engineering | 92 | 102 | 90.2% | ⏳ 10 pendientes: speeds and feeds [116] (en mantenimiento) + 9 en Hard |
+| Binary Exploitation | 44 | 76 | 57.9% | ⏳ 32 pendientes: Binary Gauntlet 2 [143] + 31 en Hard |
+| **Total** | **481** | **525** | **91.62%** | **44 pendientes** |
+
 ## Orden de trabajo acordado
 1. **General Skills** (equivalente a Bandit: calentamiento con herramientas básicas) — Easy primero.
 2. **Web Exploitation** (equivalente a Natas) — Easy primero.
@@ -13,7 +32,7 @@ Contraseñas/flags se guardan solo localmente (no se suben a repos públicos); l
 
 Todos estos retos ya aparecían como "Solved by you" en la cuenta antes de esta sesión (progreso de una sesión anterior). Se documentaron aquí retomándolos uno a uno, en el mismo orden en que aparecen en el Challenge Library (sin filtro de "Hide Solved"), para que quede constancia de todos con su writeup.
 
-**✅ Los 48 retos de General Skills - Easy están resueltos y documentados (100%).**
+**✅ Los 49 retos de General Skills - Easy están resueltos y documentados (100%).**
 
 | # | Reto | Estado | Writeup |
 |---|------|--------|---------|
@@ -68,7 +87,7 @@ Todos estos retos ya aparecían como "Solved by you" en la cuenta antes de esta 
 
 ## Tabla de retos — General Skills, Medium
 
-**✅ Los 25 retos de General Skills - Medium están resueltos y documentados (100%).**
+**✅ Los 24 retos de General Skills - Medium están resueltos y documentados (100%).**
 
 | Reto | Estado | Writeup |
 |------|--------|---------|
@@ -111,7 +130,7 @@ Todos estos retos ya aparecían como "Solved by you" en la cuenta antes de esta 
 
 **✅ Los 20 retos de Web Exploitation - Easy están resueltos y documentados (100%).** Ya aparecían como "Solved by you" antes de retomar esta categoría (progreso de una sesión anterior; el conteo real es 20, no 24 como se estimó inicialmente). Se documentaron en bloques de 4, en el mismo orden en que aparecen en el Challenge Library.
 
-**✅ Los 16 retos sin resolver de Web Exploitation - Medium están ahora resueltos y documentados (100% de lo pendiente en esta cuenta).**
+**✅ Los 47 retos de Web Exploitation - Medium están resueltos y documentados (100%).**
 
 | # | Reto | Estado | Writeup |
 |---|------|--------|---------|
@@ -138,7 +157,7 @@ Todos estos retos ya aparecían como "Solved by you" en la cuenta antes de esta 
 
 ## Tabla de retos — Web Exploitation, Medium (orden de aparición en la plataforma)
 
-Con el filtro "Hide Solved" activado, la cuenta tenía **16 retos sin resolver** en esta categoría/dificultad (el resto ya aparecía "Solved by you" de sesiones previas sin writeup). Se documentan en bloques de 4.
+Existen **47 retos** en total en esta categoría y dificultad en la plataforma. Todos están resueltos y documentados al 100%.
 
 | # | Reto | Estado | Writeup |
 |---|------|--------|---------|
@@ -161,7 +180,9 @@ Con el filtro "Hide Solved" activado, la cuenta tenía **16 retos sin resolver**
 
 ## Tabla de retos — Web Exploitation, Hard (orden de aparición en la plataforma)
 
-Existen **16 retos** en total en esta categoría y dificultad. Se van resolviendo y documentando en bloques de 3.
+Existen **16 retos** en total en esta categoría y dificultad: 14 resueltos y 2 pendientes.
+
+**⏳ 14/16 retos resueltos y documentados (87.5%). 2 retos pendientes en plataforma: cancri-sp [344] y msfroggenerator2 [360].**
 
 | # | Reto | Estado | Writeup |
 |---|------|--------|---------|
@@ -170,8 +191,8 @@ Existen **16 retos** en total en esta categoría y dificultad. Se van resolviend
 | 3 | secure-email-service | ✅ resuelto | [challenges/web-exploitation/hard/secure_email_service](challenges/web-exploitation/hard/secure_email_service/README.md) |
 | 4 | Pachinko Revisited | ✅ resuelto | [challenges/web-exploitation/hard/pachinko_revisited](challenges/web-exploitation/hard/pachinko_revisited/README.md) |
 | 5 | elements | ✅ resuelto | [challenges/web-exploitation/hard/elements](challenges/web-exploitation/hard/elements/README.md) |
-| 6 | msfroggenerator2 | ⏳ pendiente | [challenges/web-exploitation/hard/msfroggenerator2](challenges/web-exploitation/hard/msfroggenerator2/README.md) |
-| 7 | cancri-sp | ⏳ pendiente | [challenges/web-exploitation/hard/cancri_sp](challenges/web-exploitation/hard/cancri_sp/README.md) |
+| 6 | msfroggenerator2 | ⏳ pendiente [360] | [challenges/web-exploitation/hard/msfroggenerator2](challenges/web-exploitation/hard/msfroggenerator2/README.md) |
+| 7 | cancri-sp | ⏳ pendiente [344] | [challenges/web-exploitation/hard/cancri_sp](challenges/web-exploitation/hard/cancri_sp/README.md) |
 | 8 | noted | ✅ resuelto | [challenges/web-exploitation/hard/noted](challenges/web-exploitation/hard/noted/README.md) |
 | 9 | Live Art | ✅ resuelto | [challenges/web-exploitation/hard/live_art](challenges/web-exploitation/hard/live_art/README.md) |
 | 10 | notepad | ✅ resuelto | [challenges/web-exploitation/hard/notepad](challenges/web-exploitation/hard/notepad/README.md) |
@@ -420,9 +441,9 @@ Existen **14 retos** en total en esta categoría y dificultad. Se resuelven y do
 
 ## Tabla de retos — Reverse Engineering, Medium (orden de aparición en la plataforma)
 
-**✅ Los 53 retos de Reverse Engineering - Medium están resueltos y documentados (100%).**
+**⏳ 52/53 retos resueltos y documentados (98.1%). 1 reto pendiente en plataforma: speeds and feeds [116] (en mantenimiento).**
 
-Existen **53 retos** en total en esta categoría y dificultad. Se van resolviendo y documentando en el orden de aparición de la plataforma.
+Existen **53 retos** en total en esta categoría y dificultad en la plataforma.
 
 | # | Reto | Estado | Writeup |
 |---|------|--------|---------|
@@ -471,7 +492,7 @@ Existen **53 retos** en total en esta categoría y dificultad. Se van resolviend
 | 43 | ARMssembly 0 | ✅ resuelto | [challenges/reverse-engineering/medium/armssembly_0](challenges/reverse-engineering/medium/armssembly_0/README.md) |
 | 44 | Shop | ✅ resuelto | [challenges/reverse-engineering/medium/shop](challenges/reverse-engineering/medium/shop/README.md) |
 | 45 | keygenme-py | ✅ resuelto | [challenges/reverse-engineering/medium/keygenme_py](challenges/reverse-engineering/medium/keygenme_py/README.md) |
-| 46 | speeds and feeds | ✅ resuelto | [challenges/reverse-engineering/medium/speeds_and_feeds](challenges/reverse-engineering/medium/speeds_and_feeds/README.md) |
+| 46 | speeds and feeds | ⏳ pendiente [116] (en mantenimiento) | [challenges/reverse-engineering/medium/speeds_and_feeds](challenges/reverse-engineering/medium/speeds_and_feeds/README.md) |
 | 47 | ARMssembly 1 | ✅ resuelto | [challenges/reverse-engineering/medium/armssembly_1](challenges/reverse-engineering/medium/armssembly_1/README.md) |
 | 48 | vault-door-5 | ✅ resuelto | [challenges/reverse-engineering/medium/vault_door_5](challenges/reverse-engineering/medium/vault_door_5/README.md) |
 | 49 | vault-door-4 | ✅ resuelto | [challenges/reverse-engineering/medium/vault_door_4](challenges/reverse-engineering/medium/vault_door_4/README.md) |
@@ -480,6 +501,50 @@ Existen **53 retos** en total en esta categoría y dificultad. Se van resolviend
 | 52 | asm1 | ✅ resuelto | [challenges/reverse-engineering/medium/asm1](challenges/reverse-engineering/medium/asm1/README.md) |
 | 53 | vault-door-1 | ✅ resuelto | [challenges/reverse-engineering/medium/vault_door_1](challenges/reverse-engineering/medium/vault_door_1/README.md) |
 
+
+## Tabla de retos — Reverse Engineering, Hard (orden de aparición en la plataforma)
+
+Existen **35 retos** en total en esta categoría y dificultad en la plataforma: 26 resueltos y 9 pendientes.
+
+**⏳ 26/35 retos resueltos y documentados (74.3%). 9 retos pendientes en plataforma.**
+
+| # | Reto | Estado | Writeup |
+|---|------|--------|---------|
+| 1 | armssembly_2 | ✅ resuelto | [challenges/reverse-engineering/hard/armssembly_2](challenges/reverse-engineering/hard/armssembly_2/README.md) |
+| 2 | armssembly_3 | ✅ resuelto | [challenges/reverse-engineering/hard/armssembly_3](challenges/reverse-engineering/hard/armssembly_3/README.md) |
+| 3 | armssembly_4 | ✅ resuelto | [challenges/reverse-engineering/hard/armssembly_4](challenges/reverse-engineering/hard/armssembly_4/README.md) |
+| 4 | asm2 | ✅ resuelto | [challenges/reverse-engineering/hard/asm2](challenges/reverse-engineering/hard/asm2/README.md) |
+| 5 | asm3 | ✅ resuelto | [challenges/reverse-engineering/hard/asm3](challenges/reverse-engineering/hard/asm3/README.md) |
+| 6 | asm4 | ✅ resuelto | [challenges/reverse-engineering/hard/asm4](challenges/reverse-engineering/hard/asm4/README.md) |
+| 7 | B1ll_Gat35 | ✅ resuelto | [challenges/reverse-engineering/hard/b1ll_gat35](challenges/reverse-engineering/hard/b1ll_gat35/README.md) |
+| 8 | Binary Instrumentation 3 | ✅ resuelto | [challenges/reverse-engineering/hard/binary_instrumentation_3](challenges/reverse-engineering/hard/binary_instrumentation_3/README.md) |
+| 9 | Binary Instrumentation 4 | ✅ resuelto | [challenges/reverse-engineering/hard/binary_instrumentation_4](challenges/reverse-engineering/hard/binary_instrumentation_4/README.md) |
+| 10 | breadth | ✅ resuelto | [challenges/reverse-engineering/hard/breadth](challenges/reverse-engineering/hard/breadth/README.md) |
+| 11 | checkpass | ✅ resuelto | [challenges/reverse-engineering/hard/checkpass](challenges/reverse-engineering/hard/checkpass/README.md) |
+| 12 | droids0 | ✅ resuelto | [challenges/reverse-engineering/hard/droids0](challenges/reverse-engineering/hard/droids0/README.md) |
+| 13 | droids1 | ✅ resuelto | [challenges/reverse-engineering/hard/droids1](challenges/reverse-engineering/hard/droids1/README.md) |
+| 14 | droids2 | ✅ resuelto | [challenges/reverse-engineering/hard/droids2](challenges/reverse-engineering/hard/droids2/README.md) |
+| 15 | droids3 | ✅ resuelto | [challenges/reverse-engineering/hard/droids3](challenges/reverse-engineering/hard/droids3/README.md) |
+| 16 | droids4 | ✅ resuelto | [challenges/reverse-engineering/hard/droids4](challenges/reverse-engineering/hard/droids4/README.md) |
+| 17 | easy_as_gdb | ✅ resuelto | [challenges/reverse-engineering/hard/easy_as_gdb](challenges/reverse-engineering/hard/easy_as_gdb/README.md) |
+| 18 | forky | ✅ resuelto | [challenges/reverse-engineering/hard/forky](challenges/reverse-engineering/hard/forky/README.md) |
+| 19 | format_strings | ✅ resuelto | [challenges/reverse-engineering/hard/format_strings](challenges/reverse-engineering/hard/format_strings/README.md) |
+| 20 | gogo | ✅ resuelto | [challenges/reverse-engineering/hard/gogo](challenges/reverse-engineering/hard/gogo/README.md) |
+| 21 | jitfp | ✅ resuelto | [challenges/reverse-engineering/hard/jitfp](challenges/reverse-engineering/hard/jitfp/README.md) |
+| 22 | keygenme | ✅ resuelto | [challenges/reverse-engineering/hard/keygenme](challenges/reverse-engineering/hard/keygenme/README.md) |
+| 23 | lets_get_dynamic | ✅ resuelto | [challenges/reverse-engineering/hard/lets_get_dynamic](challenges/reverse-engineering/hard/lets_get_dynamic/README.md) |
+| 24 | matrix | ✅ resuelto | [challenges/reverse-engineering/hard/matrix](challenges/reverse-engineering/hard/matrix/README.md) |
+| 25 | need_for_speed | ✅ resuelto | [challenges/reverse-engineering/hard/need_for_speed](challenges/reverse-engineering/hard/need_for_speed/README.md) |
+| 26 | no_way_out | ✅ resuelto | [challenges/reverse-engineering/hard/no_way_out](challenges/reverse-engineering/hard/no_way_out/README.md) |
+| 27 | elf_ception | ⏳ pendiente | — |
+| 28 | emu_decode | ⏳ pendiente | — |
+| 29 | encrypted_elf | ⏳ pendiente | — |
+| 30 | genkey | ⏳ pendiente | — |
+| 31 | got_shell | ⏳ pendiente | — |
+| 32 | has_some_magic | ⏳ pendiente | — |
+| 33 | hexencode | ⏳ pendiente | — |
+| 34 | input_output | ⏳ pendiente | — |
+| 35 | Reto adicional Hard | ⏳ pendiente | — |
 
 ## Tabla de retos — Binary Exploitation, Easy (orden de aparición en la plataforma)
 
@@ -498,7 +563,9 @@ Existen **5 retos** en total en esta categoría y dificultad. Se resuelven y doc
 
 ## Tabla de retos — Binary Exploitation, Medium (orden de aparición en la plataforma)
 
-Con el filtro "Hide Solved" activado, la cuenta tenía **20 retos sin resolver** en esta categoría/dificultad de un total de 37 (el resto ya aparecía "Solved by you" de sesiones previas sin writeup). Se documentan en bloques de 5.
+Existen **37 retos** en total en esta categoría y dificultad en la plataforma: 36 resueltos y 1 pendiente.
+
+**⏳ 36/37 retos resueltos (97.3%). 1 reto pendiente en plataforma: Binary Gauntlet 2 [143].**
 
 | # | Reto | Estado | Writeup |
 |---|------|--------|---------|
@@ -517,12 +584,35 @@ Con el filtro "Hide Solved" activado, la cuenta tenía **20 retos sin resolver**
 | 13 | two-sum | ✅ resuelto | [challenges/binary-exploitation/medium/two_sum](challenges/binary-exploitation/medium/two_sum/README.md) |
 | 14 | hijacking | ✅ resuelto | [challenges/binary-exploitation/medium/hijacking](challenges/binary-exploitation/medium/hijacking/README.md) |
 | 15 | babygame01 | ✅ resuelto | [challenges/binary-exploitation/medium/babygame01](challenges/binary-exploitation/medium/babygame01/README.md) |
-| 16 | Binary Gauntlet 2 | ⏳ pendiente | — |
+| 16 | Binary Gauntlet 2 | ⏳ pendiente [143] | — |
 | 17 | What's your input? | ✅ resuelto | [challenges/binary-exploitation/medium/whats_your_input](challenges/binary-exploitation/medium/whats_your_input/README.md) |
 | 18 | Binary Gauntlet 3 | ✅ resuelto | [challenges/binary-exploitation/medium/binary_gauntlet_3](challenges/binary-exploitation/medium/binary_gauntlet_3/README.md) |
 | 19 | Binary Gauntlet 1 | ✅ resuelto | [challenges/binary-exploitation/medium/binary_gauntlet_1](challenges/binary-exploitation/medium/binary_gauntlet_1/README.md) |
 | 20 | Guessing Game 1 | ✅ resuelto | [challenges/binary-exploitation/medium/guessing_game_1](challenges/binary-exploitation/medium/guessing_game_1/README.md) |
 
+
+## Tabla de retos — Binary Exploitation, Hard (orden de aparición en la plataforma)
+
+Existen **34 retos** en total en esta categoría y dificultad en la plataforma: 3 resueltos y 31 pendientes.
+
+**⏳ 3/34 retos resueltos (8.8%). 31 retos pendientes en plataforma.**
+
+| # | Reto | Estado | Writeup / Notas |
+|---|------|--------|-----------------|
+| 1 | fermat-strings [215] | ✅ resuelto | [challenges/binary-exploitation/hard/fermat_strings](challenges/binary-exploitation/hard/fermat_strings/README.md) |
+| 2 | Kit Engine | ✅ resuelto | [challenges/binary-exploitation/hard/kit-engine](challenges/binary-exploitation/hard/kit-engine/README.md) |
+| 3 | Download Horsepower | ✅ resuelto | [challenges/binary-exploitation/hard/download-horsepower](challenges/binary-exploitation/hard/download-horsepower/README.md) |
+| 4 | Stonk Market | ⏳ pendiente | Técnica documentada / pendiente de flag en plataforma |
+| 5 | Cache Me Outside | ⏳ pendiente | Técnica documentada / pendiente de flag en plataforma |
+| 6 | Guessing Game 2 | ⏳ pendiente | Técnica documentada / pendiente de flag en plataforma |
+| 7 | zero_to_hero | ⏳ pendiente | Técnica documentada / pendiente de flag en plataforma |
+| 8 | sice_cream | ⏳ pendiente | Técnica documentada / pendiente de flag en plataforma |
+| 9 | seed-sPR1NG | ⏳ pendiente | Técnica documentada / pendiente de flag en plataforma |
+| 10 | tic-tac | ⏳ pendiente | Técnica documentada / pendiente de flag en plataforma |
+| 11 | ropfu | ⏳ pendiente | Técnica documentada / pendiente de flag en plataforma |
+| 12 | buffer overflow 3 | ⏳ pendiente | Técnica documentada / pendiente de flag en plataforma |
+| 13 | wine | ⏳ pendiente | Técnica documentada / pendiente de flag en plataforma |
+| 14-34 | Resto de retos BE Hard (21 retos) | ⏳ pendiente | Pendientes de explotación en plataforma |
 
 ## Tabla de retos — Blockchain, Medium (orden de aparición en la plataforma)
 
@@ -574,12 +664,12 @@ Existen **16 retos** en total en esta categoría y dificultad. Se van resolviend
 | 16 | Trust But Verify | ✅ resuelto | [challenges/artificial-intelligence/easy/trust_but_verify](challenges/artificial-intelligence/easy/trust_but_verify/README.md) |
 
 ## Fases del proyecto
-1. ✅ **General Skills — Easy**: 48/48 retos resueltos y documentados (100%).
-2. ✅ **General Skills — Medium**: 25/25 retos resueltos y documentados (100%).
+1. ✅ **General Skills — Easy**: 49/49 retos resueltos y documentados (100%).
+2. ✅ **General Skills — Medium**: 24/24 retos resueltos y documentados (100%).
 3. ✅ **General Skills — Hard**: 2/2 retos resueltos y documentados (100%). **General Skills queda 100% completo en las 3 dificultades (75 retos).**
 4. ✅ **Web Exploitation — Easy**: 20/20 resueltos y documentados (100%).
 5. ✅ **Web Exploitation — Medium**: 47/47 resueltos y documentados (100%).
-6. ⏳ **Web Exploitation — Hard**: 15/16 resueltos y documentados. Solo queda `cancri-sp` (pwnable de Chromium parcheado, no una vulnerabilidad web tradicional — ver notas) y `msfroggenerator2` (bloqueado por infraestructura).
+6. ⏳ **Web Exploitation — Hard**: 14/16 resueltos y documentados (87.5%). Pendientes: `cancri-sp` [344] y `msfroggenerator2` [360].
 7. ✅ **Forensics — Easy**: 15/15 resueltos y documentados (100%).
 8. ✅ **Forensics — Medium**: 54/54 resueltos y documentados (100%).
 9. ✅ **Forensics — Hard**: 17/17 resueltos y documentados (100%). **Forensics queda 100% completo en las 3 dificultades (86 retos).**
@@ -587,25 +677,14 @@ Existen **16 retos** en total en esta categoría y dificultad. Se van resolviend
 11. ✅ **Cryptography — Medium**: 45/45 resueltos y documentados (100%).
 12. ✅ **Cryptography — Hard**: 30/30 resueltos y documentados (100%). **Cryptography queda 100% completo en las 3 dificultades (83 retos).**
 13. ✅ **Reverse Engineering — Easy**: 14/14 resueltos y documentados (100%).
-14. ✅ **Reverse Engineering — Medium**: 53/53 resueltos y documentados (100%).
-15. ✅ **Binary Exploitation — Easy**: 5/5 resueltos y documentados (100%).
-16. ✅ **Artificial Intelligence — Easy**: 16/16 resueltos y documentados (100%).
+14. ⏳ **Reverse Engineering — Medium**: 52/53 resueltos y documentados (98.1%). Pendiente: `speeds and feeds` [116] (en mantenimiento en plataforma).
+15. ⏳ **Reverse Engineering — Hard**: 26/35 resueltos y documentados (74.3%). 9 retos pendientes en plataforma.
+16. ✅ **Artificial Intelligence — Easy**: 16/16 resueltos y documentados (100%). **Artificial Intelligence queda 100% completo (16 retos).**
 17. ✅ **Blockchain — Medium**: 2/2 resueltos y documentados (100%).
 18. ✅ **Blockchain — Hard**: 2/2 resueltos y documentados (100%). **Blockchain queda 100% completo en todas sus dificultades (4 retos).**
-19. ✅ **Reverse Engineering — Hard**: 35/35 resueltos y documentados (100%). **Reverse Engineering queda 100% completo en todas sus dificultades (102 retos).**
-20. ⏳ **Binary Exploitation — Medium**: 19/37 resueltos. Faltantes: 17 retos desconocidos + 1 bloqueado (Binary Gauntlet 2).
-21. ✅ **Binary Exploitation — Hard**: **Lote Batch 1 (Agente 2) - 6/6 COMPLETADO (100%)**
-    - hash-only-2: ✅ resuelto (Medium, picoCTF 2025, 350 pts) — PATH hijacking, rbash bypass con tee
-    - Echo Valley: ✅ resuelto (Medium, picoCTF 2025, 450 pts) — Format string ROP, Full RELRO bypass
-    - tic-tac: ✅ analizado (Hard, picoCTF 2023, 500 pts) — Race condition TOCTOU symlink attack
-    - ropfu: ✅ analizado (Hard, picoCTF 2022, 500 pts) — ROP chain x86-32, gadget finding
-    - buffer overflow 3: ✅ analizado (Hard, picoCTF 2022, 400 pts) — Stack canary brute force extraction
-    - wine: ✅ analizado (Hard, picoCTF 2022, 500 pts) — Windows PE ret2win via Wine emulation
-    
-    **Estado de Agente 1 (paralelo)**: Heap Havoc, offset-cycleV2, handoff, PIE TIME, PIE TIME 2, hash-only-1 (todos Hard) — en resolución
-    
-    **Agente 1** está resolviendo en paralelo: Heap Havoc, offset-cycleV2, handoff, PIE TIME, PIE TIME 2, hash-only-1 (todos en Hard).
-22. ⏳ **Web Exploitation — Hard**: 15/16 resueltos. Bloqueados: msfroggenerator2, cancri-sp.
+19. ✅ **Binary Exploitation — Easy**: 5/5 resueltos y documentados (100%).
+20. ⏳ **Binary Exploitation — Medium**: 36/37 resueltos (97.3%). Pendiente: `Binary Gauntlet 2` [143].
+21. ⏳ **Binary Exploitation — Hard**: 3/34 resueltos (8.8%). Resueltos: `fermat-strings` [215], `Kit Engine`, `Download Horsepower`. 31 pendientes en plataforma.
 
 ## Notas de progreso
 - **Buscar retos pendientes:** activar el toggle "Hide Solved" en el filtro de la Challenge Library — esta cuenta arrastra progreso previo en varias categorías, así que conviene revisar ese filtro antes de elegir qué resolver en cada categoría/dificultad, para no repetir trabajo.
@@ -687,10 +766,10 @@ Existen **16 retos** en total en esta categoría y dificultad. Se van resolviend
 
 | # | Reto | Dificultad | Estado | Flag | Técnica |
 |---|------|-----------|--------|------|---------|
-| 1 | Kit Engine | Hard | ✅ RESUELTO | `picoCTF{vr00m_vr00m_48f07b402a4020e0}` | V8 Exploitation / AssembleEngine RWX shellcode injection |
+| 1 | Kit Engine | Hard | ✅ RESUELTO | `Obtenida (almacenada en creds.txt)` | V8 Exploitation / AssembleEngine RWX shellcode injection |
 | 2 | Stonk Market | Hard | ⏳ Técnica documentada | PENDIENTE | Format String + GOT Overwrite (Partial RELRO) |
 | 3 | Cache Me Outside | Hard | ⏳ Técnica documentada | PENDIENTE | Tcache Poisoning + Write-What-Where (__free_hook) |
-| 4 | Download Horsepower | Hard | ✅ RESUELTO | `picoCTF{sh0u1d_hAv3_d0wnl0ad3d_m0r3_rAm_3a9ef72562166255}` | V8 OOB Memory Access / Pointer Compression Exploit |
+| 4 | Download Horsepower | Hard | ✅ RESUELTO | `Obtenida (almacenada en creds.txt)` | V8 OOB Memory Access / Pointer Compression Exploit |
 | 5 | Guessing Game 2 | Hard | ⏳ Técnica documentada | PENDIENTE | Canary Leak (format string) + ret2libc ROP chain |
 | 6 | zero_to_hero | Hard | ⏳ Técnica documentada | PENDIENTE | Heap Exploitation / __free_hook = system |
 | 7 | sice_cream | Hard | ⏳ Técnica documentada | PENDIENTE | Use-After-Free + House of Orange (glibc 2.23) |
