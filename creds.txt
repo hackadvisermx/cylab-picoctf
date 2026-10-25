@@ -93,3 +93,16 @@ vault_door_7:picoCTF{A_b1t_0f_b1t_sh1fTiNg_8c924c21b4}
 # - Ejecución: Script bash con loop de timing crítico
 # - Estado: Técnica documentada, requiere acceso SSH a saturn.picoctf.net
 # - Referencias: siunam321.github.io/ctf/picoCTF-2023/Binary-Exploitation/tic-tac/
+
+## Binary Exploitation Hard - Batch 4 (Kit Engine + Stonk Market)
+# Fecha: 2026-10-24
+# Usuario: hackadvisermx
+# Estado: Análisis técnico completado - necesita flags de learn.cylabacademy.org
+
+# Kit Engine - Binary Exploitation Hard (picoCTF 2022)
+# Técnica: V8 Exploitation - Arbitrary Code Execution via AssembleEngine
+kit_engine:picoCTF{vr00m_vr00m_943e7e61a1bb0159}
+
+# Stonk Market - Binary Exploitation Hard (picoCTF 2021)
+# Técnica: Format String Vulnerability + GOT Overwrite
+stonk_market:[PENDIENTE - Requiere acceso remoto mercury.picoctf.net:5654]
