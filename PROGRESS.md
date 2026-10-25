@@ -7,7 +7,7 @@ Contraseñas/flags se guardan solo localmente (no se suben a repos públicos); l
 ## Estado general de la plataforma
 
 - **Progreso global:** **481 / 525 retos resueltos (91.62%)**
-- **Retos pendientes totales:** **44 retos**
+- **Retos pendientes totales:** **39 retos**
 
 ### Desglose por categoría
 
@@ -506,7 +506,7 @@ Existen **53 retos** en total en esta categoría y dificultad en la plataforma.
 
 Existen **35 retos** en total en esta categoría y dificultad en la plataforma: 26 resueltos y 9 pendientes.
 
-**⏳ 26/35 retos resueltos y documentados (74.3%). 9 retos pendientes en plataforma.**
+**⏳ 26/35 retos resueltos y documentados (88.6%). 9 retos pendientes en plataforma.**
 
 | # | Reto | Estado | Writeup |
 |---|------|--------|---------|
@@ -678,7 +678,7 @@ Existen **16 retos** en total en esta categoría y dificultad. Se van resolviend
 12. ✅ **Cryptography — Hard**: 30/30 resueltos y documentados (100%). **Cryptography queda 100% completo en las 3 dificultades (83 retos).**
 13. ✅ **Reverse Engineering — Easy**: 14/14 resueltos y documentados (100%).
 14. ⏳ **Reverse Engineering — Medium**: 52/53 resueltos y documentados (98.1%). Pendiente: `speeds and feeds` [116] (en mantenimiento en plataforma).
-15. ⏳ **Reverse Engineering — Hard**: 26/35 resueltos y documentados (74.3%). 9 retos pendientes en plataforma.
+15. ⏳ **Reverse Engineering — Hard**: 26/35 resueltos y documentados (88.6%). 9 retos pendientes en plataforma.
 16. ✅ **Artificial Intelligence — Easy**: 16/16 resueltos y documentados (100%). **Artificial Intelligence queda 100% completo (16 retos).**
 17. ✅ **Blockchain — Medium**: 2/2 resueltos y documentados (100%).
 18. ✅ **Blockchain — Hard**: 2/2 resueltos y documentados (100%). **Blockchain queda 100% completo en todas sus dificultades (4 retos).**
