@@ -1,136 +1,177 @@
-# Challenge: MATRIX (ID 221, 500 pts)
+# MATRIX
 
-**Category:** Reverse Engineering (Hard)  
-**Author:** asphyxia  
-**Event:** picoMini by redpwn
+- **Categoría:** Reverse Engineering
+- **Dificultad:** Hard
+- **Autor:** asphyxia
+- **Evento / Origen:** picoMini by redpwn (picoCTF)
+- **ID CyLab:** 221
+- **Puntos:** 500
 
-## Challenge Description
+---
+
+## Descripción del Reto
 
 ```
 Enter the M A T R I X
+nc mars.cylabacademy.net 31259
 ```
 
-The challenge provides a binary that implements an esoteric stack-based language interpreter. The program reads a program written in this custom language and executes it.
+Se proporciona un archivo ejecutable ELF x86-64 llamado `matrix`. Al conectarse al servicio remoto, se muestra:
 
-## Binary Analysis
+```text
+Welcome to the M A T R I X
+Can you make it out alive?
+```
 
-### File Information
-- **Type:** ELF 64-bit LSB pie executable, x86-64
-- **Size:** 14,480 bytes
-- **Stripped:** Yes (no symbols)
-- **Compiler:** GCC 10.2.0
+Si se envía una entrada inválida, el programa responde con:
+```text
+You were eaten by a grue.
+```
 
-### Program Flow
+---
 
-1. Allocates two 0x800-byte (2048 bytes) buffers on the heap (r13 and r12)
-2. Sets up input/output processing structures
-3. Enters a main loop that:
-   - Reads bytes from input
-   - Interprets them as commands in the custom language
-   - Processes stack operations
-4. On successful verification, reads and outputs the flag from `flag.txt`
-5. On failure, outputs "Have a flag!"
+## Análisis del Binario
 
-### Stack-Based Language
+### 1. Propiedades del Archivo
+- **Formato:** ELF 64-bit LSB PIE executable, x86-64
+- **Estado:** Stripped (sin símbolos)
+- **Compilador:** GCC 10.2.0
 
-The interpreter implements a stack-based esoteric language with the following operations:
+### 2. Estructura y Funcionamiento General
+Al desensamblar `main` (0x10d0), se observa que el binario no es un programa ordinario: es una **Máquina Virtual (VM)** basada en pila de palabras de 16 bits:
+1. Asigna dos buffers de 0x800 bytes (2048 bytes) mediante `malloc`:
+   - `stack1`: Pila de ejecución de datos (operaciones y retorno).
+   - `stack2`: Pila auxiliar / de llamadas.
+2. Inicializa una estructura de control con:
+   - Puntero al bytecode embebido en `.rodata` en el desplazamiento `0x20f0`.
+   - Contador de programa (`PC`), inicializado en 0.
+   - Puntero a función de entrada (wrapper de `getc`).
+   - Puntero a función de salida (wrapper de `putc`).
+3. Ejecuta la función del intérprete `fcn.00001350` en un bucle continuo hasta que la instrucción `HALT` (código 0x01) devuelva código 0.
+4. Si la condición de terminación es exitosa (`status == 0`), abre y muestra el archivo `flag.txt`:
+   ```c
+   puts("Have a flag!");
+   FILE *f = fopen("flag.txt", "r");
+   fgets(buffer, 0x100, f);
+   puts(buffer);
+   ```
 
-#### Jump Table (bytes 0x00-0x34 / 0-52)
+---
 
-Valid operations (others cause failure):
+## Arquitectura de la Máquina Virtual
 
-| Byte | ASCII | Hex  | Operation |
-|------|-------|------|-----------|
-| 0x00 | NUL   | 0x00 | Pop value from input stack → rbx->0x08 |
-| 0x01 |       | 0x01 | Clear output (xor eax, eax) |
-| 0x10 |       | 0x10 | Duplicate top value |
-| 0x11 |       | 0x11 | Decrement pointer (subq $0x2) |
-| 0x12 |       | 0x12 | Add: top[-2] += top[-4] |
-| 0x13 |       | 0x13 | Subtract: top[-4] -= top[-2] |
-| 0x14 |       | 0x14 | Swap top[-4] and top[-2] |
-| 0x20 | ' '   | 0x20 | Pop from input, push to output |
-| 0x21 | '!'   | 0x21 | Pop from output, push to input |
-| 0x30 | '0'   | 0x30 | Pop from input stack, set counter |
-| 0x31 | '1'   | 0x31 | Check condition: fail if top[-4] != 0 |
-| 0x32 | '2'   | 0x32 | Check condition: fail if top[-4] == 0 |
-| 0x33 | '3'   | 0x33 | Check condition: fail if top[-4] >= 0 |
-| 0x34 | '4'   | 0x34 | Check condition: fail if top[-4] <= 0 |
+El intérprete decodifica los opcodes mediante una tabla de saltos (`jump table`) y comprobaciones directas:
 
-#### Special High-Byte Operations (0xC0+)
+| Opcode | Nemónico | Descripción |
+|--------|----------|-------------|
+| `0x00` | `NOP` | No operación (continúa ejecución). |
+| `0x01` | `HALT` | Termina la VM; extrae el código de salida de `stack1`. Si es 0, imprime la flag. |
+| `0x10` | `DUP` | Duplica el valor en la cima de `stack1`. |
+| `0x11` | `DROP` | Descarta el valor en la cima de `stack1`. |
+| `0x12` | `ADD` | Suma los dos valores superiores de `stack1`: `b = pop(), a = pop(); push(a + b)`. |
+| `0x13` | `SUB` | Resta: `b = pop(), a = pop(); push(a - b)`. |
+| `0x14` | `SWAP` | Intercambia los dos valores superiores de `stack1`. |
+| `0x20` | `PUSH2` | Mueve un valor de `stack1` a la pila auxiliar `stack2`. |
+| `0x21` | `POP2` | Mueve un valor de `stack2` a `stack1`. |
+| `0x30` | `JMP` | Salto incondicional: `PC = pop()`. |
+| `0x31` | `JZ` | Salto condicional si cero: `target = pop(), cond = pop(); if (cond == 0) PC = target`. |
+| `0x32` | `JNZ` | Salto condicional si no cero: `if (cond != 0) PC = target`. |
+| `0x33` | `JL` | Salto si menor a cero (signed): `if (cond < 0) PC = target`. |
+| `0x34` | `JLE` | Salto si menor o igual a cero: `if (cond <= 0) PC = target`. |
+| `0x80 <imm8>` | `PUSH imm8` | Inserta un inmediato con signo de 8 bits (extendido a 16 bits). |
+| `0x81 <imm16>` | `PUSH imm16` | Inserta un inmediato de 16 bits (little-endian). |
+| `0xc0` | `IN` | Lee un byte de `stdin` (`getc`) y lo inserta en `stack1`. |
+| `0xc1` | `OUT` | Extrae un valor de `stack1` y lo envía a `stdout` (`putc`). |
 
-- 0xC0 (-64): Call function pointer at rbx->0x20
-- 0xBF (-65): Complex multi-byte instruction parsing
-- 0x80 (-128): Call function pointer at rbx->0x20 with argument
-- 0x81 (-127): Signed byte instruction
+---
 
-The language appears to manipulate two stacks (input at rbx->0x10, output at rbx->0x18) and performs arithmetic/logical operations on 16-bit values stored on these stacks.
+## Análisis del Bytecode: El Laberinto 16x16
 
-### Key Observations
+Al desensamblar el bytecode alojado en `0x20f0` de `.rodata`, se revelan las siguientes etapas:
 
-1. **Two-stack model:** Input stack (rax from rbx->0x10) and output stack (rax from rbx->0x18)
-2. **16-bit operations:** Uses word (16-bit) values for stack elements
-3. **Conditional verification:** Multiple condition checks ensure the program meets specific requirements
-4. **Function callbacks:** Uses function pointers at rbx->0x20 and rbx->0x28 for dynamic behavior
-5. **Error handling:** Sets error flag if conditions fail; returns "Have a flag!" on error
+1. **Mensaje de Bienvenida:**
+   Empuja caracteres en orden inverso y ejecuta una rutina de impresión en `0x013b`, mostrando:
+   `Welcome to the M A T R I X\nCan you make it out alive?\n`
 
-### Verification Logic
+2. **Lectura de Movimientos:**
+   Inicializa la posición del jugador en `(x = 1, y = 1)` y un contador de llaves en `keys = 0`.
+   Lee un carácter por turno y comprueba:
+   - `'u'` (117): Decrementa `y` (`y = y - 1`).
+   - `'d'` (100): Incrementa `y` (`y = y + 1`).
+   - `'l'` (108): Decrementa `x` (`x = x - 1`).
+   - `'r'` (114): Incrementa `x` (`x = x + 1`).
+   - Cualquier otra entrada salta a `0x00fb` ("You were eaten by a grue.").
 
-The program checks:
-1. Stack values must meet specific conditions at various points
-2. Operations must not underflow or overflow the stacks
-3. The exact sequence of operations matters for verification
+3. **Indexación de la Matriz:**
+   Calcula la posición lineal dentro de una matriz de 16x16:
+   $$\text{idx} = y \times 16 + x$$
+   Cada celda en la tabla que inicia en `0x0174` ocupa 4 bytes (`idx * 4`):
+   - **Pared / Trampa (`81 fb 00 30`):** `PUSH 0x00fb; JMP`. Muestra mensaje de muerte y finaliza.
+   - **Pasillo vacío (`30 00 00 00`):** `JMP 0x007b`. Salta directamente a leer el siguiente comando.
+   - **Llave (`K`, `81 7f 05 30`):** `PUSH 0x057f; JMP`. Ejecuta `keys += 1` y continúa.
+   - **Puerta (`D`, `81 74 05 30`):** `PUSH 0x0574; JMP`. Verifica `keys > 0`; si `keys == 0`, muere devorado por el grue; si `keys > 0`, descuenta una llave (`keys -= 1`) y permite el paso.
+   - **Meta / Salida (`G`, `81 85 05 30` en `x=14, y=15`):** `PUSH 0x0585; JMP`. Muestra `"Congratulations, you made it!\n"`, termina la VM con código 0 y el binario lee e imprime `flag.txt`.
 
-## Solution Approach
+### Mapa del Laberinto Extraído
 
-The challenge requires finding the correct sequence of operations in this custom language that:
-1. Passes all stack condition checks
-2. Produces the expected output
-3. Allows the program to read and output the flag
+```text
+ 0 ################
+ 1 #S....K#.#K..#.#
+ 2 ####D###.###.#.#
+ 3 #..........#.#.#
+ 4 ##.#.#####.#.D.#
+ 5 #..#.#K..#.#.#.#
+ 6 #.##.###.#.#.#.#
+ 7 #.#......#.#.#.#
+ 8 #.#.######.#.#.#
+ 9 #.#........#.#.#
+10 #.###.######.#.#
+11 #...#..D..#..#.#
+12 #.###..#..#.#..#
+13 #.#...###.#.#D##
+14 #.#....#..D.#..#
+15 ##############G#
+```
+- `#` = Pared
+- `.` = Pasillo
+- `S` = Inicio `(1, 1)`
+- `K` = Llave (`keys + 1`)
+- `D` = Puerta (`keys - 1`, requiere `keys >= 1`)
+- `G` = Meta `(14, 15)`
 
-### Program Verification Logic
+### Mecánica de "Farming" de Llaves
+Dado que el código se encuentra en memoria de solo lectura (`.rodata`), las casillas `K` no desaparecen tras ser visitadas. Esto permite acumular llaves dando pasos repetidos de ida y vuelta sobre una casilla `K` (por ejemplo `rlrlrl...`).
 
-Key findings from dynamic testing:
-- The program reads commands from stdin in a loop (0x1178)
-- Each command is interpreted via jump table at 0x201c
-- Invalid commands set error flag at 0x13e7
-- Program exits when counter at offset 0xe(rsp) reaches 0
-- Success condition: byte at 0xc(rsp) must be 0 and word at 0xe(rsp) must be 0
+---
 
-### Stack Operations
+## Resolución Mediante Búsqueda en Anchura (BFS)
 
-The interpreter uses two stacks:
-- **Input stack** (pointer at rbx->0x10): receives values from commands
-- **Output stack** (pointer at rbx->0x18): stores results
-- All values are 16-bit (word-sized)
-- Stack grows downward in memory
+Se implementó un algoritmo de búsqueda en anchura (BFS) modelando el estado como `(x, y, keys)` para encontrar el camino más corto hacia la salida `G`:
 
-### Solution Strategy
+```python
+# Estado: (x, y, keys)
+# Camino resultante de 63 movimientos:
+path = "rrrrrlrlrlrlrllddddddlddrrddrrrdrddrruuuruuuuuuurrddddddddlddrd"
+```
 
-This requires:
-1. **Reverse engineering** of the condition tree (commands 1,2,3,4 form decision points)
-2. **Constraint solving** to find a sequence that satisfies all conditions
-3. **Stack analysis** to understand the expected state transitions
-4. Possible **automated search** or manual trace through the decision tree
+Al enviar la secuencia de movimientos al servicio remoto:
 
-Test results show:
-- Commands '0' and '1' together (sequence "01") pass initial checks
-- Pattern suggests a binary decision tree structure
-- Flag is read from `flag.txt` upon successful verification
+```bash
+python3 solve.py
+```
 
-## Files
+Salida del servidor:
+```text
+Congratulations, you made it!
+Have a flag!
+academy{y0uv3_3sc4p3d_th3_m4ze...f0r_n0w-hYkq2D9PmrA5GpEq}
+```
 
-- `matrix` - The main binary (ELF executable)
-- `matrix_disasm.txt` - Full disassembly (reference)
-- `README.md` - This file
+---
 
-## Tools Used
+## Flag
 
-- `objdump` - Binary disassembly and analysis
-- `strings` - String extraction
-- `file` - File type identification
-- Python - Data analysis and offset calculation
-
-## References
-
-- **CyLab Challenge:** https://learn.cylabacademy.org/library/221/
-- **Challenge Command:** `nc mars.cylabacademy.net 31259`
+```
+academy{y0uv3_3sc4p3d_th3_m4ze...f0r_n0w-hYkq2D9PmrA5GpEq}
+```
+*(Flag original del servidor: `picoCTF{y0uv3_3sc4p3d_th3_m4ze...f0r_n0w-hYkq2D9PmrA5GpEq}`)*

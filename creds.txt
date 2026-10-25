@@ -428,3 +428,4 @@ fermat_strings:picoCTF{f3rm4t_pwn1ng_s1nc3_th3_17th_c3ntury}
 fermat_strings:picoCTF{f3rm4t_pwn1ng_s1nc3_th3_17th_c3ntury}
 lets_get_dynamic: academy{dyn4m1c_4n4ly1s_1s_5up3r_us3ful_0c8f18c}
 rolling_my_own: academy{r011ing_y0ur_0wn_crypt0_15_h4rd!_47961d69}
+matrix: picoCTF{y0uv3_3sc4p3d_th3_m4ze...f0r_n0w-hYkq2D9PmrA5GpEq}
