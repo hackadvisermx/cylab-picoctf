@@ -124,7 +124,27 @@ Caracteres válidos -> valores de jumble:
 - 'f' -> 30 -> (OOB)
 - '/' -> 30 -> (OOB)
 
+## Problema Fundamental Identificado
+
+La tabla de validación contiene caracteres que NO son generables mediante la función jumble con caracteres de entrada válidos:
+
+- **Caracteres generables**: {a, c, e, g, i, k, m, o, q, s, u, w, y, {, }}
+- **Caracteres en tabla**: {a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, ...}
+- **Brecha**: Faltan {b, d, f, h, j, l, n, p, ...}
+
+Esto indica:
+1. Implementación incompleta de `jumble()` o
+2. Procesamiento adicional no identificado en el asm o
+3. Algoritmo más complejo que lo analizado
+
+## Herramientas Necesarias
+
+- GDB con scripts Python para trace dinámico
+- ANGR framework para symbolic execution
+- Ghidra o IDA Pro para decompilación avanzada
+- Acceso a código fuente original de picoCTF 2020
+
 ## Estado
-**En progreso** - Análisis detallado del algoritmo completado.  
-El desafío requiere reverse engineering profundo del algoritmo de cadena.  
-Se recomienda usar ANGR o análisis dinámico con GDB.
+**PENDIENTE** - Análisis arquitectónico completado.  
+Reverse engineering del algoritmo incompleto debido a limitaciones de herramientas disponibles.  
+Requiere análisis dinámico o symbolic execution para resolver completamente.
