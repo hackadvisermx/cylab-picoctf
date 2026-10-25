@@ -10,7 +10,7 @@ A diferencia de wargames con progresión estrictamente secuencial (Bandit, Natas
 
 ## Estado actual
 
-- **Progreso global en plataforma:** **487 / 525 retos resueltos (92.76%)**
+- **Progreso global en plataforma:** **488 / 525 retos resueltos (92.95%)**
 - **Total retos pendientes:** **39**
 - **Verificación:** API de CyLab, **2026-10-24** (el estado de esta sección es la fuente de verdad).
 
@@ -26,7 +26,7 @@ A diferencia de wargames con progresión estrictamente secuencial (Bandit, Natas
 | Web Exploitation | 81 | 83 | 97.6% | ⏳ 2 pendientes en Hard: `cancri-sp` [344], `msfroggenerator2` [360] |
 | Reverse Engineering | 97 | 102 | 95.1% | ⏳ 5 pendientes: `speeds and feeds` [116] (Medium, mantenimiento) + 4 en Hard |
 | Binary Exploitation | 44 | 76 | 57.9% | ⏳ 32 pendientes: `Binary Gauntlet 2` [143] (Medium) + 31 en Hard |
-| **Total** | **487** | **525** | **92.76%** | **38 pendientes** |
+| **Total** | **488** | **525** | **92.95%** | **37 pendientes** |
 
 ### Desglose por categoría y dificultad
 
@@ -105,7 +105,7 @@ Cada writeup vive en su propia carpeta (`challenges/<categoría>/<dificultad>/<s
 
 ## Próximos pasos
 
-Con 487 de 525 retos resueltos (92.76%) y 5 tracks al 100% (Artificial Intelligence, Blockchain, Cryptography, Forensics, General Skills), los esfuerzos se concentran en los **38 retos pendientes**:
+Con 488 de 525 retos resueltos (92.95%) y 5 tracks al 100% (Artificial Intelligence, Blockchain, Cryptography, Forensics, General Skills), los esfuerzos se concentran en los **37 retos pendientes**:
 
 1. **Binary Exploitation (32 pendientes):**
    - Medium: `Binary Gauntlet 2` [143].

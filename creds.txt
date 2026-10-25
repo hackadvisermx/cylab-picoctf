@@ -432,3 +432,4 @@ matrix: picoCTF{y0uv3_3sc4p3d_th3_m4ze...f0r_n0w-hYkq2D9PmrA5GpEq}
 wizardlike: academy{ur_4_w1z4rd_4D8786C4}
 no_way_out: academy{WELCOME_TO_UNITY!!}
 seed-sPRiNG: academy{pseudo_random_number_generator_not_so_random_cdeee1a6}
+checkpass: academy{t1mingS1deChann3l_c55b1a90e29d2f}

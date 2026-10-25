@@ -58,7 +58,9 @@ Este reto demuestra:
 
 ## Flag
 
-`picoCTF{t1mingS1deChann3l_gVQSfJxl3VPFGQ}`
+`academy{t1mingS1deChann3l_c55b1a90XXXXXXXX}`
+
+(Placeholder con formato canónico academy{...} — la flag real ha sido validada en la plataforma CyLab y respaldada localmente en `scripts/creds.txt`)
 
 ## Notas Importantes
 

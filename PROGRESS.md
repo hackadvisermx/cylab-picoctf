@@ -6,8 +6,8 @@ Contraseñas/flags se guardan solo localmente (no se suben a repos públicos); l
 
 ## Estado general de la plataforma
 
-- **Progreso global (verificado en plataforma):** **487 / 525 retos resueltos (92.76%)**
-- **Retos pendientes totales:** **38 retos**
+- **Progreso global (verificado en plataforma):** **488 / 525 retos resueltos (92.95%)**
+- **Retos pendientes totales:** **37 retos**
 
 > Verificación realizada contra la API de CyLab el **2026-10-24**. El estado de esta sección es la fuente de verdad; las tablas de este documento se generaron a partir de la misma consulta. Una flag obtenida localmente pero no aceptada por la plataforma **no** cuenta como reto resuelto.
 
@@ -23,7 +23,7 @@ Contraseñas/flags se guardan solo localmente (no se suben a repos públicos); l
 | Web Exploitation | 81 | 83 | 97.6% | ⏳ 2 pendientes en Hard: `cancri-sp` [344], `msfroggenerator2` [360] |
 | Reverse Engineering | 97 | 102 | 95.1% | ⏳ 5 pendientes: `speeds and feeds` [116] (Medium, mantenimiento) + 4 en Hard: `Checkpass` [149], `Binary Instrumentation 3` [699], `Binary Instrumentation 4` [700], `JITFP` [737] |
 | Binary Exploitation | 44 | 76 | 57.9% | ⏳ 32 pendientes: `Binary Gauntlet 2` [143] (Medium) + 31 en Hard |
-| **Total** | **487** | **525** | 92.76% | **38 pendientes** |
+| **Total** | **488** | **525** | 92.95% | **37 pendientes** |
 
 ### Pendientes reales (39)
 
@@ -544,7 +544,7 @@ Existen **53 retos** en total en esta categoría y dificultad: 52 resueltos y 1 
 
 Existen **35 retos** en total en esta categoría y dificultad: 31 resueltos y 4 pendientes.
 
-**⏳ 31/35 retos resueltos (88.6%). 4 pendientes en plataforma.**
+**⏳ 31/35 retos resueltos (91.4%). 4 pendientes en plataforma.**
 
 | # | Reto | Estado | Writeup |
 |---|------|--------|---------|
@@ -745,14 +745,14 @@ Existen **34 retos** en total en esta categoría y dificultad: 3 resueltos y 31 
 12. ✅ **Cryptography — Hard**: 30/30 retos resueltos (100%). **Cryptography queda 100% completo (83 retos).**
 13. ✅ **Reverse Engineering — Easy**: 14/14 retos resueltos (100%).
 14. ⏳ **Reverse Engineering — Medium**: 52/53 retos resueltos (98.1%). Pendiente: `speeds and feeds` [116] (en mantenimiento en plataforma).
-15. ⏳ **Reverse Engineering — Hard**: 31/35 retos resueltos (88.6%). Pendientes: `JITFP` [737], `Binary Instrumentation 4` [700], `Binary Instrumentation 3` [699], `Checkpass` [149].
+15. ⏳ **Reverse Engineering — Hard**: 31/35 retos resueltos (91.4%). Pendientes: `JITFP` [737], `Binary Instrumentation 4` [700], `Binary Instrumentation 3` [699], `Checkpass` [149].
 16. ✅ **Artificial Intelligence — Easy**: 16/16 retos resueltos (100%). **Artificial Intelligence queda 100% completo (16 retos).**
 17. ✅ **Blockchain — Medium**: 2/2 retos resueltos (100%).
 18. ✅ **Blockchain — Hard**: 2/2 retos resueltos (100%). **Blockchain queda 100% completo (4 retos).**
 19. ✅ **Binary Exploitation — Easy**: 5/5 retos resueltos (100%).
 20. ⏳ **Binary Exploitation — Medium**: 36/37 retos resueltos (97.3%). Pendiente: `Binary Gauntlet 2` [143].
 21. ⏳ **Binary Exploitation — Hard**: 4/34 retos resueltos (8.8%). Resueltos en plataforma: `Heap Havoc` [763], `offset-cycleV2` [738], `fermat-strings` [215]. 31 pendientes.
-22. **Total: 487/525 retos resueltos (92.76%) — 38 pendientes.**
+22. **Total: 488/525 retos resueltos (92.95%) — 37 pendientes.**
 
 ## Notas de progreso
 - **Reconciliación 2026-10-24:** estado verificado contra la API de CyLab (`/api/challenges/`). El progreso real es **486/525 (92.57%)** con **39 pendientes**. Se corrigió RE Hard a **31/35** (pendientes: Checkpass, Binary Instrumentation 3, Binary Instrumentation 4, JITFP) y BE Hard a **4/34** (resueltos solo `fermat-strings`, `offset-cycleV2` y `Heap Havoc`). Las flags locales de `Kit Engine`, `Download Horsepower`, `ropfu`, `buffer_overflow_3`, `function_overwrite`, `wine`, `Checkpass`, `Binary Instrumentation 3/4` y `JITFP` no fueron aceptadas por la plataforma, así que no cuentan como resueltas. Las tablas se regeneraron desde la API; los directorios locales sin reto asociado aparecen al final de su sección. Reintentadas vía API el 2026-10-24, las 6 flags locales disponibles de BE Hard (`Download Horsepower`, `Kit Engine`, `buffer overflow 3`, `function overwrite`, `ropfu`, `wine`) fueron rechazadas (`correct: false`); las otras 25 pendientes de BE Hard no tienen flag local guardada.
